@@ -1,0 +1,15 @@
+name: crm_accounts
+label: 单位
+icon: account
+enable_tasks: true
+enable_files: true
+fields:
+  name:
+    label: 名称
+    type: text
+list_views:
+  all:
+    label: 全部
+    columns: 
+      - name
+      - owner

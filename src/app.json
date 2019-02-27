@@ -1,0 +1,9 @@
+{
+    "url": "/app/contract",
+    "name": "contract",
+    "description": "contract management App",
+    "icon": "ion-ios-people-outline" ,
+	"icon_slds": "metrics" ,
+    "is_creator": true,
+    "objects": ["crm_accounts", "crm_contacts", "tasks", "reports"]
+}

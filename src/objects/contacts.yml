@@ -1,0 +1,18 @@
+name: crm_contacts
+label: 联系人
+icon: contact
+fields:
+  name:
+    label: 名称
+    type: text
+  account:
+    label: 单位
+    type: master_detail
+    reference_to: crm_accounts
+list_views:
+  all:
+    label: 全部
+    columns: 
+      - name
+      - account
+      - owner
