@@ -5,5 +5,5 @@
     "icon": "ion-ios-people-outline" ,
 	"icon_slds": "metrics" ,
     "is_creator": true,
-    "objects": ["crm_accounts", "crm_contacts", "tasks", "reports"]
+    "objects": ["contracts", "accounts", "contract_types", "contract_payments", "contract_receipts", "contract_acceptances", "contacts", "tasks", "events", "reports"]
 }
