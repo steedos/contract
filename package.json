@@ -1,5 +1,5 @@
 {
-  "name": "@steedos/contract-management-system",
+  "name": "@steedos-app/steedos-contracts-app",
   "version": "1.0.0",
   "description": "contract-management-system",
   "main": "main.js",
@@ -8,16 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/steedos/contract-management-system.git"
+    "url": "git+https://github.com/steedos/steedos-contracts-app.git"
   },
   "author": "Jack Zhuang",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/steedos/contract-management-system/issues"
+    "url": "https://github.com/steedos/steedos-contracts-app/issues"
   },
-  "homepage": "https://github.com/steedos/contract-management-system#readme",
-  "dependencies": {
-    "chokidar": "2.1.2",
-    "js-yaml": "3.12.1"
-  }
+  "homepage": "https://github.com/steedos/steedos-contracts-app#readme"
 }
