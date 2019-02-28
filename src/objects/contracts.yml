@@ -236,14 +236,6 @@ fields:
     required: true
     name: bop
     filterable: true
-  urlTest:
-    type: url
-    label: url字段测试
-    name: urlTest
-  emailTest:
-    type: email
-    label: email字段测试
-    name: emailTest
 list_views:
   recent:
     label: 最近查看
