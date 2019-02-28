@@ -1,5 +1,5 @@
-# contract-management-system
-Contract management system written in nodejs powered by Salesforce Lightning Design System
+# Steedos Contracts Management App / 合同管理系统
+Contracts management app written in nodejs, powered by Steedos and Salesforce Lightning Design System
 
 # how to install & run?
 
