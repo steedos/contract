@@ -1,1 +1,1 @@
-module.exports = require('@steedos/app')
+require("./steedos-app");

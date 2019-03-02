@@ -10,7 +10,6 @@ Contracts management app written in nodejs, powered by Steedos and Salesforce Li
 ### Install steedos
 ```
 npm install steedos-server --global
-npm install steedos-cli --global
 ```
 
 ### Install node_modules
@@ -18,7 +17,7 @@ npm install steedos-cli --global
 npm install
 ```
 
-### Run
+### Run Server
 ```
-steedos run
+node server
 ```

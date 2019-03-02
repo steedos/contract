@@ -1,8 +1,9 @@
-var meteor = require('@steedos/meteor-bundle-runner');
+var server = require('@steedos/meteor-bundle-runner');
 var Fiber = require("fibers");
 
 Fiber(function () {
-    meteor.loadServerBundles();
-    meteor.callStartupHooks();
-    meteor.runMain();
+    server.loadServerBundles();
+    require("./steedos-app");
+    server.callStartupHooks();
+    server.runMain();
 }).run();
