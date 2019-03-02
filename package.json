@@ -2,7 +2,7 @@
   "name": "@steedos-app/steedos-contracts-app",
   "version": "1.0.0",
   "description": "contract-management-system",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,6 +12,17 @@
   },
   "author": "Jack Zhuang",
   "license": "ISC",
+  "dependencies": {
+    "@steedos/steedos-crm-app": "^1.0.0"
+  },
+  "devDependencies": {
+    "@steedos/app": "^1.0.0"
+  },
+  "steedos": {
+    "plugins": [
+      "@steedos/steedos-crm-app"
+    ]
+  },
   "bugs": {
     "url": "https://github.com/steedos/steedos-contracts-app/issues"
   },
