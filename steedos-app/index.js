@@ -1,1 +1,1 @@
-require('@steedos/app/plugins').load(__dirname);
+require('@steedos/app').load(__dirname);
