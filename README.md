@@ -9,6 +9,7 @@ Contracts management app written in nodejs, powered by Steedos and Salesforce Li
 
 ### Install Steedos
 ```
+npm config set registry http://registry.npm.taobao.org/
 npm i steedos-server -g
 ```
 
