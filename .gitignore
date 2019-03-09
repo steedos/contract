@@ -61,3 +61,6 @@ typings/
 .next
 
 yaml
+
+package-lock.json
+yarn.lock

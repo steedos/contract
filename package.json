@@ -13,7 +13,7 @@
   "author": "Jack Zhuang",
   "license": "ISC",
   "dependencies": {
-    "@steedos/core": "^0.0.3",
+    "@steedos/core": "^0.0.6",
     "@steedos/meteor-bundle-runner": "^1.1.4",
     "@steedos/steedos-crm-app": "^1.1.0"
   },
