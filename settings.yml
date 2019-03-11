@@ -5,17 +5,3 @@ cfs:
   store: "local"
   local: 
     folder: "./storage"
-  aliyun:
-    region: xxxxxx
-    internal: false
-    bucket: xxxxxx
-    folder: xxxxxx
-    accessKeyId: xxxxxx
-    secretAccessKey: xxxxxx
-  aws:
-    region: xxxxxx
-    bucket: xxxxxx
-    folder: xxxxxx
-    accessKeyId: xxxxxx
-    secretAccessKey: xxxxxx
-
