@@ -3,23 +3,22 @@ Contracts management app written in nodejs, powered by Steedos and Salesforce Li
 
 # How to install & run?
 
-### Install dependencies 
+### 安装前准备
 - [Install NodeJS, v8.0.0 or later.](https://nodejs.org/en/)
 - [Install MongoDB Community Server v3.4 or later](https://www.mongodb.com/download-center/community)
 - [Install Visual Studio Code](https://code.visualstudio.com/)
 
-### Install Steedos
+### 安装依赖包
 ```
+# 安装 yarn 
+npm i yarn -g
+# 国内建议使用npm淘宝镜像
 npm config set registry http://registry.npm.taobao.org/
-npm i steedos-server -g
+# 使用yarn安装依赖包
+yarn
 ```
 
-### Install node_modules
+### 启动服务器
 ```
-npm i
-```
-
-### Run Server
-```
-node server
+yarn start
 ```

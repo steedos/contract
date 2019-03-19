@@ -5,7 +5,7 @@ server.Fiber(function () {
         server.loadServerBundles();
         server.callStartupHooks();
         require("@steedos/steedos-crm-app");
-        require("./steedos-app");
+        require("./index");
         server.runMain();
     });
 }).run();
