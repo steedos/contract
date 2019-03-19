@@ -1,20 +1,25 @@
-# Steedos Contracts Management App
-Contracts management app written in nodejs, powered by Steedos and Salesforce Lightning Design System
+# 合同管理系统
+本系统基于[Steedos](https://github.com/steedos/object-server)开发。您只需要在这里的[配置业务对象](src/)，设定对象、关系、字段、视图、触发器、报表，即可拥有一套自定义的合同管理系统。
 
-# How to install & run?
+![界面效果图](https://steedos.github.com/docs/assets/mac_ipad_iphone_home.png)
 
 ### 安装前准备
 - [Install NodeJS, v8.0.0 or later.](https://nodejs.org/en/)
 - [Install MongoDB Community Server v3.4 or later](https://www.mongodb.com/download-center/community)
 - [Install Visual Studio Code](https://code.visualstudio.com/)
 
-### 安装依赖包
+### 安装 yarn
 ```
-# 安装 yarn 
 npm i yarn -g
-# 国内建议使用npm淘宝镜像
+```
+
+### 国内建议使用npm淘宝镜像
+```
 npm config set registry http://registry.npm.taobao.org/
-# 使用yarn安装依赖包
+```
+
+### 使用yarn安装依赖包
+```
 yarn
 ```
 
@@ -22,3 +27,7 @@ yarn
 ```
 yarn start
 ```
+
+### 了解更多
+- [开发文档](https://steedos.github.io)
+- [Steedos 对象服务器](https://github.com/steedos/object-server)
