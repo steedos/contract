@@ -30,4 +30,3 @@ yarn start
 
 ### 了解更多
 - [开发文档](https://steedos.github.io)
-- [Steedos 对象服务器](https://github.com/steedos/object-server)
