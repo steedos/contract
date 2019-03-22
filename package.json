@@ -4,7 +4,7 @@
   "description": "contract-management-system",
   "main": "steedos-app/index.js",
   "scripts": {
-    "start": "steedos run",
+    "start": "node server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -14,7 +14,7 @@
   "author": "Jack Zhuang",
   "license": "ISC",
   "dependencies": {
-    "@steedos/core": "^1.1.8",
+    "@steedos/core": "^1.1.9",
     "@steedos/meteor-bundle-runner": "^1.1.4",
     "@steedos/steedos-crm-app": "^1.1.0",
     "@steedos/cli": "^1.1.5",
