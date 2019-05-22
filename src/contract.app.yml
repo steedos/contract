@@ -4,13 +4,13 @@ description: Contracts App
 icon_slds: metrics
 is_creator: true
 objects: 
-  - contracts
-  - accounts
-  - contract_types
-  - contract_payments
-  - contract_receipts
-  - contract_acceptances
-  - contacts
-  - tasks
-  - events
-  - reports
+  - contracts.contracts
+  - contracts.accounts
+  - contracts.contract_types
+  - contracts.contract_payments
+  - contracts.contract_receipts
+  - contracts.contract_acceptances
+  - contracts.contacts
+  - contracts.tasks
+  - contracts.events
+  - contracts.reports

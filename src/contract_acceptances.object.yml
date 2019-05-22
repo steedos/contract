@@ -2,7 +2,7 @@ name: contract_acceptances
 label: 验收
 icon: orders
 enable_files: true
-enable_instances: true
+# enable_instances: true
 fields:
   name:
     label: 名称
@@ -14,7 +14,7 @@ fields:
   contract:
     label: 合同
     type: master_detail
-    reference_to: contracts
+    reference_to: contracts.contracts
     required: true
     sortable: true
     name: contract
@@ -22,7 +22,7 @@ fields:
   account:
     label: 单位
     type: master_detail
-    reference_to: accounts
+    reference_to: contracts.accounts
     sortable: true
     name: account
     filterable: true
@@ -45,6 +45,8 @@ fields:
     required: true
     omit: false
     hidden: false
+    type: lookup
+    reference_to: organizations
 list_views:
   recent:
     label: 最近查看

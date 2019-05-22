@@ -6,13 +6,15 @@ enable_search: true
 enable_tasks: true
 enable_notes: false
 enable_api: true
-enable_share: true
+# enable_share: true TODO 暂不支持
 enable_chatter: true
 fields:
   owner:
     label: 所有人
     omit: false
     readonly: true
+    type: lookup
+    reference_to: users
   priority:
     label: 优先级
     type: select
@@ -73,6 +75,8 @@ fields:
     required: true
     omit: false
     hidden: false
+    type: lookup
+    reference_to: organizations
 list_views:
   recent:
     label: 最近查看
