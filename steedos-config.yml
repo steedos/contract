@@ -1,0 +1,13 @@
+datasources:
+  default:
+    host: 127.0.0.1
+    database: steedos
+  mongo:
+    connection: 
+      driver: mongo
+      host: 127.0.0.1
+      database: steedos
+    objects: 
+      - "./src"
+    apps:
+      - "./src/contract.app.yml"
