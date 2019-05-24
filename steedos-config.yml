@@ -1,3 +1,5 @@
+env:
+  PORT: 5000
 datasources:
   default:
     connection: 
@@ -12,3 +14,7 @@ datasources:
       - "./src"
     apps:
       - "./src/contract.app.yml"
+cfs:
+  store: "local"
+  local: 
+    folder: "./storage"
