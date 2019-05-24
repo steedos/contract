@@ -1,7 +1,8 @@
 datasources:
   default:
-    host: 127.0.0.1
-    database: steedos
+    connection: 
+      host: 127.0.0.1
+      database: steedos
   mongo:
     connection: 
       driver: mongo
