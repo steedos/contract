@@ -23,7 +23,7 @@ fields:
   contract:
     label: 合同
     type: master_detail
-    reference_to: contracts.contracts
+    reference_to: contracts
     required: true
     sortable: true
     name: contract
@@ -31,7 +31,7 @@ fields:
   account:
     label: 单位
     type: master_detail
-    reference_to: contracts.accounts
+    reference_to: accounts
     sortable: true
     name: account
     filterable: true

@@ -5,7 +5,6 @@ enable_files: true
 enable_search: true
 enable_notes: true
 enable_api: true
-# enable_share: true TODO 暂不支持
 fields:
   name:
     type: text
@@ -20,7 +19,7 @@ fields:
   account:
     label: 单位
     type: master_detail
-    reference_to: contracts.accounts
+    reference_to: accounts
     sortable: true
     name: account
     filterable: true
