@@ -15,8 +15,8 @@
   "license": "ISC",
   "dependencies": {
     "@steedos/meteor-bundle-runner": "^1.1.5",
-    "@steedos/objectql": "^0.0.7",
-    "steedos-server": "1.2.0"
+    "@steedos/objectql": "^0.0.10",
+    "steedos-server": "^1.2.2"
   },
   "devDependencies": {},
   "bugs": {
@@ -25,7 +25,8 @@
   "homepage": "https://github.com/steedos/steedos-contracts-app#readme",
   "resolutions": {
     "graphql": "^14.1.1",
-    "@steedos/objectql": "^0.0.7",
+    "@steedos/objectql": "^0.0.10",
+    "@steedos/core": "^1.1.14",
     "@steedos/auth": "^1.0.4"
   }
 }

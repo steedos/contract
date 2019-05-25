@@ -5,16 +5,17 @@ server.Fiber(function () {
     server.Profile.run("Server startup", function () {
         server.loadServerBundles();
         try {
-            let schema = objectql.getSteedosSchema()
-            schema.addDataSource('contracts', {
-                driver: "mongo",
-                url: "mongodb://127.0.0.1/steedos",
-                objectFiles: [path.resolve(__dirname, "./src")]
+
+            let objects = objectql.loadObjectFiles(path.resolve(__dirname, "./src"))
+            let apps = objectql.loadAppFiles(path.resolve(__dirname, "./src"))
+
+            objects.forEach(function(object){
+                Creator.Objects[object.name] = object
             })
 
-            schema.useAppFile(path.resolve(__dirname, "./src"))
-
-            schema.getDataSource('contracts').createTables()
+            apps.forEach(function(app){
+                Creator.Apps[app._id] = app
+            })
 
         } catch (error) {
             console.log(error)
