@@ -10,9 +10,9 @@ datasources:
       driver: mongo
       host: 127.0.0.1
       database: steedos
-    objects: 
+    objectFiles: 
       - "./src"
-    apps:
+    appFiles:
       - "./src/contract.app.yml"
 cfs:
   store: "local"
