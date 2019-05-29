@@ -30,3 +30,9 @@ yarn start
 
 ### 了解更多
 - [开发文档](https://steedos.github.io)
+
+### docker-compose方式启动服务
+```
+docker-compose up -d
+```
+如果修改了代码或者配置，执行`docker-compose build`后，`docker-compose up -d`
