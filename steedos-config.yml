@@ -14,7 +14,8 @@ datasources:
       - "./src"
     appFiles:
       - "./src/contract.app.yml"
-cfs:
-  store: "local"
-  local: 
-    folder: "./storage"
+public:
+  cfs:
+    store: "local"
+    local: 
+      folder: "./storage"
