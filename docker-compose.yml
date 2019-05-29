@@ -1,0 +1,9 @@
+version: "2"
+
+services:
+
+  contracts:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
