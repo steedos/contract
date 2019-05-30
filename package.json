@@ -16,7 +16,7 @@
   "dependencies": {
     "@steedos/meteor-bundle-runner": "^1.1.6",
     "@steedos/objectql": "^0.0.11",
-    "steedos-server": "^1.2.3"
+    "steedos-server": "^1.2.4"
   },
   "devDependencies": {},
   "bugs": {
