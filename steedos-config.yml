@@ -3,8 +3,7 @@ env:
 datasources:
   default:
     connection: 
-      host: 127.0.0.1
-      database: steedos
+      url: mongodb://127.0.0.1/steedos
   mongo:
     connection: 
       driver: mongo
