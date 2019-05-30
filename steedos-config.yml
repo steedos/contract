@@ -7,6 +7,7 @@ datasources:
       url: mongodb://mongo/steedos
   mongo:
     connection: 
+      driver: mongo
       url: mongodb://mongo/steedos
     objectFiles: 
       - "./src"
