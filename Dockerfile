@@ -8,6 +8,6 @@ RUN apt-get install git
 
 RUN yarn --force
 
-VOLUME [ "/srv/steedos" ]
+VOLUME [ "/storage" ]
 
 CMD ["yarn", "start"]

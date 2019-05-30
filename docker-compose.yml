@@ -9,7 +9,7 @@ services:
       - "5000:5000"
     volumes:
       - .:/app
-      - steedos-storage-1:/srv/steedos
+      - steedos-storage-1:/storage
 
 volumes:
   # Storage for attachments
