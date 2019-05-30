@@ -4,11 +4,10 @@ env:
 datasources:
   default:
     connection: 
-      host: 127.0.0.1
-      database: steedos
+      url: mongodb://mongo/steedos
   mongo:
     connection: 
-      url: mongodb://127.0.0.1/steedos
+      url: mongodb://mongo/steedos
     objectFiles: 
       - "./src"
     appFiles:
@@ -17,4 +16,4 @@ public:
   cfs:
     store: "local"
     local: 
-      folder: "./storage"
+      folder: "/srv/steedos"
