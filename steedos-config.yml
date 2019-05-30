@@ -7,9 +7,7 @@ datasources:
       database: steedos
   mongo:
     connection: 
-      driver: mongo
-      host: 127.0.0.1
-      database: steedos
+      url: mongodb://127.0.0.1/steedos
     objectFiles: 
       - "./src"
     appFiles:
