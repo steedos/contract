@@ -8,5 +8,13 @@ services:
     ports:
       - "5000:5000"
     volumes:
-      - "/srv/steedos-contracts-app/storage:/contracts/storage"
-      - "./steedos-config.yml:/contracts/steedos-config.yml"
+      - .:/app
+      - steedos-storage-1:/srv/steedos
+    environment:
+      - MONGO_URL=mongodb://192.168.0.21/steedos
+      - PORT=5000
+
+
+volumes:
+  # Storage for attachments
+  steedos-storage-1:
