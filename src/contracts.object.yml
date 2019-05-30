@@ -209,6 +209,11 @@ fields:
     label: 申请单id
     hidden: true
     name: fileid
+  contract_id:
+    type: text
+    label: 老合同id
+    hidden: true
+    name: contract_id
   chengbankeshi:
     type: text
     label: 承办科室
