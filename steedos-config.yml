@@ -4,10 +4,10 @@ env:
 datasources:
   default:
     connection: 
-      url: mongodb://192.168.0.21/steedos
+      url: mongodb://mongo/steedos
   mongo:
     connection: 
-      url: mongodb://192.168.0.21/steedos
+      url: mongodb://mongo/steedos
     objectFiles: 
       - "./src"
     appFiles:
