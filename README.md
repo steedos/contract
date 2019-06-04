@@ -35,4 +35,4 @@ yarn start
 ```
 docker-compose up -d
 ```
-如果修改了代码或者配置，执行`docker-compose build`后，`docker-compose up -d`
+如果修改了代码或者配置，执行`docker-compose build --no-cache`后，`docker-compose up -d`
