@@ -12,7 +12,7 @@ datasources:
 public:
   cfs:
     store: "local"
-    local: 
+    local:
       folder: "/srv/steedos"
   webservices:
     workflow:
