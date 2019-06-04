@@ -3,16 +3,16 @@ env:
   ROOT_URL: http://127.0.0.1:5000
 datasources:
   default:
-    connection: 
+    connection:
       url: mongodb://127.0.0.1/steedos
-    objectFiles: 
-	    - "./src"
-	  appFiles:
-	    - "./src/contract.app.yml"
+    objectFiles:
+      - "./src"
+    appFiles:
+      - "./src/contract.app.yml"
 public:
   cfs:
     store: "local"
-    local: 
+    local:
       folder: "/srv/steedos"
   webservices:
     workflow:
