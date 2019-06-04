@@ -14,6 +14,8 @@ public:
     store: "local"
     local: 
       folder: "/srv/steedos"
-
+  webservices:
+    workflow:
+      url: "http://steedos.ticp.net:8821/"
 cron:
   instancerecordqueue_interval: 10000
