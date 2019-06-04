@@ -14,3 +14,6 @@ public:
     store: "local"
     local: 
       folder: "/srv/steedos"
+
+cron:
+  instancerecordqueue_interval: 10000
