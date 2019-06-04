@@ -16,6 +16,6 @@ public:
       folder: "/srv/steedos"
   webservices:
     workflow:
-      url: "http://steedos.ticp.net:8821/"
+      url: "https://qhd-beat.steedos.com/"
 cron:
   instancerecordqueue_interval: 10000
