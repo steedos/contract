@@ -25,7 +25,7 @@
   "homepage": "https://github.com/steedos/steedos-contracts-app#readme",
   "resolutions": {
     "graphql": "^14.1.1",
-    "@steedos/objectql": "^0.0.11",
+    "@steedos/objectql": "^0.0.12",
     "@steedos/core": "^1.1.17",
     "@steedos/auth": "^1.0.4"
   }
