@@ -12,7 +12,7 @@ services:
       - steedos-storage-1:/storage
     environment:
       - MONGO_URL=mongodb://192.1.1.42/steedos
-      - ROOT_URL=http://qhd-beta.steedos.com/contract/
+      - ROOT_URL=https://qhd-beta.steedos.com/contract/
       - PORT=5000
 
 
