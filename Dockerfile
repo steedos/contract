@@ -1,5 +1,7 @@
 FROM node:8.16.0
 
+ADD . /app
+
 WORKDIR /app
 
 RUN npm config set registry http://registry.npm.taobao.org/

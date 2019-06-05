@@ -8,7 +8,6 @@ services:
     ports:
       - "5040:5000"
     volumes:
-      - .:/app
       - steedos-storage-1:/storage
 
 
