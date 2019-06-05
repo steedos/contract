@@ -13,7 +13,7 @@ public:
   cfs:
     store: "local"
     local:
-      folder: "/srv/steedos"
+      folder: "/storage"
   webservices:
     workflow:
       url: "https://qhd-beta.steedos.com/"
