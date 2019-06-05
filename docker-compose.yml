@@ -10,14 +10,9 @@ services:
     volumes:
       - .:/app
       - steedos-storage-1:/storage
-    environment:
-      - MONGO_URL=mongodb://192.1.1.42/steedos
-      - ROOT_URL=https://qhd-beta.steedos.com/contract/
-      - PORT=5000
+
 
 
 volumes:
   # Storage for attachments
   steedos-storage-1:
-  mongo-db-1:
-  mongo-backup-1:
