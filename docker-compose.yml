@@ -8,10 +8,10 @@ services:
     ports:
       - "5040:5000"
     volumes:
-      - steedos-storage-1:/storage
+      - /srv/workflow/cfs:/storage
 
 
 
-volumes:
-  # Storage for attachments
-  steedos-storage-1:
+# volumes:
+#   # Storage for attachments
+#   steedos-storage-1:
