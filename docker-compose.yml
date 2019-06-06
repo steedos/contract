@@ -14,4 +14,6 @@ services:
 
 volumes:
   # Storage for attachments
-  steedos-storage-1:/srv/workflow/cfs
+  steedos-storage-1:
+    external:
+      name: /srv/workflow/cfs
