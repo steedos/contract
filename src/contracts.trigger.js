@@ -19,7 +19,6 @@ Creator.Objects['contracts'].triggers = {
         modifier.$set.stamp_duty = doc.pretax_amount * yinhuashuilv
         modifier.$set.yinhuashuilv = yinhuashuilv
       }
-      console.log('before.update', userId, doc, fieldNames, modifier, options);
     }
   }
 }
