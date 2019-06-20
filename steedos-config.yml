@@ -1,10 +1,10 @@
 env:
   PORT: 5000
-  ROOT_URL: http://127.0.0.1:5000
+  ROOT_URL: https://qhd-beta.steedos.com/contract/
 datasources:
   default:
     connection:
-      url: mongodb://127.0.0.1/steedos
+      url: mongodb://192.1.1.42/steedos
     objectFiles:
       - "./src"
     appFiles:
@@ -13,4 +13,9 @@ public:
   cfs:
     store: "local"
     local:
-      folder: "/srv/steedos"
+      folder: "/storage"
+  webservices:
+    workflow:
+      url: "https://qhd-beta.steedos.com/"
+cron:
+  instancerecordqueue_interval: 10000

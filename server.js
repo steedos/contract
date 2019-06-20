@@ -17,6 +17,8 @@ server.Fiber(function () {
                 Creator.Apps[app._id] = app
             })
 
+            require('./src/contracts.trigger')
+
         } catch (error) {
             console.log(error)
         }
