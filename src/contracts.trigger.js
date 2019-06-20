@@ -1,4 +1,5 @@
 Creator.Objects['contracts'].triggers = {
+  // 根据合同分类对应的印花税率，自动计算税前金额
   "before.insert.calc_stamp_duty": {
     on: 'server',
     when: "before.insert",
@@ -8,6 +9,7 @@ Creator.Objects['contracts'].triggers = {
 		  doc.stamp_duty = pretax_amount * doc.yinhuashuilv
     }
   },
+  // 根据合同分类对应的印花税率，自动计算税前金额
   "before.update.calc_stamp_duty":{
     on: 'server',
     when: "before.update",
