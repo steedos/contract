@@ -64,3 +64,4 @@ yaml
 
 package-lock.json
 yarn.lock
+steedos-config.yml
