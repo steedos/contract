@@ -42,6 +42,8 @@
 
 华炎合同管理系统基于Creator“低代码”平台开发，在提供强大功能的同时，个性化定制也非常方便。开发人员无需编写代码，只需调整配置文件，即可快速满足业务部门的需求。
 
+<iframe height=360 width=640 src="https://www-steedos-com.oss-cn-beijing.aliyuncs.com/videos/creator/contracts-source-code.mp4" frameborder=0 allowfullscreen></iframe>
+
 ### 项目结构
 
 项目核心源码非常简单，包括以下内容：
