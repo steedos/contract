@@ -55,7 +55,7 @@
 文件 [steedos-config.yml](steedos-config.yml) ，配置系统参数：
 - 数据库连接方式，可以连接到默认的MongoDB数据库，也可以连接到第三方系统的Oracle, SQL Server, MySQL, PostgreSQL数据库；
 - 附件存储位置；
-- 服务端口和URL。
+- 服务端口和访问地址。
 
 ### 对象配置文件 
 文件 [src/contracts.object.yml](src/contracts.object.yml)，每一个业务对象是一个独立的配置文件。
