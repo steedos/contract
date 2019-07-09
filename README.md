@@ -1,10 +1,12 @@
 # 华炎合同管理系统
 
+![界面效果图](https://steedos.github.com/docs/assets/mac_ipad_iphone_home.png)
+- [源码解析视频](https://www-steedos-com.oss-cn-beijing.aliyuncs.com/videos/creator/contracts-source-code.mp4)
+- [开发文档](https://steedos.github.io)
+
 合同管理是落实企业风险管理和内部控制的一项核心的管理业务，合同管理的好坏直接影响企业的经营绩效。
 
 华炎合同管理系统是国内首个全功能的开源合同管理解决方案，以合同为中心，通过合同订立、执行、监督、统计及维护跟踪，在规避法律风险的同时实现合同价值最大化。
-
-![界面效果图](https://steedos.github.com/docs/assets/mac_ipad_iphone_home.png)
 
 # 功能简介
 
@@ -41,8 +43,6 @@
 # 源码解析
 
 华炎合同管理系统基于Creator“低代码”平台开发，在提供强大功能的同时，个性化定制也非常方便。开发人员无需编写代码，只需调整配置文件，即可快速满足业务部门的需求。
-
-<iframe height=360 width=640 src="https://www-steedos-com.oss-cn-beijing.aliyuncs.com/videos/creator/contracts-source-code.mp4" frameborder=0 allowfullscreen></iframe>
 
 ### 项目结构
 
@@ -123,6 +123,3 @@ yarn
 ```
 yarn start
 ```
-
-### 了解更多
-- [开发文档](https://steedos.github.io)
