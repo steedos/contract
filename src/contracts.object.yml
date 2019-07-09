@@ -263,6 +263,18 @@ fields:
     type: text
     label: 质保期
     name: shelf_life
+  last_date_delivery:
+    label: 约定交付期限
+    type: date
+    name: last_date_delivery
+  last_date_acceptance:
+    label: 约定验收期限
+    type: date
+    name: last_date_acceptance
+  last_date_payment:
+    label: 约定付款期限
+    type: date
+    name: last_date_payment
   fileid:
     type: text
     label: 申请单id
