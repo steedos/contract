@@ -47,8 +47,8 @@
 项目核心源码非常简单，包括以下内容：
 - [steedos-config.yml](steedos-config.yml)
 - [src](src)
-  - [src/contracts.object.yml](src/contracts.object.yml)
-  - [src/contracts.trigger.js](src/contracts.trigger.js)
+  - [contracts.object.yml](src/contracts.object.yml)
+  - [contracts.trigger.js](src/contracts.trigger.js)
   - xxx.object.yml
 
 ### 系统配置文件 
