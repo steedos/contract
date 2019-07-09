@@ -1,8 +1,9 @@
+- [源码解析视频](https://www-steedos-com.oss-cn-beijing.aliyuncs.com/videos/creator/contracts-source-code.mp4)
+- [开发文档](https://steedos.github.io)
+
 # 华炎合同管理系统
 
 ![界面效果图](https://steedos.github.com/docs/assets/mac_ipad_iphone_home.png)
-- [源码解析视频](https://www-steedos-com.oss-cn-beijing.aliyuncs.com/videos/creator/contracts-source-code.mp4)
-- [开发文档](https://steedos.github.io)
 
 合同管理是落实企业风险管理和内部控制的一项核心的管理业务，合同管理的好坏直接影响企业的经营绩效。
 
