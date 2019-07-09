@@ -6,6 +6,8 @@
 
 ![界面效果图](https://steedos.github.com/docs/assets/mac_ipad_iphone_home.png)
 
+# 功能简介
+
 ### 管合同
 
 对公司所有的合同进行分类管理，包括合同的对方单位、签订日期、金额、履约状态、分类等基本信息，以及合同的应收应付、实收实付、验收状态、开票记录等相关信息。
@@ -36,24 +38,60 @@
 
 通过配置合同统计报表，可以按履约状态、按日期、按分类对合同进行多维度的汇总与分析。系统支持普通的列表统计、分类统计、二维表，支持通过可视化的界面对报表样式进行排版。对于复杂需求的报表，也可以通过javascript和html编写报表模版文件，实现完全个性化的统计分析。
 
-### 源码解析
+# 源码解析
 
 华炎合同管理系统基于Creator“低代码”平台开发，在提供强大功能的同时，个性化定制也非常方便。开发人员无需编写代码，只需配置调整配置文件，即可快速满足业务部门的需求。
 
+### 项目结构
+
 项目源码非常简单，包括以下内容：
-- steedos-config.yml
-- src
-  - contracts.object.yml
-  - contracts.trigger.js
+- [steedos-config.yml](steedos-config.yml)
+- [src](src)
+  - [src/contracts.object.yml](src/contracts.object.yml)
+  - [src/contracts.trigger.js](src/contracts.trigger.js)
   - xxx.object.yml
 - package.json
 
-其中
-- 系统配置文件 steedos-config.yml，里面描述了数据库连接方式、附件存储位置、服务端口和URL。
-- 对象配置文件 src/*.object.yml，每一个业务对象是一个独立的配置文件，包含对象的基本属性、字段、权限以及列表视图。
-- 触发器 src/*.trigger.js，业务逻辑触发器，可以在数据增删改发生前、发生后处理业务逻辑。
+### 系统配置文件 
+文件 [steedos-config.yml](steedos-config.yml) ，里面描述了数据库连接方式、附件存储位置、服务端口和URL。
+
+### 对象配置文件 
+文件 [src/contracts.object.yml](src/contracts.object.yml)，每一个业务对象是一个独立的配置文件。
+- 设定对象的基本属性，例如显示名、数据表名、图标等
+- 设定对象启用的功能，包括
+  - 允许上传附件
+  - 开启审计日志
+  - 允许全局搜索
+  - 允许添加附件
+  - 开通API接口
+  - 允许创建任务
+- 设定对象字段，包括
+  - 文本型
+  - 日期型
+  - 布尔型
+  - 数值型
+  - 选择型（单选/多选）
+  - 关联到相关表（单选/多选）
+- 设定列表视图
+  - 选择列表显示的字段
+  - 设定排序规则
+  - 设定列表过滤条件
+  - 设定快捷过滤字段
+- 设定对象权限
+  - 允许创建
+  - 允许修改
+  - 允许删除
+  - 允许查看本单位记录
+  - 允许修改本单位记录
+  - 允许查看所有记录
+  - 允许修改所有记录
+ 
+### 触发器
+- 触发器 [src/contracts.trigger.js](src/contracts.trigger.js)，业务逻辑触发器，可以在数据增删改发生前、发生后处理业务逻辑。
 
 项目源码基于NodeJS，使用MongoDB数据库，可以轻松与您现有的NodeJS项目集成，或是通过系统提供的标准化ODATA、GraphQL接口与第三方业务系统集成。
+
+# 源码安装与调试
 
 ### 安装前准备
 - [Install NodeJS, v8.0.0 or later.](https://nodejs.org/en/)
