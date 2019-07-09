@@ -291,11 +291,22 @@ list_views:
     columns:
       - 'no'
       - name
+      - project
       - account
       - company_id
-      - amount
+      - contract_type
+      - is_bidding
+      - start_date
+      - end_date
       - signed_date
+      - amount
+      - advance_amount
+      - outstanding_amount
       - contract_state
+      - subject
+      - a_signed
+      - b_signed
+      - description
     filter_scope: space
     filter_fields:
       - company_id
@@ -309,11 +320,22 @@ list_views:
     columns:
       - 'no'
       - name
+      - project
       - account
       - company_id
-      - amount
+      - contract_type
+      - is_bidding
+      - start_date
+      - end_date
       - signed_date
+      - amount
+      - advance_amount
+      - outstanding_amount
       - contract_state
+      - subject
+      - a_signed
+      - b_signed
+      - description
     filter_fields:
       - company_id
       - contract_type
@@ -324,13 +346,24 @@ list_views:
     label: 我的合同
     filter_scope: mine
     columns:
-      - 'no'
+       - 'no'
       - name
+      - project
       - account
       - company_id
-      - amount
+      - contract_type
+      - is_bidding
+      - start_date
+      - end_date
       - signed_date
+      - amount
+      - advance_amount
+      - outstanding_amount
       - contract_state
+      - subject
+      - a_signed
+      - b_signed
+      - description
     filter_fields:
       - company_id
       - contract_type
