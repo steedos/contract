@@ -87,7 +87,13 @@
   - 允许修改所有记录
  
 ### 触发器
-- 触发器 [src/contracts.trigger.js](src/contracts.trigger.js)，业务逻辑触发器，可以在数据增删改发生前、发生后处理业务逻辑。
+触发器 [src/contracts.trigger.js](src/contracts.trigger.js)，业务逻辑触发器，可以在数据增删改发生时处理业务逻辑。
+- 数据插入前
+- 数据插入后
+- 数据更新前
+- 数据更新后
+- 数据删除前
+- 数据删除后
 
 项目源码基于NodeJS，使用MongoDB数据库，可以轻松与您现有的NodeJS项目集成，或是通过系统提供的标准化ODATA、GraphQL接口与第三方业务系统集成。
 
