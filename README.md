@@ -44,16 +44,18 @@
 
 ### 项目结构
 
-项目源码非常简单，包括以下内容：
+项目核心源码非常简单，包括以下内容：
 - [steedos-config.yml](steedos-config.yml)
 - [src](src)
   - [src/contracts.object.yml](src/contracts.object.yml)
   - [src/contracts.trigger.js](src/contracts.trigger.js)
   - xxx.object.yml
-- package.json
 
 ### 系统配置文件 
-文件 [steedos-config.yml](steedos-config.yml) ，里面描述了数据库连接方式、附件存储位置、服务端口和URL。
+文件 [steedos-config.yml](steedos-config.yml) ，配置系统参数：
+- 数据库连接方式，可以连接到默认的MongoDB数据库，也可以连接到第三方系统的Oracle, SQL Server, MySQL, PostgreSQL数据库；
+- 附件存储位置；
+- 服务端口和URL。
 
 ### 对象配置文件 
 文件 [src/contracts.object.yml](src/contracts.object.yml)，每一个业务对象是一个独立的配置文件。
@@ -64,19 +66,19 @@
   - 允许全局搜索；
   - 允许添加附件；
   - 开通API接口；
-  - 允许创建任务；
+  - 允许创建任务。
 - 设定对象字段，包括：
   - 文本型；
   - 日期型；
   - 布尔型；
   - 数值型；
   - 选择型（单选、多选）；
-  - 关联到相关表（单选、多选）；
+  - 关联到相关表（单选、多选）。
 - 设定列表视图：
   - 选择列表显示的字段；
   - 设定排序规则；
   - 设定列表过滤条件；
-  - 设定快捷过滤字段；
+  - 设定快捷过滤字段。
 - 设定对象权限：
   - 允许创建；
   - 允许修改；
@@ -84,7 +86,7 @@
   - 允许查看本单位记录；
   - 允许修改本单位记录；
   - 允许查看所有记录；
-  - 允许修改所有记录；
+  - 允许修改所有记录。
  
 ### 触发器
 触发器 [src/contracts.trigger.js](src/contracts.trigger.js)，业务逻辑触发器，可以在数据增删改发生时处理业务逻辑。
