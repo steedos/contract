@@ -14,7 +14,6 @@ fields:
   'no':
     type: text
     label: 合同编号
-    required: true
     sortable: true
     filterable: true
     name: 'no'
