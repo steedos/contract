@@ -85,7 +85,6 @@ list_views:
       - priority
       - owner
       - modified
-      - company_id
     filter_scope: space
   recent:
     label: 最近查看
@@ -94,7 +93,6 @@ list_views:
       - priority
       - owner
       - modified
-      - company_id
     filter_scope: space
   mine:
     label: 我的单位
@@ -103,7 +101,6 @@ list_views:
       - priority
       - owner
       - modified
-      - company_id
     filter_scope: mine
 permission_set:
   user:

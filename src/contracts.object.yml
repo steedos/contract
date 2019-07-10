@@ -6,6 +6,7 @@ enable_search: true
 enable_tasks: true
 enable_notes: true
 enable_events: true
+enable_chatter: true
 enable_audit: true
 enable_api: true
 enable_instances: true
@@ -277,16 +278,13 @@ list_views:
   all:
     label: 所有合同
     columns:
-      - 'no'
       - name
       - account
-      - company_id
       - amount
       - signed_date
-      - contract_state
+      - contract_type
     filter_scope: space
     filter_fields:
-      - company_id
       - contract_type
       - signed_date
       - account
@@ -295,15 +293,11 @@ list_views:
     label: 最近查看
     filter_scope: space
     columns:
-      - 'no'
       - name
       - account
-      - company_id
       - amount
       - signed_date
-      - contract_state
     filter_fields:
-      - company_id
       - contract_type
       - signed_date
       - account
@@ -312,15 +306,11 @@ list_views:
     label: 我的合同
     filter_scope: mine
     columns:
-      - 'no'
       - name
       - account
-      - company_id
       - amount
       - signed_date
-      - contract_state
     filter_fields:
-      - company_id
       - contract_type
       - signed_date
       - account
