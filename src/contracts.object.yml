@@ -345,7 +345,7 @@ list_views:
     label: 我的合同
     filter_scope: mine
     columns:
-       - 'no'
+      - 'no'
       - name
       - project
       - account
