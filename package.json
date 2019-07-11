@@ -4,7 +4,7 @@
   "description": "contract-management-system",
   "main": "steedos-app/index.js",
   "scripts": {
-    "start": "node server",
+    "start": "node start.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -14,9 +14,14 @@
   "author": "Jack Zhuang",
   "license": "ISC",
   "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.4.4",
     "@steedos/meteor-bundle-runner": "^1.1.6",
-    "@steedos/objectql": "^0.0.19",
-    "steedos-server": "^1.2.9"
+    "@steedos/objectql": "^0.1.1",
+    "@steedos/plugin-stimulsoft-report": "^0.0.3",
+    "steedos-server": "^1.2.14"
   },
   "devDependencies": {},
   "bugs": {
@@ -25,7 +30,7 @@
   "homepage": "https://github.com/steedos/steedos-contracts-app#readme",
   "resolutions": {
     "graphql": "^14.1.1",
-    "@steedos/objectql": "^0.0.19",
+    "@steedos/objectql": "^0.1.1",
     "@steedos/core": "^1.1.20",
     "@steedos/auth": "^1.0.5"
   }
