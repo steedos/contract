@@ -1,0 +1,21 @@
+_id : contracts
+name: 合同统计
+object_name : contracts
+fields:
+  - name
+  - amount
+  - contract_type.name
+  - contract_type.owner.name
+graphql: |
+  query {
+    contracts(filters:"company_id eq 'frFHLyimtGS6C3XPx'") {
+      name
+      amount
+      contract_type {
+        name
+        owner{
+          name
+        }
+      }
+    }
+  }
