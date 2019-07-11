@@ -8,7 +8,7 @@ fields:
   - contract_type.owner.name
 graphql: |
   query {
-    contracts(filters:"company_id eq 'frFHLyimtGS6C3XPx'") {
+    contracts {
       name
       amount
       contract_type {
