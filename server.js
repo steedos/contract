@@ -1,8 +1,8 @@
 var server = require('@steedos/meteor-bundle-runner');
 var objectql = require("@steedos/objectql");
 var path = require('path');
-import express from 'express';
-import { initPlugin } from '@steedos/plugin-stimulsoft-report';
+var express = require('express');
+var stimulsoftPlugin = require('@steedos/plugin-stimulsoft-report');
 let app = express();
 
 server.Fiber(function () {
@@ -28,7 +28,7 @@ server.Fiber(function () {
         }
         server.callStartupHooks();
         try {
-            initPlugin(app);
+            stimulsoftPlugin.init(app);
             WebApp.connectHandlers.use(app);
         } catch (error) {
             console.log(error)

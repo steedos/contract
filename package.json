@@ -20,7 +20,7 @@
     "@babel/register": "^7.4.4",
     "@steedos/meteor-bundle-runner": "^1.1.6",
     "@steedos/objectql": "^0.1.1",
-    "@steedos/plugin-stimulsoft-report": "^0.0.3",
+    "@steedos/plugin-stimulsoft-report": "^0.0.5",
     "steedos-server": "^1.2.14"
   },
   "devDependencies": {},

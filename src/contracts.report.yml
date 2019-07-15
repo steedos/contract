@@ -1,5 +1,6 @@
 _id : contracts
 name: 合同统计
+report_type: 'stimulsoft-report'
 object_name : contracts
 fields:
   - name
