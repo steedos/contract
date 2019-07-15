@@ -3,6 +3,7 @@ var objectql = require("@steedos/objectql");
 var path = require('path');
 var express = require('express');
 var stimulsoftPlugin = require('@steedos/plugin-stimulsoft-report');
+var jsreportPlugin = require('@steedos/plugin-jsreport');
 let app = express();
 
 server.Fiber(function () {
@@ -29,6 +30,7 @@ server.Fiber(function () {
         server.callStartupHooks();
         try {
             stimulsoftPlugin.init(app);
+            jsreportPlugin.init(app);
             WebApp.connectHandlers.use(app);
         } catch (error) {
             console.log(error)
