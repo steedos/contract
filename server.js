@@ -1,6 +1,11 @@
 var server = require('@steedos/meteor-bundle-runner');
-var objectql = require("@steedos/objectql")
+var objectql = require("@steedos/objectql");
 var path = require('path');
+var express = require('express');
+var stimulsoftPlugin = require('@steedos/plugin-stimulsoft-report');
+var jsreportPlugin = require('@steedos/plugin-jsreport');
+let app = express();
+
 server.Fiber(function () {
     server.Profile.run("Server startup", function () {
         server.loadServerBundles();
@@ -23,6 +28,13 @@ server.Fiber(function () {
             console.log(error)
         }
         server.callStartupHooks();
+        try {
+            stimulsoftPlugin.init(app);
+            jsreportPlugin.init(app);
+            WebApp.connectHandlers.use(app);
+        } catch (error) {
+            console.log(error)
+        }
         server.runMain();
     });
 }).run();
