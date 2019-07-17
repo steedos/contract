@@ -11,10 +11,9 @@
 
     <body>
         <h1>
-            {{report.name}}
+            {{report_name}}-{{now}}
         </h1>
         <div>
-            {{#each data}}
             <table class='table striped'>
                 <tr class="heading ">
                     <td>
@@ -30,24 +29,23 @@
                         合同类型.所属者.名称
                     </td>
                 </tr>
-                {{#each this}}
-                <tr class="item">
-                    <td>
-                        {{name}}
-                    </td>
-                    <td>
-                        {{amount}}
-                    </td>
-                    <td>
-                        {{contract_type.name}}
-                    </td>
-                    <td>
-                        {{contract_type.owner.name}}
-                    </td>
-                </tr>
+                {{#each contracts}}
+                    <tr class="item">
+                        <td>
+                            {{name}}
+                        </td>
+                        <td>
+                            {{amount}}
+                        </td>
+                        <td>
+                            {{contract_type.name}}
+                        </td>
+                        <td>
+                            {{contract_type.owner.name}}
+                        </td>
+                    </tr>
                 {{/each}}
             </table>
-            {{/each}}
         </div>
     </body>
 
