@@ -29,8 +29,8 @@ server.Fiber(function () {
         }
         server.callStartupHooks();
         try {
-            stimulsoftPlugin.init(app);
-            jsreportPlugin.init(app);
+            stimulsoftPlugin.init({ app: app });
+            jsreportPlugin.init({ app: app });
             WebApp.connectHandlers.use(app);
         } catch (error) {
             console.log(error)

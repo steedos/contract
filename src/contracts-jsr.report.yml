@@ -2,6 +2,7 @@ _id : contracts-jsr
 name: 合同统计-jsreport插件示例
 report_type: 'jsreport'
 object_name : contracts
+data_source : 'graphql'
 fields:
   - name
   - amount

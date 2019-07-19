@@ -2,6 +2,7 @@ _id : contracts
 name: 合同统计-stimulsoft-report插件示例
 report_type: 'stimulsoft-report'
 object_name : contracts
+data_source : 'graphql'
 fields:
   - name
   - amount
