@@ -19,3 +19,4 @@ public:
       url: "https://qhd-beta.steedos.com/"
 cron:
   instancerecordqueue_interval: 10000
+plugins: ["@steedos/plugin-jsreport"]
