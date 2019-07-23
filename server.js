@@ -4,37 +4,18 @@ var path = require('path');
 var express = require('express');
 var stimulsoftPlugin = require('@steedos/plugin-stimulsoft-report');
 var jsreportPlugin = require('@steedos/plugin-jsreport');
+var steedos = require('@steedos/core')
 let app = express();
 
 server.Fiber(function () {
-    server.Profile.run("Server startup", function () {
-        server.loadServerBundles();
-        try {
-
-            let objects = objectql.loadObjectFiles(path.resolve(__dirname, "./src"))
-            let apps = objectql.loadAppFiles(path.resolve(__dirname, "./src"))
-
-            objects.forEach(function(object){
-                Creator.Objects[object.name] = object
-            })
-
-            apps.forEach(function(app){
-                Creator.Apps[app._id] = app
-            })
-
-            require('./src/contracts.trigger')
-
-        } catch (error) {
-            console.log(error)
-        }
-        server.callStartupHooks();
-        try {
-            stimulsoftPlugin.init({ app: app });
-            jsreportPlugin.init({ app: app });
-            WebApp.connectHandlers.use(app);
-        } catch (error) {
-            console.log(error)
-        }
-        server.runMain();
-    });
+    try {
+        server.Profile.run("Server startup", function () {
+            server.loadServerBundles();
+            steedos.init();
+            server.callStartupHooks();
+            server.runMain();
+        })
+    } catch (error) {
+       console.error(error.stack);
+    }
 }).run();
