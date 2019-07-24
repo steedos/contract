@@ -4,11 +4,7 @@ env:
 datasources:
   default:
     connection:
-      url: mongodb://192.168.0.21/qhd-beta
-    objectFiles:
-      - "./src"
-    appFiles:
-      - "./src/contract.app.yml"
+      url: mongodb://192.168.0.21/steedos_cn
 public:
   cfs:
     store: "local"
