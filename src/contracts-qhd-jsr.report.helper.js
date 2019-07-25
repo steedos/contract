@@ -78,3 +78,32 @@ function deci(num, v) {
     var vv = Math.pow(10, v);
     return Math.round(num * vv) / vv;
 }
+
+function filteredReportName(userFilters) {
+    var reName = "QHD";
+    var signedDateName = "";
+    if (userFilters) {
+        userFilters.forEach(function (item) {
+            if (item.field === "signed_date") {
+                signedDateName = new Date(item.value[0]).toLocaleDateString() + "至" + new Date(item.value[1]).toLocaleDateString();
+            }
+        });
+        if (signedDateName) {
+            reName += signedDateName;
+        }
+    }
+    reName += "合同统计报表";
+    return reName;
+}
+
+function filteredCompanyName(userFilters) {
+    var reName = "";
+    if (userFilters) {
+        userFilters.forEach(function (item) {
+            if (item.field === "company_id") {
+                reName = item.value;
+            }
+        });
+    }
+    return reName;
+}

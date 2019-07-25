@@ -116,7 +116,7 @@ function geTotalTags() {
 
 function beforeRender(req, res, done) {
   var contractTypes = getContractTypes();
-  var contracts = req.data.contracts;
+  var contracts = req.data.data.contracts;
   let result = {};
   /**
    * 生成初始化的result结构：
@@ -201,7 +201,7 @@ function beforeRender(req, res, done) {
     });
     var recordContractType = record.contract_type;
     if (recordContractType) {
-      var resultContractType = result.contractTypes[recordContractType._id];
+      var resultContractType = result.contractTypes[recordContractType];
       if (!resultContractType) {
         resultContractType = result.contractTypes[otherContractTypeId];
       }
@@ -218,6 +218,6 @@ function beforeRender(req, res, done) {
     contractTypes: contractTypes,
     result: result
   });
-  delete req.data.contracts;
+  delete req.data.data;
   done();
 }
