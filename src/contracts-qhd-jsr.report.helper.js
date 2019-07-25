@@ -96,14 +96,6 @@ function filteredReportName(userFilters) {
     return reName;
 }
 
-function filteredCompanyName(userFilters) {
-    var reName = "";
-    if (userFilters) {
-        userFilters.forEach(function (item) {
-            if (item.field === "company_id") {
-                reName = item.value;
-            }
-        });
-    }
-    return reName;
+function filteredCompanyName(userFilterCompany) {
+    return userFilterCompany;
 }
