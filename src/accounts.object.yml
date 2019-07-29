@@ -102,6 +102,15 @@ list_views:
       - owner
       - modified
     filter_scope: mine
+  priority_high:
+    label: 重要客户
+    columns:
+      - name
+      - priority
+      - owner
+      - modified
+    filters: [["priority", "=", "high"]]
+    filter_fields: ["priority", "owner", "modified"]
 permission_set:
   user:
     allowCreate: false
