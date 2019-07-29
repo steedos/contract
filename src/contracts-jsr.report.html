@@ -1,0 +1,52 @@
+<html>
+
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <style>
+            body {
+                background: #eee;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>
+            {{report_name}}-{{now}}
+        </h1>
+        <div>
+            <table class='table striped'>
+                <tr class="heading ">
+                    <td>
+                        合同名称
+                    </td>
+                    <td>
+                        合同金额
+                    </td>
+                    <td>
+                        合同类型.名称
+                    </td>
+                    <td>
+                        合同类型.所属者.名称
+                    </td>
+                </tr>
+                {{#each data.contracts}}
+                    <tr class="item">
+                        <td>
+                            {{name}}
+                        </td>
+                        <td>
+                            {{amount}}
+                        </td>
+                        <td>
+                            {{contract_type.name}}
+                        </td>
+                        <td>
+                            {{contract_type.owner.name}}
+                        </td>
+                    </tr>
+                {{/each}}
+            </table>
+        </div>
+    </body>
+
+</html>

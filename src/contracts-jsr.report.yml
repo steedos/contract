@@ -1,6 +1,6 @@
-_id : contracts
-name: 合同统计-stimulsoft-report插件示例
-report_type: 'stimulsoft-report'
+_id : contracts-jsr
+name: 合同统计-jsreport插件示例
+report_type: 'jsreport'
 object_name : contracts
 data_source : 'graphql'
 fields:
@@ -10,7 +10,7 @@ fields:
   - contract_type.owner.name
 graphql: |
   query {
-    contracts {
+    contracts(filters:"company_id eq 'frFHLyimtGS6C3XPx'") {
       name
       amount
       contract_type {
