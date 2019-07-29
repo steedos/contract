@@ -9,8 +9,17 @@ enable_api: true
 enable_share: true
 enable_chatter: true
 fields:
+  name:
+    label: 名称
+    type: text
+    defaultValue: ''
+    description: ''
+    inlineHelpText: '请输入公司全称'
+    searchable: true
+    required: true
+    sortable: true
   owner:
-    label: 所有人
+    label: 责任人
     omit: false
     readonly: true
     type: lookup
@@ -28,55 +37,48 @@ fields:
         value: low
     name: priority
     filterable: true
-  name:
-    label: 名称
-    type: text
-    defaultValue: ''
-    description: ''
-    inlineHelpText: ''
-    searchable: true
-    required: true
+  tags:
+    label: 类别
+    type: select
     sortable: true
-    name: name
+    multiple: true
+    options: 供应商,客户,合作伙伴,内部单位,自然人
+    filterable: true
+  is_connected_transaction:
+    type: boolean
+    label: 是否关联单位
+    defaultValue: false
   credit_code:
     type: text
     label: 统一社会信用代码
     required: true
-    name: credit_code
   registered_capital:
     type: currency
     label: 注册资金
     scale: 2
     name: registered_capital
-  is_connected_transaction:
-    type: boolean
-    label: 是否关联单位
-    defaultValue: false
-    name: is_connected_transaction
   website:
     type: url
     label: 网址
-    name: website
+    group: 联系方式
   phone:
     type: text
     label: 电话
     defaultValue: ''
-    name: phone
+    group: 联系方式
   fax:
     type: text
     label: 传真
-    name: fax
+    group: 联系方式
+  email:
+    type: email
+    label: 邮件
+    group: 联系方式
   description:
     label: 描述
     type: textarea
     is_wide: true
     name: description
-  company_id:
-    required: true
-    omit: false
-    hidden: false
-    type: lookup
-    reference_to: organizations
 list_views:
   all:
     label: 所有单位
