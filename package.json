@@ -14,12 +14,13 @@
   "author": "Jack Zhuang",
   "license": "ISC",
   "dependencies": {
+    "@steedos/filters": "^0.0.6",
     "@steedos/meteor-bundle-runner": "^1.1.7",
-    "@steedos/objectql": "^0.1.7",
-    "@steedos/plugin-jsreport": "^0.0.6",
+    "@steedos/objectql": "^0.1.8",
+    "@steedos/plugin-jsreport": "^0.0.8",
     "@steedos/plugin-stimulsoft-report": "^0.0.6",
     "cross-fetch": "^3.0.4",
-    "steedos-server": "^1.3.1"
+    "steedos-server": "^1.3.3"
   },
   "devDependencies": {},
   "bugs": {
@@ -28,8 +29,8 @@
   "homepage": "https://github.com/steedos/steedos-contracts-app#readme",
   "resolutions": {
     "graphql": "^14.1.1",
-    "@steedos/objectql": "^0.1.7",
+    "@steedos/objectql": "^0.1.8",
     "@steedos/core": "^1.2.1",
-    "@steedos/auth": "^1.0.4"
+    "@steedos/auth": "^1.0.14"
   }
 }
