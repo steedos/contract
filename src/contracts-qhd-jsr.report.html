@@ -32,7 +32,7 @@
         }
 
         .text-left {
-            text-align: left!important;
+            text-align: left !important;
         }
 
         .text-center {
@@ -60,13 +60,13 @@
             <thead>
                 <tr class="heading">
                     <th colspan="13">
-                        {{filteredReportName user_filters}}
+                        {{filteredReportName user_filters userFilterCompany}}
                     </th>
                 </tr>
                 <tr class="headtop">
                     <th colspan="13" class="text-left">
                         <span class="col-1">
-                            填报单位：{{filteredCompanyName userFilterCompany}}
+                            填报单位：{{filteredCompanyName userFilterCompany true}}
                         </span>
                         <span class="col-2">
                             填报单位负责人：

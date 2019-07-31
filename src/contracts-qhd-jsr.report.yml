@@ -1,8 +1,8 @@
 _id : contracts-qhd-jsr
 name: QHD年度合同统计
-report_type: 'jsreport'
+report_type: jsreport
 object_name : contracts
-data_source : 'odata'
+data_source : odata
 fields : 
   - amount
   - is_important
