@@ -140,7 +140,6 @@ async function getUserFilterCompany(userFilters, userSession, rootUrl) {
       // 去除url中最后一个斜杆符号
       rootUrl = rootUrl.substr(0, rootUrl.length - 1);
     }
-    rootUrl = "http://127.0.0.1:3600";
     let url = `${rootUrl}/graphql/default/${userSession.spaceId}`;
     try {
       let authToken = userSession ? userSession.authToken : "";
