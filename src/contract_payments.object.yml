@@ -59,15 +59,6 @@ fields:
     type: date
     sortable: true
     name: pay_date
-  billing_date:
-    label: 发票日期
-    type: date
-    sortable: true
-    name: billing_date
-  billing_no:
-    label: 发票号
-    type: text
-    name: billing_no
   description:
     label: 备注
     type: textarea
