@@ -1,5 +1,5 @@
-name: contract_receipts
-label: 收款记录
+name: contract_receiptplan
+label: 收款计划
 icon: orders
 fields:
   name:
@@ -9,24 +9,47 @@ fields:
     searchable: true
     is_wide: true
     name: name
-  close_date:
-    label: 收款日期
-    type: date
+  description:
+    label: 收款说明
+    type: textarea
+    is_wide: true
+    name: description
+  account:
+    label: 付款方
+    type: master_detail
+    reference_to: accounts
     sortable: true
-    name: close_date
+    name: account
+    filterable: true
   amount:
     label: 收款金额
     type: currency
     required: true
     sortable: true
     name: amount
-  account:
-    label: 付款单位
-    type: master_detail
-    reference_to: accounts
+  currencytype:
+    type: select
+    label: 收款币种
+    defaultValue: rmb
+    options:
+      - label: 人民币
+        value: rmb
+      - label: 港币
+        value: hkd
+      - label: 美元
+        value: usd
+      - label: 欧元
+        value: eur
+      - label: 日元
+        value: jpy
+      - label: 英镑
+        value: gbp
+    name: currencytype
+  due_date:
+    label: 计划收款日期
+    type: date
     sortable: true
-    name: account
-    filterable: true
+    name: due_date
   contract:
     label: 合同
     type: master_detail
@@ -35,11 +58,11 @@ fields:
     sortable: true
     name: contract
     filterable: true
-  description:
+  note:
     label: 备注
     type: textarea
     is_wide: true
-    name: description
+    name: note
   company_id:
     required: true
     omit: false
@@ -51,18 +74,20 @@ list_views:
     label: 所有
     columns:
       - name
-      - close_date
-      - amount
       - account
+      - amount
+      - currencytype
+      - due_date
       - contract
     filter_scope: space
   recent:
     label: 最近查看
     columns:
       - name
-      - close_date
-      - amount
       - account
+      - amount
+      - currencytype
+      - due_date
       - contract
     filter_scope: space
 permission_set:
