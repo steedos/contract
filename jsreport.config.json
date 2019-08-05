@@ -1,3 +1,9 @@
 {
-    "allowLocalFilesAccess": true
+    "allowLocalFilesAccess": true,
+    "chrome": {
+        "launchOptions": {
+          "args": ["--no-sandbox"]
+        },
+        "timeout": 40000
+      }    
 }
