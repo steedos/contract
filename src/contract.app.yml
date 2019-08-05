@@ -1,16 +1,19 @@
 _id: contracts
 name: 合同
-description: 合同、付款计划、付款记录、收款记录、单位、联系人、任务、日历
+description: 合同、付款、收款、发票、单位、联系人、任务、日历
 icon_slds: metrics
 is_creator: true
 objects: 
   - contracts
-  - accounts
-  - contract_paymentplan
   - contract_receiptplan
-  - contract_payments
+  - contract_paymentplan
+  - contract_receivables
   - contract_receipts
+  - contract_payables
+  - contract_payments
+  - contract_invoice
   - contract_acceptances
+  - accounts
   - contacts
   - contract_types
   - tasks

@@ -1,5 +1,5 @@
-name: contract_paymentplan
-label: 付款计划
+name: contract_receivables
+label: 应收记录
 icon: orders
 fields:
   name:
@@ -9,13 +9,15 @@ fields:
     searchable: true
     is_wide: true
     name: name
-  description:
-    label: 付款说明
-    type: textarea
-    is_wide: true
-    name: description
+  account:
+    label: 客户
+    type: master_detail
+    reference_to: accounts
+    sortable: true
+    name: account
+    filterable: true
   amount:
-    label: 付款金额
+    label: 原币金额
     type: currency
     required: true
     sortable: true
@@ -37,12 +39,22 @@ fields:
         value: jpy
       - label: 英镑
         value: gbp
-    name: currencytype  
-  due_date:
-    label: 计划付款日期
-    type: date
-    sortable: true
-    name: due_date
+    name: currencytype 
+  description:
+    label: 收款说明
+    type: textarea
+    is_wide: true
+    name: description
+  billing_state:
+    type: select
+    label: 发票状态
+    defaultValue: notinvoiced
+    options:
+      - label: 发票已开
+        value: invoiced
+      - label: 发票待开
+        value: notinvoiced
+    name: billing_state
   contract:
     label: 合同
     type: master_detail
@@ -51,11 +63,6 @@ fields:
     sortable: true
     name: contract
     filterable: true
-  note:
-    label: 备注
-    type: textarea
-    is_wide: true
-    name: note
   company_id:
     required: true
     omit: false
@@ -67,19 +74,21 @@ list_views:
     label: 所有
     columns:
       - name
+      - account
       - amount
       - currencytype
+      - billing_state
       - contract
-      - due_date
     filter_scope: space
   recent:
     label: 最近查看
     columns:
       - name
+      - account
       - amount
       - currencytype
+      - billing_state
       - contract
-      - due_date
     filter_scope: space
 permission_set:
   user:
