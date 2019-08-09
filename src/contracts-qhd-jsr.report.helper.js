@@ -80,23 +80,29 @@ function deci(num, v) {
 }
 
 function filteredReportName(userFilters, userFilterCompany) {
+    let moment = require("moment");
     let reName = "QHD";
     let companyName = filteredCompanyName(userFilterCompany);
     reName += companyName;
     let filteredStr = "";
     if (userFilters) {
+        let getBetweenTimeBuiltinValueItem = require("@steedos/filters").getBetweenTimeBuiltinValueItem;
         userFilters.forEach(function (item) {
-            if (item.field === "signed_date") {
+            if (item.field === "signed_date" && item.value && item.value.length) {
+                if (typeof item.value === "string") {
+                    item.value = getBetweenTimeBuiltinValueItem(item.value).values;
+                }
                 let start = item.value[0];
                 let end = item.value[1];
+                // moment.utc(end).format('YYYY-MM-DD');
                 if (start && end) {
-                    filteredStr = " " + new Date(start).toLocaleDateString() + "至" + new Date(end).toLocaleDateString() + " ";
+                    filteredStr = " " + moment.utc(start).format('YYYY-MM-DD') + "至" + moment.utc(end).format('YYYY-MM-DD') + " ";
                 }
                 else if (start) {
-                    filteredStr = " " + new Date(start).toLocaleDateString() + "至今 ";
+                    filteredStr = " " + moment.utc(start).format('YYYY-MM-DD') + "至今 ";
                 }
                 else if (end) {
-                    filteredStr = " " + new Date(end).toLocaleDateString() + "之前 ";
+                    filteredStr = " " + moment.utc(end).format('YYYY-MM-DD') + "之前 ";
                 }
                 else {
                     filteredStr = " 全部 ";
