@@ -118,6 +118,7 @@ fields:
     required: true
     omit: false
     hidden: false
+    sortable: true
     type: lookup
     reference_to: organizations
   chengbankeshi:
@@ -288,86 +289,194 @@ list_views:
   all:
     label: 所有合同
     columns:
-      - 'no'
-      - name
-      - project
-      - account
-      - company_id
-      - contract_type
-      - is_bidding
-      - start_date
-      - end_date
-      - signed_date
-      - amount
-      - advance_amount
-      - outstanding_amount
-      - contract_state
-      - subject
-      - a_signed
-      - b_signed
-      - description
+      - field: 'no'
+        width: 100
+        wrap: true
+      - field: name
+        width: 200
+        wrap: true
+      - field: project
+        width: 100
+        wrap: true
+      - field: othercompany
+        width: 260
+        wrap: true
+      - field: company_id
+        width: 140
+        wrap: true
+      - field: contract_type
+        width: 100
+        wrap: true
+      - field: is_bidding
+        width: 100
+        wrap: true
+      - field: start_date
+        width: 100
+        wrap: true
+      - field: end_date
+        width: 100
+        wrap: true
+      - field: signed_date
+        width: 100
+        wrap: true
+      - field: amount
+        width: 100
+        wrap: true
+      - field: advance_amount
+        width: 100
+        wrap: true
+      - field: outstanding_amount
+        width: 100
+        wrap: true
+      - field: contract_state
+        width: 100
+        wrap: true
+      - field: subject
+        width: 100
+        wrap: true
+      - field: a_signed
+        width: 100
+        wrap: true
+      - field: b_signed
+        width: 100
+        wrap: true
+      - field: description
+        width: 100
+        wrap: true
     filter_scope: space
     filter_fields:
       - company_id
       - contract_type
       - signed_date
-      - account
+      - othercompany
       - contract_state
   recent:
     label: 最近查看
     filter_scope: space
     columns:
-      - 'no'
-      - name
-      - project
-      - account
-      - company_id
-      - contract_type
-      - is_bidding
-      - start_date
-      - end_date
-      - signed_date
-      - amount
-      - advance_amount
-      - outstanding_amount
-      - contract_state
-      - subject
-      - a_signed
-      - b_signed
-      - description
+      - field: 'no'
+        width: 100
+        wrap: true
+      - field: name
+        width: 200
+        wrap: true
+      - field: project
+        width: 100
+        wrap: true
+      - field: othercompany
+        width: 260
+        wrap: true
+      - field: company_id
+        width: 140
+        wrap: true
+      - field: contract_type
+        width: 100
+        wrap: true
+      - field: is_bidding
+        width: 100
+        wrap: true
+      - field: start_date
+        width: 100
+        wrap: true
+      - field: end_date
+        width: 100
+        wrap: true
+      - field: signed_date
+        width: 100
+        wrap: true
+      - field: amount
+        width: 100
+        wrap: true
+      - field: advance_amount
+        width: 100
+        wrap: true
+      - field: outstanding_amount
+        width: 100
+        wrap: true
+      - field: contract_state
+        width: 100
+        wrap: true
+      - field: subject
+        width: 100
+        wrap: true
+      - field: a_signed
+        width: 100
+        wrap: true
+      - field: b_signed
+        width: 100
+        wrap: true
+      - field: description
+        width: 100
+        wrap: true
     filter_fields:
       - company_id
       - contract_type
       - signed_date
-      - account
+      - othercompany
       - contract_state
   mine:
     label: 我的合同
     filter_scope: mine
     columns:
-      - 'no'
-      - name
-      - project
-      - account
-      - company_id
-      - contract_type
-      - is_bidding
-      - start_date
-      - end_date
-      - signed_date
-      - amount
-      - advance_amount
-      - outstanding_amount
-      - contract_state
-      - subject
-      - a_signed
-      - b_signed
-      - description
+      - field: 'no'
+        width: 100
+        wrap: true
+      - field: name
+        width: 200
+        wrap: true
+      - field: project
+        width: 100
+        wrap: true
+      - field: othercompany
+        width: 260
+        wrap: true
+      - field: company_id
+        width: 140
+        wrap: true
+      - field: contract_type
+        width: 100
+        wrap: true
+      - field: is_bidding
+        width: 100
+        wrap: true
+      - field: start_date
+        width: 100
+        wrap: true
+      - field: end_date
+        width: 100
+        wrap: true
+      - field: signed_date
+        width: 100
+        wrap: true
+      - field: amount
+        width: 100
+        wrap: true
+      - field: advance_amount
+        width: 100
+        wrap: true
+      - field: outstanding_amount
+        width: 100
+        wrap: true
+      - field: contract_state
+        width: 100
+        wrap: true
+      - field: subject
+        width: 100
+        wrap: true
+      - field: a_signed
+        width: 100
+        wrap: true
+      - field: b_signed
+        width: 100
+        wrap: true
+      - field: description
+        width: 100
+        wrap: true
     filter_fields:
       - company_id
       - contract_type
       - signed_date
-      - account
+      - othercompany
       - contract_state
 permission_set:
   user:
