@@ -19,6 +19,7 @@
     "@steedos/meteor-bundle-runner": "^1.1.7",
     "@steedos/filters": "^0.0.12",
     "@steedos/objectql": "^0.2.2",
+    "@steedos/standard-objects": "0.2.5",
     "@steedos/plugin-jsreport": "^0.1.1",
     "@steedos/plugin-stimulsoft-report": "^0.0.6",
     "cross-fetch": "^3.0.4",
