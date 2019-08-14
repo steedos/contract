@@ -27,7 +27,7 @@
     "steedos-server": "1.4.0-beta"
   },
   "devDependencies": {
-      "nodemon": "^1.19.1"
+    "nodemon": "^1.19.1"
   },
   "bugs": {
     "url": "https://github.com/steedos/steedos-contracts-app/issues"
