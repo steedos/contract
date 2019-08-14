@@ -32,11 +32,5 @@
   "bugs": {
     "url": "https://github.com/steedos/steedos-contracts-app/issues"
   },
-  "homepage": "https://github.com/steedos/steedos-contracts-app#readme",
-  "resolutions": {
-    "graphql": "^14.1.1",
-    "@steedos/objectql": "^0.2.2",
-    "@steedos/core": "^1.2.1",
-    "@steedos/auth": "^1.0.14"
-  }
+  "homepage": "https://github.com/steedos/steedos-contracts-app#readme"
 }
