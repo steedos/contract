@@ -24,7 +24,7 @@
     "@steedos/plugin-jsreport": "^0.1.2",
     "@steedos/plugin-stimulsoft-report": "^0.0.7",
     "cross-fetch": "^3.0.4",
-    "steedos-server": "1.4.0-beta"
+    "steedos-server": "1.4.0"
   },
   "devDependencies": {
     "nodemon": "^1.19.1"
