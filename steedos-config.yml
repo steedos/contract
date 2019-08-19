@@ -1,6 +1,6 @@
 env:
   PORT: 5000
-  ROOT_URL: http://127.0.0.1:5000/
+  ROOT_URL: https://qhd-beta.steedos.com/contract/
 datasources:
   default:
     connection:
@@ -9,4 +9,10 @@ public:
   cfs:
     store: "local"
     local:
-      folder: "/srv/steedos"
+      folder: "/storage"
+  webservices:
+    workflow:
+      url: "https://qhd-beta.steedos.com/"
+cron:
+  instancerecordqueue_interval: 10000
+plugins: ["@steedos/plugin-jsreport"]
