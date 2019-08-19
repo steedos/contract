@@ -1,8 +1,9 @@
 {
-  "name": "@steedos-app/steedos-contracts-app",
-  "version": "1.0.0",
+  "name": "@steedos/app-contracts",
+  "version": "0.0.1",
   "description": "contract-management-system",
-  "main": "steedos-app/index.js",
+  "main": "index.js",
+  "private": false,
   "scripts": {
     "start": "node server",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,23 +13,22 @@
     "url": "git+https://github.com/steedos/steedos-contracts-app.git"
   },
   "author": "Jack Zhuang",
-  "license": "ISC",
   "dependencies": {
+    "@steedos/auth": "^1.1.5",
     "@steedos/meteor-bundle-runner": "^1.1.7",
-    "@steedos/objectql": "^0.1.8",
-    "@steedos/plugin-jsreport": "^0.0.8",
+    "@steedos/objectql": "^1.0.5",
+    "@steedos/standard-objects": "^1.0.2",
+    "@steedos/plugin-jsreport": "^0.1.2",
     "@steedos/plugin-stimulsoft-report": "^0.0.6",
-    "steedos-server": "^1.3.3"
+    "steedos-server": "^1.4.0"
   },
   "devDependencies": {},
   "bugs": {
     "url": "https://github.com/steedos/steedos-contracts-app/issues"
   },
   "homepage": "https://github.com/steedos/steedos-contracts-app#readme",
-  "resolutions": {
-    "graphql": "^14.1.1",
-    "@steedos/objectql": "^0.1.8",
-    "@steedos/core": "^1.2.1",
-    "@steedos/auth": "^1.0.14"
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
   }
 }
