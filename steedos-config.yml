@@ -13,5 +13,4 @@ public:
 cron:
   instancerecordqueue_interval: 10000
 plugins: 
-  - "@steedos/plugin-contracts-enterprise"
   - "@steedos/plugin-jsreport"
