@@ -1,34 +1,34 @@
-name: res_department
-label: 部门
+name: currency
+label: 币种
 icon: account
 enable_api: true
 fields:
   name:
-    label: 部门名称
+    label: 币种名称
     type: text
   code: 
-    label: 部门代码
+    label: 币种代码
     type: text
-  parent:
-    label: 上级部门
-    type: lookup
-    reference_to: res_department
-  company:
-    label: 公司
-    type: lookup
-    reference_to: res_company
-  description:
-    label: 备注
-    type: textarea
-    is_wide: true
+  rate:
+    label: 当前汇率
+    type: number
+    scale: 5
+  decimal_places:
+    label: 小数位数
+    type: number
+  active:
+    label: 有效
+    type: boolean
+    defaultValue: true
 list_views:
   all:
     label: 所有
     columns:
       - name
       - code
-      - parent
-      - modified
+      - conversion_rate
+      - decimal_places
+      - is_active
 permission_set:
   user:
     allowCreate: false

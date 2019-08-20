@@ -1,20 +1,13 @@
-name: res_company
-label: 公司
+name: bank_type
+label: 银行类别
 icon: account
 enable_api: true
 fields:
   name:
-    label: 公司名称
+    label: 类别名称
     type: text
   code: 
-    label: 公司代码
-    type: text
-  parent:
-    label: 上级公司
-    type: lookup
-    reference_to: res_company
-  currency_type:
-    label: 本位币
+    label: 类别代码
     type: text
   description:
     label: 备注
@@ -26,7 +19,6 @@ list_views:
     columns:
       - name
       - code
-      - parent
       - modified
 permission_set:
   user:

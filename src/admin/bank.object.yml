@@ -1,4 +1,4 @@
-name: res_bank
+name: bank
 label: 银行
 icon: account
 enable_api: true

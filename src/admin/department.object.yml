@@ -1,14 +1,22 @@
-name: res_bank_type
-label: 银行类别
+name: department
+label: 部门
 icon: account
 enable_api: true
 fields:
   name:
-    label: 类别名称
+    label: 部门名称
     type: text
   code: 
-    label: 类别代码
+    label: 部门代码
     type: text
+  parent:
+    label: 上级部门
+    type: lookup
+    reference_to: department
+  company:
+    label: 公司
+    type: lookup
+    reference_to: company
   description:
     label: 备注
     type: textarea
@@ -19,6 +27,7 @@ list_views:
     columns:
       - name
       - code
+      - parent
       - modified
 permission_set:
   user:

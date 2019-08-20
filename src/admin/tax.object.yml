@@ -1,4 +1,4 @@
-name: res_tax
+name: tax
 label: 税码
 icon: account
 enable_api: true
