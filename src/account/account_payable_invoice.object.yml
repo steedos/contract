@@ -2,6 +2,7 @@ name: account_payable_invoice
 label: 付款发票
 icon: account
 enable_api: true
+enable_files: true
 fields:
   name:
     label: 标题
@@ -16,7 +17,8 @@ fields:
     required: true
   currency:
     label: 币种
-    type: text
+    type: lookup
+    reference_to: currency
     required: true
   payable_id:
     label: 应付记录
