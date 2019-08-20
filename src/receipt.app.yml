@@ -7,6 +7,9 @@ objects:
   - accounts
   - contracts
   - contract_receipts
+  - account_receivable
+  - account_receivable_invoice
+  - account_receipt
   - tasks
   - events
   - reports
