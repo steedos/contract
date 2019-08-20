@@ -10,3 +10,6 @@ objects:
   - account_payable
   - account_payable_invoice
   - account_payment
+  - tasks
+  - events
+  - reports
