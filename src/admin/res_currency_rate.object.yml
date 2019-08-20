@@ -1,14 +1,19 @@
-name: currency_exchange
+name: res_currency_rate
 label: 汇率
 icon: account
 enable_api: true
 fields:
   name:
+    label: 日期
+    type: date
+  from_currency:
     label: 源币种
-    type: text
+    type: lookup
+    reference_to: res_currency
   to_currency: 
     label: 目的币种
-    type: text
+    type: lookup
+    reference_to: res_currency
   conversion_rate:
     label: 兑换率
     type: number
@@ -18,6 +23,7 @@ list_views:
     label: 所有
     columns:
       - name
+      - from_currency
       - to_currency
       - conversion_rate
 permission_set:

@@ -1,33 +1,34 @@
-name: hr_company
-label: 业务单元
+name: res_currency
+label: 币种
 icon: account
 enable_api: true
 fields:
   name:
-    label: 公司名称
+    label: 币种名称
     type: text
   code: 
-    label: 公司代码
+    label: 币种代码
     type: text
-  parent:
-    label: 上级公司
-    type: lookup
-    reference_to: hr_company
-  currency_type:
-    label: 本位币
-    type: text
-  description:
-    label: 备注
-    type: textarea
-    is_wide: true
+  rate:
+    label: 当前汇率
+    type: number
+    scale: 5
+  decimal_places:
+    label: 小数位数
+    type: number
+  active:
+    label: 有效
+    type: boolean
+    defaultValue: true
 list_views:
   all:
     label: 所有
     columns:
       - name
       - code
-      - parent
-      - modified
+      - conversion_rate
+      - decimal_places
+      - is_active
 permission_set:
   user:
     allowCreate: false

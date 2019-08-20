@@ -1,33 +1,20 @@
-name: hr_department
-label: 经办部门
+name: res_tax
+label: 税码
 icon: account
 enable_api: true
 fields:
   name:
-    label: 部门名称
+    label: 名称
     type: text
   code: 
-    label: 部门代码
+    label: 税码
     type: text
-  parent:
-    label: 上级部门
-    type: lookup
-    reference_to: hr_department
-  company:
-    label: 公司
-    type: lookup
-    reference_to: hr_company
-  description:
-    label: 备注
-    type: textarea
-    is_wide: true
 list_views:
   all:
     label: 所有
     columns:
       - name
       - code
-      - parent
       - modified
 permission_set:
   user:

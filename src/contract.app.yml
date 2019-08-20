@@ -20,23 +20,31 @@ admin_menus:
     name: 合同分类
     object_name: contract_types
     parent: contracts
-  - _id: hr_company
-    name: 业务单元
-    object_name: hr_company
+  - _id: res_company
+    name: 公司
+    object_name: res_company
     parent: contracts
-  - _id: hr_department
-    name: 经办部门
-    object_name: hr_department
+  - _id: res_department
+    name: 部门
+    object_name: res_department
     parent: contracts
-  - _id: currency_type
+  - _id: res_currency
     name: 币种
-    object_name: currency_type
+    object_name: res_currency
     parent: contracts
-  - _id: currency_exchange
+  - _id: res_currency_rate
     name: 汇率
-    object_name: currency_exchange
+    object_name: res_currency_rate
     parent: contracts
-  - _id: tax_type
+  - _id: res_bank
+    name: 银行
+    object_name: res_bank
+    parent: contracts
+  - _id: res_bank_type
+    name: 银行类别
+    object_name: res_bank_type
+    parent: contracts
+  - _id: res_tax
     name: 税码
-    object_name: tax_type
+    object_name: res_tax
     parent: contracts
