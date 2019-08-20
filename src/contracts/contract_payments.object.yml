@@ -1,5 +1,5 @@
-name: contract_receipts
-label: 收款
+name: contract_payments
+label: 付款计划
 icon: orders
 fields:
   name:
@@ -16,7 +16,7 @@ fields:
     sortable: true
     name: amount
   due_date:
-    label: 计划收款日期
+    label: 计划付款日期
     type: date
     sortable: true
     name: due_date
@@ -36,16 +36,16 @@ fields:
     name: account
     filterable: true
   is_closed:
-    label: 已收款
+    label: 已付款
     type: boolean
     name: is_closed
   close_date:
-    label: 实际收款日期
+    label: 实际付款日期
     type: date
     sortable: true
     name: close_date
   billing_date:
-    label: 开票日期
+    label: 发票日期
     type: date
     sortable: true
     name: billing_date
@@ -71,8 +71,8 @@ list_views:
       - name
       - amount
       - contract
-      - close_date
       - due_date
+      - is_closed
     filter_scope: space
   recent:
     label: 最近查看
@@ -80,8 +80,8 @@ list_views:
       - name
       - amount
       - contract
-      - close_date
       - due_date
+      - is_closed
     filter_scope: space
 permission_set:
   user:
