@@ -1,5 +1,5 @@
 name: accounts
-label: 单位
+label: 签约对象
 icon: account
 enable_files: true
 enable_search: true
