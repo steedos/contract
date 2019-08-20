@@ -4,12 +4,12 @@ description: 合同收款相关业务流程
 icon_slds: metrics
 is_creator: true
 objects: 
-  - accounts
   - contracts
   - contract_receipts
   - account_receivable
   - account_receivable_invoice
   - account_receipt
+  - accounts
   - tasks
   - events
   - reports

@@ -30,6 +30,10 @@ admin_menus:
     name: 经办部门
     object_name: department
     parent: contracts
+  - _id: account_project
+    name: 核算项目
+    object_name: account_project
+    parent: contracts
   - _id: currency
     name: 币种
     object_name: currency
@@ -38,15 +42,15 @@ admin_menus:
     name: 汇率
     object_name: currency_rate
     parent: contracts
-  - _id: bank
+  - _id: account_bank
     name: 银行
-    object_name: bank
+    object_name: account_bank
     parent: contracts
-  - _id: bank_type
+  - _id: account_bank_type
     name: 银行类别
-    object_name: bank_type
+    object_name: account_bank_type
     parent: contracts
-  - _id: tax
+  - _id: account_tax
     name: 税码
-    object_name: tax
+    object_name: account_tax
     parent: contracts

@@ -1,18 +1,14 @@
-name: bank_type
-label: 银行类别
+name: account_tax
+label: 税码
 icon: account
 enable_api: true
 fields:
   name:
-    label: 类别名称
+    label: 名称
     type: text
   code: 
-    label: 类别代码
+    label: 税码
     type: text
-  description:
-    label: 备注
-    type: textarea
-    is_wide: true
 list_views:
   all:
     label: 所有
