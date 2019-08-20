@@ -1,33 +1,20 @@
-name: department
-label: 经办部门
+name: account_payment_method
+label: 付款方式
 icon: account
 enable_api: true
 fields:
   name:
-    label: 部门名称
+    label: 付款方式名称
     type: text
   code: 
-    label: 部门代码
+    label: 付款方式代码
     type: text
-  parent:
-    label: 上级部门
-    type: lookup
-    reference_to: department
-  company_id:
-    label: 公司
-    type: lookup
-    reference_to: company
-  description:
-    label: 备注
-    type: textarea
-    is_wide: true
 list_views:
   all:
     label: 所有
     columns:
       - name
       - code
-      - parent
       - modified
 permission_set:
   user:

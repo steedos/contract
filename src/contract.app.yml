@@ -7,6 +7,8 @@ objects:
   - contracts
   - accounts
   - contacts
+  - contract_payments
+  - contract_receipts
   - tasks
   - events
   - reports

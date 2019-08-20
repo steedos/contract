@@ -1,34 +1,37 @@
-name: department
-label: 经办部门
+name: account_payment
+label: 付款记录
 icon: account
 enable_api: true
 fields:
   name:
-    label: 部门名称
+    label: 标题
     type: text
   code: 
-    label: 部门代码
+    label: 单据号
     type: text
-  parent:
-    label: 上级部门
-    type: lookup
-    reference_to: department
+  amount:
+    label: 金额
+    type: number
+  currency:
+    label: 币种
+    type: text
+  contract_id:
+    label: 合同
+    type: master_detail
+    reference_to: contracts
   company_id:
-    label: 公司
-    type: lookup
-    reference_to: company
-  description:
-    label: 备注
-    type: textarea
-    is_wide: true
+    omit: false
+    hidden: false
+    label: 我方单位
 list_views:
   all:
     label: 所有
     columns:
-      - name
       - code
-      - parent
-      - modified
+      - name
+      - amount
+      - currency
+      - company_id
 permission_set:
   user:
     allowCreate: false
