@@ -42,13 +42,13 @@ admin_menus:
     name: 汇率
     object_name: currency_rate
     parent: contracts
-  - _id: account_bank
+  - _id: bank
     name: 银行
-    object_name: account_bank
+    object_name: bank
     parent: contracts
-  - _id: account_bank_type
+  - _id: bank_type
     name: 银行类别
-    object_name: account_bank_type
+    object_name: bank_type
     parent: contracts
   - _id: account_tax
     name: 税码
