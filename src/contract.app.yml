@@ -32,3 +32,11 @@ admin_menus:
     name: 币种
     object_name: currency_type
     parent: contracts
+  - _id: currency_exchange
+    name: 汇率
+    object_name: currency_exchange
+    parent: contracts
+  - _id: tax_type
+    name: 税码
+    object_name: tax_type
+    parent: contracts

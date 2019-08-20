@@ -12,6 +12,7 @@ fields:
   conversion_rate:
     label: 兑换率
     type: number
+    scale: 5
   decimal_places:
     label: 小数位数
     type: number

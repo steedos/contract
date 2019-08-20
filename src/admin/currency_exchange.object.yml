@@ -1,33 +1,25 @@
-name: hr_company
-label: 业务单元
+name: currency_exchange
+label: 汇率
 icon: account
 enable_api: true
 fields:
   name:
-    label: 公司名称
+    label: 源币种
     type: text
-  code: 
-    label: 公司代码
+  to_currency: 
+    label: 目的币种
     type: text
-  parent:
-    label: 上级公司
-    type: lookup
-    reference_to: hr_company
-  currency_type:
-    label: 本位币
-    type: text
-  description:
-    label: 备注
-    type: textarea
-    is_wide: true
+  conversion_rate:
+    label: 兑换率
+    type: number
+    scale: 5
 list_views:
   all:
     label: 所有
     columns:
       - name
-      - code
-      - parent
-      - modified
+      - to_currency
+      - conversion_rate
 permission_set:
   user:
     allowCreate: false
