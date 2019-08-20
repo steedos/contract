@@ -27,8 +27,8 @@ list_views:
   all:
     label: 所有
     columns:
-      - code
       - name
+      - code
       - amount
       - currency
       - company_id

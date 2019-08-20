@@ -23,11 +23,11 @@ admin_menus:
     object_name: contract_types
     parent: contracts
   - _id: company
-    name: 公司
+    name: 我方单位
     object_name: company
     parent: contracts
   - _id: department
-    name: 部门
+    name: 经办部门
     object_name: department
     parent: contracts
   - _id: currency
