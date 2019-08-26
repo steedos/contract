@@ -1,6 +1,6 @@
 {
   "name": "@steedos/app-contracts",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "contract-management-system",
   "main": "index.js",
   "private": false,
@@ -23,10 +23,10 @@
   },
   "devDependencies": {
     "@steedos/meteor-bundle-runner": "^1.1.7",
-    "steedos-server": "1.4.1-beta.0",
-    "nodemon": "^1.19.1",
     "@steedos/plugin-jsreport": "^0.1.2",
-    "@steedos/plugin-stimulsoft-report": "^0.0.6"
+    "@steedos/plugin-stimulsoft-report": "^0.0.6",
+    "nodemon": "^1.19.1",
+    "steedos-server": "^1.4.1"
   },
   "bugs": {
     "url": "https://github.com/steedos/steedos-contracts-app/issues"

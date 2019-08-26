@@ -12,6 +12,12 @@ objects:
   - tasks
   - events
   - reports
+mobile_objects: 
+  - contracts
+  - accounts
+  - contacts
+  - tasks
+  - events
 admin_menus:
   - _id: contracts
     name: 合同

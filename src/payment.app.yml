@@ -13,3 +13,8 @@ objects:
   - tasks
   - events
   - reports
+mobile_objects: 
+  - contract_payments
+  - account_payable
+  - account_payable_invoice
+  - account_payment
