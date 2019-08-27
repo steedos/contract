@@ -145,3 +145,8 @@ yarn
 ```
 yarn start
 ```
+
+
+# 了解更多
+
+[关于 Steedos 低代码开发平台](http://developer.steedos.com/)
