@@ -31,17 +31,12 @@ fields:
     type: master_detail
     reference_to: contracts
     required: true
-  uploader:
+  owner:
     label: 上传人
     omit: false
-    sortable: true
+    readonly: true
     type: lookup
     reference_to: users
-  upload_date:
-    label: 上传时间
-    type: date
-    sortable: true
-    name: upload_date
   company_id:
     omit: false
     hidden: false
@@ -53,8 +48,8 @@ list_views:
       - name
       - amount
       - invoice_number
-      - uploader
-      - upload_date
+      - owner
+      - created
 permission_set:
   user:
     allowCreate: false
