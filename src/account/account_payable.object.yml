@@ -83,13 +83,13 @@ fields:
     label: 历史收票总金额
     type: number
   Billno:
-    label: 应收单单据号
+    label: 应付单单据号
     type: text
   pk_status:
     label: 应付单据状态
     type: text
   Bill_id:
-    label: 应收单ID
+    label: 应付单ID
     omit: true
     hidden: true
     type: text
