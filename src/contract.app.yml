@@ -9,6 +9,8 @@ objects:
   - contacts
   - contract_payments
   - contract_receipts
+  - account_payable
+  - account_receivable
   - tasks
   - events
   - reports

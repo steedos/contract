@@ -9,14 +9,24 @@ fields:
     searchable: true
     is_wide: true
     name: name
+  amount_description:
+    label: 付款说明
+    type: textarea
+    is_wide: true
+    name: description
   amount:
-    label: 金额
+    label: 付款金额
     type: currency
     required: true
     sortable: true
     name: amount
+  currency:
+    label: 付款币种
+    type: lookup
+    reference_to: currency
+    required: true
   due_date:
-    label: 计划付款日期
+    label: 计划付款时间
     type: date
     sortable: true
     name: due_date
@@ -28,31 +38,6 @@ fields:
     sortable: true
     name: contract
     filterable: true
-  account:
-    label: 单位
-    type: master_detail
-    reference_to: accounts
-    sortable: true
-    name: account
-    filterable: true
-  is_closed:
-    label: 已付款
-    type: boolean
-    name: is_closed
-  close_date:
-    label: 实际付款日期
-    type: date
-    sortable: true
-    name: close_date
-  billing_date:
-    label: 发票日期
-    type: date
-    sortable: true
-    name: billing_date
-  billing_no:
-    label: 发票号
-    type: text
-    name: billing_no
   description:
     label: 备注
     type: textarea
@@ -70,18 +55,18 @@ list_views:
     columns:
       - name
       - amount
+      - currency
       - contract
       - due_date
-      - is_closed
     filter_scope: space
   recent:
     label: 最近查看
     columns:
       - name
       - amount
+      - currency
       - contract
       - due_date
-      - is_closed
     filter_scope: space
 permission_set:
   user:

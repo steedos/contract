@@ -7,7 +7,6 @@ objects:
   - contracts
   - contract_receipts
   - account_receivable
-  - account_receivable_invoice
   - account_receipt
   - accounts
   - tasks
@@ -16,5 +15,4 @@ objects:
 mobile_objects: 
   - contract_receipts
   - account_receivable
-  - account_receivable_invoice
   - account_receipt

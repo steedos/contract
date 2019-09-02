@@ -7,7 +7,7 @@ objects:
   - contracts
   - contract_payments
   - account_payable
-  - account_payable_invoice
+  - account_receivable_invoice
   - account_payment
   - accounts
   - tasks
@@ -16,5 +16,5 @@ objects:
 mobile_objects: 
   - contract_payments
   - account_payable
-  - account_payable_invoice
+  - account_receivable_invoice
   - account_payment
