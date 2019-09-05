@@ -13349,7 +13349,7 @@ saml-idp@^1.1.0:
     xmldom "=0.1.27"
     xpath "0.0.27"
 
-"samlp@github:mcguinness/node-samlp":
+samlp@mcguinness/node-samlp:
   version "3.4.1"
   resolved "https://codeload.github.com/mcguinness/node-samlp/tar.gz/7bfb7c29be520f249beff6a9e933b63a628e31a1"
   dependencies:
@@ -14182,10 +14182,10 @@ stealthy-require@^1.1.1:
   resolved "https://registry.yarnpkg.com/stealthy-require/-/stealthy-require-1.1.1.tgz#35b09875b4ff49f26a777e509b3090a3226bf24b"
   integrity sha1-NbCYdbT/SfJqd35QmzCQoyJr8ks=
 
-steedos-server@^1.5.1:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/steedos-server/-/steedos-server-1.5.1.tgz#84805ea2876b150f56ca7792552589fa9d308522"
-  integrity sha512-FSJz4ris974OLBh0sAIrvjhtWvfw+DEmD9lsglsgygaFA/gtLBKVCW7AypfLteUEwpH9pWHKDWYsWlTWPe/1kQ==
+steedos-server@^1.5.2-patch.2:
+  version "1.5.2-patch.2"
+  resolved "https://registry.yarnpkg.com/steedos-server/-/steedos-server-1.5.2-patch.2.tgz#16ad930712fac8e518749eb42e8a6eccd874c22a"
+  integrity sha512-48KuDC3SCq96j5GAQ0o3Y1xKcRf8UeQEDSEubyE1xLL02w/0fmE5fAYGbrCQ2ASy7nDQLwVKWXh6ZgK5RSVxuw==
   dependencies:
     "@babel/runtime" "^7.2.0"
     "@steedos/auth" "^1.5.2"

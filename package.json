@@ -28,7 +28,7 @@
     "@steedos/plugin-jsreport": "^0.1.2",
     "@steedos/plugin-stimulsoft-report": "^0.0.6",
     "nodemon": "^1.19.1",
-    "steedos-server": "^1.5.1"
+    "steedos-server": "^1.5.2-patch.2"
   },
   "bugs": {
     "url": "https://github.com/steedos/steedos-contracts-app/issues"
