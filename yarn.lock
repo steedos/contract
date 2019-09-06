@@ -1220,6 +1220,20 @@
     sha256 "^0.2.0"
     underscore "^1.9.1"
 
+"@steedos/auth@^1.5.5":
+  version "1.5.5"
+  resolved "https://registry.yarnpkg.com/@steedos/auth/-/auth-1.5.5.tgz#e27d54bdfad5e5e4de3589ae6c1e08e85392739e"
+  integrity sha512-X0PryykhUiaTf90UmmYrJXgoTfKJNhNX6b3v183Md4vF/Q/P1LJPOui2DXTUadAMJ09Sca8rBkTastDRXQTdfQ==
+  dependencies:
+    "@steedos/objectql" "^1.5.5"
+    bcrypt "^3.0.6"
+    cookies "^0.7.3"
+    express "^4.16.4"
+    express-jwt "^5.3.1"
+    jsonwebtoken "^8.5.1"
+    sha256 "^0.2.0"
+    underscore "^1.9.1"
+
 "@steedos/core@^1.5.1":
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/@steedos/core/-/core-1.5.1.tgz#646725693edc071cd71c9af2eccf82ee3edaa72f"
@@ -1231,6 +1245,44 @@
     "@steedos/auth" "^1.5.1"
     "@steedos/objectql" "^1.5.1"
     "@steedos/standard-objects" "^1.5.1"
+    "@types/express" "^4.16.1"
+    "@types/mongodb" "^3.1.22"
+    "@types/node" "^11.10.4"
+    "@types/underscore" "^1.8.13"
+    body-parser "^1.18.1"
+    bunyan-sfdx-no-dtrace "^1.8.2"
+    chai "^4.2.0"
+    clone "^2.1.2"
+    cookies "^0.6.1"
+    devextreme "^18.2.6"
+    express "^4.15.4"
+    express-graphql "^0.7.1"
+    fibers "^3.1.1"
+    globby "^9.1.0"
+    graphql "^14.1.1"
+    graphql-type-json "^0.2.2"
+    js-yaml ">=3.13.1"
+    jsen "^0.6.6"
+    mongodb "^3.0.8"
+    odata-v4-mongodb "^0.1.12"
+    pg "^7.8.2"
+    reflect-metadata "^0.1.10"
+    routing-controllers "^0.7.7"
+    simpl-schema "^1.5.5"
+    uglify-js "^3.6.0"
+    underscore "1.5.2"
+
+"@steedos/core@^1.5.5":
+  version "1.5.5"
+  resolved "https://registry.yarnpkg.com/@steedos/core/-/core-1.5.5.tgz#6981376ca0606dc7b87888dc4dba469e5365b5b7"
+  integrity sha512-t37fQH/182Z8GB2KlOyCPj61kPbZd+Fmpa5w9lf/UDEvJS3EXehzVXlMUJZXIfRSEClR/a66sewV/BDMWxEryA==
+  dependencies:
+    "@salesforce/dev-config" "^1.4.4"
+    "@salesforce/kit" "^1.0.4"
+    "@salesforce/ts-types" "^1.1.1"
+    "@steedos/auth" "^1.5.5"
+    "@steedos/objectql" "^1.5.5"
+    "@steedos/standard-objects" "^1.5.5"
     "@types/express" "^4.16.1"
     "@types/mongodb" "^3.1.22"
     "@types/node" "^11.10.4"
@@ -1414,6 +1466,43 @@
     typeorm "^0.2.16"
     underscore "1.5.2"
 
+"@steedos/objectql@^1.5.5":
+  version "1.5.5"
+  resolved "https://registry.yarnpkg.com/@steedos/objectql/-/objectql-1.5.5.tgz#56a98121ccfdad9de44e789892a507c7a153f851"
+  integrity sha512-drYEJYf8QV1g6xquJtBJzyGy0/iiMHtD1aGiT+k4fmZEnN8zPKy8XTjdim0e6jArUnCxFy1cfOqcjeEVgIPFww==
+  dependencies:
+    "@salesforce/dev-config" "^1.4.4"
+    "@salesforce/kit" "^1.0.4"
+    "@salesforce/ts-types" "^1.1.1"
+    "@steedos/filters" "^1.5.1"
+    "@steedos/odata-v4-typeorm" "^0.0.24"
+    "@steedos/schemas" "^1.5.1"
+    "@steedos/standard-objects" "^1.5.5"
+    "@types/express" "^4.16.1"
+    "@types/mongodb" "^3.1.22"
+    "@types/node" "^11.10.4"
+    "@types/underscore" "^1.8.13"
+    app-root-path "^2.2.1"
+    body-parser "^1.18.1"
+    bunyan-sfdx-no-dtrace "^1.8.2"
+    chai "^4.2.0"
+    clone "^2.1.2"
+    cookies "^0.6.1"
+    express "^4.15.4"
+    express-graphql "^0.7.1"
+    fibers "^3.1.1"
+    globby "^9.1.0"
+    graphql "^14.1.1"
+    graphql-type-json "^0.2.2"
+    jsen "^0.6.6"
+    mongodb "^3.0.8"
+    odata-v4-mongodb "^0.1.12"
+    odata-v4-sql "^0.1.2"
+    reflect-metadata "^0.1.10"
+    routing-controllers "^0.7.7"
+    typeorm "^0.2.16"
+    underscore "1.5.2"
+
 "@steedos/odata-v4-typeorm@^0.0.24":
   version "0.0.24"
   resolved "https://registry.yarnpkg.com/@steedos/odata-v4-typeorm/-/odata-v4-typeorm-0.0.24.tgz#da14a880e5ec2b52b91f2912939b812449988e8b"
@@ -1474,6 +1563,11 @@
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/@steedos/standard-objects/-/standard-objects-1.5.1.tgz#4f9500e982266bcac4deffee49e0acc23947ed6e"
   integrity sha512-9OK+ZWmb8R0HZg+bdbBSxY7NBUBMtlgqFIr7A0/VsuvDPdzTu57frbotBXMufuRZMjUHPQHFITN0GrD6tX0BFQ==
+
+"@steedos/standard-objects@^1.5.5":
+  version "1.5.5"
+  resolved "https://registry.yarnpkg.com/@steedos/standard-objects/-/standard-objects-1.5.5.tgz#6c33b16de6501417c6bd08251e4243da9a93020b"
+  integrity sha512-tsAf+bnxUlTRBy7cO//Mgmz19XzAKluKyCc7lKT/KVVIdydBk34lMGkwEEA8ZYqdSGCOJ99SwB/8hHppCwQBAA==
 
 "@steedos/steedos-plugin-workflow@^1.0.1":
   version "1.0.1"
