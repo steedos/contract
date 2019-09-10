@@ -7,8 +7,7 @@
   "scripts": {
     "debug": "nodemon server.js",
     "start": "node server",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "clear": "rd /s /q node_modules\\@steedos\\auth\\node_modules\\@steedos node_modules\\@steedos\\core\\node_modules\\@steedos node_modules\\@steedos\\objectql\\node_modules\\@steedos node_modules\\@steedos\\plugin-jsreport\\node_modules\\@steedos"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -18,8 +17,6 @@
   "dependencies": {},
   "devDependencies": {
     "@steedos/accounts": "^0.1.1",
-    "@steedos/plugin-jsreport": "^0.1.2",
-    "@steedos/plugin-stimulsoft-report": "^0.0.6",
     "@steedos/steedos-plugin-workflow": "^1.0.2",
     "nodemon": "^1.19.1",
     "steedos-server": "^1.6.0"
