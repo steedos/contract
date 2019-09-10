@@ -1328,6 +1328,15 @@
     moment "^2.24.0"
     underscore "^1.9.1"
 
+"@steedos/filters@^1.5.4":
+  version "1.5.4"
+  resolved "https://registry.yarnpkg.com/@steedos/filters/-/filters-1.5.4.tgz#3fcad8d769913ecbf392630a4f572dcb0ff74c2b"
+  integrity sha512-ePWbue//4DBmLYH1hqZQclsbpGwd+3/v97LsfocQxy/cJ8KuKbERct17c0Atp4qM3D1BY2fjeld+FqzuZlNlSg==
+  dependencies:
+    devextreme "^18.2.6"
+    moment "^2.24.0"
+    underscore "^1.9.1"
+
 "@steedos/meteor-bundle-dependencies@1.5.1":
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/@steedos/meteor-bundle-dependencies/-/meteor-bundle-dependencies-1.5.1.tgz#784f16b2bbb012dc649f1288df71f2e605b539a7"
@@ -14276,15 +14285,15 @@ stealthy-require@^1.1.1:
   resolved "https://registry.yarnpkg.com/stealthy-require/-/stealthy-require-1.1.1.tgz#35b09875b4ff49f26a777e509b3090a3226bf24b"
   integrity sha1-NbCYdbT/SfJqd35QmzCQoyJr8ks=
 
-steedos-server@^1.5.2-patch.2:
-  version "1.5.2-patch.2"
-  resolved "https://registry.yarnpkg.com/steedos-server/-/steedos-server-1.5.2-patch.2.tgz#16ad930712fac8e518749eb42e8a6eccd874c22a"
-  integrity sha512-48KuDC3SCq96j5GAQ0o3Y1xKcRf8UeQEDSEubyE1xLL02w/0fmE5fAYGbrCQ2ASy7nDQLwVKWXh6ZgK5RSVxuw==
+steedos-server@^1.5.3:
+  version "1.5.3"
+  resolved "https://registry.yarnpkg.com/steedos-server/-/steedos-server-1.5.3.tgz#0afc6b9cd03e164e7107880513fec556dbaca948"
+  integrity sha512-3ya41IQilTDuIc36y39pteCZPkvC6mEEH1sSmv6vyB1FLM998LvQdAqPwbmo2HP4lbW5agh3OMU5rxsoj7c9Bw==
   dependencies:
     "@babel/runtime" "^7.2.0"
     "@steedos/auth" "^1.5.2"
     "@steedos/core" "^1.5.1"
-    "@steedos/filters" "^1.5.1"
+    "@steedos/filters" "^1.5.4"
     "@steedos/meteor-bundle-dependencies" "1.5.1"
     "@steedos/meteor-bundle-runner" "^1.5.1"
     "@steedos/objectql" "^1.5.1"
