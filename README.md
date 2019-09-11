@@ -54,9 +54,10 @@
 项目核心源码非常简单，包括以下内容：
 - [steedos-config.yml](steedos-config.yml)
 - [src](src)
-  - [contracts.object.yml](src/contracts.object.yml)
-  - [contracts.trigger.js](src/contracts.trigger.js)
-  - xxx.object.yml
+  - contract
+    - [contracts.object.yml](src/contract/contracts.object.yml)
+    - [contracts.trigger.js](src/contract/contracts.trigger.js)
+    - xxx.object.yml
 
 ### 系统配置文件 
 文件 [steedos-config.yml](steedos-config.yml) ，配置系统参数：
@@ -67,7 +68,7 @@
 系统可以连接到默认的MongoDB数据库，也可以连接到第三方系统的Oracle, SQL Server, MySQL, PostgreSQL数据库。
 
 ### 对象配置文件 
-文件 [src/contracts.object.yml](src/contracts.object.yml)，每一个业务对象是一个独立的配置文件。
+文件 [src/contract/contracts.object.yml](src/contract/contracts.object.yml)，每一个业务对象是一个独立的配置文件。
 - 设定对象的基本属性，例如显示名、数据表名、图标等；
 - 设定对象启用的功能，包括：
   - 允许上传附件；
@@ -114,7 +115,7 @@
   - 对于敏感的业务数据，可以设定只能查看、修改部分字段。
  
 ### 触发器
-触发器 [src/contracts.trigger.js](src/contracts.trigger.js)，业务逻辑触发器，可以在数据增删改发生时处理业务逻辑。
+触发器 [src/contract/contracts.trigger.js](src/contract/contracts.trigger.js)，业务逻辑触发器，可以在数据增删改发生时处理业务逻辑。
 - 数据插入前；
 - 数据插入后；
 - 数据更新前；
