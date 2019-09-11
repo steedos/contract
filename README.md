@@ -56,8 +56,8 @@
 - [src](src)
   - contract
     - [contracts.object.yml](src/contract/contracts.object.yml)
-    - [contracts.trigger.js](src/contract/contracts.trigger.js)
-    - xxx.object.yml
+  - triggers
+    - [contracts.object.js](src/triggers/contracts.object.js)
 
 ### 系统配置文件 
 文件 [steedos-config.yml](steedos-config.yml) ，配置系统参数：
@@ -115,7 +115,7 @@
   - 对于敏感的业务数据，可以设定只能查看、修改部分字段。
  
 ### 触发器
-触发器 [src/contract/contracts.trigger.js](src/contract/contracts.trigger.js)，业务逻辑触发器，可以在数据增删改发生时处理业务逻辑。
+触发器 [src/triggers/contracts.object.js](src/triggers/contracts.object.js)，业务逻辑触发器，可以在数据增删改发生时处理业务逻辑。
 - 数据插入前；
 - 数据插入后；
 - 数据更新前；
