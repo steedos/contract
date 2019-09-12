@@ -56,7 +56,7 @@ let upBySpace = async function (spaceId) {
             console.error(ex);
             return {};
         });
-        console.log("UPDATED organization:", updatedDoc.name);
+        console.log("UPDATED organizations:", updatedDoc.name);
     }
 
     if (orgs.length === 1){
@@ -65,13 +65,19 @@ let upBySpace = async function (spaceId) {
         console.log("ONLYONE COMPANY:", rootOrgId);
         let updatedDoc = await db.updateMany("organizations", [["space", "=", spaceId]], {
             company_id: rootOrgId
+        }).catch((ex) => {
+            console.error(ex);
+            return {};
         });
-        console.log("===updatedDoc====1===", updatedDoc);
+        console.log("UPDATED organizations count:", updatedDoc.result ? updatedDoc.result.nModified : 'error');
         updatedDoc = await db.updateMany("space_users", [["space", "=", spaceId]], {
             company_id: rootOrgId,
             company_ids: [rootOrgId]
+        }).catch((ex) => {
+            console.error(ex);
+            return {};
         });
-        console.log("===updatedDoc====2===", updatedDoc);
+        console.log("UPDATED space_users count:", updatedDoc.result ? updatedDoc.result.nModified : 'error');
     }
 
     // 因为is_group属性作废，所以需要把is_group为true及is_company为true的organizations应该更新is_company为false
@@ -92,7 +98,7 @@ let upBySpace = async function (spaceId) {
             console.error(ex);
             return {};
         });
-        console.log("UPDATED organization:", updatedDoc.name);
+        console.log("UPDATED organizations:", updatedDoc.name);
     }
 }
 
@@ -100,7 +106,7 @@ let downBySpace = async function (spaceId) {
     console.log(`SPACEID: ${spaceId}`);
     let companys = await db.find("company", {
         filters: [["space", "=", spaceId]],
-        fields: ["_id"]
+        fields: ["_id", "name"]
     }).catch((ex) => {
         console.error(ex);
         return [];
@@ -108,9 +114,28 @@ let downBySpace = async function (spaceId) {
     for (let item of companys) {
         await db.delete("company", item._id).catch((ex) => {
             console.error(ex);
-            return [];
+            return false;
         });
         console.log("DELETED company:", item.name);
+    }
+
+    // 还原is_group对应的is_company为true
+    let groupOrgs = await db.find("organizations", {
+        filters: [["space", "=", spaceId], ["is_company", "=", false], ["is_group", "=", true]],
+        fields: ["_id"]
+    }).catch((ex) => {
+        console.error(ex);
+        return [];
+    });
+    console.log("CANCEL GROUP COMPANY:", groupOrgs);
+    for (let org of groupOrgs) {
+        let updatedDoc = await db.updateOne("organizations", org._id, {
+            is_company: true
+        }).catch((ex) => {
+            console.error(ex);
+            return {};
+        });
+        console.log("UPDATED organizations:", updatedDoc.name);
     }
 }
 
