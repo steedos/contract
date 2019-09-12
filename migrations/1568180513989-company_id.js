@@ -21,7 +21,7 @@ let upBySpace = async function (spaceId) {
 
     // ["is_group", "=", undefined]查的是is_group未定义的情况，对应到mongo语法`is_group: { $exists: false }`
     let orgs = await db.find("organizations", {
-        filters: [["space", "=", spaceId], [[["is_company", "=", true], ["is_group", "=", undefined]], "or", ["parent", "=", ""]]],
+        filters: [["space", "=", spaceId], [[["is_company", "=", true], ["is_group", "=", undefined]], "or", ["parent", "=", null]]],
         fields: ["name", "space", "owner", "created_by", "created", "modified_by", "modified"]
     }).catch((ex) => {
         console.error(ex);
@@ -48,6 +48,51 @@ let upBySpace = async function (spaceId) {
             return null;
         });
         console.log("INSERTED company:", insertedDoc.name);
+        let orgDoc = {
+            company_id: org._id
+        };
+        // 设置关联组织的company_id值，特别是落地版根组织可能没有company_id值，需要加上
+        let updatedDoc = await db.updateOne("organizations", org._id, orgDoc).catch((ex) => {
+            console.error(ex);
+            return {};
+        });
+        console.log("UPDATED organization:", updatedDoc.name);
+    }
+
+    if (orgs.length === 1){
+        // 工作区只有一个单位时，应该自动把 space_users.company_id, company_ids, organizations.company_id 都设置为单位的ID值
+        let rootOrgId = orgs[0]._id;
+        console.log("ONLYONE COMPANY:", rootOrgId);
+        let updatedDoc = await db.updateMany("organizations", [["space", "=", spaceId]], {
+            company_id: rootOrgId
+        });
+        console.log("===updatedDoc====1===", updatedDoc);
+        updatedDoc = await db.updateMany("space_users", [["space", "=", spaceId]], {
+            company_id: rootOrgId,
+            company_ids: [rootOrgId]
+        });
+        console.log("===updatedDoc====2===", updatedDoc);
+    }
+
+    // 因为is_group属性作废，所以需要把is_group为true及is_company为true的organizations应该更新is_company为false
+    // 否则会留下原来is_group为true的组织为"单位级组织"，但其实它们不是单位级的
+    // is_group值保持不变，方便执行migrate down
+    let groupOrgs = await db.find("organizations", {
+        filters: [["space", "=", spaceId], ["is_company", "=", true], ["is_group", "=", true]],
+        fields: ["_id"]
+    }).catch((ex) => {
+        console.error(ex);
+        return [];
+    });
+    console.log("CANCEL GROUP COMPANY:", groupOrgs);
+    for (let org of groupOrgs) {
+        let updatedDoc = await db.updateOne("organizations", org._id, {
+            is_company: false
+        }).catch((ex) => {
+            console.error(ex);
+            return {};
+        });
+        console.log("UPDATED organization:", updatedDoc.name);
     }
 }
 
