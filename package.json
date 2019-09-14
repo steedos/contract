@@ -14,9 +14,6 @@
     "url": "git+https://github.com/steedos/steedos-contracts-app.git"
   },
   "author": "Jack Zhuang",
-  "dependencies": {
-    "migrate": "^1.6.2"
-  },
   "devDependencies": {
     "@steedos/accounts": "^0.1.1",
     "@steedos/steedos-plugin-workflow": "^1.0.3",
