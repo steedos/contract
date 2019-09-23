@@ -15,10 +15,10 @@
   },
   "author": "Jack Zhuang",
   "devDependencies": {
-    "@steedos/accounts": "^1.6.1-patch.5",
-    "@steedos/steedos-plugin-workflow": "^1.0.3",
+    "@steedos/accounts": "^1.6.5-patch.5",
+    "@steedos/steedos-plugin-workflow": "^1.0.4",
     "nodemon": "^1.19.1",
-    "steedos-server": "^1.6.2"
+    "steedos-server": "^1.6.6"
   },
   "bugs": {
     "url": "https://github.com/steedos/steedos-contracts-app/issues"
@@ -27,5 +27,10 @@
   "license": "MIT",
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "aliyun-sdk": "^1.12.3",
+    "aws-sdk": "^2.533.0",
+    "bcrypt": "^3.0.6"
   }
 }
