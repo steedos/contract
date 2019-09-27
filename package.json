@@ -18,7 +18,7 @@
     "@steedos/accounts": "^1.6.5-patch.5",
     "@steedos/steedos-plugin-workflow": "^1.0.4",
     "nodemon": "^1.19.1",
-    "steedos-server": "^1.6.6"
+    "steedos-server": "^1.6.8"
   },
   "bugs": {
     "url": "https://github.com/steedos/steedos-contracts-app/issues"
@@ -28,9 +28,10 @@
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {
-    "aliyun-sdk": "^1.12.3",
-    "aws-sdk": "^2.533.0",
-    "bcrypt": "^3.0.6"
+  "resolutions": {
+    "**/lodash": "^4.17.12",
+    "**/handlebars": "^4.3.0",
+    "**/debug": "^3.1.0",
+    "**/hoek": "^5.0.3"
   }
 }
