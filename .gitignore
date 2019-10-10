@@ -67,3 +67,4 @@ package-lock.json
 .DS_Store
 .migrate
 .history/*
+storage/files/*
