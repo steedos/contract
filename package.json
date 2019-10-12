@@ -15,10 +15,10 @@
   },
   "author": "Jack Zhuang",
   "devDependencies": {
-    "@steedos/accounts": "^1.6.5-patch.9",
-    "@steedos/steedos-plugin-workflow": "^1.0.6",
+    "@steedos/accounts": "^1.7.0",
+    "@steedos/steedos-plugin-workflow": "^1.7.0",
     "nodemon": "^1.19.1",
-    "steedos-server": "^1.6.12"
+    "steedos-server": "^1.7.2"
   },
   "bugs": {
     "url": "https://github.com/steedos/steedos-contracts-app/issues"
