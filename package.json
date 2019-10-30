@@ -18,7 +18,7 @@
     "@steedos/accounts": "^1.7.5",
     "@steedos/steedos-plugin-workflow": "^1.7.0",
     "nodemon": "^1.19.1",
-    "steedos-server": "^1.8.1"
+    "steedos-server": "^1.8.2"
   },
   "bugs": {
     "url": "https://github.com/steedos/steedos-contracts-app/issues"
