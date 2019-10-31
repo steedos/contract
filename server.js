@@ -5,6 +5,7 @@ server.Fiber(function () {
         server.Profile.run("Server startup", function () {
             server.loadServerBundles();
             steedos.init();
+            WebAppInternals.setInlineScriptsAllowed(false);
             server.callStartupHooks();
             server.runMain();
         })

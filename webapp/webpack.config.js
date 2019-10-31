@@ -39,8 +39,8 @@ module.exports = {
         react: 'React',
     },
     output: {
-        path: path.join(__dirname, '/dist'),
+        path: path.join(__dirname, '..', '/src'),
         publicPath: '/',
-        filename: 'main.js',
+        filename: 'webapp.client.js',
     },
 };
