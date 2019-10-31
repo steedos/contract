@@ -778,12 +778,12 @@
     saml-idp "^1.1.0"
     tslib "1.10.0"
 
-"@steedos/auth@^1.8.1":
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/@steedos/auth/-/auth-1.8.1.tgz#0f5b5235c9db5cb5408babcc6a361ec6f212eb9f"
-  integrity sha512-GizNoF3bpEwyaVfPDIfKX5L7s5VtG0cD/3GcmoRra/EGH4lbPrCMp538/vHVEmgzcqgi/1LJqK/gVI0PsdZNAA==
+"@steedos/auth@^1.8.2":
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/@steedos/auth/-/auth-1.8.2.tgz#cadcbcd6384df355c202da33111da768d51dfc32"
+  integrity sha512-07YPno7zLRtS24NFL6EwmZy3C4iZPzmFjorI3I5VBJBxI259Ta0Uoqzqa/1K6VdulVHsktE2pDXRHry5/m0ngg==
   dependencies:
-    "@steedos/objectql" "^1.8.1"
+    "@steedos/objectql" "^1.8.2"
     bcrypt "^3.0.6"
     cookies "^0.7.3"
     express "^4.16.4"
@@ -792,18 +792,18 @@
     sha256 "^0.2.0"
     underscore "^1.9.1"
 
-"@steedos/core@^1.8.1":
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/@steedos/core/-/core-1.8.1.tgz#367f22052b49fe6084e02ef13bd7b9edd77344f5"
-  integrity sha512-5bSa+mymgihHc8EzbFWgQWKm8JTJ9XRDieoRvcdThJ1lad+PNLtH0ZnkCOes5WBhFbIUAibXVkk3VKWfS+YCsQ==
+"@steedos/core@^1.8.2":
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/@steedos/core/-/core-1.8.2.tgz#15c0480a9a07c0c4f3c14ab7268c969b9ae6b74b"
+  integrity sha512-pkYanvjqKdYk4R8WfT8SszIGSFnGEyw5H76hg7F5D52N4+wKv5wRTIW7mHVLZFApwC+mW6dCmJ5pxunX7yooYg==
   dependencies:
     "@salesforce/dev-config" "^1.4.4"
     "@salesforce/kit" "^1.0.4"
     "@salesforce/ts-types" "^1.1.1"
-    "@steedos/auth" "^1.8.1"
-    "@steedos/migrate" "^1.8.1"
-    "@steedos/objectql" "^1.8.1"
-    "@steedos/standard-objects" "^1.8.1"
+    "@steedos/auth" "^1.8.2"
+    "@steedos/migrate" "^1.8.2"
+    "@steedos/objectql" "^1.8.2"
+    "@steedos/standard-objects" "^1.8.2"
     "@types/express" "^4.16.1"
     "@types/mongodb" "^3.1.22"
     "@types/node" "^11.10.4"
@@ -831,18 +831,18 @@
     uglify-js "^3.6.0"
     underscore "1.5.2"
 
-"@steedos/filters@^1.8.1":
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/@steedos/filters/-/filters-1.8.1.tgz#82ec5d5334709bf877def278565ac1e8f4431d45"
-  integrity sha512-Jnv3lMohbg4fCtuOsWRmAqITJaAAi9hFWtu4S8UC7TPyP4jpWZSWxz09Lx1x88Hos5olJZeqMoCmtVNAjj4L7w==
+"@steedos/filters@^1.8.2":
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/@steedos/filters/-/filters-1.8.2.tgz#a8e06c479abfca3c542db7d6d2c639489e1f48f1"
+  integrity sha512-HApP1+yaL//Qm4PfZNYqcF97ghZXNeowhgVMEBdEJjjvjCim+p0/ZCHxy1SqZPGbZtznNMwEnvP+MfYSFJh8UA==
   dependencies:
     moment "^2.24.0"
     underscore "^1.9.1"
 
-"@steedos/meteor-bundle-dependencies@^1.8.1":
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/@steedos/meteor-bundle-dependencies/-/meteor-bundle-dependencies-1.8.1.tgz#51df80aec58423b7b6a735a7ce28989d175731b1"
-  integrity sha512-cCRm3xjEinuuVIe9DyJWbSev1t8yaF58Y/NFfiEmQJHig8ZX87kaXWewBOdBGTNJgYmlY4IOD8GUrvQgOWdKhQ==
+"@steedos/meteor-bundle-dependencies@^1.8.2":
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/@steedos/meteor-bundle-dependencies/-/meteor-bundle-dependencies-1.8.2.tgz#a939c851c23c44a0a6da5ceb7e5150559868d185"
+  integrity sha512-SPMaqrxrcs2sL6sgyQ6atlhwSoqCuJ2EFdEOhOBHuxJfkQPWpnqGqN/yT1sTS5KExxp8MqKkslnXsIkFXRBqkg==
   dependencies:
     apn "1.6.2"
     arson "0.2.6"
@@ -889,10 +889,10 @@
     uuid "3.3.2"
     whatwg-fetch "2.0.4"
 
-"@steedos/meteor-bundle-runner@^1.8.1":
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/@steedos/meteor-bundle-runner/-/meteor-bundle-runner-1.8.1.tgz#2d21daba6c4430e220a18673af743da3d3f93ad2"
-  integrity sha512-M2h3RtOFlCJEKm/tHzSbJdnL7HhtcPvIrb68+zo3plwIBqYq2XBt1v7LHyLmbGSMxHTGIHp+wUvUGL6NAv4RuQ==
+"@steedos/meteor-bundle-runner@^1.8.2":
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/@steedos/meteor-bundle-runner/-/meteor-bundle-runner-1.8.2.tgz#b90463fbd2dfdf27d5eed8b6fb09612402bdde38"
+  integrity sha512-05boteUJ9df8EQjjdvQpH9bmPrIB3nRAMmp+Aq8HUxauBIUsxr1oBLnMsBkACwIbntR0Zhzom9V/S7zAXwhABw==
   dependencies:
     fibers "3.1.1"
     meteor-promise "0.8.5"
@@ -903,25 +903,25 @@
     source-map-support "^0.5.10"
     underscore "1.5.2"
 
-"@steedos/migrate@^1.8.1":
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/@steedos/migrate/-/migrate-1.8.1.tgz#566cebab32da51f4474877c2d257981f67873149"
-  integrity sha512-SkYQLCE1Y+IdCAZ6V6c8SrkuD05L0dfSvuLbJp82DLS6xfo5QNsCJ7ke0dpkdb3qkzpQs5Tnf0Mt0hroezYA8Q==
+"@steedos/migrate@^1.8.2":
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/@steedos/migrate/-/migrate-1.8.2.tgz#6e216adeed27871d4a6decf65bc4f6ad7b0d95fd"
+  integrity sha512-66bvBrFZvmjQYPyvDRYo8bKbZN7FsI83MlEmvKYTjUIsb4QiqfVBHNV/TnPJ2z3nmZDS1Q+MLIqxDzMTa9Co9A==
   dependencies:
     migrate "^1.6.2"
 
-"@steedos/objectql@^1.8.1":
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/@steedos/objectql/-/objectql-1.8.1.tgz#fdd4c08f7b392fd203007fdb87854fcd8191cf93"
-  integrity sha512-X69ObgpVKUg/Xa+hOepz+Ukx2kVkh4qMcuiWtUXQDNYH7m6fHOhO86FotM7BWY/ba8MPue6VRjKy0yDIfhX+0w==
+"@steedos/objectql@^1.8.2":
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/@steedos/objectql/-/objectql-1.8.2.tgz#9c557d93105c4f458dc6a3b5ddb1c0b5ffdc013b"
+  integrity sha512-Yej0QMU51lp8Xf8d7egh08pvJu/drnYkLCbCor15N14BEZ8ksrvxyS8W+Is0CcfTr2E2lm0RvshsA3M3ptYPqg==
   dependencies:
     "@salesforce/dev-config" "^1.4.4"
     "@salesforce/kit" "^1.0.4"
     "@salesforce/ts-types" "^1.1.1"
-    "@steedos/filters" "^1.8.1"
+    "@steedos/filters" "^1.8.2"
     "@steedos/odata-v4-typeorm" "^0.0.24"
-    "@steedos/schemas" "^1.8.1"
-    "@steedos/standard-objects" "^1.8.1"
+    "@steedos/schemas" "^1.8.2"
+    "@steedos/standard-objects" "^1.8.2"
     "@types/express" "^4.16.1"
     "@types/mongodb" "^3.1.22"
     "@types/node" "^11.10.4"
@@ -955,15 +955,15 @@
     odata-v4-parser "0.1.13"
     odata-v4-sql "^0.1.2"
 
-"@steedos/schemas@^1.8.1":
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/@steedos/schemas/-/schemas-1.8.1.tgz#5e9184e8e1b176e3aee513d3d8eb8320f06f10c9"
-  integrity sha512-baY+XvSkY/Q+Mk7UNnap1/FwwNyFy8AWi/P2jP7cQPXz2g0W5nNtLrrkTaI8q9j8u5JebQrWKbbl7aBLhWiXzA==
+"@steedos/schemas@^1.8.2":
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/@steedos/schemas/-/schemas-1.8.2.tgz#14537916c0ee232d7ab82422a57a76eeb196b855"
+  integrity sha512-zySwev7AcXQv4rNdUYZMoSO7L9VkCRkSsuiyu9dfJjHN2GMeo8IJViWs3ZR/qvKg+ZlvdjazLp+wOtDroV6p/A==
 
-"@steedos/standard-objects@^1.8.1":
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/@steedos/standard-objects/-/standard-objects-1.8.1.tgz#af0238f4f7eebc796f81f7b769d2fae7493cb5cc"
-  integrity sha512-hzH0kvpEyeaRqpbtAGk4u8YIoN6isEzRqvEHI7Tn25H++4mmtYsVuWuAYfYhhNo5pYH6WL5IWGIjWdBAPMfI0w==
+"@steedos/standard-objects@^1.8.2":
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/@steedos/standard-objects/-/standard-objects-1.8.2.tgz#0488fe50b6ee33e68a26687d533ed47a34347a6d"
+  integrity sha512-bpnQpKLj+enMjCHJ0xoLpFTAxqk/WGgsm5vsF2G+adCJs3LmSNPIBiQ+3hCmS7RN8MiOwvslyCC8TnLI6zQeZQ==
 
 "@steedos/steedos-plugin-workflow@^1.7.0":
   version "1.7.0"
@@ -3592,10 +3592,10 @@ faye-websocket@^0.10.0:
   dependencies:
     websocket-driver ">=0.5.1"
 
-fibers@3.1.1, fibers@^3.1.1, fibers@^4:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/fibers/-/fibers-4.0.2.tgz#d04f9ccd0aba179588202202faeb4fed65d497f5"
-  integrity sha512-FhICi1K4WZh9D6NC18fh2ODF3EWy1z0gzIdV9P7+s2pRjfRBnCkMDJ6x3bV1DkVymKH8HGrQa/FNOBjYvnJ/tQ==
+fibers@3.1.1, fibers@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/fibers/-/fibers-3.1.1.tgz#0238902ca938347bd779523692fbeefdf4f688ab"
+  integrity sha512-dl3Ukt08rHVQfY8xGD0ODwyjwrRALtaghuqGH2jByYX1wpY+nAnRQjJ6Dbqq0DnVgNVQ9yibObzbF4IlPyiwPw==
   dependencies:
     detect-libc "^1.0.3"
 
@@ -7860,20 +7860,20 @@ stealthy-require@^1.1.1:
   resolved "https://registry.yarnpkg.com/stealthy-require/-/stealthy-require-1.1.1.tgz#35b09875b4ff49f26a777e509b3090a3226bf24b"
   integrity sha1-NbCYdbT/SfJqd35QmzCQoyJr8ks=
 
-steedos-server@^1.8.1:
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/steedos-server/-/steedos-server-1.8.1.tgz#ca236e37bcb54168cad0fb8e3c9663cf446b66e2"
-  integrity sha512-yiQ8x51kbfVF6O/V6FGvgvgnS0XZFsass9BEo2Ax1hJhq3m3BvEPxgyn3rhvfMQJ9CjEiS+NJlH0/XXwJ2SVCQ==
+steedos-server@^1.8.2:
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/steedos-server/-/steedos-server-1.8.2.tgz#21f2cabfdb7492ce1ea63a353be2c0ff0a89bcad"
+  integrity sha512-qmjiDSREfMxtm5WiuXsWUwLAy+0ReUk5iGdKSFkSxdKlY0dv3dSjsVgDIEwlJi8rjW9wDZ2w6Ka2IaopPsmZ2g==
   dependencies:
     "@babel/runtime" "^7.2.0"
     "@salesforce-ux/design-system" "^2.7.4"
-    "@steedos/auth" "^1.8.1"
-    "@steedos/core" "^1.8.1"
-    "@steedos/filters" "^1.8.1"
-    "@steedos/meteor-bundle-dependencies" "^1.8.1"
-    "@steedos/meteor-bundle-runner" "^1.8.1"
-    "@steedos/objectql" "^1.8.1"
-    "@steedos/standard-objects" "^1.8.1"
+    "@steedos/auth" "^1.8.2"
+    "@steedos/core" "^1.8.2"
+    "@steedos/filters" "^1.8.2"
+    "@steedos/meteor-bundle-dependencies" "^1.8.2"
+    "@steedos/meteor-bundle-runner" "^1.8.2"
+    "@steedos/objectql" "^1.8.2"
+    "@steedos/standard-objects" "^1.8.2"
     aliyun-sdk "^1.12.3"
     aws-sdk "^2.533.0"
     basic-auth "^2.0.1"
