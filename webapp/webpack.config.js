@@ -36,7 +36,13 @@ module.exports = {
         ],
     },
     externals: {
-        react: 'React',
+        "react": 'React',
+        "react-dom": 'ReactDom',
+        "redux": 'Redux',
+        "react-redux": 'ReactRedux',
+        "prop-types": 'PropTypes',
+        "@steedos/react": 'ReactSteedos',
+        "@salesforce/design-system-react": 'ReactDesignSystem',
     },
     output: {
         path: path.join(__dirname, '..', '/src'),
