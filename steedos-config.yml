@@ -32,3 +32,4 @@ cron:
   instancerecordqueue_interval: 10000
 
 plugins:
+  - "@steedos/accounts"
