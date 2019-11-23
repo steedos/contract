@@ -1,0 +1,9 @@
+_id: workflow
+name: 流程审批
+description: 流程审批
+icon_slds: task
+is_creator: true
+objects: 
+  - instances
+mobile_objects: 
+  - instances
