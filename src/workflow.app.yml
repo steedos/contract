@@ -1,6 +1,6 @@
 _id: WORKFLOW
-name: 流程审批
-description: 流程审批
+name: 流程
+description: 电子化流程审批系统。
 icon_slds: task
 is_creator: true
 objects: 
