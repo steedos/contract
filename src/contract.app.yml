@@ -65,6 +65,7 @@ dashboard:
     position: RIGHT
     type: apps
     mobile: true
+    ignoreApps: ['contracts']
   workflow: 
     label: 待审核文件
     position: CENTER_TOP
