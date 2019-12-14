@@ -55,7 +55,8 @@ let config = {
         "objectName": "tasks",
         "filters": [
             ["assignees", "=", "{userId}"],
-            ["state", "<>", "complete"]
+            ["state", "<>", "complete"],
+            ['created', 'between', 'last_7_days']
         ],
         "sort": "due_date",
         "columns": [{
@@ -71,8 +72,7 @@ let config = {
         "unborderedRow": true,
         "showAllLink": true,
         "illustration": {
-            "messageBody": "您没有待办任务",
-            "path": "/assets/images/illustrations/empty-state-no-results.svg#no-results"
+            "messageBody": "您最近7天没有待办任务"
         }
     },
     "calendar": {
