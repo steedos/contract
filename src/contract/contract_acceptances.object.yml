@@ -21,7 +21,7 @@ fields:
     filterable: true
   account:
     label: 单位
-    type: master_detail
+    type: lookup
     reference_to: accounts
     sortable: true
     name: account

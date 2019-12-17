@@ -149,7 +149,7 @@ fields:
     name: othercompany
   customer_contact:
     label: 联系人
-    type: master_detail
+    type: lookup
     reference_to: contacts
     filterable: false
     name: customer_contact
