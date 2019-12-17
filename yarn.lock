@@ -973,6 +973,11 @@
   resolved "https://registry.yarnpkg.com/@steedos/standard-objects/-/standard-objects-1.13.4.tgz#0b93796f29f7707f295a09e64654645a96591c63"
   integrity sha512-BethTFkE2/SeAYxsqVBi7rZHyVZ7ve3om1iKmLP2miv4o8NjTHmp2URZbfMBwlhOZ36eyAAAPU5LqAsQzXCdqA==
 
+"@steedos/standard-objects@^1.13.5":
+  version "1.13.5"
+  resolved "https://registry.yarnpkg.com/@steedos/standard-objects/-/standard-objects-1.13.5.tgz#b9b91b87b23bc43be6bb24e8574a4f8437c1225f"
+  integrity sha512-c3IYHdjzHu4rw/pSDNY4w2ce2Nj3RFoow4RkDt40ZcGDW1t+2sCq5RvBCY9U7wnfd3g+05+ThwlSNjm9sb2yvg==
+
 "@steedos/steedos-plugin-workflow@^1.10.1":
   version "1.10.1"
   resolved "https://registry.yarnpkg.com/@steedos/steedos-plugin-workflow/-/steedos-plugin-workflow-1.10.1.tgz#900281967ddb39f1597965ddb0f001cdc2b7f324"
