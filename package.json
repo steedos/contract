@@ -6,7 +6,7 @@
   "private": false,
   "scripts": {
     "debug": "nodemon server.js",
-    "start": "yarn build && node server",
+    "start": "node server",
     "clear": "rm -rf node_modules/@steedos/auth/node_modules/@steedos node_modules/@steedos/core/node_modules/@steedos node_modules/@steedos/objectql/node_modules/@steedos node_modules/@steedos/plugin-jsreport/node_modules/@steedos node_modules/@steedos/accounts/node_modules/@steedos",
     "build": "yarn buildClient",
     "buildClient": "cd webapp && yarn && yarn build && cd ..",
