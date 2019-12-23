@@ -30,7 +30,7 @@ fields:
     defaultValue: "{now}"
   company_id:
     label: 我方单位
-    required: true
+    required: false
     omit: false
     hidden: false
     sortable: true
@@ -120,7 +120,6 @@ fields:
     type: lookup
     searchable: true
     reference_to: department
-    required: true
   owner:
     label: 执行人
     sortable: true
@@ -418,9 +417,6 @@ list_views:
       - field: create_date
         width: 120
         wrap: true
-      - field: company_id
-        width: 200
-        wrap: true
       - field: othercompany
         width: 200
         wrap: true
@@ -428,9 +424,6 @@ list_views:
         width: 280
         wrap: true
       - field: amount
-        width: 120
-        wrap: true
-      - field: currency_type
         width: 120
         wrap: true
       - field: contract_type
@@ -554,216 +547,6 @@ list_views:
             ["scanned_file","=", false],
             ["copied_file","=", false],
             ["create_date", "<", time],
-            ["virtual_contract", "<>", "非合同"],
-            ["contract_state","<>","terminated"]
-          ];
-      }
-    columns:
-      - field: create_date
-        width: 120
-        wrap: true
-      - field: company_id
-        width: 200
-        wrap: true
-      - field: othercompany
-        width: 200
-        wrap: true
-      - field: name
-        width: 280
-        wrap: true
-      - field: amount
-        width: 120
-        wrap: true
-      - field: currency_type
-        width: 120
-        wrap: true
-      - field: contract_type
-        width: 120
-        wrap: true
-      - field: "no"
-        width: 120
-        wrap: true
-      - field: serial_number
-        width: 120
-        wrap: true
-    filter_fields:
-      - contract_type
-      - signed_date
-      - othercompany
-      - contract_state
-    sort:
-      - - create_date
-        - desc
-  dzug_jt:
-    label: 集团公司合同
-    filter_scope: space
-    filters: !<tag:yaml.org,2002:js/function> |-
-      function () {
-          return [
-            [
-              ["company_id","=","0001A2100000000036TU"],
-              "or"
-              ["company_id","=","0001B21000000001HHBY"]
-            ],
-            ["contract_state","<>","terminated"]
-          ];
-      }
-    columns:
-      - field: create_date
-        width: 120
-        wrap: true
-      - field: company_id
-        width: 200
-        wrap: true
-      - field: othercompany
-        width: 200
-        wrap: true
-      - field: name
-        width: 280
-        wrap: true
-      - field: amount
-        width: 120
-        wrap: true
-      - field: currency_type
-        width: 120
-        wrap: true
-      - field: contract_type
-        width: 120
-        wrap: true
-      - field: "no"
-        width: 120
-        wrap: true
-      - field: serial_number
-        width: 120
-        wrap: true
-    filter_fields:
-      - contract_type
-      - signed_date
-      - othercompany
-      - contract_state
-    sort:
-      - - create_date
-        - desc
-  dzug_zgs:
-    label: 子公司合同
-    filter_scope: space
-    filters: !<tag:yaml.org,2002:js/function> |-
-      function () {
-          var arr = ["0001A2100000000036WC","0001B21000000000MGLZ","0001A2100000000036V9","0001A2100000000036U0","0001A2100000000036U3","0001A2100000000036U6",
-          "0001A2100000000036UC","0001A2100000000036UF","0001A2100000000036UI","0001A2100000000036UO","0001A2100000000036UX","0001A2100000000036V3",
-          "0001A2100000000036V6","0001A2100000000036VC","0001A2100000000036VF","0001A2100000000036VI","0001A2100000000036VL","0001A2100000000036VO",
-          "0001A2100000000036VR","0001A2100000000036W9","0001A2100000000036WC","0001A2100000000036WF","0001A2100000000036WI","0001A2100000000036WL",
-          "0001A2100000000036WO","0001A2100000000036WR","0001A2100000000036WU","0001A2100000000036X0","0001A2100000000036X6","0001A2100000000036X9",
-          "0001A2100000000036XE","0001A210000000004Q2R","0001B21000000000IBXO","0001B21000000000M1X5","0001B21000000000PC0M","0001B21000000000PC0U",
-          "0001B21000000000TX0G","0001B21000000000V666","0001B21000000001UG3X","0001B21000000001XS3N"
-          ];
-          return [
-            ["company_id","in", arr],
-            ["contract_state","<>","terminated"]
-          ];
-      }
-    columns:
-      - field: create_date
-        width: 120
-        wrap: true
-      - field: company_id
-        width: 200
-        wrap: true
-      - field: othercompany
-        width: 200
-        wrap: true
-      - field: name
-        width: 280
-        wrap: true
-      - field: amount
-        width: 120
-        wrap: true
-      - field: currency_type
-        width: 120
-        wrap: true
-      - field: contract_type
-        width: 120
-        wrap: true
-      - field: "no"
-        width: 120
-        wrap: true
-      - field: serial_number
-        width: 120
-        wrap: true
-    filter_fields:
-      - contract_type
-      - signed_date
-      - othercompany
-      - contract_state
-    sort:
-      - - create_date
-        - desc
-  dzug_pt:
-    label: 平台公司合同
-    filter_scope: space
-    filters: !<tag:yaml.org,2002:js/function> |-
-      function () {
-          return [
-            [
-              ["company_id","=","0001A2100000000036V0"],
-              "or",
-              ["company_id","=","0001A2100000000036U9"],
-              "or",
-              ["company_id","=","0001A2100000000036UU"],
-              "or",
-              ["company_id","=","0001A2100000000036VX"],
-              "or",
-              ["company_id","=","0001A2100000000036W3"],
-              "or",
-              ["company_id","=","0001A2100000000036X3"],
-              "or",
-              ["company_id","=","0001B21000000000YAZ1"]
-            ],
-            ["contract_state","<>","terminated"]
-          ];
-      }
-    columns:
-      - field: create_date
-        width: 120
-        wrap: true
-      - field: company_id
-        width: 200
-        wrap: true
-      - field: othercompany
-        width: 200
-        wrap: true
-      - field: name
-        width: 280
-        wrap: true
-      - field: amount
-        width: 120
-        wrap: true
-      - field: currency_type
-        width: 120
-        wrap: true
-      - field: contract_type
-        width: 120
-        wrap: true
-      - field: "no"
-        width: 120
-        wrap: true
-      - field: serial_number
-        width: 120
-        wrap: true
-    filter_fields:
-      - contract_type
-      - signed_date
-      - othercompany
-      - contract_state
-    sort:
-      - - create_date
-        - desc
-  contract_manager:
-    label: 合同管理员
-    filter_scope: space
-    filters: !<tag:yaml.org,2002:js/function> |-
-      function () {
-          return [
             ["virtual_contract", "<>", "非合同"],
             ["contract_state","<>","terminated"]
           ];

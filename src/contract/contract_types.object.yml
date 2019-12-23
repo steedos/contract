@@ -7,19 +7,11 @@ fields:
     label: 名称
     name: name
     searchable: true
-  remarks:
+    required: true
+  code:
     type: text
-    label: 备注
-    name: remarks
-  yinhuashuilv:
-    type: number
-    label: 印花税率
-    scale: 4
-    name: yinhuashuilv
-  company_ids:
-    label: 所属单位
-    omit: false
-    hidden: false
+    label: 编码
+    name: code
 permission_set:
   user:
     allowCreate: false
@@ -42,4 +34,3 @@ list_views:
     columns:
       - name
       - remarks
-      - yinhuashuilv
