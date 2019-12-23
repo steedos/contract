@@ -7,7 +7,7 @@ enable_share: true
 enable_trash: false
 fields:
   owner:
-    label: 录入人
+    label: 责任人
     readonly: true
     type: lookup
     reference_to: users
@@ -25,14 +25,12 @@ fields:
   phone:
     type: text
     label: 电话
-    required: true
     defaultValue: ""
     name: phone
   address:
     type: text
     label: 公司地址
     defaultValue: ""
-    required: true
     name: address
   registered_capital:
     type: currency
@@ -40,10 +38,9 @@ fields:
     scale: 2
     name: registered_capital
   category:
-    label: 签约对象类别（企业、个人、其它）
+    label: 签约对象类别
     type: select
     sortable: true
-    required: true
     defaultValue: "1"
     options:
       - label: 企业
@@ -58,13 +55,11 @@ fields:
     label: 国家/地区
     name: country
     reference_to: country
-    required: true
   credit_code:
     type: text
     label: 纳税人识别号（身份证/其他）
     unique: true
     name: credit_code
-    required: true
     searchable: true
   description:
     label: 其他
