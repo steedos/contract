@@ -6,13 +6,8 @@ services:
     build: .
     restart: unless-stopped
     ports:
-      - "5040:5000"
+      - "5040:5040"
     volumes:
       - /srv/workflow/cfs:/storage
+      - /srv/git/steedos-contracts-app/steedos-config.yml:/app/steedos-config.yml
 
-
-# volumes:
-#   # Storage for attachments
-#   steedos-storage-1:
-#   mongo-db-1:
-#   mongo-backup-1:
