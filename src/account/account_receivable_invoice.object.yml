@@ -25,6 +25,7 @@ fields:
     label: 应付记录
     type: lookup
     reference_to: account_receivable
+    relatedList: true
     required: true
   contract_id:
     label: 合同

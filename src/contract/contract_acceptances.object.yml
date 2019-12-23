@@ -23,6 +23,7 @@ fields:
     label: 单位
     type: lookup
     reference_to: accounts
+    relatedList: true
     sortable: true
     name: account
     filterable: true
@@ -45,7 +46,6 @@ fields:
     required: true
     omit: false
     hidden: false
-    type: lookup
 list_views:
   all:
     label: 所有

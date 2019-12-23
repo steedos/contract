@@ -1,9 +1,0 @@
-_id: WORKFLOW
-name: 流程
-description: 电子化流程审批系统。
-icon_slds: task
-is_creator: true
-objects: 
-  - instances
-mobile_objects: 
-  - instances

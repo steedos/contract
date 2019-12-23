@@ -2,32 +2,44 @@ name: department
 label: 经办部门
 icon: account
 enable_api: true
+enable_trash: true
 fields:
   name:
     label: 部门名称
     type: text
-  code: 
+  code:
     label: 部门代码
     type: text
-  parent:
+  company_id:
     label: 上级部门
     type: lookup
-    reference_to: department
-  company_id:
-    label: 公司
-    type: lookup
     reference_to: company
+    omit: false
+    hidden: false
+    required: true
   description:
     label: 备注
     type: textarea
     is_wide: true
+  enablestate:
+    label: 启用状态
+    type: select
+    options:
+      - label: 未启用
+        value: "1"
+      - label: 已启用
+        value: "2"
+      - label: 已停用
+        value: "3"
+    omit: true
+    readonly: true
 list_views:
   all:
     label: 所有
     columns:
       - name
       - code
-      - parent
+      - company_id
       - modified
 permission_set:
   user:

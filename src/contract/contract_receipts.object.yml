@@ -17,6 +17,7 @@ fields:
   account:
     label: 付款方
     type: lookup
+    relatedList: true
     reference_to: accounts
     sortable: true
     name: account
@@ -54,7 +55,6 @@ fields:
     required: true
     omit: false
     hidden: false
-    type: lookup
 list_views:
   all:
     label: 所有
