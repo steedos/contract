@@ -1,4 +1,4 @@
-FROM jsreport/jsreport:2.5.0-full
+FROM steedos/jsreport-2.5.0-full:oracle-instantclient
 
 ADD . /app
 
@@ -8,8 +8,12 @@ RUN npm config set registry http://registry.npm.taobao.org/
 
 RUN npm i yarn -g
 
+RUN npm install -g typescript
+
+RUN yarn config set registry http://registry.npm.taobao.org/
+
 RUN yarn --force
 
-VOLUME [ "/storage" ]
+RUN tsc
 
 CMD ["yarn", "start"]
