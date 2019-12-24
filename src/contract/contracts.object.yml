@@ -44,6 +44,7 @@ fields:
     searchable: true
     reference_to: accounts
     multiple: true
+    required: true
   project:
     type: lookup
     label: 项目
@@ -188,11 +189,6 @@ fields:
     scale: 2
     required: true
     sortable: true
-  capital_amount:
-    label: 大写金额
-    type: text
-    group: 合同主要内容
-    readonly: true
   currency_type:
     label: 币种
     type: lookup
@@ -248,10 +244,6 @@ fields:
     filterable: true
   remark:
     label: 备注
-    group: 合同主要内容
-    type: textarea
-  description:
-    label: 说明
     group: 合同主要内容
     type: textarea
   contract_state:
@@ -736,7 +728,6 @@ permission_set:
       - contract_object
       - subject
       - amount
-      - capital_amount
       - amount_description
       - deadline
       - remark
@@ -811,7 +802,6 @@ permission_set:
       - contract_object
       - subject
       - amount
-      - capital_amount
       - amount_description
       - deadline
       - remark

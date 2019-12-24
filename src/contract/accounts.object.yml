@@ -168,8 +168,8 @@ list_views:
       - phone
       - address
       - registered_capital
-      - category
       - credit_code
+      - owner
     filter_scope: space
   mine:
     label: 我的单位
@@ -178,8 +178,8 @@ list_views:
       - phone
       - address
       - registered_capital
-      - category
       - credit_code
+      - owner
     filter_scope: mine
 permission_set:
   user:

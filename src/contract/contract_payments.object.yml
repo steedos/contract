@@ -1,6 +1,7 @@
 name: contract_payments
 label: 付款计划
 icon: orders
+enable_follow: true
 fields:
   name:
     label: 名称
@@ -14,6 +15,7 @@ fields:
     type: textarea
     is_wide: true
     name: description
+    rows: 2
   amount:
     label: 付款金额
     type: currency
@@ -24,7 +26,6 @@ fields:
     label: 付款币种
     type: lookup
     reference_to: currency
-    required: true
   due_date:
     label: 计划付款时间
     type: date
@@ -38,33 +39,77 @@ fields:
     sortable: true
     name: contract
     filterable: true
-  description:
-    label: 备注
-    type: textarea
-    is_wide: true
-    name: description
   company_id:
     required: true
     omit: false
     hidden: false
+    type: lookup
+  account:
+    type: lookup
+    relatedList: true
+    label: 收款方
+    searchable: true
+    reference_to: accounts
+    create: false
+    depend_on:
+      - contract
+    optionsFunction: !!js/function |
+      function(values) {
+        var _options = [];
+        var contractId = values.contract;
+        if (!contractId) {
+          return;
+        }
+
+        if(!_.isString(contractId)){
+          contractId = values.contract._id
+        }
+        
+        var contract = Creator.odata.get('contracts', contractId, 'othercompany');
+        if (contract) {
+          var qydxIds = contract.othercompany
+          if(_.isArray(qydxIds) && qydxIds.length > 0){
+            var filters = [];
+            _.forEach(qydxIds, function(qydxId){
+                filters.push("(_id eq '" + qydxId + "')")
+            })
+            var $filter = filters.join(" or ")
+            var accounts = Creator.odata.query('accounts', {$filter: $filter, $select: 'name'}, true);
+            if (accounts){
+              _.each(accounts, function(item){
+                _options.push({value: item._id, label: item.name});
+              })
+            }
+          }
+        }
+        return _options;
+      }
+  finished:
+    label: 已完成
+    type: boolean
 list_views:
   all:
     label: 所有
     columns:
+      - contract
       - name
       - amount
-      - currency
-      - contract
       - due_date
+      - account
+      - currency
     filter_scope: space
+    sort:
+      - - due_date
+        - desc
   recent:
     label: 最近查看
     columns:
+      - contract
       - name
       - amount
-      - currency
-      - contract
       - due_date
+      - account
+      - currency
     filter_scope: space
 permission_set:
   user:
