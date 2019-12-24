@@ -242,6 +242,18 @@ fields:
     type: date
     sortable: true
     filterable: true
+  start_date:
+    label: 开始日期
+    group: 合同主要内容
+    type: date
+    sortable: true
+    filterable: true
+  end_date:
+    label: 结束日期
+    group: 合同主要内容
+    type: date
+    sortable: true
+    filterable: true
   remark:
     label: 备注
     group: 合同主要内容
