@@ -417,7 +417,7 @@ list_views:
         width: 280
         wrap: true
       - field: company_id
-        width: 220
+        width: 120
       - field: othercompany
         width: 200
       - field: amount
