@@ -303,7 +303,6 @@ fields:
     group: 合同收付款信息
     scale: 2
     sortable: true
-    readonly: true
     defaultValue: 0
   unpaid_amount:
     label: 未支付付款总金额
@@ -311,7 +310,6 @@ fields:
     type: number
     scale: 2
     sortable: true
-    readonly: true
     defaultValue: 0
   receipted_amount:
     label: 已收票总金额
@@ -319,7 +317,6 @@ fields:
     group: 合同收付款信息
     scale: 2
     sortable: true
-    readonly: true
     defaultValue: 0
   unclaimed_votes_amount:
     label: 未收票总金额
@@ -327,7 +324,6 @@ fields:
     group: 合同收付款信息
     scale: 2
     sortable: true
-    readonly: true
     defaultValue: 0
   received_amount:
     label: 已收款总金额
@@ -335,7 +331,6 @@ fields:
     type: number
     scale: 2
     sortable: true
-    readonly: true
     defaultValue: 0
   unreceived_amount:
     label: 未收款总金额
@@ -343,23 +338,20 @@ fields:
     type: number
     scale: 2
     sortable: true
-    readonly: true
     defaultValue: 0
   for_invoicing_amount:
-    label: 申请开票总金额
+    label: 开票总金额
     group: 合同收付款信息
     type: number
     scale: 2
     sortable: true
-    readonly: true
     defaultValue: 0
   unfor_invoicing_amount:
-    label: 未申请开票总金额
+    label: 未开票总金额
     group: 合同收付款信息
     type: number
     scale: 2
     sortable: true
-    readonly: true
     defaultValue: 0
   change_before:
     label: 变更前合同
