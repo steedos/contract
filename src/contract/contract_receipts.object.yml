@@ -92,25 +92,18 @@ list_views:
   all:
     label: 所有
     columns:
-      - contract
       - name
+      - contract
       - amount
       - due_date
       - account
-      - currency
+      - finished
     filter_scope: space
     sort:
       - - due_date
         - desc
   recent:
     label: 最近查看
-    columns:
-      - contract
-      - name
-      - amount
-      - due_date
-      - account
-      - currency
     filter_scope: space
 permission_set:
   user:
