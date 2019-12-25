@@ -438,6 +438,8 @@ list_views:
         width: 120
       - field: end_date
         width: 120
+      - field: bop
+        width: 120
     filter_scope: space
     filter_fields:
       - contract_type
@@ -492,6 +494,8 @@ list_views:
           ];
       }
     columns:
+      - field: create_date
+        width: 120
       - field: company_id
         width: 220
         wrap: true
@@ -507,13 +511,7 @@ list_views:
       - field: othercompany
         width: 220
         wrap: true
-      - field: owner_organization
-        width: 120
-        wrap: true
       - field: owner
-        width: 120
-        wrap: true
-      - field: currency_type
         width: 120
         wrap: true
       - field: amount
@@ -550,12 +548,8 @@ list_views:
           ];
       }
     columns:
-      - field: company_id
-        width: 220
-        wrap: true
-      - field: "no"
-        width: 150
-        wrap: true
+      - field: create_date
+        width: 120
       - field: name
         width: 220
         wrap: true
@@ -565,13 +559,7 @@ list_views:
       - field: othercompany
         width: 220
         wrap: true
-      - field: owner_organization
-        width: 120
-        wrap: true
       - field: owner
-        width: 120
-        wrap: true
-      - field: currency_type
         width: 120
         wrap: true
       - field: amount
