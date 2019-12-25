@@ -421,24 +421,23 @@ list_views:
       - field: create_date
         width: 120
         wrap: true
-      - field: othercompany
-        width: 200
-        wrap: true
       - field: name
         width: 280
         wrap: true
+      - field: company_id
+        width: 220
+      - field: othercompany
+        width: 200
       - field: amount
         width: 120
-        wrap: true
       - field: contract_type
         width: 120
-        wrap: true
-      - field: "no"
+      - field: owner
         width: 120
-        wrap: true
-      - field: serial_number
+      - field: start_date
         width: 120
-        wrap: true
+      - field: end_date
+        width: 120
     filter_scope: space
     filter_fields:
       - contract_type
@@ -457,34 +456,6 @@ list_views:
             ["contract_state","<>","terminated"]
           ];
       }
-    columns:
-      - field: create_date
-        width: 120
-        wrap: true
-      - field: company_id
-        width: 200
-        wrap: true
-      - field: othercompany
-        width: 200
-        wrap: true
-      - field: name
-        width: 280
-        wrap: true
-      - field: amount
-        width: 120
-        wrap: true
-      - field: currency_type
-        width: 120
-        wrap: true
-      - field: contract_type
-        width: 120
-        wrap: true
-      - field: "no"
-        width: 120
-        wrap: true
-      - field: serial_number
-        width: 120
-        wrap: true
     filter_fields:
       - contract_type
       - signed_date
@@ -502,87 +473,6 @@ list_views:
             ["contract_state","<>","terminated"]
           ];
       }
-    columns:
-      - field: create_date
-        width: 120
-        wrap: true
-      - field: company_id
-        width: 200
-        wrap: true
-      - field: othercompany
-        width: 200
-        wrap: true
-      - field: name
-        width: 280
-        wrap: true
-      - field: amount
-        width: 120
-        wrap: true
-      - field: currency_type
-        width: 120
-        wrap: true
-      - field: contract_type
-        width: 120
-        wrap: true
-      - field: "no"
-        width: 120
-        wrap: true
-      - field: serial_number
-        width: 120
-        wrap: true
-    filter_fields:
-      - contract_type
-      - signed_date
-      - othercompany
-      - contract_state
-    sort:
-      - - create_date
-        - desc
-  none:
-    label: 无原件
-    filter_scope: space
-    filters: !<tag:yaml.org,2002:js/function> |-
-      function () {
-          var dayTime = 24 * 60 * 60 * 1000;
-          var time =  new Date().getTime() - (30 * dayTime);
-          time = new Date(moment(time).format('YYYY-MM-DD'));
-          return [
-            ["original_file","=",false],
-            ["scanned_file","=", false],
-            ["copied_file","=", false],
-            ["create_date", "<", time],
-            ["virtual_contract", "<>", "非合同"],
-            ["contract_state","<>","terminated"]
-          ];
-      }
-    columns:
-      - field: create_date
-        width: 120
-        wrap: true
-      - field: company_id
-        width: 200
-        wrap: true
-      - field: othercompany
-        width: 200
-        wrap: true
-      - field: name
-        width: 280
-        wrap: true
-      - field: amount
-        width: 120
-        wrap: true
-      - field: currency_type
-        width: 120
-        wrap: true
-      - field: contract_type
-        width: 120
-        wrap: true
-      - field: "no"
-        width: 120
-        wrap: true
-      - field: serial_number
-        width: 120
-        wrap: true
     filter_fields:
       - contract_type
       - signed_date
@@ -716,50 +606,6 @@ permission_set:
     allowRead: true
     modifyAllRecords: false
     viewAllRecords: false
-    disabled_list_views:
-      - contract_manager
-    uneditable_fields:
-      - "no"
-      - serial_number
-      - create_date
-      - company_id
-      - othercompany
-      - project
-      - business_category
-      - name
-      - is_bidding
-      - bop
-      - is_approve_by_boss
-      - virtual_contract
-      - applicant
-      - applicant_organization
-      - owner
-      - owner_organization
-      - created
-      - modified
-      - contract_object
-      - subject
-      - amount
-      - amount_description
-      - deadline
-      - remark
-      - description
-      - contract_state
-      - stamp_state
-      - paid_amount
-      - unpaid_amount
-      - receipted_amount
-      - unclaimed_votes_amount
-      - received_amount
-      - unreceived_amount
-      - for_invoicing_amount
-      - unfor_invoicing_amount
-      - change_before
-      - change_after
-      - contract_type
-      - currency_type
-      - amount_type
-      - receive_payment_type
   admin:
     allowCreate: true
     allowDelete: true
@@ -767,82 +613,3 @@ permission_set:
     allowRead: true
     modifyAllRecords: true
     viewAllRecords: true
-  contract_manager:
-    viewAllRecords: true
-    disabled_list_views:
-      - recent
-      - dzug_jt
-      - dzug_pt
-      - dzug_zgs
-    unrelated_objects:
-      - account_payable
-      - account_payable_invoice
-      - account_payment
-      - account_receipt
-      - account_receivable
-      - cost_recognition
-      - lease_invoice
-      - revenue_recognition
-  company_contract_manager:
-    allowEdit: true
-    viewCompanyRecords: true
-    disabled_list_views:
-      - recent
-      - dzug_jt
-      - dzug_pt
-      - dzug_zgs
-      - contract_manager
-    uneditable_fields:
-      - "no"
-      - serial_number
-      - create_date
-      - company_id
-      - othercompany
-      - project
-      - business_category
-      - name
-      - is_bidding
-      - bop
-      - is_approve_by_boss
-      - virtual_contract
-      - applicant
-      - applicant_organization
-      - owner
-      - owner_organization
-      - created
-      - modified
-      - contract_object
-      - subject
-      - amount
-      - amount_description
-      - deadline
-      - remark
-      - description
-      - contract_state
-      - stamp_state
-      - paid_amount
-      - unpaid_amount
-      - receipted_amount
-      - unclaimed_votes_amount
-      - received_amount
-      - unreceived_amount
-      - for_invoicing_amount
-      - unfor_invoicing_amount
-      - change_before
-      - change_after
-      - signed_date
-      - contract_type
-      - currency_type
-      - amount_type
-      - receive_payment_type
-      - contract_fulfillment_state
-  accounting_manager:
-    viewAllRecords: true
-    disabled_list_views:
-      - contract_manager
-      - none
-  company_accounting_manager:
-    viewCompanyRecords: true
-    disabled_list_views:
-      - contract_manager
-      - none
