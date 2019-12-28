@@ -10,7 +10,6 @@
     "clear": "rm -rf node_modules/@steedos/auth/node_modules/@steedos node_modules/@steedos/core/node_modules/@steedos node_modules/@steedos/objectql/node_modules/@steedos node_modules/@steedos/plugin-jsreport/node_modules/@steedos node_modules/@steedos/accounts/node_modules/@steedos",
     "build": "yarn buildClient",
     "buildClient": "cd webapp && yarn && yarn build && cd ..",
-    "prepare": "yarn build",
     "up": "yarn upgrade -S @steedos --latest && yarn upgrade steedos-server --latest "
   },
   "repository": {
