@@ -9207,19 +9207,10 @@ xmlbuilder@~9.0.1:
   resolved "https://registry.yarnpkg.com/xmlbuilder/-/xmlbuilder-9.0.7.tgz#132ee63d2ec5565c557e20f4c22df9aca686b10d"
   integrity sha1-Ey7mPS7FVlxVfiD0wi35rKaGsQ0=
 
-xmldom@=0.1.15:
-  version "0.1.15"
-  resolved "https://registry.yarnpkg.com/xmldom/-/xmldom-0.1.15.tgz#b3048062f1bdd52edc421424459f06dceeb2f94d"
-  integrity sha1-swSAYvG91S7cQhQkRZ8G3O6y+U0=
-
-xmldom@=0.1.19, "xmldom@github:auth0/xmldom#v0.1.19-auth0_1":
-  version "0.1.19"
-  resolved "https://codeload.github.com/auth0/xmldom/tar.gz/3376bc7beb5551bf68e12b0cc6b0e3669f77d392"
-
-xmldom@^0.1.27, xmldom@~0.1.15:
-  version "0.1.27"
-  resolved "https://registry.yarnpkg.com/xmldom/-/xmldom-0.1.27.tgz#d501f97b3bdb403af8ef9ecc20573187aadac0e9"
-  integrity sha1-1QH5ezvbQDr4757MIFcxh6rawOk=
+xmldom@0.2.1, xmldom@=0.1.15, xmldom@=0.1.19, xmldom@^0.1.27, xmldom@auth0/xmldom#v0.1.19-auth0_1, xmldom@~0.1.15:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/xmldom/-/xmldom-0.2.1.tgz#cac9465066f161e1c3302793ea4dbe59c518274f"
+  integrity sha512-kXXiYvmblIgEemGeB75y97FyaZavx6SQhGppLw5TKWAD2Wd0KAly0g23eVLh17YcpxZpnFym1Qk/eaRjy1APPg==
 
 xmlhttprequest-ssl@~1.5.4:
   version "1.5.5"
