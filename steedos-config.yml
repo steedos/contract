@@ -17,8 +17,6 @@ public:
   is_group_company: true
   accounts:
     loginExpirationInDays: 1825
-plugins:
-  - "@steedos/accounts"
 cfs:
   aliyun:
     region: ${ENV_CFS_ALIYUN_REGION}
