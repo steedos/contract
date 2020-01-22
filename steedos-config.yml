@@ -25,3 +25,5 @@ cfs:
     bucket: ${ENV_CFS_ALIYUN_BUCKET}
     accessKeyId: ${ENV_CFS_ALIYUN_ACCESSKEYID}
     secretAccessKey: ${ENV_CFS_ALIYUN_SECRETACCESSKEY}
+cron:
+  instancerecordqueue_interval: 10000
