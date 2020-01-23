@@ -43,7 +43,6 @@ fields:
     label: 签约对象
     searchable: true
     reference_to: accounts
-    multiple: true
     required: true
   project:
     type: lookup
