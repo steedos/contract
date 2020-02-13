@@ -23,7 +23,8 @@
     "@steedos/steedos-plugin-workflow": "^2.0.4",
     "dotenv-flow": "^3.1.0",
     "nodemon": "^1.19.1",
-    "steedos-server": "^1.16.4"
+    "steedos-server": "^1.16.4",
+    "weixin-pay": "1.1.7"
   },
   "bugs": {
     "url": "https://github.com/steedos/steedos-contracts-app/issues"
