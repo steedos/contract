@@ -11,4 +11,5 @@ services:
       - /srv/workflow/cfs:/storage
       - /srv/git/steedos-contracts-app/src:/app/src
       - /srv/git/steedos-contracts-app/steedos-config.yml:/app/steedos-config.yml
+      - /srv/git/steedos-contracts-app/.env.local:/app/.env.local
 
