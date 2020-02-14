@@ -802,10 +802,10 @@
   dependencies:
     tslib "^1.10.0"
 
-"@steedos/accounts@^1.10.11":
-  version "1.10.11"
-  resolved "https://registry.npm.taobao.org/@steedos/accounts/download/@steedos/accounts-1.10.11.tgz#f69b30acd2a0fb13146ebc3beb0f29dc82e344f4"
-  integrity sha1-9pswrNKg+xMUbrw76w8p3ILjRPQ=
+"@steedos/accounts@^1.10.12":
+  version "1.10.12"
+  resolved "https://registry.npm.taobao.org/@steedos/accounts/download/@steedos/accounts-1.10.12.tgz#ebad182cc2daf13849cc35f7cd5e55d3d6d9b545"
+  integrity sha1-660YLMLa8ThJzDX3zV5V09bZtUU=
   dependencies:
     "@accounts/mongo" "^0.19.0"
     "@accounts/rest-express" "^0.19.0"
@@ -5995,22 +5995,6 @@ node-gyp@3.6.0:
     tar "^2.0.0"
     which "1"
 
-node-pre-gyp@*:
-  version "0.14.0"
-  resolved "https://registry.npm.taobao.org/node-pre-gyp/download/node-pre-gyp-0.14.0.tgz#9a0596533b877289bcad4e143982ca3d904ddc83"
-  integrity sha1-mgWWUzuHcom8rU4UOYLKPZBN3IM=
-  dependencies:
-    detect-libc "^1.0.2"
-    mkdirp "^0.5.1"
-    needle "^2.2.1"
-    nopt "^4.0.1"
-    npm-packlist "^1.1.6"
-    npmlog "^4.0.2"
-    rc "^1.2.7"
-    rimraf "^2.6.1"
-    semver "^5.3.0"
-    tar "^4.4.2"
-
 node-pre-gyp@0.12.0:
   version "0.12.0"
   resolved "https://registry.npm.taobao.org/node-pre-gyp/download/node-pre-gyp-0.12.0.tgz#39ba4bb1439da030295f899e3b520b7785766149"
@@ -7584,7 +7568,7 @@ saml@^0.12.1:
     xmldom "=0.1.15"
     xpath "0.0.5"
 
-samlp@3.4.1, "samlp@github:mcguinness/node-samlp":
+samlp@3.4.1, samlp@mcguinness/node-samlp:
   version "3.4.1"
   resolved "https://registry.npm.taobao.org/samlp/download/samlp-3.4.1.tgz#f75b21bed0a572e28874b063bb012a7d60a1a0c2"
   integrity sha1-91shvtClcuKIdLBjuwEqfWChoMI=
@@ -8445,7 +8429,7 @@ tar@^2.0.0, tar@^2.2.1:
     fstream "^1.0.12"
     inherits "2"
 
-tar@^4, tar@^4.4.2:
+tar@^4:
   version "4.4.13"
   resolved "https://registry.npm.taobao.org/tar/download/tar-4.4.13.tgz?cache=0&sync_timestamp=1580272840873&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftar%2Fdownload%2Ftar-4.4.13.tgz#43b364bc52888d555298637b10d60790254ab525"
   integrity sha1-Q7NkvFKIjVVSmGN7ENYHkCVKtSU=
@@ -9346,7 +9330,7 @@ xmlbuilder@~9.0.1:
   resolved "https://registry.npm.taobao.org/xmlbuilder/download/xmlbuilder-9.0.7.tgz#132ee63d2ec5565c557e20f4c22df9aca686b10d"
   integrity sha1-Ey7mPS7FVlxVfiD0wi35rKaGsQ0=
 
-xmldom@0.2.1, xmldom@=0.1.15, xmldom@=0.1.19, xmldom@^0.1.27, "xmldom@github:auth0/xmldom#v0.1.19-auth0_1", xmldom@~0.1.15:
+xmldom@0.2.1, xmldom@=0.1.15, xmldom@=0.1.19, xmldom@^0.1.27, xmldom@auth0/xmldom#v0.1.19-auth0_1, xmldom@~0.1.15:
   version "0.2.1"
   resolved "https://registry.npm.taobao.org/xmldom/download/xmldom-0.2.1.tgz?cache=0&sync_timestamp=1576802605842&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fxmldom%2Fdownload%2Fxmldom-0.2.1.tgz#cac9465066f161e1c3302793ea4dbe59c518274f"
   integrity sha1-yslGUGbxYeHDMCeT6k2+WcUYJ08=
