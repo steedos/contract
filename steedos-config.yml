@@ -31,3 +31,5 @@ billing:
   appid: ${ENV_BILLING_APPID}
   mch_id: ${ENV_BILLING_MCH_ID}
   partner_key: ${ENV_BILLING_PARTNER_KEY}
+tenant:
+  saas: true
