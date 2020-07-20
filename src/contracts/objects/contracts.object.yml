@@ -1,0 +1,474 @@
+name: contracts
+label: 合同
+icon: contract
+enable_files: true
+enable_search: true
+enable_events: true
+enable_tasks: true
+enable_api: true
+enable_chatter: true
+enable_audit: true
+enable_workflow: true
+fields:
+  name:
+    label: 合同名称
+    type: text
+    required: true
+    searchable: true
+    index: true
+  "no":
+    type: autonumber
+    formula: "{YYYY}-{000} "
+    label: 合同编号
+    sortable: true
+    filterable: true
+    omit: true
+    readonly: true
+  othercompany:
+    type: lookup
+    relatedList: true
+    label: 业务伙伴
+    searchable: true
+    reference_to: accounts
+    required: true
+  contract_type:
+    type: lookup
+    label: 分类
+    reference_to: contract_types
+    required: true
+  create_date:
+    label: 登记日期
+    type: date
+    sortable: true
+    filterable: true
+    defaultValue: "{now}"
+  bop:
+    type: select
+    label: 收支类别
+    options:
+      - label: 付款合同
+        value: 付款合同
+      - label: 收款合同
+        value: 收款合同
+    allowedValues:
+      - 付款合同
+      - 收款合同
+    required: true
+    defaultValue: 收款合同
+  owner:
+    label: 执行人
+    sortable: true
+    type: lookup
+    reference_to: users
+    omit: false
+    hidden: false
+  created_by:
+    label: 创建人
+    sortable: true
+    type: lookup
+    reference_to: users
+  modified_by:
+    label: 修改人
+    sortable: true
+    type: lookup
+    reference_to: users
+  subject:
+    type: textarea
+    label: 合同主要内容
+    is_wide: true
+  amount:
+    label: 合同金额
+    type: number
+    scale: 2
+    required: true
+    sortable: true
+  signed_date:
+    label: 签订日期
+    type: date
+    sortable: true
+    filterable: true
+  start_date:
+    label: 开始日期
+    type: date
+    sortable: true
+    filterable: true
+  end_date:
+    label: 结束日期
+    type: date
+    sortable: true
+    filterable: true
+  remark:
+    label: 备注
+    type: textarea
+    is_wide: true
+  instance_state:
+    type: select
+    label: 合同状态
+    searchable: true
+    options:
+      - label: 审批中
+        value: pending
+      - label: 已核准
+        value: approved
+      - label: 已驳回
+        value: rejected
+      - label: 已取消
+        value: terminated
+      - label: 已签订
+        value: signed
+      - label: 已作废
+        value: droped
+      - label: 已完成
+        value: completed
+    omit: false
+    hidden: false
+  contract_fulfillment_state:
+    type: select
+    label: 合同履行状态
+    searchable: true
+    options:
+      - label: 履行中
+        value: 履行中
+      - label: 履行完
+        value: 履行完
+      - label: 已取消
+        value: 已取消
+  paid_amount:
+    label: 已支付总金额
+    type: number
+    scale: 2
+    sortable: true
+    readonly: true
+    defaultValue: 0
+  unpaid_amount:
+    label: 未支付付款总金额
+    type: number
+    scale: 2
+    sortable: true
+    readonly: true
+    defaultValue: 0
+  received_amount:
+    label: 已收款总金额
+    type: number
+    scale: 2
+    sortable: true
+    readonly: true
+    defaultValue: 0
+  unreceived_amount:
+    label: 未收款总金额
+    type: number
+    scale: 2
+    sortable: true
+    readonly: true
+    defaultValue: 0
+list_views:
+  all:
+    label: 所有有效合同
+    filters: !<tag:yaml.org,2002:js/function> |-
+      function () {
+          return [
+            ["instance_state","<>","terminated"], "and",["instance_state","<>","pending"], "and",["instance_state","<>","rejected"], "and",["instance_state","<>","droped"]
+          ];
+      }
+    columns:
+      - field: create_date
+        width: 150
+        wrap: true
+      - field: name
+        width: 280
+        wrap: true
+      - field: othercompany
+        width: 200
+      - field: amount
+        width: 120
+      - field: contract_type
+        width: 120
+      - field: bop
+        width: 120
+      - field: owner
+        width: 120
+      - field: signed_date
+        width: 150
+      - field: start_date
+        width: 150
+      - field: end_date
+        width: 150
+    filter_scope: space
+    filter_fields:
+      - contract_type
+      - signed_date
+      - othercompany
+      - instance_state
+    sort:
+      - - create_date
+        - desc
+  recent:
+    label: 最近查看
+    filter_scope: space
+    filters: !<tag:yaml.org,2002:js/function> |-
+      function () {
+          return [
+            ["instance_state","<>","terminated"]
+          ];
+      }
+    filter_fields:
+      - contract_type
+      - signed_date
+      - othercompany
+      - instance_state
+    sort:
+      - - create_date
+        - desc
+  mine:
+    label: 我的有效合同
+    filter_scope: mine
+    filters: !<tag:yaml.org,2002:js/function> |-
+      function () {
+          return [
+            ["instance_state","<>","terminated"], "and",["instance_state","<>","pending"], "and",["instance_state","<>","rejected"], "and",["instance_state","<>","droped"]
+          ];
+      }
+    filter_fields:
+      - contract_type
+      - signed_date
+      - othercompany
+      - instance_state
+    sort:
+      - - create_date
+        - desc
+  mine_invalid:
+    label: 我的其他合同
+    filter_scope: mine
+    filters: !<tag:yaml.org,2002:js/function> |-
+      function () {
+          return [
+            ["instance_state","=","terminated"], "or",["instance_state","=","rejected"], "or",["instance_state","=","droped"]
+          ];
+      }
+    columns:
+      - field: create_date
+        width: 150
+        wrap: true
+      - field: name
+        width: 280
+        wrap: true
+      - field: instance_state
+        width: 120
+        wrap: true
+      - field: othercompany
+        width: 200
+      - field: amount
+        width: 120
+      - field: contract_type
+        width: 120
+      - field: bop
+        width: 120
+      - field: owner
+        width: 120
+    filter_fields:
+      - contract_type
+      - signed_date
+      - othercompany
+      - instance_state
+    sort:
+      - - create_date
+        - desc
+  contract_payments:
+    label: 付款合同
+    filter_scope: space
+    filters: !<tag:yaml.org,2002:js/function> |-
+      function () {
+          return [
+            ["bop","=","付款合同"],
+            ["instance_state","<>","terminated"], "and",["instance_state","<>","pending"], "and",["instance_state","<>","rejected"], "and",["instance_state","<>","droped"]
+          ];
+      }
+    columns:
+      - field: create_date
+        width: 150
+      - field: "no"
+        width: 150
+        wrap: true
+      - field: name
+        width: 220
+        wrap: true
+      - field: instance_state
+        width: 120
+        wrap: true
+      - field: othercompany
+        width: 220
+        wrap: true
+      - field: amount
+        width: 120
+        wrap: true
+      - field: unfor_invoicing_amount
+        width: 120
+        wrap: true
+      - field: unpaid_amount
+        width: 120
+        wrap: true
+      - field: for_invoicing_amount
+        width: 120
+        wrap: true
+      - field: paid_amount
+        width: 120
+        wrap: true
+      - field: owner
+        width: 120
+        wrap: true
+    filter_fields:
+      - contract_type
+      - signed_date
+      - othercompany
+      - instance_state
+    sort:
+      - - create_date
+        - desc
+  contract_receipts:
+    label: 收款合同
+    filter_scope: space
+    filters: !<tag:yaml.org,2002:js/function> |-
+      function () {
+          return [
+            ["bop","=","收款合同"],
+            ["instance_state","<>","terminated"], "and",["instance_state","<>","pending"], "and",["instance_state","<>","rejected"], "and",["instance_state","<>","droped"]
+          ];
+      }
+    columns:
+      - field: create_date
+        width: 150
+      - field: "no"
+        width: 150
+        wrap: true
+      - field: name
+        width: 220
+        wrap: true
+      - field: instance_state
+        width: 120
+        wrap: true
+      - field: othercompany
+        width: 220
+        wrap: true
+      - field: amount
+        width: 120
+        wrap: true
+      - field: unfor_invoicing_amount
+        width: 120
+        wrap: true
+      - field: unreceived_amount
+        width: 120
+        wrap: true
+      - field: for_invoicing_amount
+        width: 120
+        wrap: true
+      - field: received_amount
+        width: 120
+        wrap: true
+      - field: owner
+        width: 120
+        wrap: true
+    filter_fields:
+      - contract_type
+      - signed_date
+      - othercompany
+      - instance_state
+    sort:
+      - - create_date
+        - desc
+  all_pending:
+    label: 所有审批中的合同
+    filter_scope: space
+    filters: !<tag:yaml.org,2002:js/function> |-
+      function () {
+          return [
+            ["instance_state","=","pending"]
+          ];
+      }
+    columns:
+      - field: create_date
+        width: 150
+        wrap: true
+      - field: name
+        width: 280
+        wrap: true
+      - field: instance_state
+        width: 120
+        wrap: true
+      - field: othercompany
+        width: 200
+      - field: amount
+        width: 120
+      - field: contract_type
+        width: 120
+      - field: bop
+        width: 120
+      - field: owner
+        width: 120
+    filter_fields:
+      - contract_type
+      - signed_date
+      - othercompany
+      - instance_state
+    sort:
+      - - create_date
+        - desc
+  all_invalid:
+    label: 所有无效合同
+    filter_scope: space
+    filters: !<tag:yaml.org,2002:js/function> |-
+      function () {
+          return [
+            ["instance_state","=","terminated"], "or",["instance_state","=","rejected"], "or",["instance_state","=","droped"]
+          ];
+      }
+    columns:
+      - field: create_date
+        width: 150
+        wrap: true
+      - field: name
+        width: 280
+        wrap: true
+      - field: instance_state
+        width: 120
+        wrap: true
+      - field: othercompany
+        width: 200
+      - field: amount
+        width: 120
+      - field: contract_type
+        width: 120
+      - field: bop
+        width: 120
+      - field: owner
+        width: 120
+    filter_fields:
+      - contract_type
+      - signed_date
+      - othercompany
+      - instance_state
+    sort:
+      - - create_date
+        - desc
+
+permission_set:
+  user:
+    allowCreate: true
+    allowDelete: true
+    allowEdit: true
+    allowRead: true
+    modifyAllRecords: false
+    viewAllRecords: false 
+  contract_manager:
+    allowCreate: true
+    allowEdit: true
+    allowDelete: true
+    allowRead: true
+    modifyAllRecords: true
+    viewAllRecords: true
+  admin:
+    allowCreate: true
+    allowDelete: true
+    allowEdit: true
+    allowRead: true
+    modifyAllRecords: true
+    viewAllRecords: true

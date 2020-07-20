@@ -1,7 +1,0 @@
-name: contracts_home
-label: 首页
-icon: contract
-fields:
-  name:
-    label: name
-    type: text
