@@ -1,6 +1,6 @@
 {
   "name": "@steedos/app-contracts",
-  "version": "1.5.5",
+  "version": "1.6.0",
   "description": "contract-management-system",
   "main": "index.js",
   "private": false,
@@ -18,13 +18,13 @@
   },
   "author": "Jack Zhuang",
   "dependencies": {
-      "dotenv-flow": "^3.1.0",
-      "@steedos/steedos-plugin-workflow": "^2.0.3",
-      "@steedos/accounts": "^1.19.4",
-      "steedos-server": "^1.21.6"
+    "dotenv-flow": "^3.1.0"
   },
   "devDependencies": {
-      "nodemon": "^1.19.1"
+    "nodemon": "^1.19.1",
+    "@steedos/steedos-plugin-workflow": "^2.0.3",
+    "@steedos/accounts": "^1.19.4",
+    "steedos-server": "^1.21.6"
   },
   "bugs": {
     "url": "https://github.com/steedos/steedos-contracts-app/issues"

@@ -128,7 +128,7 @@
 # 源码安装与调试
 
 ### 安装前准备
-- [Install NodeJS, v8.0 or later.](https://nodejs.org/en/)
+- [Install NodeJS, v10.0 or later.](https://nodejs.org/en/)
 - [Install MongoDB Community Server v3.4 or later](https://www.mongodb.com/download-center/community)
 - [Install Visual Studio Code](https://code.visualstudio.com/)
 
