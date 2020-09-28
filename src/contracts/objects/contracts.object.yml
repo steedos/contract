@@ -135,32 +135,38 @@ fields:
         value: 已取消
   paid_amount:
     label: 已支付总金额
-    type: number
+    type: summary
     scale: 2
     sortable: true
-    readonly: true
-    defaultValue: 0
+    summary_object: contract_payments
+    summary_type: sum
+    summary_field: "amount"
+    filters: [["finished", "=", true]]
+    data_type: 'currency'
   unpaid_amount:
     label: 未支付付款总金额
-    type: number
+    type: formula
     scale: 2
     sortable: true
-    readonly: true
-    defaultValue: 0
+    formula: "IF(bop='收款合同',0,amount - paid_amount)"
+    data_type: 'currency'
   received_amount:
     label: 已收款总金额
-    type: number
+    type: summary
     scale: 2
     sortable: true
-    readonly: true
-    defaultValue: 0
+    summary_object: contract_receipts
+    summary_type: sum
+    summary_field: "amount"
+    filters: [["finished", "=", true]]
+    data_type: 'currency'
   unreceived_amount:
     label: 未收款总金额
-    type: number
+    type: formula
     scale: 2
     sortable: true
-    readonly: true
-    defaultValue: 0
+    formula: "IF(bop='付款合同',0,amount - received_amount)"
+    data_type: 'currency'
 list_views:
   all:
     label: 所有有效合同

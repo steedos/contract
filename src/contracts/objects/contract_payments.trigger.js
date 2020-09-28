@@ -1,5 +1,4 @@
-const contractManager = require('./contracts.manager');
-const paymentManager = require('./contract_payments.manager');
+
 
 module.exports = {
 
@@ -17,17 +16,5 @@ module.exports = {
       var contract = await this.getObject('contracts').findOne(doc.contract, { fields: { othercompany: 1 } });
       doc.account = contract.othercompany || "";
     }
-  },
-
-  afterInsert: async function () {
-    await contractManager.caculateAmount(this.doc.contract);
-  },
-
-  afterUpdate: async function () {
-    await paymentManager.caculatePaidAmount(this.id);
-  },
-
-  afterDelete: async function () {
-    await contractManager.caculateAmount(this.previousDoc.contract);
   },
 };
