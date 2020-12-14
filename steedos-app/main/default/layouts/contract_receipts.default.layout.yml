@@ -1,0 +1,16 @@
+name: default
+label: default
+profiles:
+  - admin
+  - user
+custom_actions: []
+relatedList: {}
+fields:
+  - field: name
+  - field: amount_description
+  - field: amount
+  - field: due_date
+  - field: finished
+  - field: real_date
+  - field: contract
+  - field: account

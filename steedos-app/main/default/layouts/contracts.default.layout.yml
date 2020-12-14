@@ -1,0 +1,30 @@
+name: default
+label: default
+enable_workflow: true
+profiles:
+  - admin
+  - user
+custom_actions: []
+relatedList: {}
+fields:
+  - field: name
+  - field: 'no'
+  - field: othercompany
+  - field: contract_type
+  - field: create_date
+  - field: bop
+  - field: owner
+  - field: created_by
+  - field: modified_by
+  - field: subject
+  - field: amount
+  - field: signed_date
+  - field: start_date
+  - field: end_date
+  - field: remark
+  - field: instance_state
+  - field: contract_fulfillment_state
+  - field: paid_amount
+  - field: unpaid_amount
+  - field: received_amount
+  - field: unreceived_amount
