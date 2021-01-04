@@ -2,8 +2,6 @@ datasources:
   default:
     connection:
       url: ${MONGO_URL}
-    objectFiles: 
-      - "./src/**"
 public:
   cfs:
     store: "local"

@@ -1,0 +1,20 @@
+name: recent
+label: 最近查看
+filter_scope: space
+filters: |-
+  function anonymous(
+  ) {
+
+      return [
+        ["instance_state","<>","terminated"]
+      ];
+
+  }
+filter_fields:
+  - contract_type
+  - signed_date
+  - othercompany
+  - instance_state
+sort:
+  - - create_date
+    - desc
