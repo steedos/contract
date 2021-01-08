@@ -141,7 +141,7 @@ fields:
     summary_object: contract_payments
     summary_type: sum
     summary_field: "amount"
-    filters: [["finished", "=", true]]
+    summary_filters: [["finished", "=", true]]
     data_type: 'currency'
   unpaid_amount:
     label: 未支付付款总金额
@@ -158,7 +158,7 @@ fields:
     summary_object: contract_receipts
     summary_type: sum
     summary_field: "amount"
-    filters: [["finished", "=", true]]
+    summary_filters: [["finished", "=", true]]
     data_type: 'currency'
   unreceived_amount:
     label: 未收款总金额
