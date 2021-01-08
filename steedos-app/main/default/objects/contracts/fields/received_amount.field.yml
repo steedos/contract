@@ -6,7 +6,7 @@ sortable: true
 summary_object: contract_receipts
 summary_type: sum
 summary_field: amount
-filters:
+summary_filters:
   - - finished
     - '='
     - true
