@@ -9,7 +9,7 @@
     "index.js",
     "/package.json",
     "/README.md",
-    "/src",
+    "/steedos-app",
     "plugin.config.yml"
   ],
   "scripts": {
