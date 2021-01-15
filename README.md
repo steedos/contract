@@ -1,8 +1,26 @@
-# 华炎合同管理系统
 
-合同管理是落实企业风险管理和内部控制的一项核心的管理业务，合同管理的好坏直接影响企业的经营绩效。
+<p align="center">
+  <a href="https://www.steedos.com/cn">
+    <img alt="华炎合同管理系统" src="https://steedos.github.io/assets/logo.png" width="120" />
+  </a>
+</p>
+<h1 align="center">
+  华炎合同管理系统
+</h1>
 
-借助华炎合同管理系统，你能够集中进行合同存储，提高合规性，自动化和加快整个合同生命周期，并获得更多其他业务优势。
+<p align="center">
+<a href="https://github.com/steedos/steedos-app-contract/issues">  报告错误</a>
+<a href="https://github.com/steedos/steedos-app-contract/discussions"> · 讨论</a>
+</p>
+
+<p align="center" style="border-top: solid 1px #cccccc">
+  合同管理是落实企业风险管理和内部控制的一项核心的管理业务，合同管理的好坏直接影响企业的经营绩效。借助华炎合同管理系统，你能够集中进行合同存储，提高合规性，自动化和加快整个合同生命周期，并获得更多其他业务优势。
+
+</p>
+
+<h3 align="center">
+ 🤖 🎨 🚀
+</h3>
 
 ![合同界面图](/docs/images/contract.png)
 
@@ -10,7 +28,7 @@
 - [开发文档](https://steedos.github.io)
 
 
-### 规范和控制合同审批流程
+#### ✨规范和控制合同审批流程
 
 华炎魔方内置专业的流程引擎，对于合同管理中的各种事项，只需简单配置，就能实现电子化审批。
 
@@ -23,7 +41,7 @@
 * 供应商资质审查
 可以设定供应商准入流程。在系统里发起审查，填写信息、上传资质文件，相关人员和各级领导查验信息后核准资质。
 
-### 合同范本管理
+### ✨合同范本管理
 
 在一个中央数据库中集中维护整个企业的标准条款、合同模板和政策规则。
 
@@ -39,7 +57,7 @@
 * 自动化处理
 范本中可设定变量，第三方业务系统可以通过标准API，传入参数，从范本自动生成带水印的PDF文件。
 
-### 支持电子签名，节约成本
+#### ✨支持电子签名，节约成本
 
 通过添加电子签名功能，你可以省去邮寄和签署多份合同副本的步骤，节约时间和成本。
 
@@ -52,7 +70,7 @@
 * 签章验证
 可随时查看和校验电子签名的有效性。合同如果被篡改，签名自动失效。
 
-### PC、移动一体化
+#### ✨PC、移动一体化
 合同管理的各项功能，包括对流程发起、审批和监控都可以扩展到移动端，即时领导出差，一部手机，即可实现随时随地管理合同、使用签章、监控执行、预警风险。签署更高效，管理更便捷。
 
 * 消息推送
@@ -61,7 +79,7 @@
 * 个性化手机界面
 只需简单配置，就能定制你的专属手机客户端。
 
-### 收付款管理
+#### ✨收付款管理
 收付款管理功能可以帮您确保数据安全，减少繁琐的手动审批环节
 
 * 收款计划
@@ -76,7 +94,7 @@
 * 付款记录
 付款成功后，相关数据会自动同步到台账信息中，点击合同名称，就能看到付款记录的详细信息。
 
-### 发票管理
+#### ✨发票管理
 可以将业务系统和财务系统生成的各种电子发票进行统一合规的管理，完成电子发票的采集，保存，查询，归档等一系列的操作。并且严格按照国家的政策的规定，帮您预警风险。
 
 * 合规监测
@@ -90,11 +108,11 @@
 
 ![审批王界面效果图](https://www.steedos.com/cn/libs/img/workflow/int.png)
 
-# 源码解析
+#### 源码解析
 
 每个企业因行业不同、规模不同、业务不同，合同管理的要素和侧重点也不一样。华炎合同管理系统基于Creator“低代码”平台开发，在提供强大功能的同时，按需定制也非常方便。开发人员无需编写代码，只需调整配置文件，即可快速满足业务部门的需求。
 
-### 项目结构
+#### 项目结构
 
 项目核心源码非常简单，包括以下内容：
 - [steedos-config.yml](steedos-config.yml)
@@ -104,7 +122,7 @@
   - triggers
     - [contracts.object.js](src/triggers/contracts.object.js)
 
-### 系统配置文件 
+#### 系统配置文件 
 文件 [steedos-config.yml](steedos-config.yml) ，配置系统参数：
 - 数据库连接方式；
 - 附件存储位置；
@@ -112,7 +130,7 @@
 
 系统可以连接到默认的MongoDB数据库，也可以连接到第三方系统的Oracle, SQL Server, MySQL, PostgreSQL数据库。
 
-### 对象配置文件 
+#### 对象配置文件 
 文件 [src/contract/contracts.object.yml](src/contract/contracts.object.yml)，每一个业务对象是一个独立的配置文件。
 - 设定对象的基本属性，例如显示名、数据表名、图标等；
 - 设定对象启用的功能，包括：
@@ -125,7 +143,7 @@
   - 开启审计日志；
   - 启用回收站。
   
-### 配置对象字段
+#### 配置对象字段
 开发人员可以配置对象的字段，Creator支持常见的字段类型：
   - 文本型；
   - 日期型；
@@ -137,7 +155,7 @@
 开发人员可以设定字段的显示名称、描述、可选项、是否必填、分组显示等参数。
 开发人员可以将字段关联到另一个对象，两个对象之间会自动创建关联关系，在查看主表记录时，自动显示相关的子表记录。 
  
-### 配置列表视图：
+#### 配置列表视图：
 开发人员可以配置对象的列表视图，一个对象可以由一个或多个列表视图组成。业务人员在前台操作时，可以很方便的切换列表视图，也可以自定义列表视图。
 
 列表视图可以配置以下参数：
@@ -146,7 +164,7 @@
   - 设定列表过滤条件；
   - 设定快捷过滤字段。
 
-### 配置访问权限：
+#### 配置访问权限：
 开发人员可以配置对象的默认访问权限，系统上线后，系统管理员也可以在设置界面中设置对象权限。
 
 对象可以配置以下权限：
@@ -159,7 +177,7 @@
   - 对于集团企业，可以设定只能查看、修改本分部的数据；
   - 对于敏感的业务数据，可以设定只能查看、修改部分字段。
  
-### 触发器
+#### 触发器
 触发器 [src/triggers/contracts.object.js](src/triggers/contracts.object.js)，业务逻辑触发器，可以在数据增删改发生时处理业务逻辑。
 - 数据插入前；
 - 数据插入后；
@@ -172,27 +190,42 @@
 
 # 源码安装与调试
 
-### 安装前准备
+#### 安装前准备
 - [Install NodeJS, v10.0 or later.](https://nodejs.org/en/)
 - [Install MongoDB Community Server v3.4 or later](https://www.mongodb.com/download-center/community)
 - [Install Visual Studio Code](https://code.visualstudio.com/)
 
-### 安装 yarn
+#### 安装 yarn
 ```
 npm i yarn -g
 ```
 
-### 使用yarn安装依赖包
+#### 使用yarn安装依赖包
 ```
 yarn
 ```
 
-### 启动服务器
+#### 启动服务器
 ```
 yarn start
 ```
 
 
-# 了解更多
+## 了解更多
 
 [关于 Steedos 低代码开发平台](http://developer.steedos.com/)
+
+## 保持联系
+
+如果您有任何疑问或想与其他华炎魔方用户交谈，请[点击进入讨论](https://github.com/steedos/steedos-app-contract/discussions)或扫码添加以下联系方式与我们联系！
+##### 开发人员微信群
+
+ ![开发者微信交流群](https://steedos.github.io/assets/github/platform/cn/QR_wechat_developers.jpg)
+
+#### 商务咨询
+
+![商务咨询](https://steedos.github.io/assets/github/platform/cn/business_consulting.jpg)
+
+#### 微信公众号
+
+![微信公众号](https://www.steedos.com/assets/github/platform/cn/public_number.jpg)
