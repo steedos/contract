@@ -22,7 +22,7 @@
  🤖 🎨 🚀
 </h3>
 
-![合同界面图](https://steedos.github.io/docs/images/contract.png)
+![合同界面图](https://steedos.github.io/assets/github/contract/cn/contract.png)
 
 - [视频演示](https://www-steedos-com.oss-cn-beijing.aliyuncs.com/videos/creator/contracts-demo.mp4)
 - [开发文档](https://steedos.github.io)
