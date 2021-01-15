@@ -4,7 +4,7 @@
 
 借助华炎合同管理系统，你能够集中进行合同存储，提高合规性，自动化和加快整个合同生命周期，并获得更多其他业务优势。
 
-![合同界面图](https://steedos.github.io/steedos-app-contract/docs/images/contract.png)
+![合同界面图](https://steedos.github.io/docs/images/contract.png)
 
 - [视频演示](https://www-steedos-com.oss-cn-beijing.aliyuncs.com/videos/creator/contracts-demo.mp4)
 - [开发文档](https://steedos.github.io)
