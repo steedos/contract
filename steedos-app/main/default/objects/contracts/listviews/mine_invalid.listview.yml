@@ -1,9 +1,8 @@
 name: mine_invalid
 label: 我的其他合同
 filter_scope: mine
-filters: |-
-  function anonymous(
-  ) {
+filters: !<tag:yaml.org,2002:js/function> |-
+  function () {
 
       return [
         ["instance_state","=","terminated"], "or",["instance_state","=","rejected"], "or",["instance_state","=","droped"]

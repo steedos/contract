@@ -1,9 +1,8 @@
 name: all_invalid
 label: 所有无效合同
 filter_scope: space
-filters: |-
-  function anonymous(
-  ) {
+filters: !<tag:yaml.org,2002:js/function> |-
+  function () {
 
       return [
         ["instance_state","=","terminated"], "or",["instance_state","=","rejected"], "or",["instance_state","=","droped"]

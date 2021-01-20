@@ -1,9 +1,8 @@
 name: contract_receipts
 label: 收款合同
 filter_scope: space
-filters: |-
-  function anonymous(
-  ) {
+filters: !<tag:yaml.org,2002:js/function> |-
+  function () {
 
       return [
         ["bop","=","收款合同"],

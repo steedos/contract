@@ -1,8 +1,7 @@
 name: all
 label: 所有有效合同
-filters: |-
-  function anonymous(
-  ) {
+filters: !<tag:yaml.org,2002:js/function> |-
+  function () {
 
       return [
         ["instance_state","<>","terminated"], "and",["instance_state","<>","pending"], "and",["instance_state","<>","rejected"], "and",["instance_state","<>","droped"]
