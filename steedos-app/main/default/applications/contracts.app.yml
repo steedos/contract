@@ -1,3 +1,4 @@
+code: contracts
 _id: contracts
 name: Contracts
 description: Manage contracts and payments.
@@ -14,9 +15,10 @@ objects:
   - tasks
   - events
   - reports
-mobile_objects: 
+mobile_objects:
   - contracts
   - contract_payments
   - contract_receipts
   - accounts
   - contacts
+visible: true
