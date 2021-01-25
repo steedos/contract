@@ -15,6 +15,7 @@
   "scripts": {
     "debug": "nodemon server.js",
     "start": "node server",
+    "buildPackage": "steedos package:build -n contract -p steedos-app",
     "cs": "cd ../../packages/objectql && yarn compile && cd ../../apps/steedos-app-contract && yarn start",
     "clear": "rm -rf node_modules/@steedos/auth/node_modules/@steedos node_modules/@steedos/core/node_modules/@steedos node_modules/@steedos/objectql/node_modules/@steedos node_modules/@steedos/plugin-jsreport/node_modules/@steedos node_modules/@steedos/accounts/node_modules/@steedos",
     "build": "yarn buildClient",
