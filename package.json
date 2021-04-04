@@ -30,7 +30,7 @@
   },
   "author": "Jack Zhuang",
   "dependencies": {
-    "@steedos/service-metadata": "~1.0.0",
+    "@steedos/service-metadata-server": "~1.0.0",
     "@steedos/service-package-loader": "~0.0.1",
     "@steedos/service-steedos-server": "~0.0.1",
     "cross-env": "^7.0.3",
