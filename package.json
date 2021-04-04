@@ -34,9 +34,6 @@
     "@steedos/service-package-loader": "~0.0.1",
     "@steedos/service-steedos-server": "~0.0.1",
     "cross-env": "^7.0.3",
-    "ioredis": "^4.22.0",
-    "moleculer": "^0.14.12",
-    "moleculer-cli": "^0.7.1",
     "dotenv-flow": "^3.2.0",
     "underscore": "1.9.2"
   },
