@@ -18,6 +18,7 @@ module.exports = {
         },
         apiServer: {
             enabled: true
-        }
+        },
+        plugins: ['@steedos/app-crm']
     }
 }
