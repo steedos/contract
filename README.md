@@ -25,7 +25,7 @@
 ![合同界面图](https://steedos.github.io/assets/github/contract/cn/contract.png)
 
 - [视频演示](https://www-steedos-com.oss-cn-beijing.aliyuncs.com/videos/creator/contracts-demo.mp4)
-- [开发文档](https://steedos.github.io)
+- [文档](https://www.steedos.cn/docs)
 
 
 ### ✨规范和控制合同审批流程
