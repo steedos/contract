@@ -1,6 +1,0 @@
-name: inventory
-group: 管理信息
-label: 盘点
-searchable: true
-sort_no: 223
-type: boolean

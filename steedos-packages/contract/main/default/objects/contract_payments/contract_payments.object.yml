@@ -1,7 +1,7 @@
 name: contract_payments
 custom: true
-enable_follow: true
-enable_share: true
+enable_follow: false
+enable_share: false
 icon: orders
 is_enable: true
 label: 付款计划

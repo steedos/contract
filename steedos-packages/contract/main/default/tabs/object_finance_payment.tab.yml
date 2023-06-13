@@ -1,0 +1,7 @@
+name: object_finance_payment
+desktop: true
+label: 付款
+mobile: true
+object: finance_payment
+permissions: []
+type: object

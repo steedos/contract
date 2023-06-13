@@ -1,0 +1,7 @@
+name: object_contract_receipts
+desktop: true
+label: 收款计划
+mobile: true
+object: contract_receipts
+permissions: []
+type: object

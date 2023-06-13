@@ -1,0 +1,7 @@
+name: object_currency
+desktop: true
+label: 货币
+mobile: true
+object: currency
+permissions: []
+type: object

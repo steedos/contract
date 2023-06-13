@@ -1,7 +1,0 @@
-name: is_asset
-group: 管理信息
-label: 资产
-searchable: true
-hidden: true
-sort_no: 220
-type: boolean

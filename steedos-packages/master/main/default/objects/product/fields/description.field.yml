@@ -1,7 +1,0 @@
-name: description
-group: 其他信息
-is_wide: true
-label: 备注
-rows: 3
-sort_no: 500
-type: textarea

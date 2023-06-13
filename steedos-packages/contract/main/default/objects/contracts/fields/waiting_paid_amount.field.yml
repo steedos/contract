@@ -14,7 +14,6 @@ precision: 18
 readonly: true
 required: false
 scale: 2
-visible_on: "{{formData.payment === true ? true: false}}"
 searchable: false
 sort_no: 460
 sortable: false

@@ -1,8 +1,0 @@
-name: owner
-hidden: false
-index: true
-group: 管理信息
-label: 管理员
-omit: true
-sort_no: 190
-sortable: true

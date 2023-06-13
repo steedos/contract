@@ -1,6 +1,0 @@
-name: product_currency
-group: 采购信息
-label: 币种
-reference_to: currency
-sort_no: 270
-type: lookup

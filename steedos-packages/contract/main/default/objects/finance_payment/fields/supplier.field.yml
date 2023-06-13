@@ -1,0 +1,19 @@
+name: supplier
+filterable: false
+hidden: false
+index: false
+is_name: false
+is_wide: false
+label: 收款方
+multiple: false
+omit: false
+readonly: false
+reference_to: accounts
+required: true
+searchable: true
+sort_no: 60
+sortable: false
+type: lookup
+create: false
+depend_on:
+  - contract

@@ -1,0 +1,20 @@
+name: customer_bank
+filterable: false
+hidden: false
+index: false
+is_name: false
+is_wide: false
+label: 付款方银行账号
+create: false
+multiple: false
+omit: false
+depend_on:
+  - account
+  - currency
+readonly: false
+reference_to: account_banks
+required: false
+searchable: false
+sort_no: 200
+sortable: false
+type: lookup

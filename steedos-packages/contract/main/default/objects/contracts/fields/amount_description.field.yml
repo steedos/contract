@@ -10,6 +10,7 @@ readonly: false
 required: false
 rows: 0
 searchable: false
-sort_no: 126
+sort_no: 280
 sortable: false
 type: textarea
+group: 价款信息

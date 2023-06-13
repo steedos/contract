@@ -1,5 +1,0 @@
-name: warehouse_keeper
-label: 仓库管理员
-sort_no: 120
-type: lookup
-reference_to: users

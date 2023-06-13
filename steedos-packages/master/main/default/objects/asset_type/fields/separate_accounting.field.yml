@@ -1,5 +1,0 @@
-name: separate_accounting
-label: 单独核算
-searchable: true
-sort_no: 120
-type: boolean

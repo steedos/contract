@@ -1,0 +1,7 @@
+name: object_bank
+desktop: true
+label: 银行
+mobile: true
+object: bank
+permissions: []
+type: object

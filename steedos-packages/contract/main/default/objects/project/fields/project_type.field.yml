@@ -1,0 +1,26 @@
+name: project_type
+filterable: true
+hidden: false
+index: false
+is_name: false
+is_wide: false
+label: 项目类型
+multiple: false
+omit: false
+options:
+  - label: 研发
+    value: develop
+  - label: 服务
+    value: service
+  - label: 工程
+    value: engineering
+  - label: 专题
+    value: special
+  - label: 其他
+    value: other
+readonly: false
+required: false
+searchable: false
+sort_no: 110
+sortable: true
+type: select

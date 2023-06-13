@@ -1,0 +1,19 @@
+name: account
+filterable: true
+hidden: false
+index: false
+is_name: false
+is_wide: false
+label: 付款方
+multiple: false
+readonly: false
+reference_to: accounts
+required: true
+searchable: false
+sort_no: 120
+sortable: true
+type: lookup
+create: false
+depend_on:
+  - contract
+

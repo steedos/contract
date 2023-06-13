@@ -1,8 +1,0 @@
-name: length
-hidden: true
-group: 尺寸信息（M）
-label: 长
-precision: 18
-scale: 2
-sort_no: 350
-type: number

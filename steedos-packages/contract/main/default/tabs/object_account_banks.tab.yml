@@ -1,0 +1,7 @@
+name: object_account_banks
+desktop: true
+label: 银行帐号
+mobile: true
+object: account_banks
+permissions: []
+type: object

@@ -12,7 +12,6 @@ precision: 18
 readonly: false
 required: false
 scale: 2
-visible_on: "{{formData.collection === true ? true: false}}"
 searchable: false
 sort_no: 505
 sortable: true

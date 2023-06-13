@@ -4,7 +4,7 @@ filterable: false
 hidden: false
 index: false
 is_name: false
-is_wide: false
+is_wide: true
 label: 价款类型
 multiple: false
 omit: false
@@ -18,6 +18,7 @@ options:
 readonly: false
 required: true
 searchable: false
-sort_no: 340
+sort_no: 200
 sortable: false
 type: select
+group: 价款信息

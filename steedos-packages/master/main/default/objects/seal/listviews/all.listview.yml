@@ -1,8 +1,0 @@
-name: all
-columns:
-  - name
-  - code
-  - company_id
-  - seal_admin
-label: 所有印章
-shared: true

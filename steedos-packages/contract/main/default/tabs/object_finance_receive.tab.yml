@@ -1,0 +1,7 @@
+name: object_finance_receive
+desktop: true
+label: 收款
+mobile: true
+object: finance_receive
+permissions: []
+type: object

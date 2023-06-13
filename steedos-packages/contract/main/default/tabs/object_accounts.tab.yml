@@ -1,0 +1,7 @@
+name: object_accounts
+desktop: true
+label: 业务伙伴
+mobile: true
+object: accounts
+permissions: []
+type: object

@@ -3,44 +3,8 @@ create: false
 depend_on:
   - contract
 label: 收款方
-optionsFunction: !<tag:yaml.org,2002:js/function> |-
-  function(values
-  ) {
-
-
-    var _options = [];
-    var contractId = values.contract;
-    if (!contractId) {
-      return;
-    }
-
-    if(!_.isString(contractId)){
-      contractId = values.contract._id
-    }
-    
-    var contract = Creator.odata.get('contracts', contractId, 'othercompany');
-    if (contract) {
-      var qydxIds = contract.othercompany
-      if(_.isArray(qydxIds) && qydxIds.length > 0){
-        var filters = [];
-        _.forEach(qydxIds, function(qydxId){
-            filters.push("(_id eq '" + qydxId + "')")
-        })
-        var $filter = filters.join(" or ")
-        var accounts = Creator.odata.query('accounts', {$filter: $filter, $select: 'name'}, true);
-        if (accounts){
-          _.each(accounts, function(item){
-            _options.push({value: item._id, label: item.name});
-          })
-        }
-      }
-    }
-    return _options;
-
-
-  }
+sort_no: 110
 reference_to: accounts
 relatedList: true
 searchable: true
-sort_no: 180
 type: lookup

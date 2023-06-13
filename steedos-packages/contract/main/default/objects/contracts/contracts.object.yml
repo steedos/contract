@@ -9,7 +9,7 @@ enable_inline_edit: true
 enable_instances: true
 enable_notes: false
 enable_search: true
-enable_share: true
+enable_share: false
 enable_tasks: false
 enable_trash: true
 enable_workflow: true

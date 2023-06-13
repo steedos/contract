@@ -1,0 +1,16 @@
+name: project_code
+filterable: false
+formula: 'XM-{YYYY}-{0000}'
+generated: false
+hidden: false
+index: false
+is_name: false
+is_wide: false
+label: 项目编号
+omit: false
+readonly: true
+required: false
+searchable: false
+sort_no: 105
+sortable: false
+type: autonumber

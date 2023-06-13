@@ -1,8 +1,0 @@
-name: width
-hidden: true
-group: 尺寸信息（M）
-label: 宽
-precision: 18
-scale: 2
-sort_no: 360
-type: number

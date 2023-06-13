@@ -12,3 +12,4 @@ searchable: false
 sort_no: 60
 sortable: true
 type: date
+defaultValue: '{now}'

@@ -1,0 +1,23 @@
+name: count_milestones_ok
+data_type: number
+filterable: false
+hidden: true
+index: false
+is_name: false
+is_wide: false
+label: 里程碑完成数
+omit: true
+precision: 18
+readonly: false
+required: false
+scale: 1
+searchable: false
+sort_no: 260
+sortable: false
+summary_filters:
+  - field: completed
+    operation: '='
+    value: true
+summary_object: project_milestone
+summary_type: count
+type: summary

@@ -1,0 +1,7 @@
+name: object_contract_payments
+desktop: true
+label: 付款计划
+mobile: true
+object: contract_payments
+permissions: []
+type: object

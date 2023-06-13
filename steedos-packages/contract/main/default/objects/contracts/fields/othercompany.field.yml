@@ -4,14 +4,12 @@ hidden: false
 index: false
 is_name: false
 is_wide: false
-label: 相对方
+label: 客户/供应商
 multiple: true
-omit: false
-readonly: true
 reference_to: accounts
 required: false
 searchable: true
-sort_no: 50
+sort_no: 450
 sortable: false
 type: lookup
-visible_on: "{{global.mode ==='read' ? true : false}}"
+group: 关联信息

@@ -1,8 +1,0 @@
-name: net_weight
-hidden: true
-group: 重量信息（KG）
-label: 净重
-precision: 18
-scale: 2
-sort_no: 390
-type: number

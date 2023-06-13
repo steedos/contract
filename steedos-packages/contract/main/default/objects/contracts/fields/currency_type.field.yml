@@ -1,5 +1,4 @@
 name: currency_type
-defaultValue: 6261092232cc250032e1a973
 filterable: false
 hidden: false
 index: false
@@ -12,6 +11,7 @@ readonly: false
 reference_to: currency
 required: false
 searchable: false
-sort_no: 70
+sort_no: 270
 sortable: false
 type: lookup
+group: 价款信息

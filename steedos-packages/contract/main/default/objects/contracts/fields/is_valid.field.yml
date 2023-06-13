@@ -1,4 +1,5 @@
 name: is_valid
+defaultValue: valid
 filterable: false
 hidden: false
 index: false
@@ -17,6 +18,6 @@ options:
     color: cfd3d7
 required: true
 searchable: false
-sort_no: 450
+sort_no: 70
 sortable: false
 type: select

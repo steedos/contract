@@ -1,5 +1,0 @@
-name: version
-group: 管理信息
-label: 版本
-sort_no: 250
-type: text

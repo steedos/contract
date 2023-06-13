@@ -1,0 +1,7 @@
+name: object_bank_type
+desktop: true
+label: 银行类别
+mobile: true
+object: bank_type
+permissions: []
+type: object

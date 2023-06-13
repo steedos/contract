@@ -8,9 +8,10 @@ label: 合同含税总价
 omit: false
 precision: 18
 readonly: false
-required: true
+required: false
 scale: 2
 searchable: false
-sort_no: 65
+sort_no: 250
 sortable: true
 type: number
+group: 价款信息

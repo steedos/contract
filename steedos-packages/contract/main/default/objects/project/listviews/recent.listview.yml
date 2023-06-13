@@ -1,0 +1,42 @@
+name: recent
+columns:
+  - field: name
+    wrap: false
+  - field: project_manager
+    width: '150'
+    wrap: false
+  - field: status
+    width: '150'
+    wrap: false
+  - field: deadline
+    width: '150'
+    wrap: false
+  - field: account
+    wrap: false
+  - field: open_tasks_it
+    width: '100'
+    wrap: false
+  - field: open_issues
+    width: '100'
+    wrap: false
+  - field: total_hours
+    width: '100'
+    wrap: false
+  - field: created
+    wrap: false
+filter_fields:
+  - internal
+  - account
+  - contract
+  - status
+  - project_manager
+  - deadline
+filter_scope: space
+filters: []
+label: 最近查看
+scrolling_mode: standard
+shared: true
+sort:
+  - field_name: created
+    order: desc
+type: grid

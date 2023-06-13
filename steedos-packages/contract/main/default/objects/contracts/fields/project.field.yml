@@ -8,7 +8,8 @@ label: 项目
 primary: false
 reference_to: project
 required: false
-sort_no: 18
+sort_no: 480
 sortable: false
 type: master_detail
 write_requires_master_read: true
+group: 关联信息

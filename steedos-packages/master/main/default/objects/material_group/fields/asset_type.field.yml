@@ -1,5 +1,0 @@
-name: asset_type
-label: 所属物料类型
-reference_to: asset_type
-sort_no: 140
-type: lookup

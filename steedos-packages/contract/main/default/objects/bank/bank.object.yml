@@ -1,0 +1,8 @@
+name: bank
+custom: true
+enable_api: true
+enable_share: false
+enable_enhanced_lookup: true
+icon: account
+label: 银行
+version: 2

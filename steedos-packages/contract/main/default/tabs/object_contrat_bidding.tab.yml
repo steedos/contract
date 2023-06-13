@@ -1,0 +1,7 @@
+name: object_contrat_bidding
+desktop: true
+label: 招投标
+mobile: true
+object: contrat_bidding
+permissions: []
+type: object

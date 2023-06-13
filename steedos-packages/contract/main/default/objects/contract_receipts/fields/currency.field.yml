@@ -2,6 +2,6 @@ name: currency
 create: false
 label: 收款币种
 reference_to: currency
-required: true
+required: false
 sort_no: 140
 type: lookup

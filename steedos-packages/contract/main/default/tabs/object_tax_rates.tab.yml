@@ -1,0 +1,7 @@
+name: object_tax_rates
+desktop: true
+label: 税率
+mobile: true
+object: tax_rates
+permissions: []
+type: object

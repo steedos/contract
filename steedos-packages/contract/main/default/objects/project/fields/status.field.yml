@@ -1,0 +1,34 @@
+name: status
+defaultValue: 'to_be_signed'
+filterable: false
+hidden: false
+index: false
+is_name: false
+is_wide: false
+label: 项目状态
+omit: false
+options:
+  - label: 草稿
+    value: to_be_signed
+    color: cfd3d7
+  - label: 立项中
+    value: approving
+    color: a2eeef
+  - label: 进行中
+    value: working
+    color: 49d181
+  - label: 暂停
+    value: pause
+    color: EAB236
+  - label: 已验收
+    value: accepted
+    color: F4A460
+  - label: 已中止
+    value: aborted
+    color: E99695
+readonly: false
+required: true
+searchable: true
+sort_no: 110
+sortable: true
+type: select
