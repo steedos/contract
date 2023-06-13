@@ -23,7 +23,7 @@ services:
       - "steedos-installed-packages:/app/.steedos"
       - "steedos-data:/app/storage"
       # 使用 docker 启动项目中的软件包
-      # - "./steedos-packages:/app/steedos-packages"
+      - "./steedos-packages:/app/steedos-packages"
     depends_on:
       mongodb:
         condition: service_healthy
