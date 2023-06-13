@@ -1,0 +1,69 @@
+name: contracts_paid_home
+datasource: default
+label: 合同付款
+options:
+  parameters:
+    - title: 时间范围
+      name: datetime
+      type: datetime-range
+      locals: []
+      value: d_this_year
+  apply_auto_limit: false
+query: |-
+  {
+      "collection": "contracts",
+      "aggregate": [
+          {
+              "$project": {
+                  "is_deleted": "$is_deleted",
+                  "amount": "$amount",
+                  "paid_amount": "$paid_amount",
+                  "unpaid_amount": "$unpaid_amount",
+                  "payment": "$payment",
+                  "signed_date": {
+                      "$dateToString": {
+                          "format": "%Y-%m-%d %H:%M",
+                          "date": "$signed_date",
+                          "timezone": "+00"
+                      }
+                  }
+              }
+          },
+          {
+              "$match": {
+                  "is_deleted": {
+                      "$ne": true
+                  },
+                  "payment": true,
+                  "$and": [
+                      {
+                          "signed_date": {
+                              "$gte": "{{ datetime.start }}"
+                          }
+                      },
+                      {
+                          "signed_date": {
+                              "$lte": "{{ datetime.end }}"
+                          }
+                      }
+                  ]
+              }
+          },
+          {
+              "$group": {
+                  "_id": "",
+                  "paid_amount": {
+                      "$sum": "$paid_amount"
+                  },
+                  "unpaid_amount": {
+                      "$sum": "$unpaid_amount"
+                  }
+              }
+          }
+      ]
+  }
+schedule:
+  interval: 60
+  time: null
+  day_of_week: null
+  until: null

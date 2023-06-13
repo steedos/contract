@@ -1,0 +1,111 @@
+name: contracts_amount_month_home
+datasource: default
+label: 合同签约金额月度统计
+options:
+  parameters:
+    - title: 签订日期
+      name: datetime
+      type: datetime-range
+      global: false
+      locals: []
+      value: d_this_year
+  apply_auto_limit: false
+query: |
+  {
+      "collection": "contracts",
+      "aggregate": [
+          {
+              "$project": {
+                  "is_deleted": "$is_deleted",
+                  "amount": "$amount",
+                  "signed_date": {
+                      "$dateToString": {
+                          "format": "%Y-%m-%d %H:%M",
+                          "date": "$signed_date",
+                          "timezone": "+00"
+                      }
+                  },
+                  "signed_date_month": {
+                      "$dateToString": {
+                          "format": "%Y-%m",
+                          "date": "$signed_date",
+                          "timezone": "+00"
+                      }
+                  },
+                  "year": { "$year": "$signed_date" },
+                  "month": { "$month": "$signed_date" },
+                  "day": { "$dayOfMonth": "$signed_date" }
+              }
+          },
+          {
+              "$addFields": {
+                  "next_signed_date": {
+                      "$dateFromParts": {"year": { "$add": ["$year", 1] }, "month": "$month", "day": "$day"}
+                  }
+              }
+          },
+          {
+              "$addFields": {
+                  "amount2":  { "$add": ["$amount", 990000] }
+              }
+          },
+          {
+              "$addFields": {
+                  "next_signed_date_format": {
+                      "$dateToString": {
+                          "format": "%Y-%m-%d %H:%M",
+                          "date": "$next_signed_date",
+                          "timezone": "+00"
+                      }
+                  }
+              }
+          },
+          
+          {
+              "$match": {
+                  "is_deleted": {
+                      "$ne": true
+                  },
+                  "$and": [
+                      {
+                          "next_signed_date_format": {
+                              "$gte": "{{ datetime.start }}"
+                          }
+                      },
+                      {
+                          "signed_date": {
+                              "$lte": "{{ datetime.end }}"
+                          }
+                      }
+                  ]
+              }
+          },
+          {
+              "$group": {
+                  "_id": "$signed_date_month",
+                  "total_amount": {
+                      "$sum": "$amount"
+                  }
+              }
+          },
+          {
+              "$addFields": {
+                  "year_tag":  { "$substr": [ "$_id", 0, 4 ] }
+              }
+          },
+          {
+              "$addFields": {
+                  "mongth_tag":  { "$substr": [ "$_id", 5, 7 ] }
+              }
+          },
+          {
+              "$sort" : { "mongth_tag" : 1 }
+          }
+          
+      ]
+  }
+schedule:
+  interval: 60
+  time: null
+  day_of_week: null
+  until: null

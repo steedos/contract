@@ -1,0 +1,88 @@
+name: contracts_ee_sum_collection
+datasource: default
+label: 合同ee-合同应收情况
+options:
+  parameters:
+    - title: Datetime
+      name: datetime
+      type: datetime-range
+      locals: []
+      value: d_this_year
+  apply_auto_limit: false
+query: |-
+  {
+      "collection": "contracts",
+      "aggregate": [
+          {
+              "$project": {
+                  "is_deleted": "$is_deleted",
+                  "name":"$name",
+                  "collection": "$collection",
+                  "amount": "$amount",
+                  "received_amount": "$received_amount",
+                  "unreceived_amount": "$unreceived_amount",
+                  "signed_date": {
+                      "$dateToString": {
+                          "format": "%Y-%m-%d %H:%M",
+                          "date": "$signed_date",
+                          "timezone": "+00"
+                      }
+                  },
+                  "signed_date_month": {
+                      "$dateToString": {
+                          "format": "%Y-%m",
+                          "date": "$signed_date",
+                          "timezone": "+00"
+                      }
+                  }
+              }
+          },
+          {
+              "$match": {
+                  "is_deleted": {
+                      "$ne": true
+                  },
+                  "collection": true,
+                  "$and": [
+                      {
+                          "signed_date": {
+                              "$gte": "{{ datetime.start }}"
+                          }
+                      },
+                      {
+                          "signed_date": {
+                              "$lte": "{{ datetime.end }}"
+                          }
+                      }
+                  ]
+              }
+          },
+          {
+              "$group": {
+                  "_id": "$signed_date_month",
+                  "count": {
+                      "$sum": 1
+                  },
+                  "total_amount": {
+                      "$sum": "$amount"
+                  },
+                  "total_received_amount":{
+                      "$sum": "$received_amount"
+                  }
+              }
+          },
+          {
+              "$sort" : { "_id" : 1 }
+          },
+          {
+              "$addFields": {
+                  "mongth_tag":  { "$substr": [ "$_id", 5, 7 ] }
+              }
+          }
+      ]
+  }
+schedule:
+  interval: 60
+  time: null
+  day_of_week: null
+  until: null

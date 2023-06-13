@@ -1,0 +1,14 @@
+name: contract
+filterable: false
+generated: false
+index: false
+is_name: false
+is_wide: false
+label: 相关合同
+multiple: false
+primary: false
+reference_to: contracts
+required: false
+sort_no: 210
+sortable: false
+type: lookup

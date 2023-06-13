@@ -1,0 +1,8 @@
+name: 开票明细.用户
+allowCreate: true
+allowDelete: true
+allowEdit: true
+allowRead: true
+modifyAllRecords: false
+permission_set_id: user
+viewAllRecords: false

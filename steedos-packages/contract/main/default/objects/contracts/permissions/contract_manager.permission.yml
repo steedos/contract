@@ -1,0 +1,9 @@
+allowCreate: true
+allowDelete: true
+allowEdit: true
+allowRead: true
+modifyAllRecords: false
+modifyCompanyRecords: true
+permission_set_id: contract_manager
+viewAllRecords: false
+viewCompanyRecords: true

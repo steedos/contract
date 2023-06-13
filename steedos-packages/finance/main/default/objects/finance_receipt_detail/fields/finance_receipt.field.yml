@@ -1,0 +1,16 @@
+name: finance_receipt
+filterable: false
+hidden: false
+index: false
+is_name: false
+is_wide: false
+label: 收票记录
+omit: false
+readonly: true
+reference_to: finance_receipt
+required: true
+searchable: false
+sort_no: 120
+sortable: false
+type: master_detail
+write_requires_master_read: true

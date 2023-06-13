@@ -1,0 +1,14 @@
+name: amount_capital
+filterable: false
+hidden: true
+index: false
+is_name: false
+is_wide: false
+label: 合同含税总价大写
+omit: false
+readonly: true
+required: false
+searchable: false
+sort_no: 65
+sortable: true
+type: text

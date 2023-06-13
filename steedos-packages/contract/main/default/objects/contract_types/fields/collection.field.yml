@@ -1,0 +1,5 @@
+name: collection
+label: 收款合同
+searchable: true
+sort_no: 120
+type: boolean

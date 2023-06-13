@@ -1,0 +1,16 @@
+name: project
+filterable: false
+generated: false
+index: false
+is_name: false
+is_wide: false
+label: 项目
+primary: false
+readonly: true
+reference_to: project
+required: false
+sort_no: 500
+sortable: false
+type: master_detail
+write_requires_master_read: false
+visible_on: "{{global.mode ==='read' ? true : false}}"

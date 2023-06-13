@@ -1,0 +1,15 @@
+name: invoice_phone
+data_type: text
+filterable: false
+formula: contacts_name.mobile
+formula_blank_value: zeroes
+generated: false
+index: false
+is_name: false
+is_wide: false
+label: 相对方联系方式
+primary: false
+sort_no: 160
+sortable: false
+type: formula
+visible_on: "{{global.mode ==='read' ? true : false}}"

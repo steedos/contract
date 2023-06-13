@@ -1,0 +1,13 @@
+name: disadvantage
+filterable: false
+generated: false
+index: false
+is_name: false
+is_wide: false
+label: 劣势说明
+primary: false
+required: false
+rows: 3
+sort_no: 130
+sortable: false
+type: textarea

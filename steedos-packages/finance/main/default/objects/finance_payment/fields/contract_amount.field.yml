@@ -1,0 +1,20 @@
+name: contract_amount
+data_type: currency
+filterable: false
+formula: contract.amount
+formula_blank_value: zeroes
+hidden: false
+index: false
+is_name: false
+is_wide: false
+label: 合同金额
+omit: false
+precision: 18
+readonly: false
+required: false
+scale: 2
+searchable: false
+sort_no: 630
+sortable: false
+type: formula
+visible_on: "{{global.mode ==='read' ? true : false}}"

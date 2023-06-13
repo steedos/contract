@@ -1,0 +1,40 @@
+name: all
+columns:
+  - field: id
+    width: '130'
+    wrap: false
+  - field: name
+    wrap: true
+  - field: money
+    width: '120'
+    wrap: false
+  - field: contract
+    wrap: true
+  - field: invoice_type
+    width: '160'
+    wrap: false
+  - field: account
+    width: '230'
+    wrap: false
+  - field: customer_bank
+    wrap: false
+  - field: count
+    wrap: false
+  - field: sumprice
+    wrap: false 
+  - field: due_date
+    wrap: false 
+  - field: is_active
+    wrap: false 
+  - field: actual_date
+    wrap: false  
+filter_scope: space
+filters: []
+label: 所有开票申请
+scrolling_mode: standard
+shared: true
+show_count: false
+sort:
+  - field_name: id
+    order: desc
+type: grid

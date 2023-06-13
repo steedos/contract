@@ -1,0 +1,7 @@
+name: contracts_home
+desktop: true
+icon: announcement
+label: 首页
+mobile: true
+page: contracts_home
+type: page

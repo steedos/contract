@@ -1,0 +1,22 @@
+name: cash_flow_type
+filterable: false
+hidden: true
+index: false
+is_name: false
+is_wide: false
+label: 收付款类型
+multiple: false
+omit: false
+options:
+  - label: 收款
+    value: receive
+    color: 49d181
+  - label: 付款
+    value: pay
+    color: E99695
+readonly: false
+required: true
+searchable: false
+sort_no: 30
+sortable: false
+type: select

@@ -1,0 +1,16 @@
+name: id
+filterable: false
+formula: 'SK-{YYYY}-{0000}'
+hidden: false
+index: false
+is_name: true
+is_wide: false
+label: 收款单编号
+omit: false
+readonly: true
+visible_on: "{{global.mode ==='read' ? true : false}}"
+required: false
+searchable: false
+sort_no: 335
+sortable: true
+type: autonumber

@@ -1,0 +1,44 @@
+name: finance_payment
+custom: true
+enable_api: true
+enable_audit: true
+enable_chatter: false
+enable_enhanced_lookup: true
+enable_events: false
+enable_files: true
+enable_inline_edit: true
+enable_instances: true
+enable_notes: false
+enable_search: true
+enable_share: false
+enable_tasks: false
+enable_workflow: true
+icon: orders
+is_enable: true
+label: 付款
+version: 2
+form:
+  initialValues: !!js/function |
+    function(){
+      if(Session.get("record_id")){
+        if (Session.get("object_name") == "contracts"){
+          var mainRecord = Creator.odata.get(Session.get("object_name"), Session.get("record_id"), 'currency_type');
+          var currency_type = '';
+          if(mainRecord){
+            currency_type = mainRecord.currency_type;
+          }
+          return {
+            currency: currency_type,
+          } 
+        } else if (Session.get("object_name") == "finance_payment") {
+          var mainRecord = Creator.odata.get(Session.get("object_name"), Session.get("record_id"), 'currency_type');
+          var currency_type = '';
+          if(mainRecord){
+            currency_type = mainRecord.currency_type
+          }
+          return {
+            currency: currency_type
+          } 
+        }
+      }
+    }

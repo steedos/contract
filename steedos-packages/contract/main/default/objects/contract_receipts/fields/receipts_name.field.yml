@@ -1,0 +1,23 @@
+name: receipts_name
+hidden: false
+is_name: true
+label: 款项名称
+omit: false
+options:
+  - label: 首付款
+    value: pending
+  - label: 进度款
+    value: approved
+  - label: 尾款
+    value: rejected
+  - label: 质保金
+    value: terminated
+  - label: 补充款
+    value: signed
+  - label: 全款
+    value: all
+readonly: false
+required: true
+searchable: true
+sort_no: 10
+type: select

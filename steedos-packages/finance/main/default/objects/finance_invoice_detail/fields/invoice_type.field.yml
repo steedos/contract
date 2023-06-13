@@ -1,0 +1,16 @@
+name: invoice_type
+filterable: false
+hidden: true
+index: false
+is_name: false
+is_wide: false
+label: 发票类型
+multiple: false
+omit: false
+readonly: true
+reference_to: invoice_type
+required: false
+searchable: false
+sort_no: 180
+sortable: false
+type: lookup

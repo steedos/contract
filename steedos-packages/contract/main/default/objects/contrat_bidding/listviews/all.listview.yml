@@ -1,0 +1,20 @@
+name: all
+columns:
+  - field: name
+  - field: number
+  - field: type
+  - field: company
+  - field: start
+  - field: end
+  - field: remark
+  - field: winning_bidder
+  - field: amount
+filter_scope: space
+filters: []
+label: 所有
+mobile_columns: []
+scrolling_mode: standard
+shared: true
+sort: []
+sort_no: 100
+type: grid

@@ -1,0 +1,8 @@
+name: other_name
+data_type: text
+is_name: true
+formula: othercompany_name.name
+label: 相对方名称
+sort_no: 100
+type: formula
+visible_on: "{{global.mode ==='read' ? true : false}}"

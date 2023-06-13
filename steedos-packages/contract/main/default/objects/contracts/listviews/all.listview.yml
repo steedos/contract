@@ -1,0 +1,51 @@
+name: all
+columns:
+  - field: 'no'
+    width: '150'
+    wrap: true
+  - field: name
+    width: '260'
+    wrap: true
+  - field: contract_type
+    width: '150'
+    wrap: true
+  - field: othercompany
+    width: '220'
+    wrap: true
+  - field: amount
+    width: '150'
+    wrap: true
+  - field: cash_flow_type
+    width: '100'
+    wrap: true
+  - field: contract_fulfillment_state
+    width: '100'
+    wrap: false
+  - field: signed_date
+    width: '120'
+    wrap: false
+  - field: owner
+    width: '120'
+    wrap: false
+  - field: created
+    wrap: false
+filter_fields:
+  - contract_type
+  - signed_date
+  - othercompany
+  - instance_state
+  - owner
+filter_scope: space
+filters:
+  - is_default: true
+    field: instance_state
+    operation: <>
+    value:
+      - terminated
+    is_required: false
+label: 所有合同
+shared: true
+show_count: false
+sort:
+  - field_name: 'no'
+    order: desc

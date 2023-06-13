@@ -1,0 +1,4 @@
+name: finished
+label: 已完成
+sort_no: 20
+type: boolean

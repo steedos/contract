@@ -1,0 +1,26 @@
+name: paid_amount
+data_type: number
+filterable: false
+group: 付款信息
+hidden: false
+index: false
+is_name: false
+is_wide: false
+label: 已付款金额
+omit: false
+precision: 18
+readonly: false
+required: false
+scale: 2
+visible_on: "{{formData.payment === true ? true: false}}"
+searchable: false
+sort_no: 460
+sortable: true
+summary_field: amount
+summary_filters:
+  - field: payment_status
+    operation: '='
+    value: paid
+summary_object: finance_payment
+summary_type: sum
+type: summary

@@ -1,0 +1,24 @@
+name: instance_state
+filterable: true
+hidden: false
+label: 合同审批状态
+omit: false
+options:
+  - label: 草稿
+    value: draft
+  - label: 进行中
+    value: pending
+  - label: 已完成
+    value: completed
+  - label: 已核准
+    value: approved
+  - label: 已驳回
+    value: rejected
+  - label: 已取消
+    value: terminated
+readonly: true
+searchable: true
+sort_no: 430
+sortable: true
+type: select
+visible_on: "{{global.mode ==='read' ? true : false}}"

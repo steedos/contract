@@ -1,0 +1,5 @@
+name: due_date
+label: 计划收款时间
+sort_no: 150
+sortable: true
+type: date

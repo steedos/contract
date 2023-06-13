@@ -1,0 +1,14 @@
+name: serial_number
+filterable: true
+hidden: true
+index: false
+is_name: false
+is_wide: false
+label: 编号
+omit: false
+readonly: true
+required: false
+searchable: true
+sort_no: 16
+sortable: true
+type: text

@@ -1,0 +1,23 @@
+name: original_file
+filterable: false
+group: 合同备案信息
+hidden: true
+index: false
+is_name: false
+is_wide: false
+label: 备案文件类型
+multiple: false
+omit: false
+options:
+  - label: 原件
+    value: original
+  - label: 扫描件
+    value: scan
+  - label: 复印件
+    value: copies
+readonly: false
+required: false
+searchable: false
+sort_no: 590
+sortable: false
+type: select

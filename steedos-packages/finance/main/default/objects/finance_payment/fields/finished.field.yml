@@ -1,0 +1,15 @@
+name: finished
+filterable: false
+group: 付款信息
+hidden: true
+index: false
+is_name: false
+is_wide: false
+label: 已完成
+omit: false
+readonly: false
+required: false
+searchable: false
+sort_no: 425
+sortable: false
+type: boolean

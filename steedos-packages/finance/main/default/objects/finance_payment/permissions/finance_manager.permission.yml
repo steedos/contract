@@ -1,0 +1,10 @@
+name: 付款.财务管理员
+allowCreate: true
+allowDelete: true
+allowEdit: true
+allowRead: true
+modifyAllRecords: true
+modifyCompanyRecords: false
+permission_set_id: finance_manager
+viewAllRecords: true
+viewCompanyRecords: false

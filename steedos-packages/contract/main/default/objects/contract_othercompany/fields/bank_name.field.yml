@@ -1,0 +1,15 @@
+name: bank_name
+data_type: text
+filterable: false
+formula: pk_bankdoc.pk_bankdoc.name
+formula_blank_value: blanks
+generated: false
+index: false
+is_name: false
+is_wide: false
+label: 相对方开户行
+primary: false
+sort_no: 188
+sortable: false
+type: formula
+visible_on: "{{global.mode ==='read' ? true : false}}"

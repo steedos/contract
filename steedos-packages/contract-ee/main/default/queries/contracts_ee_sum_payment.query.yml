@@ -1,0 +1,88 @@
+name: contracts_ee_sum_payment
+datasource: default
+label: 合同ee-合同应付情况
+options:
+  parameters:
+    - title: Datetime
+      name: datetime
+      type: datetime-range
+      locals: []
+      value: d_this_year
+  apply_auto_limit: false
+query: |-
+  {
+      "collection": "contracts",
+      "aggregate": [
+          {
+              "$project": {
+                  "is_deleted": "$is_deleted",
+                  "name":"$name",
+                  "payment": "$payment",
+                  "amount": "$amount",
+                  "paid_amount": "$paid_amount",
+                  "unpaid_amount": "$unpaid_amount",
+                  "signed_date": {
+                      "$dateToString": {
+                          "format": "%Y-%m-%d %H:%M",
+                          "date": "$signed_date",
+                          "timezone": "+00"
+                      }
+                  },
+                  "signed_date_month": {
+                      "$dateToString": {
+                          "format": "%Y-%m",
+                          "date": "$signed_date",
+                          "timezone": "+00"
+                      }
+                  }
+              }
+          },
+          {
+              "$match": {
+                  "is_deleted": {
+                      "$ne": true
+                  },
+                  "payment": true,
+                  "$and": [
+                      {
+                          "signed_date": {
+                              "$gte": "{{ datetime.start }}"
+                          }
+                      },
+                      {
+                          "signed_date": {
+                              "$lte": "{{ datetime.end }}"
+                          }
+                      }
+                  ]
+              }
+          },
+          {
+              "$group": {
+                  "_id": "$signed_date_month",
+                  "count": {
+                      "$sum": 1
+                  },
+                  "total_amount": {
+                      "$sum": "$amount"
+                  },
+                  "total_paid_amount":{
+                      "$sum": "$paid_amount"
+                  }
+              }
+          },
+          {
+              "$sort" : { "_id" : 1 }
+          },
+          {
+              "$addFields": {
+                  "mongth_tag":  { "$substr": [ "$_id", 5, 7 ] }
+              }
+          }
+      ]
+  }
+schedule:
+  interval: 60
+  time: null
+  day_of_week: null
+  until: null

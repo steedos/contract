@@ -1,0 +1,8 @@
+name: company_id
+create: false
+hidden: false
+label: 我方签约主体
+omit: false
+required: true
+sort_no: 170
+type: lookup

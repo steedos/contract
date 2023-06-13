@@ -1,0 +1,14 @@
+name: contract_bidding
+filterable: false
+generated: false
+index: false
+is_name: false
+is_wide: false
+label: 招投标信息
+primary: false
+reference_to: contrat_bidding
+required: false
+sort_no: 140
+sortable: false
+type: master_detail
+write_requires_master_read: false

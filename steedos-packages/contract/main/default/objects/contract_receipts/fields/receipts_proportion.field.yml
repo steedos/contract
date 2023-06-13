@@ -1,0 +1,16 @@
+name: receipts_proportion
+data_type: percent
+filterable: false
+formula: amount/contract_amount
+formula_blank_value: zeroes
+generated: false
+index: false
+is_name: false
+is_wide: false
+label: 收款比例
+precision: 18
+primary: false
+scale: 2
+sort_no: 350
+sortable: false
+type: formula

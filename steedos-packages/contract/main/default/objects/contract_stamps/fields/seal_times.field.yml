@@ -1,0 +1,14 @@
+name: seal_times
+filterable: false
+generated: false
+index: false
+is_name: false
+is_wide: false
+label: 申请用印次数
+precision: 18
+primary: false
+required: false
+scale: 0
+sort_no: 118
+sortable: false
+type: number

@@ -1,0 +1,23 @@
+name: received_invoice_amount
+data_type: currency
+filterable: false
+group: 付款信息
+hidden: false
+index: false
+is_name: false
+is_wide: false
+label: 已收票金额
+omit: false
+precision: 18
+readonly: false
+required: false
+scale: 2
+visible_on: "{{formData.payment === true ? true: false}}"
+searchable: false
+sort_no: 480
+sortable: false
+summary_field: sumprice
+summary_object: finance_receipt
+summary_type: sum
+type: summary
+summary_filters: []

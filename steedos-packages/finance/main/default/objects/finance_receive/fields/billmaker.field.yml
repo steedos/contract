@@ -1,0 +1,16 @@
+name: billmaker
+filterable: false
+hidden: true
+index: false
+is_name: false
+is_wide: false
+label: 收款记录人
+multiple: false
+omit: false
+readonly: false
+reference_to: users
+required: false
+searchable: false
+sort_no: 400
+sortable: false
+type: lookup

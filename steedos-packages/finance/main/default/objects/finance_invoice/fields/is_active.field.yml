@@ -1,0 +1,5 @@
+name: is_active
+defaultValue: false
+label: 已开票
+sort_no: 300
+type: toggle

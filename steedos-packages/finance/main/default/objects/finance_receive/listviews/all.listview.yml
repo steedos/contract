@@ -1,0 +1,27 @@
+name: all
+columns:
+  - field: id
+    wrap: false
+  - field: account
+    wrap: false
+  - field: due_date
+    wrap: false
+  - field: amount
+    wrap: false
+  - field: contract_receipts_state
+    wrap: false
+  - field: receipt_date
+    wrap: false
+  - field: amount_description
+    wrap: false
+filter_fields:
+  - contract
+  - due_date
+  - account
+filter_scope: space
+label: 所有收款记录
+shared: true
+show_count: false
+sort:
+  - field_name: id
+    order: desc

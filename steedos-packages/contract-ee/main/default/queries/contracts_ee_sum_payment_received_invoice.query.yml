@@ -1,0 +1,69 @@
+name: contracts_ee_sum_payment_received_invoice
+datasource: default
+label: 合同ee-采购付款
+options:
+  parameters:
+    - title: Datetime
+      name: datetime
+      type: datetime-range
+      locals: []
+      value: d_this_year
+  apply_auto_limit: false
+query: |-
+  {
+      "collection": "contracts",
+      "aggregate": [
+          {
+              "$project": {
+                  "is_deleted": "$is_deleted",
+                  "name":"$name",
+                  "payment": "$payment",
+                  "amount": "$amount",
+                  "received_invoice_amount": "$received_invoice_amount",
+                  "signed_date": {
+                      "$dateToString": {
+                          "format": "%Y-%m-%d %H:%M",
+                          "date": "$signed_date",
+                          "timezone": "+00"
+                      }
+                  }
+              }
+          },
+          {
+              "$match": {
+                  "is_deleted": {
+                      "$ne": true
+                  },
+                  "payment": true,
+                  "$and": [
+                      {
+                          "signed_date": {
+                              "$gte": "{{ datetime.start }}"
+                          }
+                      },
+                      {
+                          "signed_date": {
+                              "$lte": "{{ datetime.end }}"
+                          }
+                      }
+                  ]
+              }
+          },
+          {
+              "$group": {
+                  "_id": "",
+                  "total_amount": {
+                      "$sum": "$amount"
+                  },
+                  "total_received_invoice_amount":{
+                      "$sum": "$received_invoice_amount"
+                  }
+              }
+          }
+      ]
+  }
+schedule:
+  interval: 60
+  time: null
+  day_of_week: null
+  until: null

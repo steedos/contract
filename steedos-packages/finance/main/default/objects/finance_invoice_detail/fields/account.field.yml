@@ -1,0 +1,35 @@
+name: account
+filterable: false
+hidden: false
+index: false
+is_name: false
+is_wide: false
+label: 付款方名称
+multiple: false
+omit: false
+# optionsFunction: !<tag:yaml.org,2002:js/function> |-
+#   function(values
+#   ) {
+
+#       var _options = [];
+#       var invoiceapply = _.isObject(values.invoiceapply) ? values.invoiceapply._id : values.invoiceapply;
+#       if (!invoiceapply) {
+#           return;
+#       }
+#       var finance_invoice = Creator.odata.get('finance_invoice', invoiceapply, 'account');
+#       if (finance_invoice) {
+#           var account = Creator.odata.get('accounts', finance_invoice.account, 'name');
+#           if (account) {
+#               _options = [{ value: account._id, label: account.name }];
+#           }
+#       }
+#       return _options;
+
+#   }
+readonly: true
+reference_to: accounts
+required: true
+searchable: false
+sort_no: 170
+sortable: false
+type: lookup

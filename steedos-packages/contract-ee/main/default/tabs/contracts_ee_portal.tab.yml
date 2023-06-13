@@ -1,0 +1,7 @@
+name: contracts_ee_portal
+desktop: true
+icon: account
+label: 首页
+mobile: true
+page: contracts_ee_home
+type: page

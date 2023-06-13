@@ -1,0 +1,14 @@
+name: amount
+filterable: false
+generated: false
+index: false
+is_name: false
+is_wide: false
+label: 应标方报价
+precision: 18
+primary: false
+required: false
+scale: 2
+sort_no: 110
+sortable: false
+type: currency

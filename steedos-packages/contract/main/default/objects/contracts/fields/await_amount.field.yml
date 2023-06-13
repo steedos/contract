@@ -1,0 +1,25 @@
+name: await_amount
+data_type: number
+filterable: false
+group: 付款信息
+hidden: true
+index: false
+is_name: false
+is_wide: false
+label: 付款累计(待付款)
+omit: false
+precision: 18
+readonly: false
+required: false
+scale: 2
+searchable: false
+sort_no: 475
+sortable: true
+summary_field: amount
+summary_filters:
+  - field: payment_status
+    operation: '='
+    value: unpaid
+summary_object: finance_payment
+summary_type: sum
+type: summary

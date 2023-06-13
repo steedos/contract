@@ -1,0 +1,5 @@
+name: code
+label: 编码
+sort_no: 100
+type: text
+required: true

@@ -1,0 +1,78 @@
+name: 招投标信息.管理员
+allowCreate: true
+allowCreateFiles: true
+allowDelete: true
+allowDeleteFiles: true
+allowEdit: true
+allowEditFiles: true
+allowRead: true
+allowReadFiles: true
+modifyAllFiles: true
+modifyAllRecords: true
+permission_set_id: admin
+viewAllFiles: true
+viewAllRecords: true
+field_permissions:
+  - field: name
+    readable: true
+    editable: true
+  - field: owner
+    readable: false
+    editable: false
+  - field: created
+    readable: true
+    editable: false
+  - field: created_by
+    readable: true
+    editable: false
+  - field: modified
+    readable: true
+    editable: false
+  - field: modified_by
+    readable: true
+    editable: false
+  - field: locked
+    readable: false
+    editable: false
+  - field: company_id
+    readable: false
+    editable: false
+  - field: company_ids
+    readable: false
+    editable: false
+  - field: instance_state
+    readable: false
+    editable: false
+  - field: number
+    readable: true
+    editable: true
+  - field: type
+    readable: true
+    editable: true
+  - field: company
+    readable: true
+    editable: true
+  - field: start
+    readable: true
+    editable: true
+  - field: end
+    readable: true
+    editable: true
+  - field: file
+    readable: true
+    editable: true
+  - field: remark
+    readable: true
+    editable: true
+  - field: winning_bidder
+    readable: true
+    editable: true
+  - field: amount
+    readable: true
+    editable: true
+  - field: project
+    readable: true
+    editable: true
+  - field: contract
+    readable: true
+    editable: true

@@ -1,0 +1,21 @@
+name: waiting_invoice_amount
+data_type: currency
+filterable: false
+formula: amount-made_invoice_amount-approving_invoice_amount
+formula_blank_value: zeroes
+group: 收款信息
+hidden: false
+index: false
+is_name: false
+is_wide: false
+label: 剩余可开票金额
+omit: false
+precision: 18
+readonly: true
+required: false
+scale: 2
+visible_on: "{{formData.collection === true ? true: false}}"
+searchable: false
+sort_no: 510
+sortable: false
+type: formula

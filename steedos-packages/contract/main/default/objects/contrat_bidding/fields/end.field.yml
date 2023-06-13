@@ -1,0 +1,12 @@
+name: end
+filterable: false
+generated: false
+index: false
+is_name: false
+is_wide: false
+label: 结束时间
+primary: false
+required: false
+sort_no: 150
+sortable: false
+type: date

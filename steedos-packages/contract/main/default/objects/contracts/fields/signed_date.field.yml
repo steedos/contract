@@ -1,0 +1,14 @@
+name: signed_date
+filterable: true
+hidden: false
+index: false
+is_name: false
+is_wide: false
+label: 签订日期
+omit: false
+readonly: false
+required: false
+searchable: false
+sort_no: 60
+sortable: true
+type: date

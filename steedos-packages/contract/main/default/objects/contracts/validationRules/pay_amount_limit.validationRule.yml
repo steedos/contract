@@ -1,0 +1,5 @@
+name: pay_amount_limit
+active: true
+error_condition_formula: |-
+  NOT(ISBLANK(project._id)) && project.contracts_all_pay + amount > project.project_cost_budget && ISPICKVAL( cash_flow_type , "pay" )
+error_message: 本付款合同新增/修改后，所属项目的应付款总额会超过预算成本总额。请做相应调整。

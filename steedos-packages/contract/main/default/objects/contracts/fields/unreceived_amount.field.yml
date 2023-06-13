@@ -1,0 +1,21 @@
+name: unreceived_amount
+data_type: currency
+filterable: false
+formula: 'IF(collection == false,0,amount-received_amount)'
+formula_blank_value: zeroes
+group: 收款信息
+hidden: false
+index: false
+is_name: false
+is_wide: false
+label: 合同待收款金额
+omit: false
+precision: 18
+readonly: true
+required: false
+scale: 2
+visible_on: "{{formData.collection === true ? true: false}}"
+searchable: false
+sort_no: 495
+sortable: true
+type: formula

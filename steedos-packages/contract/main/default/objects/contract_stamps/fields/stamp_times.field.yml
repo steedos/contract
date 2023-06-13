@@ -1,0 +1,6 @@
+name: stamp_times
+is_name: false
+label: 实际盖章次数
+searchable: true
+sort_no: 140
+type: text

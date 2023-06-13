@@ -1,0 +1,5 @@
+name: is_active
+defaultValue: true
+label: 已收票
+sort_no: 40
+type: toggle

@@ -1,0 +1,12 @@
+name: number
+filterable: false
+generated: false
+index: false
+is_name: false
+is_wide: false
+label: 招标编号
+primary: false
+required: false
+sort_no: 110
+sortable: false
+type: text

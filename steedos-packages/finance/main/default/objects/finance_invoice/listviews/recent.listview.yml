@@ -1,0 +1,32 @@
+name: recent
+columns:
+  - field: id
+    width: '130'
+    wrap: false
+  - field: name
+    wrap: true
+  - field: money
+    width: '120'
+    wrap: false
+  - field: contract
+    wrap: true
+  - field: invoice_type
+    width: '160'
+    wrap: false
+  - field: account
+    width: '230'
+    wrap: false
+  - field: customer_bank
+    wrap: false
+  - field: due_date
+    wrap: false 
+  - field: is_active
+    wrap: false 
+  - field: actual_date
+    wrap: false  
+filter_scope: space
+filters: []
+label: 最近查看
+scrolling_mode: standard
+shared: true
+type: grid

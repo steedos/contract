@@ -1,0 +1,14 @@
+name: contracts
+filterable: false
+generated: false
+index: false
+is_name: false
+is_wide: false
+label: 合同名称
+primary: false
+reference_to: contracts
+required: false
+sort_no: 130
+sortable: false
+type: master_detail
+write_requires_master_read: false

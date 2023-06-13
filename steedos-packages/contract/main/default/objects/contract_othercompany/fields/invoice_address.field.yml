@@ -1,0 +1,15 @@
+name: invoice_address
+data_type: text
+filterable: false
+formula: othercompany_name.address
+formula_blank_value: blanks
+generated: false
+index: false
+is_name: false
+is_wide: false
+label: 相对方联系地址
+primary: false
+sort_no: 170
+sortable: false
+type: formula
+visible_on: "{{global.mode ==='read' ? true : false}}"

@@ -1,0 +1,14 @@
+name: othercompany_name
+filterable: false
+generated: false
+index: false
+is_name: false
+is_wide: false
+label: 相对方签约主体
+multiple: false
+primary: false
+reference_to: accounts
+required: true
+sort_no: 110
+sortable: false
+type: lookup

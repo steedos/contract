@@ -1,0 +1,21 @@
+name: 合同.用户
+allowCreate: true
+allowDelete: true
+allowEdit: true
+allowRead: true
+disabled_list_views:
+  - contract_manager
+  - none
+  - all
+  - contract_payments
+  - contract_receipts
+modifyAllRecords: false
+modifyCompanyRecords: false
+permission_set_id: user
+uneditable_related_list:
+  - cms_files
+  - contract_payments
+  - contract_receipts
+  - events
+viewAllRecords: false
+viewCompanyRecords: false

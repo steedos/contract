@@ -1,0 +1,7 @@
+name: created_by
+label: 创建人
+reference_to: users
+sort_no: 110
+sortable: true
+type: lookup
+hidden: true

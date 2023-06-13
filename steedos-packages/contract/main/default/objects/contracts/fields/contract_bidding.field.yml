@@ -1,0 +1,14 @@
+name: contract_bidding
+filterable: false
+generated: false
+index: false
+is_name: false
+is_wide: false
+label: 招投标
+multiple: true
+primary: false
+reference_to: contrat_bidding
+required: false
+sort_no: 455
+sortable: false
+type: lookup

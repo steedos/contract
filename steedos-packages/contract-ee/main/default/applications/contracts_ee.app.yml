@@ -1,0 +1,37 @@
+name: 合同+
+code: contracts_ee
+description: 查看合同看板，管理合同及其收付款，发起和处理合同相关流程。
+icon_slds: contract
+is_creator: true
+is_new_window: false
+is_use_ie: false
+is_use_iframe: false
+mobile: true
+mobile_objects:
+  - contracts
+  - contract_receipts
+  - contract_payments
+  - finance_invoice
+  - finance_receive
+  - finance_receipt
+  - finance_payment
+  - accounts
+  - instances
+  - tasks
+  - events
+objects:
+  - contracts
+  - contract_receipts
+  - contract_payments
+  - finance_invoice
+  - finance_receive
+  - finance_receipt
+  - finance_payment
+  - accounts
+  - instances
+  - tasks
+  - events
+sort: 25
+tabs:
+  - contracts_ee_portal
+visible: true

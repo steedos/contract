@@ -1,0 +1,21 @@
+name: ticket_information
+defaultValue: 先票后款
+filterable: false
+hidden: false
+index: false
+is_name: false
+is_wide: false
+label: 票款方式
+multiple: false
+omit: false
+options:
+  - label: 先票后款
+    value: 先票后款
+  - label: 先款后票
+    value: 先款后票
+readonly: false
+required: true
+searchable: false
+sort_no: 280
+sortable: false
+type: select

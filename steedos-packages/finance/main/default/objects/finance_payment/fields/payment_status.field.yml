@@ -1,0 +1,21 @@
+name: payment_status
+filterable: false
+group: 付款信息
+hidden: false
+index: false
+is_name: false
+is_wide: false
+label: 付款状态
+multiple: false
+omit: false
+readonly: false
+options:
+  - label: 已支付
+    value: paid
+  - label: 未支付
+    value: unpaid
+required: true
+searchable: false
+sort_no: 415
+sortable: false
+type: select

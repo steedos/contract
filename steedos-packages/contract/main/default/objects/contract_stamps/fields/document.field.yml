@@ -1,0 +1,12 @@
+name: document
+filterable: false
+index: true
+is_name: true
+is_wide: false
+label: 盖章文件
+readonly: false
+required: true
+searchable: true
+sort_no: 112
+sortable: false
+type: text

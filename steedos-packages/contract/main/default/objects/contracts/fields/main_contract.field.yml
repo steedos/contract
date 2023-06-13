@@ -1,0 +1,20 @@
+name: main_contract
+filterable: false
+hidden: false
+index: false
+is_name: false
+is_wide: false
+label: 是否主子合同
+multiple: false
+omit: false
+options:
+  - label: 是
+    value: 是
+  - label: 否
+    value: 否
+readonly: false
+required: false
+searchable: true
+sort_no: 105
+sortable: false
+type: select

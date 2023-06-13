@@ -1,0 +1,12 @@
+name: winning_bidder
+filterable: false
+generated: false
+index: false
+is_name: false
+is_wide: false
+label: 中标方
+primary: false
+required: false
+sort_no: 180
+sortable: false
+type: text

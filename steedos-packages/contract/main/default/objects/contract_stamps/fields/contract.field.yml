@@ -1,0 +1,9 @@
+name: contract
+label: 合同
+reference_to: contracts
+required: true
+searchable: true
+sort_no: 100
+sortable: true
+type: master_detail
+write_requires_master_read: true

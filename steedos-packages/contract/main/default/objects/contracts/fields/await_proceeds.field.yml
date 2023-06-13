@@ -1,0 +1,25 @@
+name: await_proceeds
+data_type: number
+filterable: false
+group: 收款信息
+hidden: true
+index: false
+is_name: false
+is_wide: false
+label: 收款累计(待收款)
+omit: false
+precision: 18
+readonly: true
+required: false
+scale: 2
+searchable: false
+sort_no: 500
+sortable: true
+summary_field: amount
+summary_filters:
+  - field: contract_receipts_state
+    operation: '='
+    value: unreceived
+summary_object: finance_receive
+summary_type: sum
+type: summary

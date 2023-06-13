@@ -1,0 +1,18 @@
+name: account_banks
+data_type: text
+filterable: false
+formula: customer_bank.pk_bankdoc.name
+formula_blank_value: blanks
+hidden: false
+index: false
+is_name: false
+is_wide: false
+label: 付款方开户行
+omit: false
+readonly: false
+required: false
+searchable: false
+sort_no: 210
+sortable: false
+type: formula
+visible_on: "{{global.mode ==='read' ? true : false}}"

@@ -1,0 +1,11 @@
+name: stamp_state
+defaultValue: 'not'
+label: 盖章状态
+options:
+  - label: 未盖章
+    value: not
+  - label: 已盖章
+    value: done
+searchable: true
+sort_no: 120
+type: select

@@ -1,0 +1,16 @@
+name: all
+columns:
+  - name
+  - payment_name
+  - contract
+  - amount
+  - pay_proportion
+  - due_date
+  - account
+  - currency
+filter_scope: space
+label: 所有
+shared: true
+sort:
+  - - due_date
+    - desc

@@ -1,0 +1,15 @@
+name: legal_representative
+data_type: text
+filterable: false
+formula: othercompany_name.legal_representative
+formula_blank_value: zeroes
+generated: false
+index: false
+is_name: false
+is_wide: false
+label: 相对方法人代表
+primary: false
+sort_no: 140
+sortable: false
+type: formula
+visible_on: "{{global.mode ==='read' ? true : false}}"

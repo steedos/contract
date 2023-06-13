@@ -1,0 +1,28 @@
+name: all
+columns:
+  - field: 'no'
+    wrap: false
+  - field: account
+    wrap: false
+  - field: amount
+    wrap: false
+  - field: invoice_type
+    wrap: false
+  - field: invoice_code
+    wrap: false
+  - field: invoice_number
+    wrap: false
+  - field: bill_date
+    wrap: false
+filter_fields:
+  - receipt
+  - contract
+  - account
+  - invoice_type
+filter_scope: space
+filters: []
+label: 所有开票明细
+scrolling_mode: standard
+shared: true
+show_count: false
+type: grid

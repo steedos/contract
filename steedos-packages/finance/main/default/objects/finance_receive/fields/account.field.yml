@@ -1,0 +1,46 @@
+name: account
+filterable: true
+hidden: false
+index: false
+is_name: false
+is_wide: false
+label: 付款方
+multiple: false
+readonly: false
+reference_to: accounts
+required: true
+searchable: false
+sort_no: 120
+sortable: true
+type: lookup
+create: false
+depend_on:
+  - contract
+optionsFunction: !<tag:yaml.org,2002:js/function> |-
+  function(values
+  ) {
+    var _options = [];
+    var contract = _.isObject(values.contract) ? values.contract._id : values.contract;
+    if (!contract) {
+      return;
+    }
+    var contracts = Creator.getObjectRecord('contracts', contract, 'othercompany');
+    if (contracts.othercompany.length == 1) {
+      var accounts = Creator.getObjectRecord('accounts', contracts.othercompany, 'name');
+      if (accounts){
+        _options = [{value: accounts._id, label: accounts.name}];
+      }
+    }
+    if (contracts.othercompany.length > 1) {
+      contracts.othercompany.forEach(function (item) {
+        var accounts = Creator.getObjectRecord('accounts', item, 'name');
+        if (accounts){
+          _options.push({
+            label: accounts.name,
+            value: accounts._id
+          });
+        }
+      });
+    }
+    return _options;
+  }

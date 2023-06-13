@@ -1,0 +1,63 @@
+name: contracts_ee_sum_finance_invoice
+datasource: default
+label: 合同ee-销售收款-2
+options:
+  parameters:
+    - title: datetime
+      name: datetime
+      type: datetime-range
+      global: false
+      locals: []
+      value: d_this_year
+  apply_auto_limit: false
+query: |-
+  {
+      "collection": "finance_invoice",
+      "aggregate": [
+          {
+              "$project": {
+                  "name":"$name",
+                  "is_active": "$is_active",
+                  "money": "$money",
+                  "created": {
+                      "$dateToString": {
+                          "format": "%Y-%m-%d %H:%M",
+                          "date": "$created",
+                          "timezone": "+08"
+                      }
+                  }
+              }
+          },
+         {
+            "$match": {
+                 "is_active": true,
+                 "$and": [
+                      {
+                          "created": {
+                              "$gte": "{{ datetime.start }}"
+                          }
+                      },
+                      {
+                          "created": {
+                              "$lte": "{{ datetime.end }}"
+                          }
+                      }
+                  ]
+              }
+          },
+          {
+            "$group": {
+                "_id": "",
+                "total_money": {
+                    "$sum": "$money"
+                }
+            }
+          }
+
+      ]
+  }
+schedule:
+  interval: 60
+  time: null
+  day_of_week: null
+  until: null

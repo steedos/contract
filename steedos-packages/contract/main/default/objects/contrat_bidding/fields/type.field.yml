@@ -1,0 +1,23 @@
+name: type
+data_type: text
+filterable: false
+generated: false
+index: false
+is_name: false
+is_wide: false
+label: 招标方式
+multiple: false
+options:
+  - label: 公开招标
+    value: 公开招标
+  - label: 邀请招标
+    value: 邀请招标
+  - label: 邀请议标
+    value: 邀请议标
+  - label: 单一来源
+    value: 单一来源
+primary: false
+required: false
+sort_no: 120
+sortable: false
+type: select

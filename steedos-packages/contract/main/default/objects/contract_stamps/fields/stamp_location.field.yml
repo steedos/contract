@@ -1,0 +1,6 @@
+name: stamp_location
+is_wide: true
+label: 盖章地点
+searchable: true
+sort_no: 160
+type: textarea

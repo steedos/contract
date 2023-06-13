@@ -1,0 +1,6 @@
+name: amount
+label: 付款金额
+required: true
+sort_no: 120
+sortable: true
+type: currency

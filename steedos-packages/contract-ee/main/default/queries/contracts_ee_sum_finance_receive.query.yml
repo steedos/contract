@@ -1,0 +1,62 @@
+name: contracts_ee_sum_finance_receive
+datasource: default
+label: 合同ee-销售收款
+options:
+  parameters:
+    - title: datetime
+      name: datetime
+      type: datetime-range
+      global: false
+      locals: []
+      value: d_this_year
+  apply_auto_limit: false
+query: |-
+  {
+      "collection": "finance_receive",
+      "aggregate": [
+          {
+              "$project": {
+                  "name":"$name",
+                  "contract_receipts_state": "$contract_receipts_state",
+                  "amount": "$amount",
+                  "receipt_date": {
+                      "$dateToString": {
+                          "format": "%Y-%m-%d %H:%M",
+                          "date": "$receipt_date",
+                          "timezone": "+00"
+                      }
+                  }
+              }
+          },
+          {
+            "$match": {
+                 "contract_receipts_state": "received",
+                 "$and": [
+                      {
+                          "receipt_date": {
+                              "$gte": "{{ datetime.start }}"
+                          }
+                      },
+                      {
+                          "receipt_date": {
+                              "$lte": "{{ datetime.end }}"
+                          }
+                      }
+                  ]
+              }
+          },
+                  {
+              "$group": {
+                  "_id": "",
+                  "total_amount": {
+                      "$sum": "$amount"
+                  }
+              }
+          }
+      ]
+  }
+schedule:
+  interval: 60
+  time: null
+  day_of_week: null
+  until: null

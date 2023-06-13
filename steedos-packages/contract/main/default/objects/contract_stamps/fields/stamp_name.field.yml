@@ -1,0 +1,6 @@
+name: stamp_name
+label: 印章名称
+reference_to: seal
+searchable: true
+sort_no: 110
+type: lookup

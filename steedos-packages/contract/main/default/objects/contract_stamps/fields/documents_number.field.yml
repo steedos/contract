@@ -1,0 +1,14 @@
+name: documents_number
+filterable: false
+generated: false
+index: false
+is_name: false
+is_wide: false
+label: 文件份数
+precision: 18
+primary: false
+required: false
+scale: 0
+sort_no: 114
+sortable: false
+type: number

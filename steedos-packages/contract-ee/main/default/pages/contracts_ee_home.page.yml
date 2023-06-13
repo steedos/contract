@@ -1,0 +1,9 @@
+name: contracts_ee_home
+__filename: >-
+  /workspace/steedos-ee/steedos-packages/contract-ee/main/default/pages/contracts_ee_home.page.yml
+is_active: true
+label: 合同首页
+pageAssignments: []
+render_engine: amis
+type: app
+widgets: []

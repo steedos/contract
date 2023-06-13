@@ -1,0 +1,17 @@
+name: bank
+data_type: text
+filterable: false
+formula: account.invoice_bank
+formula_blank_value: blanks
+hidden: false
+index: false
+is_name: false
+is_wide: false
+label: 开户行
+omit: false
+readonly: false
+required: false
+searchable: false
+sort_no: 190
+sortable: false
+type: formula

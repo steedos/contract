@@ -1,0 +1,21 @@
+name: verified
+defaultValue: ''
+filterable: false
+hidden: false
+index: false
+is_name: false
+is_wide: false
+label: 查验状态
+multiple: false
+omit: false
+options:
+  - label: 已查验
+    value: done
+  - label: 未查验
+    value: havenot
+readonly: false
+required: false
+searchable: false
+sort_no: 420
+sortable: false
+type: select

@@ -1,0 +1,5 @@
+name: other_payment_method
+label: 其他付款方式
+type: text
+sort_no: 340
+visible_on: "{{formData.payment_method === '其他'?true:false}}"

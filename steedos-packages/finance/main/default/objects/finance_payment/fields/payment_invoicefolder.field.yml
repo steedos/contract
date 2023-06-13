@@ -1,0 +1,27 @@
+name: payment_invoicefolder
+filterable: false
+hidden: false
+index: false
+is_name: false
+is_wide: false
+label: 收票记录
+create: false
+multiple: true
+omit: false
+depend_on:
+  - contract
+filtersFunction: !<tag:yaml.org,2002:js/function> |-
+    function (filters, values){
+      if(values == undefined){
+        return [];
+      }else{
+        return [["contract","=",values.contract]]
+      }
+    }
+readonly: false
+reference_to: finance_receipt
+required: false
+searchable: false
+sort_no: 188
+sortable: false
+type: lookup

@@ -1,0 +1,24 @@
+name: amount_type
+defaultValue: immobilization
+filterable: false
+hidden: false
+index: false
+is_name: false
+is_wide: false
+label: 价款类型
+multiple: false
+omit: false
+options:
+  - label: 固定
+    value: immobilization
+  - label: 浮动
+    value: float
+  - label: 无金额
+    value: no_amount_of
+readonly: true
+required: false
+searchable: false
+sort_no: 360
+sortable: false
+type: select
+visible_on: "{{global.mode ==='read' ? true : false}}"

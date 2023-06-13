@@ -1,0 +1,71 @@
+name: contracts_received_home
+datasource: default
+label: 合同收款
+options:
+  parameters:
+    - title: 时间范围
+      name: datetime
+      type: datetime-range
+      locals: []
+      value:
+        start: '2022-05-01 00:00'
+        end: '2022-05-31 23:59'
+  apply_auto_limit: false
+query: |-
+  {
+      "collection": "contracts",
+      "aggregate": [
+          {
+              "$project": {
+                  "is_deleted": "$is_deleted",
+                  "amount": "$amount",
+                  "received_amount": "$received_amount",
+                  "unreceived_amount": "$unreceived_amount",
+                  "collection": "$collection",
+                  "signed_date": {
+                      "$dateToString": {
+                          "format": "%Y-%m-%d %H:%M",
+                          "date": "$signed_date",
+                          "timezone": "+00"
+                      }
+                  }
+              }
+          },
+          {
+              "$match": {
+                  "is_deleted": {
+                      "$ne": true
+                  },
+                  "collection": true,
+                  "$and": [
+                      {
+                          "signed_date": {
+                              "$gte": "{{ datetime.start }}"
+                          }
+                      },
+                      {
+                          "signed_date": {
+                              "$lte": "{{ datetime.end }}"
+                          }
+                      }
+                  ]
+              }
+          },
+          {
+              "$group": {
+                  "_id": "",
+                  "received_amount": {
+                      "$sum": "$received_amount"
+                  },
+                  "unreceived_amount": {
+                      "$sum": "$unreceived_amount"
+                  }
+              }
+          }
+      ]
+  }
+schedule:
+  interval: 60
+  time: null
+  day_of_week: null
+  until: null

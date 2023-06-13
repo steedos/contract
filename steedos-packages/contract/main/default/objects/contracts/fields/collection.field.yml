@@ -1,0 +1,7 @@
+name: collection
+label: 收款合同
+readonly: true
+searchable: true
+sort_no: 40
+type: boolean
+visible_on: "{{global.mode ==='read' ? true : false}}"

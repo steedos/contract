@@ -1,0 +1,5 @@
+name: amount_description
+is_wide: true
+label: 付款说明
+sort_no: 300
+type: textarea

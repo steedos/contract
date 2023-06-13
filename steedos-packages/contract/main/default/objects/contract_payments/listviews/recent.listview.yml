@@ -1,0 +1,13 @@
+name: recent
+columns:
+  - name
+  - payment_name
+  - contract
+  - amount
+  - pay_proportion
+  - due_date
+  - account
+  - currency
+filter_scope: space
+label: 最近查看
+shared: true

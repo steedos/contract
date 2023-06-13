@@ -1,0 +1,13 @@
+name: upload_invoices
+filterable: false
+generated: false
+index: false
+is_name: false
+is_wide: false
+label: 上传发票
+multiple: true
+primary: false
+required: false
+sort_no: 410
+sortable: false
+type: file

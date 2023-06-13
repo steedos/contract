@@ -1,0 +1,13 @@
+name: all
+columns:
+  - field: name
+    wrap: false
+  - field: code
+    wrap: false
+filter_fields:
+  - name
+  - created
+filter_scope: space
+label: 全部
+shared: true
+show_count: false

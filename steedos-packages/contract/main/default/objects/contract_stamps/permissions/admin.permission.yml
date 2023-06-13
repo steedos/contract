@@ -1,0 +1,383 @@
+allowCreate: true
+allowDelete: true
+allowEdit: true
+allowRead: true
+modifyAllRecords: true
+permission_set_id: admin
+viewAllRecords: true
+field_permissions:
+  - field: contract
+    readable: true
+    editable: true
+  - field: stamp_date
+    readable: true
+    editable: true
+  - field: stamp_description
+    readable: true
+    editable: true
+  - field: stamp_location
+    readable: true
+    editable: true
+  - field: stamp_name
+    readable: true
+    editable: true
+  - field: stamp_source
+    readable: false
+    editable: false
+  - field: stamp_state
+    readable: true
+    editable: true
+  - field: stamp_times
+    readable: true
+    editable: true
+  - field: stamp_user
+    readable: true
+    editable: true
+  - field: document
+    readable: true
+    editable: true
+  - field: document
+    readable: true
+    editable: true
+  - field: document
+    readable: true
+    editable: true
+  - field: document
+    readable: true
+    editable: true
+  - field: document
+    readable: true
+    editable: true
+  - field: document
+    readable: true
+    editable: true
+  - field: document
+    readable: true
+    editable: true
+  - field: document
+    readable: true
+    editable: true
+  - field: document
+    readable: true
+    editable: true
+  - field: document
+    readable: true
+    editable: true
+  - field: documents_number
+    readable: true
+    editable: true
+  - field: documents_number
+    readable: true
+    editable: true
+  - field: documents_number
+    readable: true
+    editable: true
+  - field: documents_number
+    readable: true
+    editable: true
+  - field: documents_number
+    readable: true
+    editable: true
+  - field: documents_number
+    readable: true
+    editable: true
+  - field: documents_number
+    readable: true
+    editable: true
+  - field: documents_number
+    readable: true
+    editable: true
+  - field: documents_number
+    readable: true
+    editable: true
+  - field: documents_number
+    readable: true
+    editable: true
+  - field: seal_times
+    readable: true
+    editable: true
+  - field: seal_times
+    readable: true
+    editable: true
+  - field: seal_times
+    readable: true
+    editable: true
+  - field: seal_times
+    readable: true
+    editable: true
+  - field: seal_times
+    readable: true
+    editable: true
+  - field: seal_times
+    readable: true
+    editable: true
+  - field: seal_times
+    readable: true
+    editable: true
+  - field: seal_times
+    readable: true
+    editable: true
+  - field: seal_times
+    readable: true
+    editable: true
+  - field: seal_times
+    readable: true
+    editable: true
+  - field: owner
+    readable: false
+    editable: false
+  - field: owner
+    readable: false
+    editable: false
+  - field: owner
+    readable: false
+    editable: false
+  - field: owner
+    readable: false
+    editable: false
+  - field: owner
+    readable: false
+    editable: false
+  - field: owner
+    readable: false
+    editable: false
+  - field: owner
+    readable: false
+    editable: false
+  - field: owner
+    readable: false
+    editable: false
+  - field: owner
+    readable: false
+    editable: false
+  - field: owner
+    readable: false
+    editable: false
+  - field: created
+    readable: true
+    editable: false
+  - field: created
+    readable: true
+    editable: false
+  - field: created
+    readable: true
+    editable: false
+  - field: created
+    readable: true
+    editable: false
+  - field: created
+    readable: true
+    editable: false
+  - field: created
+    readable: true
+    editable: false
+  - field: created
+    readable: true
+    editable: false
+  - field: created
+    readable: true
+    editable: false
+  - field: created
+    readable: true
+    editable: false
+  - field: created
+    readable: true
+    editable: false
+  - field: created_by
+    readable: true
+    editable: false
+  - field: created_by
+    readable: true
+    editable: false
+  - field: created_by
+    readable: true
+    editable: false
+  - field: created_by
+    readable: true
+    editable: false
+  - field: created_by
+    readable: true
+    editable: false
+  - field: created_by
+    readable: true
+    editable: false
+  - field: created_by
+    readable: true
+    editable: false
+  - field: created_by
+    readable: true
+    editable: false
+  - field: created_by
+    readable: true
+    editable: false
+  - field: created_by
+    readable: true
+    editable: false
+  - field: modified
+    readable: true
+    editable: false
+  - field: modified
+    readable: true
+    editable: false
+  - field: modified
+    readable: true
+    editable: false
+  - field: modified
+    readable: true
+    editable: false
+  - field: modified
+    readable: true
+    editable: false
+  - field: modified
+    readable: true
+    editable: false
+  - field: modified
+    readable: true
+    editable: false
+  - field: modified
+    readable: true
+    editable: false
+  - field: modified
+    readable: true
+    editable: false
+  - field: modified_by
+    readable: true
+    editable: false
+  - field: modified_by
+    readable: true
+    editable: false
+  - field: modified_by
+    readable: true
+    editable: false
+  - field: modified_by
+    readable: true
+    editable: false
+  - field: modified_by
+    readable: true
+    editable: false
+  - field: modified_by
+    readable: true
+    editable: false
+  - field: modified_by
+    readable: true
+    editable: false
+  - field: modified_by
+    readable: true
+    editable: false
+  - field: modified_by
+    readable: true
+    editable: false
+  - field: modified_by
+    readable: true
+    editable: false
+  - field: locked
+    readable: false
+    editable: false
+  - field: locked
+    readable: false
+    editable: false
+  - field: locked
+    readable: false
+    editable: false
+  - field: locked
+    readable: false
+    editable: false
+  - field: locked
+    readable: false
+    editable: false
+  - field: locked
+    readable: false
+    editable: false
+  - field: locked
+    readable: false
+    editable: false
+  - field: locked
+    readable: false
+    editable: false
+  - field: locked
+    readable: false
+    editable: false
+  - field: company_id
+    readable: false
+    editable: false
+  - field: company_id
+    readable: false
+    editable: false
+  - field: company_id
+    readable: false
+    editable: false
+  - field: company_id
+    readable: false
+    editable: false
+  - field: company_id
+    readable: false
+    editable: false
+  - field: company_id
+    readable: false
+    editable: false
+  - field: company_id
+    readable: false
+    editable: false
+  - field: company_id
+    readable: false
+    editable: false
+  - field: company_id
+    readable: false
+    editable: false
+  - field: company_ids
+    readable: false
+    editable: false
+  - field: company_ids
+    readable: false
+    editable: false
+  - field: company_ids
+    readable: false
+    editable: false
+  - field: company_ids
+    readable: false
+    editable: false
+  - field: company_ids
+    readable: false
+    editable: false
+  - field: company_ids
+    readable: false
+    editable: false
+  - field: company_ids
+    readable: false
+    editable: false
+  - field: company_ids
+    readable: false
+    editable: false
+  - field: company_ids
+    readable: false
+    editable: false
+  - field: company_ids
+    readable: false
+    editable: false
+  - field: instance_state
+    readable: true
+    editable: true
+  - field: instance_state
+    readable: true
+    editable: true
+  - field: instance_state
+    readable: true
+    editable: true
+  - field: instance_state
+    readable: true
+    editable: true
+  - field: instance_state
+    readable: true
+    editable: true
+  - field: instance_state
+    readable: true
+    editable: true
+  - field: instance_state
+    readable: true
+    editable: true
+  - field: instance_state
+    readable: true
+    editable: true
+  - field: instance_state
+    readable: true
+    editable: true

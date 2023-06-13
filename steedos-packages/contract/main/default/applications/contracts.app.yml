@@ -1,0 +1,36 @@
+name: 合同
+code: contracts
+description: 合同管理应用：包括数据看板、合同及相应流程审批。
+icon_slds: document
+is_creator: true
+is_new_window: false
+is_use_ie: false
+is_use_iframe: false
+mobile: true
+mobile_objects:
+  - contracts
+  - contract_receipts
+  - contract_payments
+  - accounts
+  - instances
+  - tasks
+  - events
+  - reports
+oauth2_enabled: false
+oauth2_logout_enabled: false
+objects:
+  - contracts
+  - contract_receipts
+  - contract_payments
+  - accounts
+  - instances
+  - tasks
+  - events
+  - reports
+saml_enabled: false
+saml_logout_enabled: false
+sort: 20
+tabs:
+  # - contract_kanban
+  - contracts_home
+visible: true

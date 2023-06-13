@@ -1,0 +1,14 @@
+{
+    "name": "@steedos-labs/finance-ee",
+    "version": "2.2.4",
+    "main": "package.service.js",
+    "publishConfig": {
+        "access": "public"
+    },
+    "dependencies": {
+        "@steedos-labs/finance": "2.2.4",
+        "@steedos-labs/flows": "2.2.1",
+        "@steedos-labs/master": "2.2.4"
+    },
+    "gitHead": "f19acd58f91306840e665320b772a9db962a7cf0"
+}

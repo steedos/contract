@@ -1,0 +1,5 @@
+name: stamp_date
+label: 盖章时间
+searchable: true
+sort_no: 130
+type: datetime

@@ -1,0 +1,20 @@
+name: pk_bankdoc
+filterable: false
+generated: false
+index: false
+is_name: false
+is_wide: false
+label: 相对方银行账户
+multiple: false
+primary: false
+reference_to: account_banks
+required: true
+sort_no: 180
+sortable: false
+type: lookup
+depend_on:
+  - othercompany_name
+filtersFunction: !<tag:yaml.org,2002:js/function> |-
+    function (filters, values){
+        return [["account","=",values.othercompany_name]]
+    }

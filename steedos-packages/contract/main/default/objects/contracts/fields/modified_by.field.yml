@@ -1,0 +1,6 @@
+name: modified_by
+label: 修改人
+reference_to: users
+sort_no: 1270
+sortable: true
+type: lookup

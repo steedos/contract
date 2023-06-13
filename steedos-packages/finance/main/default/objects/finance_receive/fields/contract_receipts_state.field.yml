@@ -1,0 +1,21 @@
+name: contract_receipts_state
+filterable: false
+group: 收款信息
+hidden: true
+index: false
+is_name: false
+is_wide: false
+label: 收款状态
+multiple: false
+omit: false
+readonly: false
+options:
+  - label: 已收款
+    value: received
+  - label: 未收款
+    value: unreceived
+required: true
+searchable: false
+sort_no: 450
+sortable: false
+type: select

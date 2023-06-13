@@ -1,0 +1,97 @@
+name: contracts_collection_sum_home
+datasource: default
+label: 合同收款统计
+options:
+  parameters:
+    - title: 签订日期
+      name: datetime
+      type: datetime-range
+      global: false
+      locals: []
+      value: d_this_year
+  apply_auto_limit: false
+query: |-
+  {
+      "collection": "contracts",
+      "aggregate": [
+          {
+              "$project": {
+                  "is_deleted": "$is_deleted",
+                  "amount": "$amount",
+                  "received_amount": "$received_amount",
+                  "collection": "$collection",
+                  "signed_date": {
+                      "$dateToString": {
+                          "format": "%Y-%m-%d %H:%M",
+                          "date": "$signed_date",
+                          "timezone": "+00"
+                      }
+                  }
+              }
+          },
+          {
+              "$match": {
+                  "is_deleted": {
+                      "$ne": true
+                  },
+                  "collection": true,
+                  "$and": [
+                      {
+                          "signed_date": {
+                              "$gte": "{{ datetime.start }}"
+                          }
+                      },
+                      {
+                          "signed_date": {
+                              "$lte": "{{ datetime.end }}"
+                          }
+                      }
+                  ]
+              }
+          },
+          {
+              "$group": {
+                  "_id": "",
+                  "total_amount": {
+                      "$sum": "$amount"
+                  },
+                  "total_received_amount": {
+                      "$sum": "$received_amount"
+                  }
+              }
+          },
+          {
+              "$addFields": {
+                  "rate": {
+                      "$divide": [
+                          "$total_received_amount",
+                          "$total_amount"
+                      ]
+                  }
+              }
+          },
+          {
+              "$addFields": {
+                  "rate_percent": {
+                      "$multiply": [
+                          "$rate",
+                          100
+                      ]
+                  }
+              }
+          },
+          {
+              "$project": {
+                  "_id": 1,
+                  "total_amount": 1,
+                  "total_received_amount": 1,
+                  "rate_percent": 1
+              }
+          }
+      ]
+  }
+schedule:
+  interval: 60
+  time: null
+  day_of_week: null
+  until: null

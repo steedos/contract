@@ -1,0 +1,23 @@
+name: invoice_amount
+data_type: currency
+filterable: false
+group: 收款信息
+hidden: true
+index: false
+is_name: false
+is_wide: false
+label: 已申请开票金额
+omit: false
+precision: 18
+readonly: false
+required: false
+scale: 2
+visible_on: "{{formData.collection === true ? true: false}}"
+searchable: false
+sort_no: 510
+sortable: false
+summary_field: money
+summary_object: finance_invoice
+summary_type: sum
+type: summary
+summary_filters: []

@@ -1,0 +1,15 @@
+name: billno
+filterable: false
+group: 收款信息
+hidden: false
+index: false
+is_name: false
+is_wide: false
+label: 财务单据号
+omit: false
+readonly: false
+required: false
+searchable: false
+sort_no: 460
+sortable: false
+type: text

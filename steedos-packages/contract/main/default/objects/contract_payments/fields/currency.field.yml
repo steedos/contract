@@ -1,0 +1,7 @@
+name: currency
+create: false
+label: 付款币种
+reference_to: currency
+required: true
+sort_no: 130
+type: lookup

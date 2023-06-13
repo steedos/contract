@@ -1,0 +1,44 @@
+name: finance_invoice_detail
+custom: true
+enable_api: true
+enable_audit: false
+enable_chatter: false
+enable_enhanced_lookup: true
+enable_events: false
+enable_files: true
+enable_inline_edit: false
+enable_instances: false
+enable_notes: false
+enable_search: true
+enable_share: false
+enable_tasks: false
+enable_workflow: false
+icon: document
+is_enable: true
+label: 开票明细
+version: 2
+form:
+  initialValues: !!js/function |
+    function(){
+      if(Session.get("record_id")){
+        if (Session.get("object_name") == "finance_invoice"){
+          var mainRecord = Creator.odata.get(Session.get("object_name"), Session.get("record_id"), 'account,invoice_type,tax,contract');
+          var account = '';
+          var invoice_type = '';
+          var contract = '';
+          var tax = '';
+          if(mainRecord){
+            account = mainRecord.account;
+            invoice_type = mainRecord.invoice_type;
+            contract = mainRecord.contract;
+            tax = mainRecord.tax
+          }
+          return {
+            account: account,
+            invoice_type: invoice_type,
+            contract: contract,
+            tax: tax
+          } 
+        }
+      }
+    }

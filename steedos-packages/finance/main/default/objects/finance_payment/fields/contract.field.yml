@@ -1,0 +1,25 @@
+name: contract
+filterable: true
+hidden: false
+index: false
+is_name: false
+is_wide: false
+label: 合同
+omit: false
+readonly: false
+reference_to: contracts
+required: false
+searchable: false
+sort_no: 50
+sortable: true
+type: master_detail
+create: false
+write_requires_master_read: true
+filtersFunction: !<tag:yaml.org,2002:js/function> |-
+  function(filters, values){
+    if(values == undefined){
+      return [];
+    }else{
+      return [["payment","=",true]];
+    }
+  }

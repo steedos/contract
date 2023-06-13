@@ -1,0 +1,16 @@
+name: 'no'
+filterable: false
+formula: 'KPMX-{YYYY}-{0000}'
+hidden: false
+index: false
+is_name: true
+is_wide: false
+label: 编号
+omit: false
+readonly: true
+required: false
+visible_on: "{{global.mode ==='read' ? true : false}}"
+searchable: false
+sort_no: 130
+sortable: true
+type: autonumber

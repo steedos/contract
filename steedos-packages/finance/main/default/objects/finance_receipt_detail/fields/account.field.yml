@@ -1,0 +1,37 @@
+name: account
+filterable: false
+hidden: false
+index: false
+is_name: false
+is_wide: false
+label: 销售方名称
+multiple: false
+# omit: false
+# optionsFunction: !<tag:yaml.org,2002:js/function> |-
+#   function(values
+#   ) {
+
+
+#           var _options = [];
+#           var finance_receipt = _.isObject(values.finance_receipt) ? values.finance_receipt._id : values.finance_receipt;
+#           console.log('finance_receipt')
+#           if (!finance_receipt) {
+#             return;
+#           }
+#           var finance_receipt = Creator.odata.get('finance_receipt', finance_receipt, 'account');
+#           if (finance_receipt) {
+#           var account = Creator.odata.get('accounts', finance_receipt.account, 'name');
+#           if (account) {
+#               _options = [{ value: account._id, label: account.name }];
+#           }
+#       }
+#       return _options;
+
+#   }
+readonly: false
+reference_to: accounts
+required: false
+searchable: false
+sort_no: 130
+sortable: false
+type: lookup

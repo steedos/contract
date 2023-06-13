@@ -1,0 +1,5 @@
+name: payment
+is_enable: true
+label: 编辑付款信息
+'on': record_only
+visible: false

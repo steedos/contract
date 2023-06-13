@@ -1,0 +1,15 @@
+name: revocation_date
+filterable: true
+group: 合同备案信息
+hidden: true
+index: false
+is_name: false
+is_wide: false
+label: 废止日期
+omit: false
+readonly: false
+required: false
+searchable: false
+sort_no: 600
+sortable: true
+type: date

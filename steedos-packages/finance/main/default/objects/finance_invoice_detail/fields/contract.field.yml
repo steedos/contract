@@ -1,0 +1,16 @@
+name: contract
+filterable: false
+hidden: false
+index: false
+is_name: false
+is_wide: false
+label: 合同
+multiple: false
+omit: false
+readonly: true
+reference_to: contracts
+required: false
+searchable: false
+sort_no: 135
+sortable: false
+type: lookup

@@ -1,0 +1,482 @@
+name: contract_payments.admin
+allowCreate: true
+allowCreateFiles: true
+allowDelete: true
+allowDeleteFiles: true
+allowEdit: true
+allowEditFiles: true
+allowRead: true
+allowReadFiles: true
+modifyAllFiles: true
+modifyAllRecords: true
+modifyCompanyRecords: false
+permission_set_id: admin
+viewAllFiles: true
+viewAllRecords: true
+viewCompanyRecords: false
+field_permissions:
+  - field: account
+    readable: true
+    editable: true
+  - field: account
+    readable: true
+    editable: true
+  - field: account
+    readable: true
+    editable: true
+  - field: account
+    readable: true
+    editable: true
+  - field: account
+    readable: true
+    editable: true
+  - field: account
+    readable: true
+    editable: true
+  - field: account
+    readable: true
+    editable: true
+  - field: account
+    readable: true
+    editable: true
+  - field: amount_description
+    readable: true
+    editable: true
+  - field: amount_description
+    readable: true
+    editable: true
+  - field: amount_description
+    readable: true
+    editable: true
+  - field: amount_description
+    readable: true
+    editable: true
+  - field: amount_description
+    readable: true
+    editable: true
+  - field: amount_description
+    readable: true
+    editable: true
+  - field: amount_description
+    readable: true
+    editable: true
+  - field: amount_description
+    readable: true
+    editable: true
+  - field: amount_description
+    readable: true
+    editable: true
+  - field: amount_description
+    readable: true
+    editable: true
+  - field: amount_description
+    readable: true
+    editable: true
+  - field: amount_description
+    readable: true
+    editable: true
+  - field: amount_description
+    readable: true
+    editable: true
+  - field: amount
+    readable: true
+    editable: true
+  - field: amount
+    readable: true
+    editable: true
+  - field: amount
+    readable: true
+    editable: true
+  - field: amount
+    readable: true
+    editable: true
+  - field: amount
+    readable: true
+    editable: true
+  - field: amount
+    readable: true
+    editable: true
+  - field: amount
+    readable: true
+    editable: true
+  - field: amount
+    readable: true
+    editable: true
+  - field: amount
+    readable: true
+    editable: true
+  - field: amount
+    readable: true
+    editable: true
+  - field: amount
+    readable: true
+    editable: true
+  - field: amount
+    readable: true
+    editable: true
+  - field: amount
+    readable: true
+    editable: true
+  - field: amount
+    readable: true
+    editable: true
+  - field: company_id
+    readable: true
+    editable: true
+  - field: company_id
+    readable: true
+    editable: true
+  - field: company_id
+    readable: true
+    editable: true
+  - field: company_id
+    readable: true
+    editable: true
+  - field: company_id
+    readable: true
+    editable: true
+  - field: company_id
+    readable: true
+    editable: true
+  - field: company_id
+    readable: true
+    editable: true
+  - field: company_id
+    readable: true
+    editable: true
+  - field: company_id
+    readable: true
+    editable: true
+  - field: company_id
+    readable: true
+    editable: true
+  - field: company_id
+    readable: true
+    editable: true
+  - field: company_id
+    readable: true
+    editable: true
+  - field: company_id
+    readable: true
+    editable: true
+  - field: company_id
+    readable: true
+    editable: true
+  - field: contract
+    readable: true
+    editable: true
+  - field: contract
+    readable: true
+    editable: true
+  - field: contract
+    readable: true
+    editable: true
+  - field: contract
+    readable: true
+    editable: true
+  - field: contract
+    readable: true
+    editable: true
+  - field: contract
+    readable: true
+    editable: true
+  - field: contract
+    readable: true
+    editable: true
+  - field: contract
+    readable: true
+    editable: true
+  - field: contract
+    readable: true
+    editable: true
+  - field: contract
+    readable: true
+    editable: true
+  - field: contract
+    readable: true
+    editable: true
+  - field: contract
+    readable: true
+    editable: true
+  - field: contract
+    readable: true
+    editable: true
+  - field: contract
+    readable: true
+    editable: true
+  - field: currency
+    readable: true
+    editable: true
+  - field: currency
+    readable: true
+    editable: true
+  - field: currency
+    readable: true
+    editable: true
+  - field: currency
+    readable: true
+    editable: true
+  - field: currency
+    readable: true
+    editable: true
+  - field: currency
+    readable: true
+    editable: true
+  - field: currency
+    readable: true
+    editable: true
+  - field: currency
+    readable: true
+    editable: true
+  - field: currency
+    readable: true
+    editable: true
+  - field: currency
+    readable: true
+    editable: true
+  - field: currency
+    readable: true
+    editable: true
+  - field: currency
+    readable: true
+    editable: true
+  - field: currency
+    readable: true
+    editable: true
+  - field: currency
+    readable: true
+    editable: true
+  - field: description
+    readable: true
+    editable: true
+  - field: due_date
+    readable: true
+    editable: true
+  - field: due_date
+    readable: true
+    editable: true
+  - field: due_date
+    readable: true
+    editable: true
+  - field: due_date
+    readable: true
+    editable: true
+  - field: due_date
+    readable: true
+    editable: true
+  - field: due_date
+    readable: true
+    editable: true
+  - field: due_date
+    readable: true
+    editable: true
+  - field: due_date
+    readable: true
+    editable: true
+  - field: due_date
+    readable: true
+    editable: true
+  - field: due_date
+    readable: true
+    editable: true
+  - field: due_date
+    readable: true
+    editable: true
+  - field: due_date
+    readable: true
+    editable: true
+  - field: due_date
+    readable: true
+    editable: true
+  - field: due_date
+    readable: true
+    editable: true
+  - field: finished
+    readable: true
+    editable: true
+  - field: finished
+    readable: true
+    editable: true
+  - field: finished
+    readable: true
+    editable: true
+  - field: finished
+    readable: true
+    editable: true
+  - field: finished
+    readable: true
+    editable: true
+  - field: finished
+    readable: true
+    editable: true
+  - field: finished
+    readable: true
+    editable: true
+  - field: finished
+    readable: true
+    editable: true
+  - field: finished
+    readable: true
+    editable: true
+  - field: finished
+    readable: true
+    editable: true
+  - field: finished
+    readable: true
+    editable: true
+  - field: finished
+    readable: true
+    editable: true
+  - field: finished
+    readable: true
+    editable: true
+  - field: finished
+    readable: true
+    editable: true
+  - field: name
+    readable: true
+    editable: true
+  - field: name
+    readable: true
+    editable: true
+  - field: name
+    readable: true
+    editable: true
+  - field: name
+    readable: true
+    editable: true
+  - field: name
+    readable: true
+    editable: true
+  - field: name
+    readable: true
+    editable: true
+  - field: name
+    readable: true
+    editable: true
+  - field: name
+    readable: true
+    editable: true
+  - field: name
+    readable: true
+    editable: true
+  - field: name
+    readable: true
+    editable: true
+  - field: name
+    readable: true
+    editable: true
+  - field: name
+    readable: true
+    editable: true
+  - field: name
+    readable: true
+    editable: true
+  - field: name
+    readable: true
+    editable: true
+  - field: project
+    readable: true
+    editable: false
+  - field: project
+    readable: true
+    editable: false
+  - field: project
+    readable: true
+    editable: false
+  - field: project
+    readable: true
+    editable: false
+  - field: project
+    readable: true
+    editable: false
+  - field: project
+    readable: true
+    editable: false
+  - field: project
+    readable: true
+    editable: false
+  - field: project
+    readable: true
+    editable: false
+  - field: project
+    readable: true
+    editable: false
+  - field: project
+    readable: true
+    editable: false
+  - field: project
+    readable: true
+    editable: false
+  - field: project
+    readable: true
+    editable: false
+  - field: project
+    readable: true
+    editable: false
+  - field: project
+    readable: true
+    editable: false
+  - field: account
+    readable: true
+    editable: true
+  - field: amount_description
+    readable: true
+    editable: true
+  - field: amount
+    readable: true
+    editable: true
+  - field: company_id
+    readable: true
+    editable: true
+  - field: contract
+    readable: true
+    editable: true
+  - field: currency
+    readable: true
+    editable: true
+  - field: due_date
+    readable: true
+    editable: true
+  - field: finished
+    readable: true
+    editable: true
+  - field: name
+    readable: true
+    editable: true
+  - field: project
+    readable: true
+    editable: true
+  - field: owner
+    readable: false
+    editable: false
+  - field: created
+    readable: true
+    editable: false
+  - field: created_by
+    readable: true
+    editable: false
+  - field: modified
+    readable: true
+    editable: false
+  - field: modified_by
+    readable: true
+    editable: false
+  - field: locked
+    readable: false
+    editable: false
+  - field: company_ids
+    readable: false
+    editable: false
+  - field: instance_state
+    readable: false
+    editable: false
+  - field: payment_name
+    readable: true
+    editable: true
+  - field: contract_amount
+    readable: true
+    editable: true
+  - field: pay_proportion
+    readable: true
+    editable: true

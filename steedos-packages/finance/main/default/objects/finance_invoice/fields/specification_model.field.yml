@@ -1,0 +1,14 @@
+name: specification_model
+filterable: false
+hidden: true
+index: false
+is_name: false
+is_wide: false
+label: 规格型号
+omit: false
+readonly: false
+required: false
+searchable: false
+sort_no: 250
+sortable: false
+type: text

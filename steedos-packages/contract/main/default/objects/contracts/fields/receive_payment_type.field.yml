@@ -1,0 +1,23 @@
+name: receive_payment_type
+defaultValue: '"single_use"'
+filterable: false
+hidden: true
+index: false
+is_name: false
+is_wide: false
+label: 收/付款方式
+multiple: false
+omit: false
+options:
+  - label: 一次性
+    value: single_use
+  - label: 分期
+    value: by_stages
+  - label: 无金额
+    value: no_amount_of
+readonly: false
+required: false
+searchable: false
+sort_no: 345
+sortable: false
+type: select

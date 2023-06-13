@@ -1,0 +1,6 @@
+name: stamp_description
+is_wide: true
+label: 备注
+searchable: true
+sort_no: 180
+type: textarea

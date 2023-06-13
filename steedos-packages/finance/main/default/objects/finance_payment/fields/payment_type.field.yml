@@ -1,0 +1,20 @@
+name: payment_type
+filterable: false
+hidden: false
+index: false
+is_name: false
+is_wide: false
+label: 付款类别
+multiple: false
+omit: false
+options:
+  - label: 合同付款
+    value: 合同付款
+  - label: 其他付款
+    value: 其他付款
+readonly: false
+required: false
+searchable: false
+sort_no: 159
+sortable: false
+type: select

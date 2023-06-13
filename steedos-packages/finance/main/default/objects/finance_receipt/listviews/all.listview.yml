@@ -1,0 +1,31 @@
+name: all
+columns:
+  - field: id
+    wrap: false
+  - field: name
+    wrap: false
+  - field: contract
+    wrap: false
+  - field: account
+    wrap: false
+  - field: sumprice
+    wrap: false
+  - field: count
+    wrap: false
+  - field: due_date
+    wrap: false 
+  - field: is_active
+    wrap: false 
+  - field: actual_date
+    wrap: false  
+filter_fields:
+  - contract
+  - complete_invoice
+  - invoice_type
+filter_scope: space
+filters: []
+label: 所有收票记录
+scrolling_mode: standard
+shared: true
+show_count: false
+type: grid

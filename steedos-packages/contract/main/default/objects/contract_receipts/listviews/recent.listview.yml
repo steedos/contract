@@ -1,0 +1,12 @@
+name: recent
+columns:
+  - contract
+  - name
+  - amount
+  - due_date
+  - account
+  - currency
+  - subject
+filter_scope: space
+label: 最近查看
+shared: true

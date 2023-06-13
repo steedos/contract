@@ -1,0 +1,19 @@
+name: excluding_tax_amount
+data_type: currency
+filterable: false
+formula: money-ROUND(money*tax.tax_rate, 2)
+formula_blank_value: zeroes
+hidden: true
+index: false
+is_name: false
+is_wide: false
+label: 不含税金额
+omit: false
+precision: 18
+readonly: false
+required: false
+scale: 2
+searchable: false
+sort_no: 240
+sortable: false
+type: formula

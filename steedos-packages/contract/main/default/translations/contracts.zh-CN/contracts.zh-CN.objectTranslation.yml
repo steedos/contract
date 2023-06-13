@@ -1,0 +1,13 @@
+name: contracts
+label: 合同
+description: 
+fields:
+  company_id:
+    label: 我方单位
+listviews:
+  all:
+    label: 所有合同
+  mine:
+    label: 我的合同
+  recent:
+    label: 最近查看

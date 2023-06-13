@@ -1,0 +1,5 @@
+name: start_less_end
+active: true
+error_condition_formula: |-
+  end_date < start_date
+error_message: 合同结束日期不能小于合同开始日期

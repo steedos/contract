@@ -1,0 +1,14 @@
+name: unit
+filterable: false
+hidden: true
+index: false
+is_name: false
+is_wide: false
+label: 单位
+omit: false
+readonly: false
+required: false
+searchable: false
+sort_no: 260
+sortable: false
+type: text

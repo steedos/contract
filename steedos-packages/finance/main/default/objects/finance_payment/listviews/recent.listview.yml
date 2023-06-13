@@ -1,0 +1,24 @@
+name: recent
+columns:
+  - field: id
+    wrap: false
+  - field: supplier
+    wrap: false
+  - field: amount
+    wrap: false
+  - field: due_date
+    wrap: false
+  - field: payment_status
+    wrap: false
+  - field: payment_date
+    wrap: false
+  - field: amount_description
+    wrap: false
+filter_fields:
+  - contract
+  - due_date
+  - account
+filter_scope: space
+label: 最近查看
+shared: true
+show_count: false

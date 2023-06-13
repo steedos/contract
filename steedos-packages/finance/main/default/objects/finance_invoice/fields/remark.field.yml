@@ -1,0 +1,15 @@
+name: remark
+filterable: false
+hidden: false
+index: false
+is_name: false
+is_wide: true
+label: 备注(特殊要求)
+omit: false
+readonly: false
+required: false
+rows: 0
+searchable: false
+sort_no: 310
+sortable: false
+type: textarea

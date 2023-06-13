@@ -1,0 +1,15 @@
+name: credit_code
+data_type: text
+filterable: false
+formula: othercompany_name.credit_code
+formula_blank_value: blanks
+generated: false
+index: false
+is_name: false
+is_wide: false
+label: 统一社会信用代码
+primary: false
+sort_no: 120
+sortable: false
+type: formula
+visible_on: "{{global.mode ==='read' ? true : false}}"
