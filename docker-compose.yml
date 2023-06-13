@@ -19,7 +19,6 @@ services:
       # - STEEDOS_IDENTITY_OIDC_CLIENT_ID=steedos-oidc-public
       # - STEEDOS_IDENTITY_OIDC_CLIENT_SECRET=none
       # - STEEDOS_IDENTITY_OIDC_NAME=Steedos ID
-      - STEEDOS_INITIAL_PACKAGES=@steedos-labs/project-ee,@steedos-labs/demo-ee,@steedos-labs/flows
     volumes:
       - "steedos-installed-packages:/app/.steedos"
       - "steedos-data:/app/storage"
