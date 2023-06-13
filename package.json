@@ -1,22 +1,31 @@
 {
-  "name": "my-steedos-project",
-  "version": "0.1.0",
+  "name": "contract",
+  "version": "0.0.1",
   "private": true,
   "workspaces": [
     "steedos-packages/*"
   ],
   "scripts": {
     "docker": "docker-compose up",
-    "start": "moleculer-runner steedos-packages/*/package.service.js --config steedos.config.js --hot --repl",
-    "repl": "moleculer-runner  --config steedos.config.js --repl"
+    "start": "moleculer-runner steedos-packages/*/package.service.js --hot --repl",
+    "repl": "moleculer-runner --repl",
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna run build",
+    "version:latest": "lerna version --force-publish --exact",
+    "publish:latest": "lerna publish from-package --registry https://registry.npmjs.org",
+    "version:beta": "lerna version prerelease --preid beta --force-publish --exact",
+    "publish:beta": "lerna publish from-package --registry https://registry.npmjs.org --dist-tag beta"
   },
   "dependencies": {
+    "@steedos/data-import": "^2.5",
     "@steedos/service-object-mixin": "^2.5",
     "@steedos/service-package-loader": "^2.5",
     "bcryptjs": "^2.4.3",
     "dotenv-flow": "^3.2.0",
-    "ioredis": "^5.3.1",
     "moleculer-repl": "^0.7.3",
-    "nats": "^2.13.1"
+    "nats": "^2.14.0"
+  },
+  "devDependencies": {
+    "lerna": "^5.4.0"
   }
 }

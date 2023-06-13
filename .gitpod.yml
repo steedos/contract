@@ -27,12 +27,6 @@ tasks:
       yarn
       gp await-port 5000
       yarn start
-  - name: Node-RED
-    command: |
-      gp await-port 4222
-      cd nodered-app
-      npm i --no-optional 
-      npm start
 
 vscode:
   extensions:
