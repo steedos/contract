@@ -1,0 +1,6 @@
+name: business_scope
+label: 营业范围
+scale: 2
+sort_no: 30
+is_wide: true
+type: text

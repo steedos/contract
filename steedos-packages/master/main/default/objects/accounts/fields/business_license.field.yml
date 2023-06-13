@@ -1,0 +1,6 @@
+name: business_license
+label: 营业执照
+required: false
+searchable: true
+sort_no: 25
+type: image

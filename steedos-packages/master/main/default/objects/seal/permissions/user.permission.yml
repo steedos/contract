@@ -1,0 +1,20 @@
+allowCreate: false
+allowDelete: false
+allowEdit: false
+allowRead: true
+modifyAllRecords: false
+permission_set_id: user
+viewAllRecords: true
+field_permissions:
+  - field: code
+    readable: true
+    editable: true
+  - field: company_id
+    readable: true
+    editable: true
+  - field: name
+    readable: true
+    editable: true
+  - field: seal_admin
+    readable: true
+    editable: true

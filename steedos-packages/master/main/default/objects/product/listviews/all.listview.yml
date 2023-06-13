@@ -1,0 +1,14 @@
+name: all
+columns:
+  - name
+  - product_code
+  - material_group
+  - asset_type
+  - specification
+  - amount
+  - separate_accounting
+  - inventory
+  - attributes
+filter_scope: space
+label: 所有物料
+shared: true

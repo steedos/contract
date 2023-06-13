@@ -1,0 +1,6 @@
+name: remark
+label: 描述
+is_wide: true
+rows: 2
+sort_no: 150
+type: textarea

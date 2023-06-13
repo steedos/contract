@@ -1,0 +1,17 @@
+name: tax_rate
+filterable: false
+hidden: false
+index: true
+is_name: false
+is_wide: false
+label: 税率
+omit: false
+inlineHelpText: 税率为百分比字段，输入0.06即显示为6%
+precision: 18
+readonly: false
+required: true
+scale: 2
+searchable: false
+sort_no: 120
+sortable: false
+type: percent

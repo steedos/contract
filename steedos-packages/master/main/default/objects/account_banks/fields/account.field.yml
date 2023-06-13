@@ -1,0 +1,6 @@
+name: account
+label: 业务伙伴
+reference_to: accounts
+required: true
+sort_no: 100
+type: master_detail

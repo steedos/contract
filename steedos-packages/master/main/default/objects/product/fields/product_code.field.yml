@@ -1,0 +1,5 @@
+name: product_code
+label: 物料编码
+sort_no: 110
+type: text
+required: true

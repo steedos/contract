@@ -1,0 +1,5 @@
+name: material_group
+label: 物料分组
+reference_to: material_group
+sort_no: 120
+type: lookup

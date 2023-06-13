@@ -1,0 +1,21 @@
+name: accountproperty
+defaultValue: company
+filterable: false
+hidden: false
+index: false
+is_name: false
+is_wide: false
+label: 账户性质
+multiple: false
+omit: false
+options:
+  - label: 公司
+    value: company
+  - label: 个人
+    value: private
+readonly: false
+required: true
+searchable: false
+sort_no: 140
+sortable: false
+type: select

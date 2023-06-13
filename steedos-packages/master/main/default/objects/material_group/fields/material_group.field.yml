@@ -1,0 +1,15 @@
+name: material_group
+filterable: true
+hidden: false
+index: false
+is_name: false
+is_wide: false
+label: 上级物料分组
+omit: false
+readonly: false
+reference_to: material_group
+required: false
+searchable: false
+sort_no: 130
+sortable: true
+type: lookup

@@ -1,0 +1,8 @@
+name: seal
+custom: true
+enable_files: true
+enable_search: true
+icon: approval
+is_enable: true
+label: 印章
+version: 2

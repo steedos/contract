@@ -1,0 +1,8 @@
+name: height
+hidden: true
+group: 尺寸信息（M）
+label: 高
+precision: 18
+scale: 2
+sort_no: 370
+type: number

@@ -1,0 +1,17 @@
+name: salvage
+filterable: false
+hidden: false
+index: true
+is_name: false
+is_wide: false
+group: 折旧信息
+label: 残值率
+omit: false
+precision: 18
+readonly: false
+required: false
+scale: 2
+searchable: false
+sort_no: 290
+sortable: false
+type: percent

@@ -1,0 +1,23 @@
+name: company_type
+data_type: text
+filterable: false
+generated: false
+index: false
+is_name: false
+is_wide: false
+label: 企业性质
+multiple: false
+options:
+  - label: 国企
+    value: 国企
+  - label: 民企
+    value: 民企
+  - label: 外企
+    value: 外企
+  - label: 集体企业
+    value: 集体企业
+primary: false
+required: true
+sort_no: 22
+sortable: false
+type: select

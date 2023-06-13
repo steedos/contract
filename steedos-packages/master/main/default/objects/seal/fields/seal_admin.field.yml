@@ -1,0 +1,7 @@
+name: seal_admin
+create: false
+label: 印章管理员
+reference_to: users
+required: true
+sort_no: 130
+type: lookup

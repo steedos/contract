@@ -1,0 +1,3 @@
+name: shipping_address
+type: textarea
+hidden: true

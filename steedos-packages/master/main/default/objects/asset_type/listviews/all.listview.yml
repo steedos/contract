@@ -1,0 +1,16 @@
+name: all
+columns:
+  - field: name
+    wrap: false
+  - field: code
+    wrap: false
+  - field: separate_accounting
+    wrap: false
+filter_fields:
+  - name
+  - code
+  - separate_accounting
+filter_scope: space
+label: 所有
+shared: true
+show_count: false

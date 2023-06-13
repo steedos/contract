@@ -1,0 +1,3 @@
+name: billing_address
+type: textarea
+hidden: true

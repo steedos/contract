@@ -1,0 +1,13 @@
+name: all
+columns:
+  - field: name
+    _id: 51153cb2-a902-4c73-b539-c2159b749aaf
+  - _id: cce717ca-9a36-4f70-9897-02b5fba8b944
+    field: warehouse_id
+  - _id: 1f9b6ded-1fc7-4adc-a777-539062807598
+    field: parent
+filter_scope: space
+filters: []
+label: 所有
+shared: true
+sort_no: 100

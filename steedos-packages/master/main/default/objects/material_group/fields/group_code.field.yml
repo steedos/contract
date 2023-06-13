@@ -1,0 +1,4 @@
+name: group_code
+label: 分组编码
+sort_no: 120
+type: text

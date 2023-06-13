@@ -1,0 +1,26 @@
+name: product
+custom: true
+enable_audit: true
+enable_enhanced_lookup: true
+enable_files: true
+enable_search: true
+icon: product
+label: 物料
+version: 2
+form:
+  onValuesChange: !!js/function |
+    function(args){
+      const material_group = args.values.material_group;
+      var options, result;
+      result = [];
+      options = {
+          $filter: `(_id eq '${material_group}')`,
+          $select: 'name,inventory'
+      };
+      inventory = Creator.odata.query('material_group', options, true);
+      if(inventory && inventory[0].inventory){
+        args.form.setFieldsValue({inventory: inventory[0].inventory});
+      }else{
+        args.form.setFieldsValue({inventory: false});
+      }
+    }

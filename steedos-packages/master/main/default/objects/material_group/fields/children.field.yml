@@ -1,0 +1,7 @@
+name: children
+label: 子分组
+reference_to: material_group
+sort_no: 180
+type: lookup
+multiple: true
+hidden: true

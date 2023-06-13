@@ -1,0 +1,17 @@
+name: pk_bankdoc
+filterable: false
+filters: [["enablestate", "=", "enable"]]
+hidden: false
+index: false
+is_name: false
+is_wide: false
+label: 开户银行
+multiple: false
+omit: false
+readonly: false
+reference_to: bank
+required: true
+searchable: false
+sort_no: 110
+sortable: false
+type: lookup

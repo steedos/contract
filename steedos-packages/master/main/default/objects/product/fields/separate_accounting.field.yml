@@ -1,0 +1,13 @@
+name: separate_accounting
+group: 管理信息
+data_type: boolean
+filterable: false
+formula: material_group.separate_accounting
+formula_blank_value: blanks
+omit: true
+readonly: true
+required: false
+label: 单独核算
+searchable: true
+sort_no: 210
+type: formula

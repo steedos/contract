@@ -1,0 +1,6 @@
+name: company_id
+hidden: false
+label: 所属单位
+omit: false
+required: true
+sort_no: 190

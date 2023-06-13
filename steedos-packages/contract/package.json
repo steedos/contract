@@ -2,9 +2,7 @@
     "name": "@steedos-labs/contract",
     "version": "2.2.4",
     "main": "package.service.js",
-    "dependencies": {
-        "@steedos-labs/master": "2.2.4"
-    },
+    "dependencies": {},
     "license": "MIT",
     "publishConfig": {
         "access": "public"

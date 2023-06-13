@@ -1,0 +1,34 @@
+name: account_banks
+custom: true
+enable_api: true
+enable_audit: true
+enable_share: true
+enable_trash: true
+enable_enhanced_lookup: true
+form:
+  onValuesChange: !!js/function |
+    function(args){
+      const account = args.values.account;
+      const pk_bankdoc = args.values.pk_bankdoc;
+      var options, option, result;
+      result = [];
+      options = {
+          $filter: `(_id eq '${account}')`,
+          $select: 'name'
+      };
+      option = {
+          $filter: `(_id eq '${pk_bankdoc}')`,
+          $select: 'name,combinenum'
+      };
+      accounts = Creator.odata.query('accounts', options, true);
+      bank = Creator.odata.query('bank', option, true);
+      if(accounts && accounts.length){
+        args.form.setFieldsValue({combinenum: accounts.name});
+      }
+      if(bank && bank.length){
+        args.form.setFieldsValue({combinenum: combinenum.combinenum});
+      }
+    }
+icon: account
+label: 银行帐号
+version: 2

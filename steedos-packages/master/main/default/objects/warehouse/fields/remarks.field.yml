@@ -1,0 +1,6 @@
+name: remarks
+is_wide: true
+label: 备注
+rows: 3
+sort_no: 150
+type: textarea

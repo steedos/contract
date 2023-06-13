@@ -1,0 +1,5 @@
+name: due_date
+label: 到期日期
+scale: 2
+sort_no: 144
+type: date

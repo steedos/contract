@@ -1,0 +1,7 @@
+name: bank_type
+enable_api: true
+enable_share: true
+enable_enhanced_lookup: false
+icon: account
+label: 银行类别
+version: 2

@@ -1,0 +1,5 @@
+name: dept
+label: 相关部门
+sort_no: 140
+type: lookup
+reference_to: organizations

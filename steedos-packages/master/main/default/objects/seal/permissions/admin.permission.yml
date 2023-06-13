@@ -1,0 +1,68 @@
+allowCreate: true
+allowDelete: true
+allowEdit: true
+allowRead: true
+modifyAllRecords: true
+permission_set_id: admin
+viewAllRecords: true
+field_permissions:
+  - field: code
+    readable: true
+    editable: true
+  - field: code
+    readable: true
+    editable: true
+  - field: code
+    readable: true
+    editable: true
+  - field: code
+    readable: true
+    editable: true
+  - field: code
+    readable: true
+    editable: true
+  - field: company_id
+    readable: true
+    editable: true
+  - field: company_id
+    readable: true
+    editable: true
+  - field: company_id
+    readable: true
+    editable: true
+  - field: company_id
+    readable: true
+    editable: true
+  - field: company_id
+    readable: true
+    editable: true
+  - field: name
+    readable: true
+    editable: true
+  - field: name
+    readable: true
+    editable: true
+  - field: name
+    readable: true
+    editable: true
+  - field: name
+    readable: true
+    editable: true
+  - field: name
+    readable: true
+    editable: true
+  - field: seal_admin
+    readable: true
+    editable: true
+  - field: seal_admin
+    readable: true
+    editable: true
+  - field: seal_admin
+    readable: true
+    editable: true
+  - field: seal_admin
+    readable: true
+    editable: true
+  - field: seal_admin
+    readable: true
+    editable: true

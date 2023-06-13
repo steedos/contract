@@ -1,0 +1,7 @@
+name: name
+index: true
+label: 计量单位名称
+required: true
+searchable: true
+sort_no: 100
+type: text

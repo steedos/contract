@@ -1,0 +1,4 @@
+name: accounts
+fields:
+  company_ids:
+    label: 我方单位

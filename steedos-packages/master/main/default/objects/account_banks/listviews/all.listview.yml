@@ -1,0 +1,22 @@
+name: all
+columns:
+  - field: accnum
+    wrap: false
+  - field: accname
+    wrap: false
+  - field: pk_bankdoc
+    wrap: false
+  - field: account
+  - field: accountproperty
+  - field: accstate
+  - field: pk_currtype
+  - field: enablestate
+    wrap: false
+filter_fields:
+  - account
+  - accstate
+  - accountproperty
+filter_scope: space
+label: 所有
+shared: true
+show_count: false

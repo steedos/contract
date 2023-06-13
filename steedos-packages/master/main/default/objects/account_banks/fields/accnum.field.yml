@@ -1,0 +1,7 @@
+name: accnum
+index: true
+is_name: true
+label: 账号
+required: true
+sort_no: 170
+type: text

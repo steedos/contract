@@ -1,0 +1,13 @@
+name: recent
+columns:
+  - field: name
+    wrap: false
+  - field: tax_rate
+    wrap: false
+filter_scope: space
+filters: []
+label: 最近查看
+scrolling_mode: standard
+shared: true
+show_count: false
+type: grid

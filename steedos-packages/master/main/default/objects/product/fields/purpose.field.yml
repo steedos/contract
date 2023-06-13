@@ -1,0 +1,25 @@
+name: purpose
+hidden: true
+label: 使用用途
+multiple: true
+options:
+  - _id: 41080a0c-fc50-4dc5-93fe-a462d69c5557
+    label: 允许采购
+    value: purchase
+  - _id: ff30c6c6-feb7-4d68-b515-925ed6f79743
+    label: 允许销售
+    value: sale
+  - _id: eecfe35e-407c-4593-992e-57ba458dfff3
+    label: 允许库存
+    value: stock
+  - _id: e43c71ff-87d7-4f4a-89dc-0266caefcf42
+    label: 允许生产
+    value: produce
+  - _id: 5ef07c96-1093-449b-845c-80d5c8947bb7
+    label: 允许委外
+    value: out
+  - _id: 3dbaa61f-f138-41f5-8970-d26cb9e45c4a
+    label: 允许资产
+    value: asset
+sort_no: 340
+type: select

@@ -1,0 +1,12 @@
+name: separate_accounting
+data_type: boolean
+filterable: false
+formula: asset_type.separate_accounting
+formula_blank_value: blanks
+omit: true
+readonly: true
+required: false
+label: 单独核算
+searchable: true
+sort_no: 150
+type: formula

@@ -2,10 +2,7 @@
     "name": "@steedos-labs/contract-ee",
     "version": "2.2.4",
     "main": "package.service.js",
-    "dependencies": {
-        "@steedos-labs/contract": "2.2.4",
-        "@steedos-labs/flows": "2.2.1"
-    },
+    "dependencies": {},
     "publishConfig": {
         "access": "public"
     },

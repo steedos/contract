@@ -1,0 +1,13 @@
+name: file
+filterable: false
+generated: false
+index: false
+is_name: false
+is_wide: true
+label: 资质证件
+multiple: false
+primary: false
+required: true
+sort_no: 130
+sortable: false
+type: file

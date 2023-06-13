@@ -1,0 +1,12 @@
+name: start
+filterable: false
+generated: false
+index: false
+is_name: false
+is_wide: false
+label: 资质有效期起
+primary: false
+required: false
+sort_no: 110
+sortable: false
+type: date

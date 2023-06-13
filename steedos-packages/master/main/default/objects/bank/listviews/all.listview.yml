@@ -1,0 +1,20 @@
+name: all
+columns:
+  - field: name
+    wrap: false
+  - field: code
+    wrap: false
+  - field: pk_banktype
+    wrap: false
+  - field: combinenum
+    wrap: false
+  - field: enablestate
+    wrap: false
+filter_fields:
+  - name
+  - enablestate
+  - pk_banktype
+filter_scope: space
+label: 所有
+shared: true
+show_count: false

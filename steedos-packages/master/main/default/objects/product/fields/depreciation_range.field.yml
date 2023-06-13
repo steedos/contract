@@ -1,0 +1,17 @@
+name: depreciation_range
+filterable: false
+hidden: false
+index: false
+is_name: false
+is_wide: false
+group: 折旧信息
+label: 折旧年限
+omit: false
+precision: 18
+readonly: false
+required: false
+scale: 2
+searchable: false
+sort_no: 280
+sortable: true
+type: number

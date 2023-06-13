@@ -1,0 +1,34 @@
+name: mine
+columns:
+  - field: name
+    wrap: false
+    width: '150'
+  - field: phone
+    wrap: false
+    width: '100'
+  - field: address
+    wrap: false
+    width: '150'
+  - field: is_customer
+    wrap: false
+    width: '80'
+  - field: is_supplier
+    wrap: false
+    width: '80'
+  - field: credit_code
+    width: '200'
+    wrap: false
+  - field: company_type
+    wrap: false
+    width: '100'
+  - field: status
+    width: '120'
+    wrap: false
+filter_fields:
+  - address
+  - name
+  - status
+filter_scope: mine
+label: 我的单位
+shared: true
+show_count: false

@@ -1,0 +1,14 @@
+name: accounts
+filterable: false
+generated: false
+index: false
+is_name: false
+is_wide: false
+label: 相关业务伙伴
+primary: false
+reference_to: accounts
+required: true
+sort_no: 105
+sortable: false
+type: master_detail
+write_requires_master_read: false

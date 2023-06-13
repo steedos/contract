@@ -1,0 +1,25 @@
+name: accstate
+defaultValue: normal
+filterable: false
+hidden: false
+index: false
+is_name: false
+is_wide: false
+label: 账户状态
+multiple: false
+omit: false
+options:
+  - label: 正常
+    value: normal
+  - label: 冻结
+    value: frozen
+  - label: 部分冻结
+    value: partially_frozen
+  - label: 销户
+    value: closed
+readonly: false
+required: true
+searchable: false
+sort_no: 190
+sortable: false
+type: select

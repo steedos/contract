@@ -1,0 +1,5 @@
+name: replace
+group: 管理信息
+label: 替代
+sort_no: 240
+type: text

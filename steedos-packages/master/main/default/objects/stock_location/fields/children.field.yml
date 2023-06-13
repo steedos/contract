@@ -1,0 +1,7 @@
+name: children
+hidden: true
+label: 子库位
+multiple: true
+reference_to: stock_location
+sort_no: 100
+type: lookup

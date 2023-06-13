@@ -1,0 +1,12 @@
+name: end
+filterable: false
+generated: false
+index: false
+is_name: false
+is_wide: false
+label: 资质有效期止
+primary: false
+required: false
+sort_no: 120
+sortable: false
+type: date

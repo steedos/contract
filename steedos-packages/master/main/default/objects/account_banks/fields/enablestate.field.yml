@@ -1,0 +1,23 @@
+name: enablestate
+defaultValue: enable
+filterable: false
+hidden: false
+index: false
+is_name: false
+is_wide: false
+label: 启用状态
+multiple: false
+omit: false
+options:
+  - label: 未启用
+    value: not_enabled
+  - label: 已启用
+    value: enable
+  - label: 已停用
+    value: disabled
+readonly: false
+required: true
+searchable: false
+sort_no: 200
+sortable: false
+type: select

@@ -5,8 +5,6 @@
     "publishConfig": {
         "access": "public"
     },
-    "dependencies": {
-        "@steedos-labs/master": "2.2.4"
-    },
+    "dependencies": {},
     "gitHead": "f19acd58f91306840e665320b772a9db962a7cf0"
 }

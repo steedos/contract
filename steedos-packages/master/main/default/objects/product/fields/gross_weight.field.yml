@@ -1,0 +1,8 @@
+name: gross_weight
+hidden: true
+group: 重量信息（KG）
+label: 毛重
+precision: 18
+scale: 2
+sort_no: 380
+type: number

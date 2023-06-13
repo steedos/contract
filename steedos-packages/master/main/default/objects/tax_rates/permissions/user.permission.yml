@@ -1,0 +1,8 @@
+name: 税率.user
+allowCreate: false
+allowDelete: false
+allowEdit: false
+allowRead: true
+modifyAllRecords: false
+permission_set_id: user
+viewAllRecords: true

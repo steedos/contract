@@ -1,0 +1,5 @@
+name: name
+label: 货币名称
+required: true
+sort_no: 100
+type: text

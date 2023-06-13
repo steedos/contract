@@ -1,0 +1,14 @@
+name: inventory
+columns:
+  - name
+  - product_code
+  - material_group
+  - asset_type
+  - specification
+  - amount
+  - separate_accounting
+  - attributes
+filter_scope: space
+filters: [["inventory", "=", true]]
+label: 盘点物料
+shared: true

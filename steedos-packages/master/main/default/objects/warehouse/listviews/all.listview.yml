@@ -1,0 +1,8 @@
+name: all
+columns:
+  - name
+  - warehouse_keeper
+  - dept
+  - warehouse_status
+label: 所有位置
+shared: true

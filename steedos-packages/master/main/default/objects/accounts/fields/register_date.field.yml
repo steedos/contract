@@ -1,0 +1,5 @@
+name: register_date
+label: 成立日期
+scale: 2
+sort_no: 143
+type: date

@@ -1,0 +1,5 @@
+name: accname
+label: 户名
+required: true
+sort_no: 160
+type: text
