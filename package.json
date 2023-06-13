@@ -1,0 +1,22 @@
+{
+  "name": "my-steedos-project",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "steedos-packages/*"
+  ],
+  "scripts": {
+    "docker": "docker-compose up",
+    "start": "moleculer-runner steedos-packages/*/package.service.js --config steedos.config.js --hot --repl",
+    "repl": "moleculer-runner  --config steedos.config.js --repl"
+  },
+  "dependencies": {
+    "@steedos/service-object-mixin": "^2.5",
+    "@steedos/service-package-loader": "^2.5",
+    "bcryptjs": "^2.4.3",
+    "dotenv-flow": "^3.2.0",
+    "ioredis": "^5.3.1",
+    "moleculer-repl": "^0.7.3",
+    "nats": "^2.13.1"
+  }
+}
