@@ -1,0 +1,18 @@
+name: recent
+columns:
+  - field: name
+  - field: account
+  - field: salutation
+  - field: title
+  - field: mobile
+  - field: email
+  - field: description
+filter_scope: space
+filters: []
+label: 最近查看
+mobile_columns: []
+scrolling_mode: standard
+shared: true
+sort: []
+sort_no: 100
+type: grid
