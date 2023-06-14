@@ -1,5 +1,0 @@
-name: isdefault
-defaultValue: false
-label: 默认
-sort_no: 220
-type: boolean

@@ -1,0 +1,7 @@
+name: object_contract_types
+desktop: true
+label: 合同分类
+mobile: true
+object: contract_types
+permissions: []
+type: object

@@ -1,6 +1,5 @@
 name: pk_bankdoc
 filterable: false
-filters: [["enablestate", "=", "enable"]]
 hidden: false
 index: false
 is_name: false
