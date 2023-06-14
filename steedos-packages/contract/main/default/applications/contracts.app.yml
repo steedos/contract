@@ -24,51 +24,45 @@ tab_items:
   object_contracts:
     group: 合同信息
     index: 2
+  object_contract_types:
+    group: 合同信息
+    index: 3
   object_finance_receive:
     group: 收付款信息
-    index: 3
+    index: 4
   object_finance_payment:
     group: 收付款信息
-    index: 4
+    index: 5
   object_contract_receipts:
     group: 收付款信息
-    index: 5
+    index: 6
   object_contract_payments:
     group: 收付款信息
-    index: 6
+    index: 7
   object_accounts:
     group: 客商信息
-    index: 7
+    index: 8
   object_contacts:
     group: 客商信息
-    index: 8
+    index: 9
   object_account_banks:
     group: 客商信息
-    index: 9
+    index: 10
   object_bank_type:
     group: 基础信息
-    index: 10
+    index: 11
   object_bank:
     group: 基础信息
-    index: 11
+    index: 12
   object_tax_rates:
     group: 基础信息
-    index: 12
+    index: 13
   object_currency:
     group: 基础信息
-    index: 13
+    index: 14
   object_project:
     group: 基础信息
     index: 15
-  object_contract_types:
-    group: 基础信息
-    index: 16
-  object_contrat_bidding:
-    group: 招投标信息
-    index: 17
-  object_contract_bidding_information:
-    group: 招投标信息
-    index: 18
 tabs:
   - contracts_home
   - object_contracts
@@ -84,7 +78,5 @@ tabs:
   - object_bank_type
   - object_contract_types
   - object_currency
-  - object_contract_bidding_information
-  - object_contrat_bidding
   - object_project
 visible: true

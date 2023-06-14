@@ -1,7 +1,7 @@
 name: contract
 create: false
 filterable: true
-label: 合同/业务
+label: 合同
 reference_to: contracts
 required: true
 sort_no: 150

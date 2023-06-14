@@ -14,10 +14,6 @@ options:
   - label: 付款
     value: pay
     color: E99695
-  - label: 收款&付款
-    value: receive&pay
-    color: E99695
-    
 readonly: false
 required: true
 searchable: false

@@ -1,7 +1,7 @@
 name: received_amount
 data_type: number
 filterable: false
-group: 收款信息
+group: 价款信息
 hidden: false
 index: false
 is_name: false
@@ -13,7 +13,7 @@ readonly: true
 required: false
 scale: 2
 searchable: false
-sort_no: 490
+sort_no: 289
 sortable: true
 summary_field: amount
 summary_filters:

@@ -1,5 +1,5 @@
 name: name
-label: 名称
+label: 分类名称
 searchable: true
 sort_no: 110
 type: text

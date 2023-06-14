@@ -1,6 +1,0 @@
-name: name
-index: true
-label: 招投标名称
-required: true
-sort_no: 100
-type: text
