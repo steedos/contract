@@ -9,13 +9,14 @@
             "title": "收款合同",
             "body": [
               {
-                "type": "grid",
-                "columns": [
+                "type": "panel",
+                "id": "u:bc29e00915ac",
+                "title": "合同收款数据",
+                "body": [
                   {
-                    "body": [
+                    "type": "grid",
+                    "columns": [
                       {
-                        "type": "panel",
-                        "title": "合同收款数据",
                         "body": [
                           {
                             "type": "service",
@@ -26,7 +27,7 @@
                                 "body": [
                                   {
                                     "type": "tpl",
-                                    "tpl": "<p style=\"text-align: center;\">当年合同总金额</p>\n<p style=\"text-align: center;\"><span style=\"font-size: 14pt; color: #3598db;\">&yen;${sum}&nbsp;</span></p>",
+                                    "tpl": "<p style=\"text-align: center;\">&nbsp;</p>\n<p style=\"text-align: center;\">当年合同总金额</p>\n<p style=\"text-align: center;\"><span style=\"font-size: 14pt; color: #3598db;\">&yen;${sum}&nbsp;</span></p>",
                                     "inline": false,
                                     "id": "u:cdcd665793e2"
                                   }
@@ -55,7 +56,13 @@
                               "adaptor": "console.log('payload==>', payload)\nconst contracts = payload.data.contracts;\nlet sum = 0;\ncontracts.forEach(function (item) {\n    console.log('item==>', item)\n    const amount = item.amount || 0;\n    sum += amount ;\n})\npayload.data.sum = sum;\n\nreturn payload;",
                               "requestAdaptor": "console.log('api==>', api)\n// const time = new Date();\n// const year = time.getFullYear();\n// const month = time.getMonth() + 1;\n// api.data.query.replaceAll('2023', '1111');\n// api.body.query.replaceAll('2023', '2222');\nreturn api;"
                             }
-                          },
+                          }
+                        ],
+                        "id": "u:ca2e694f8871",
+                        "md": 4
+                      },
+                      {
+                        "body": [
                           {
                             "type": "service",
                             "body": [
@@ -127,91 +134,84 @@
                             }
                           }
                         ],
-                        "id": "u:b6fde7ca8128",
-                        "actions": [
-                        ],
-                        "affixFooter": false
+                        "id": "u:38d5f8413be5"
                       }
                     ],
-                    "id": "u:16e609210be6"
-                  },
-                  {
-                    "body": [
-                      {
-                        "type": "panel",
-                        "title": "月度付款情况",
-                        "body": [
-                          {
-                            "type": "chart",
-                            "config": {
-                              "xAxis": {
-                                "type": "category",
-                                "data": [
-                                  "一月",
-                                  "二月",
-                                  "三月",
-                                  "四月",
-                                  "五月",
-                                  "六月",
-                                  "七月",
-                                  "八月",
-                                  "九月",
-                                  "十月",
-                                  "十一月",
-                                  "十二月"
-                                ],
-                                "id": "u:66cbd3acc471"
-                              },
-                              "yAxis": {
-                                "type": "value",
-                                "id": "u:9ce2693b2c90"
-                              },
-                              "series": [
-                                {
-                                  "data": "${monthData}",
-                                  "type": "bar",
-                                  "id": "u:770961895776"
-                                }
-                              ]
-                            },
-                            "replaceChartOption": true,
-                            "id": "u:cbab0bdc30a9",
-                            "api": {
-                              "url": "${context.rootUrl}/graphql?a=2",
-                              "method": "post",
-                              "headers": {
-                                "Authorization": "Bearer ${context.tenantId},${context.authToken}"
-                              },
-                              "data": {
-                                "query": "{contracts (filters:[[\"cash_flow_type\",\"=\",\"receive\"],[\"signed_date\",\"between\",[\"2023-01-01T00:00:00.000Z\",\"2023-12-31T00:00:00.000Z\"]]]){ amount,signed_date, paid_amount }}"
-                              },
-                              "adaptor": "console.log('chart==payload==>', payload);\nconst contracts = payload.data.contracts;\nlet monthData = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];\n\ncontracts.forEach(function (item) {\n  const amount = item.amount || 0;\n  const month = Number(item.signed_date\n    .substr(5, 2));\n  monthData[month - 1] += amount;\n})\npayload.data.monthData = monthData;\nconsole.log('aa==>',payload)\nreturn payload;"
-                            }
-                          }
-                        ],
-                        "id": "u:b6fde7ca8128",
-                        "affixFooter": false
-                      }
-                    ],
-                    "id": "u:c72abd97a114"
+                    "id": "u:8ec88d5e180c"
                   }
                 ],
-                "id": "u:20422191e079"
+                "affixFooter": false
+              },
+              {
+                "type": "panel",
+                "title": "月度收款情况",
+                "body": [
+                  {
+                    "type": "chart",
+                    "config": {
+                      "xAxis": {
+                        "type": "category",
+                        "data": [
+                          "一月",
+                          "二月",
+                          "三月",
+                          "四月",
+                          "五月",
+                          "六月",
+                          "七月",
+                          "八月",
+                          "九月",
+                          "十月",
+                          "十一月",
+                          "十二月"
+                        ],
+                        "id": "u:66cbd3acc471"
+                      },
+                      "yAxis": {
+                        "type": "value",
+                        "id": "u:9ce2693b2c90"
+                      },
+                      "series": [
+                        {
+                          "data": "${monthData}",
+                          "type": "bar",
+                          "id": "u:770961895776"
+                        }
+                      ]
+                    },
+                    "replaceChartOption": true,
+                    "id": "u:cbab0bdc30a9",
+                    "api": {
+                      "url": "${context.rootUrl}/graphql?a=2",
+                      "method": "post",
+                      "headers": {
+                        "Authorization": "Bearer ${context.tenantId},${context.authToken}"
+                      },
+                      "data": {
+                        "query": "{contracts (filters:[[\"cash_flow_type\",\"=\",\"receive\"],[\"signed_date\",\"between\",[\"2023-01-01T00:00:00.000Z\",\"2023-12-31T00:00:00.000Z\"]]]){ amount,signed_date, paid_amount }}"
+                      },
+                      "adaptor": "console.log('chart==payload==>', payload);\nconst contracts = payload.data.contracts;\nlet monthData = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];\n\ncontracts.forEach(function (item) {\n  const amount = item.amount || 0;\n  const month = Number(item.signed_date\n    .substr(5, 2));\n  monthData[month - 1] += amount;\n})\npayload.data.monthData = monthData;\nconsole.log('aa==>',payload)\nreturn payload;"
+                    }
+                  }
+                ],
+                "id": "u:b6fde7ca8128",
+                "affixFooter": false
               }
             ],
-            "id": "u:199a32b4daa2"
+            "id": "u:32492563929e"
           },
           {
             "title": "付款合同",
             "body": [
               {
-                "type": "grid",
-                "columns": [
+                "type": "panel",
+                "id": "u:bc29e00915ac",
+                "title": "合同付款数据",
+                "body": [
                   {
-                    "body": [
+                    "type": "grid",
+                    "columns": [
                       {
-                        "type": "panel",
-                        "title": "合同付款数据",
                         "body": [
                           {
                             "type": "service",
@@ -222,7 +222,7 @@
                                 "body": [
                                   {
                                     "type": "tpl",
-                                    "tpl": "<p style=\"text-align: center;\">当年合同总金额</p>\n<p style=\"text-align: center;\"><span style=\"font-size: 14pt; color: #3598db;\">&yen;${sum}&nbsp;</span></p>",
+                                    "tpl": "<p style=\"text-align: center;\">&nbsp;</p>\n<p style=\"text-align: center;\">当年合同总金额</p>\n<p style=\"text-align: center;\"><span style=\"font-size: 14pt; color: #3598db;\">&yen;${sum}&nbsp;</span></p>",
                                     "inline": false,
                                     "id": "u:cdcd665793e2"
                                   }
@@ -251,7 +251,13 @@
                               "adaptor": "console.log('payload==>', payload)\nconst contracts = payload.data.contracts;\nlet sum = 0;\ncontracts.forEach(function (item) {\n    console.log('item==>', item)\n    const amount = item.amount || 0;\n    sum += amount ;\n})\npayload.data.sum = sum;\n\nreturn payload;",
                               "requestAdaptor": "console.log('api==>', api)\n// const time = new Date();\n// const year = time.getFullYear();\n// const month = time.getMonth() + 1;\n// api.data.query.replaceAll('2023', '1111');\n// api.body.query.replaceAll('2023', '2222');\nreturn api;"
                             }
-                          },
+                          }
+                        ],
+                        "id": "u:ca2e694f8871",
+                        "md": 4
+                      },
+                      {
+                        "body": [
                           {
                             "type": "service",
                             "body": [
@@ -323,79 +329,71 @@
                             }
                           }
                         ],
-                        "id": "u:b6fde7ca8128",
-                        "actions": [
-                        ],
-                        "affixFooter": false
+                        "id": "u:38d5f8413be5"
                       }
                     ],
-                    "id": "u:16e609210be6"
-                  },
-                  {
-                    "body": [
-                      {
-                        "type": "panel",
-                        "title": "月度付款情况",
-                        "body": [
-                          {
-                            "type": "chart",
-                            "config": {
-                              "xAxis": {
-                                "type": "category",
-                                "data": [
-                                  "一月",
-                                  "二月",
-                                  "三月",
-                                  "四月",
-                                  "五月",
-                                  "六月",
-                                  "七月",
-                                  "八月",
-                                  "九月",
-                                  "十月",
-                                  "十一月",
-                                  "十二月"
-                                ],
-                                "id": "u:66cbd3acc471"
-                              },
-                              "yAxis": {
-                                "type": "value",
-                                "id": "u:9ce2693b2c90"
-                              },
-                              "series": [
-                                {
-                                  "data": "${monthData}",
-                                  "type": "bar",
-                                  "id": "u:770961895776"
-                                }
-                              ]
-                            },
-                            "replaceChartOption": true,
-                            "id": "u:cbab0bdc30a9",
-                            "api": {
-                              "url": "${context.rootUrl}/graphql?a=2",
-                              "method": "post",
-                              "headers": {
-                                "Authorization": "Bearer ${context.tenantId},${context.authToken}"
-                              },
-                              "data": {
-                                "query": "{contracts (filters:[[\"cash_flow_type\",\"=\",\"pay\"],[\"signed_date\",\"between\",[\"2023-01-01T00:00:00.000Z\",\"2023-12-31T00:00:00.000Z\"]]]){ amount,signed_date, paid_amount }}"
-                              },
-                              "adaptor": "console.log('chart==payload==>', payload);\nconst contracts = payload.data.contracts;\nlet monthData = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];\n\ncontracts.forEach(function (item) {\n  const amount = item.amount || 0;\n  const month = Number(item.signed_date\n    .substr(5, 2));\n  monthData[month - 1] += amount;\n})\npayload.data.monthData = monthData;\nconsole.log('aa==>',payload)\nreturn payload;"
-                            }
-                          }
-                        ],
-                        "id": "u:b6fde7ca8128",
-                        "affixFooter": false
-                      }
-                    ],
-                    "id": "u:c72abd97a114"
+                    "id": "u:8ec88d5e180c"
                   }
                 ],
-                "id": "u:20422191e079"
+                "affixFooter": false
+              },
+              {
+                "type": "panel",
+                "title": "月度付款情况",
+                "body": [
+                  {
+                    "type": "chart",
+                    "config": {
+                      "xAxis": {
+                        "type": "category",
+                        "data": [
+                          "一月",
+                          "二月",
+                          "三月",
+                          "四月",
+                          "五月",
+                          "六月",
+                          "七月",
+                          "八月",
+                          "九月",
+                          "十月",
+                          "十一月",
+                          "十二月"
+                        ],
+                        "id": "u:66cbd3acc471"
+                      },
+                      "yAxis": {
+                        "type": "value",
+                        "id": "u:9ce2693b2c90"
+                      },
+                      "series": [
+                        {
+                          "data": "${monthData}",
+                          "type": "bar",
+                          "id": "u:770961895776"
+                        }
+                      ]
+                    },
+                    "replaceChartOption": true,
+                    "id": "u:cbab0bdc30a9",
+                    "api": {
+                      "url": "${context.rootUrl}/graphql?a=2",
+                      "method": "post",
+                      "headers": {
+                        "Authorization": "Bearer ${context.tenantId},${context.authToken}"
+                      },
+                      "data": {
+                        "query": "{contracts (filters:[[\"cash_flow_type\",\"=\",\"pay\"],[\"signed_date\",\"between\",[\"2023-01-01T00:00:00.000Z\",\"2023-12-31T00:00:00.000Z\"]]]){ amount,signed_date, paid_amount }}"
+                      },
+                      "adaptor": "console.log('chart==payload==>', payload);\nconst contracts = payload.data.contracts;\nlet monthData = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];\n\ncontracts.forEach(function (item) {\n  const amount = item.amount || 0;\n  const month = Number(item.signed_date\n    .substr(5, 2));\n  monthData[month - 1] += amount;\n})\npayload.data.monthData = monthData;\nconsole.log('aa==>',payload)\nreturn payload;"
+                    }
+                  }
+                ],
+                "id": "u:b6fde7ca8128",
+                "affixFooter": false
               }
             ],
-            "id": "u:6b3bdcfe9497"
+            "id": "u:eedd3aa2eb9e"
           }
         ],
         "id": "u:e06e0d1d39ae",
