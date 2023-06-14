@@ -14,12 +14,3 @@ searchable: false
 sort_no: 80
 sortable: true
 type: master_detail
-write_requires_master_read: true
-filtersFunction: !<tag:yaml.org,2002:js/function> |-
-  function(filters, values){
-    if(values == undefined){
-      return [];
-    }else{
-      return [["collection","=",true]];
-    }
-  }

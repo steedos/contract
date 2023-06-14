@@ -1,7 +1,5 @@
 name: account
 create: false
-depend_on:
-  - contract
 filterable: true
 label: 付款方
 required: false

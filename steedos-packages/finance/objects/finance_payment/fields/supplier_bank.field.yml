@@ -8,9 +8,6 @@ label: 收款方银行账号
 create: false
 multiple: false
 omit: false
-depend_on:
-  - supplier
-  - currency
 readonly: false
 reference_to: account_banks
 required: true

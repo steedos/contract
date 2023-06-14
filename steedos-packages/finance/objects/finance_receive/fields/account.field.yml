@@ -14,6 +14,4 @@ sort_no: 120
 sortable: true
 type: lookup
 create: false
-depend_on:
-  - contract
 

@@ -1,7 +1,5 @@
 name: account
 create: false
-depend_on:
-  - contract
 label: 收款方
 sort_no: 110
 reference_to: accounts

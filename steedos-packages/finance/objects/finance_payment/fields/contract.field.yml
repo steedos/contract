@@ -15,11 +15,3 @@ sortable: true
 type: master_detail
 create: false
 write_requires_master_read: true
-filtersFunction: !<tag:yaml.org,2002:js/function> |-
-  function(filters, values){
-    if(values == undefined){
-      return [];
-    }else{
-      return [["payment","=",true]];
-    }
-  }

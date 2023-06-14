@@ -1,8 +1,0 @@
-name: receive
-is_enable: false
-label: 编辑收款信息
-'on': record_only
-visible: |-
-  function(object_name, record_id, record_permissions) {
-          return false;
-      }

@@ -15,5 +15,3 @@ sort_no: 60
 sortable: false
 type: lookup
 create: false
-depend_on:
-  - contract
