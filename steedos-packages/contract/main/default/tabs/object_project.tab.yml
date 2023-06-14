@@ -1,0 +1,7 @@
+name: object_project
+desktop: true
+label: 项目
+mobile: true
+object: project
+permissions: []
+type: object
