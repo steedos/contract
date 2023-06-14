@@ -1,6 +1,0 @@
-name: pk_banktype
-label: 银行类别
-reference_to: bank_type
-sort_no: 130
-type: master_detail
-write_requires_master_read: true

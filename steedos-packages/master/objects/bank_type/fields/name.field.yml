@@ -1,5 +1,0 @@
-name: name
-label: 类别名称
-required: true
-sort_no: 100
-type: text

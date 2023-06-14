@@ -48,21 +48,18 @@ tab_items:
   object_account_banks:
     group: 客商信息
     index: 10
-  object_bank_type:
-    group: 基础信息
-    index: 11
   object_bank:
     group: 基础信息
-    index: 12
+    index: 11
   object_tax_rates:
     group: 基础信息
-    index: 13
+    index: 12
   object_currency:
     group: 基础信息
-    index: 14
+    index: 13
   object_project:
     group: 基础信息
-    index: 15
+    index: 14
 tabs:
   - contracts_home
   - object_contracts
@@ -75,7 +72,6 @@ tabs:
   - object_account_banks
   - object_tax_rates
   - object_bank
-  - object_bank_type
   - object_contract_types
   - object_currency
   - object_project
