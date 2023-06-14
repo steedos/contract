@@ -2,460 +2,424 @@
     "type": "page",
     "title": "Welcome to Steedos",
     "body": [
-        {
-            "type": "form",
-            "title": "",
+      {
+        "type": "tabs",
+        "tabs": [
+          {
+            "title": "收款合同",
             "body": [
-                {
-                    "label": "签订日期",
-                    "type": "input-datetime-range",
-                    "name": "datetime",
-                    "id": "u:de60dc7f7766",
-                    "ranges": [
-                        "today",
-                        "yesterday",
-                        "prevweek",
-                        "thisweek",
-                        "prevmonth",
-                        "thismonth",
-                        "lastYear",
-                        "thisyear",
-                        "7daysago"
-                    ],
-                    "inputClassName": "w-xl p-l p-b",
-                    "mode": "normal",
-                    "inputFormat": "YYYY-MM-DD HH:SS",
-                    "minDate": "",
-                    "maxDate": "",
-                    "format": "YYYY-MM-DD HH:mm",
-                    "embed": false,
-                    "utc": false,
-                    "className": "r bg-white",
-                    "clearable": false,
-                    "value": "-3month, now",
-                    "labelClassName": "font-bold p-l p-t-sm"
-                },
-                {
-                    "type": "service",
+              {
+                "type": "grid",
+                "columns": [
+                  {
                     "body": [
-                        {
-                            "type": "grid",
-                            "columns": [
-                                {
-                                    "body": [
-                                        {
-                                            "type": "panel",
-                                            "title": "应收款总额 - <span class='!text-slate-400'>合同收款统计</span>",
-                                            "body": [
-                                                {
-                                                    "type": "tpl",
-                                                    "tpl": "<div class=\"text-center  text-4xl sm:text-7xl \">\n<div style=\"transform: scale(0.65);\"><span class=\"leading-normal\" title=\"${total_amount}\">￥${total_amount}</span></div>\n</div>",
-                                                    "inline": false,
-                                                    "id": "u:82da07b1f746"
-                                                }
-                                            ],
-                                            "id": "u:73871fecf5f8",
-                                            "affixFooter": false,
-                                            "actions": [],
-                                            "headerClassName": "p p-b-xs font-bold r",
-                                            "inline": false,
-                                            "className": "Panel--default r no-border m-b"
-                                        }
-                                    ],
-                                    "id": "u:39033e30d52e",
-                                    "md": ""
-                                },
-                                {
-                                    "body": [
-                                        {
-                                            "type": "panel",
-                                            "title": "已收款总额 - <span class='text-slate-400'>合同收款统计</span>",
-                                            "body": [
-                                                {
-                                                    "type": "tpl",
-                                                    "tpl": "<div class=\"text-center  text-4xl sm:text-7xl \">\n<div style=\"transform: scale(0.65);\"><span class=\"leading-normal\" title=\"${total_received_amount}\">￥${total_received_amount}</span></div>\n</div>",
-                                                    "inline": false,
-                                                    "id": "u:aa32d923d43e"
-                                                }
-                                            ],
-                                            "id": "u:77b6b7c4a818",
-                                            "affixFooter": false,
-                                            "actions": [],
-                                            "headerClassName": "p font-bold p-b-xs",
-                                            "inline": false,
-                                            "className": "Panel--default r no-border m-b"
-                                        }
-                                    ],
-                                    "id": "u:60db55fcd1f0",
-                                    "md": ""
-                                },
-                                {
-                                    "body": [
-                                        {
-                                            "type": "panel",
-                                            "title": "回款率 - <span class='text-slate-400'>合同收款统计</span>",
-                                            "body": [
-                                                {
-                                                    "type": "tpl",
-                                                    "tpl": "<div class=\"text-center  text-4xl sm:text-7xl \">\n<div style=\"transform: scale(0.65);\"><span class=\"leading-normal\" title=\"${rate_percent}\">${rate_percent}%</span></div>\n</div>",
-                                                    "inline": false,
-                                                    "id": "u:efb693b726a4",
-                                                    "className": ""
-                                                }
-                                            ],
-                                            "id": "u:14182dfeced7",
-                                            "affixFooter": false,
-                                            "actions": [],
-                                            "headerClassName": "p font-bold p-b-xs",
-                                            "inline": false,
-                                            "className": "Panel--default r no-border"
-                                        }
-                                    ],
-                                    "id": "u:549045670ccb",
-                                    "md": ""
-                                }
+                      {
+                        "type": "panel",
+                        "title": "合同收款数据",
+                        "body": [
+                          {
+                            "type": "service",
+                            "body": [
+                              {
+                                "type": "panel",
+                                "title": "",
+                                "body": [
+                                  {
+                                    "type": "tpl",
+                                    "tpl": "<p style=\"text-align: center;\">当年合同总金额</p>\n<p style=\"text-align: center;\"><span style=\"font-size: 14pt; color: #3598db;\">&yen;${sum}&nbsp;</span></p>",
+                                    "inline": false,
+                                    "id": "u:cdcd665793e2"
+                                  }
+                                ],
+                                "id": "u:fd914d5afd83",
+                                "affixFooter": false,
+                                "actions": [
+                                ]
+                              }
                             ],
-                            "id": "u:5f326ed9a36c"
-                        }
-                    ],
-                    "id": "u:29bd9dde1d4a",
-                    "messages": {},
-                    "api": {
-                        "method": "post",
-                        "url": "${context.rootUrl}/service/api/~packages-@steedos/service-charts/queries/contracts_collection_sum_home/results?datetime=${datetime}",
-                        "requestAdaptor": "\nvar datetime = api.data.datetime;\nvar start_and_end;\nif (datetime) {\n  start_and_end = datetime.split(',');\n} else {\n  start_and_end = ['', ''];\n}\napi.data.parameters = {\n  datetime: {\n    start: start_and_end[0],\n    end: start_and_end[1]\n  }\n}",
-                        "adaptor": "\nvar rows = payload?.query_result?.data?.rows;\nif (rows.length) {\n  rows = rows[0]\n} else {\n  rows = { total_amount: 0, total_received_amount: 0, rate_percent: 0 }\n}\npayload.data = {\n  total_amount: rows.total_amount,\n  total_received_amount: rows.total_received_amount,\n  rate_percent: rows.rate_percent.toFixed(2)\n};\n// console.log('payload ==>', payload)\nreturn payload;\n",
-                        "headers": {
-                            "Authorization": "Bearer ${context.tenantId},${context.authToken}"
-                        },
-                        "sendOn": "this.datetime"
-                    },
-                    "affixFooter": false,
-                    "className": "m-t"
-                },
-                {
-                    "type": "chart",
-                    "className": "r r-2x bg-white no-border",
-                    "config": {
-                        "tooltip": {
-                            "show": true
-                        },
-                        "xAxis": {
-                            "type": "category",
-                            "data": "${mongth_tag}",
-                            "axisTick": {
-                                "show": false
-                            }
-                        },
-                        "yAxis": {
-                            "type": "value"
-                        },
-                        "toolbox": {
-                            "show": true,
-                            "feature": {
-                                "dataZoom": {
-                                    "yAxisIndex": "none"
-                                },
-                                "dataView": {
-                                    "readOnly": true
-                                },
-                                "restore": {},
-                                "saveAsImage": {}
-                            }
-                        },
-                        "series": [
-                            {
-                                "data": "${total_amount}",
-                                "type": "line",
-                                "name": "${year_tag[0]}"
-                            }
-                        ],
-                        "title": {
-                            "text": "签约金额按月统计曲线",
-                            "textStyle": {
-                                "fontSize": "1em"
+                            "id": "u:8d929fc71aac",
+                            "messages": {
                             },
-                            "padding": 15
-                        },
-                        "legend": {
-                            "top": 50,
-                            "right": 15
-                        },
-                        "grid": {
-                            "containLabel": true,
-                            "left": "1%",
-                            "bottom": "6%"
-                        }
-                    },
-                    "replaceChartOption": true,
-                    "id": "u:54012a41a480",
-                    "api": {
-                        "method": "post",
-                        "url": "${context.rootUrl}/service/api/~packages-@steedos/service-charts/queries/contracts_amount_month_home/results?datetime=${datetime}",
-                        "headers": {
-                            "Authorization": "Bearer ${context.tenantId},${context.authToken}"
-                        },
-                        "requestAdaptor": "\nvar datetime = api.data.datetime;\nvar start_and_end;\nif (datetime) {\n  start_and_end = datetime.split(',');\n} else {\n  start_and_end = ['', ''];\n}\napi.data.parameters = {\n  datetime: {\n    start: start_and_end[0],\n    end: start_and_end[1]\n  }\n}",
-                        "adaptor": "\nvar rows = payload?.query_result?.data?.rows;\nvar total_amount_array = rows.map((item) => {\n  return item.total_amount;\n})\nvar year_tag_array = rows.map((item) => {\n  return item.year_tag;\n})\nvar mongth_tag_array = rows.map((item) => {\n  return item.mongth_tag;\n})\npayload.data = {\n  total_amount: total_amount_array,\n  year_tag: year_tag_array,\n  mongth_tag: mongth_tag_array,\n};\n// console.log('payload==>', payload)\nreturn payload;\n",
-                        "sendOn": "this.datetime"
-                    },
-                    "affixFooter": false
-                },
-                {
-                    "type": "grid",
-                    "className": "m-t",
-                    "columns": [
-                        {
+                            "api": {
+                              "url": "${context.rootUrl}/graphql?a=1",
+                              "method": "post",
+                              "messages": {
+                              },
+                              "sendOn": "",
+                              "data": {
+                                "query": "{contracts(filters:[[\"cash_flow_type\",\"=\",\"receive\"],[\"signed_date\",\"between\",[\"2023-01-01T00:00:00.000Z\",\"2023-12-31T00:00:00.000Z\"]]]){amount, signed_date}}"
+                              },
+                              "headers": {
+                                "Authorization": "Bearer ${context.tenantId},${context.authToken}"
+                              },
+                              "adaptor": "console.log('payload==>', payload)\nconst contracts = payload.data.contracts;\nlet sum = 0;\ncontracts.forEach(function (item) {\n    console.log('item==>', item)\n    const amount = item.amount || 0;\n    sum += amount ;\n})\npayload.data.sum = sum;\n\nreturn payload;",
+                              "requestAdaptor": "console.log('api==>', api)\n// const time = new Date();\n// const year = time.getFullYear();\n// const month = time.getMonth() + 1;\n// api.data.query.replaceAll('2023', '1111');\n// api.body.query.replaceAll('2023', '2222');\nreturn api;"
+                            }
+                          },
+                          {
+                            "type": "service",
                             "body": [
-                                {
-                                    "type": "chart",
-                                    "config": {
-                                        "title": {
-                                            "text": "收款柱状图",
-                                            "textStyle": {
-                                                "fontSize": "1em"
-                                            },
-                                            "padding": 15
-                                        },
-                                        "tooltip": {
-                                            "show": true
-                                        },
-                                        "legend": {
-                                            "data": [
-                                                "已收款金额",
-                                                "待收款金额"
-                                            ],
-                                            "left": 15,
-                                            "bottom": 15
-                                        },
-                                        "xAxis": {
-                                            "type": "category",
-                                            "axisTick": {
-                                                "show": false
-                                            },
-                                            "axisLabel": {
-                                                "inside": true,
-                                                "color": "#fff"
-                                            },
-                                            "data": [
-                                                "金额"
-                                            ]
-                                        },
-                                        "yAxis": {
-                                            "type": "value"
-                                        },
-                                        "series": [
-                                            {
-                                                "name": "已收款金额",
-                                                "type": "bar",
-                                                "data": [
-                                                    "${received_amount}"
-                                                ],
-                                                "itemStyle": {
-                                                    "color": "#325cd1"
-                                                },
-                                                "barGap": "0%",
-                                                "barCategoryGap": "20%",
-                                                "label": {
-                                                    "show": true,
-                                                    "position": "top"
-                                                }
-                                            },
-                                            {
-                                                "name": "待收款金额",
-                                                "type": "bar",
-                                                "data": [
-                                                    "${unreceived_amount}"
-                                                ],
-                                                "itemStyle": {
-                                                    "color": "#f00"
-                                                },
-                                                "label": {
-                                                    "show": true,
-                                                    "position": "top"
-                                                }
-                                            }
+                              {
+                                "type": "grid",
+                                "columns": [
+                                  {
+                                    "body": [
+                                      {
+                                        "type": "panel",
+                                        "title": "",
+                                        "body": [
+                                          {
+                                            "type": "tpl",
+                                            "tpl": "<p>&nbsp;</p>\n<p style=\"text-align: center;\">本月签订合同金额</p>\n<p style=\"text-align: center;\"><span style=\"font-size: 14pt; color: #3598db;\">&yen;${sum}&nbsp;</span></p>",
+                                            "inline": false,
+                                            "id": "u:6f52ce8d4681"
+                                          }
                                         ],
-                                        "toolbox": {
-                                            "show": true,
-                                            "feature": {
-                                                "dataZoom": {
-                                                    "yAxisIndex": "none"
-                                                },
-                                                "dataView": {
-                                                    "readOnly": true
-                                                },
-                                                "restore": {},
-                                                "saveAsImage": {}
-                                            }
-                                        },
-                                        "grid": {
-                                            "containLabel": true,
-                                            "left": "1%"
-                                        }
-                                    },
-                                    "replaceChartOption": true,
-                                    "id": "u:9f00714716ef",
-                                    "api": {
-                                        "method": "post",
-                                        "url": "${context.rootUrl}/service/api/~packages-@steedos/service-charts/queries/contracts_received_home/results?datetime=${datetime}",
-                                        "adaptor": "\nvar rows = payload?.query_result?.data?.rows;\nif (rows.length) {\n  rows = rows[0]\n} else {\n  rows = { received_amount: 0, unreceived_amount:0}\n}\npayload.data = {\n  received_amount: rows.received_amount,\n  unreceived_amount: rows.unreceived_amount\n};\nreturn payload;\n",
-                                        "headers": {
-                                            "Authorization": "Bearer ${context.tenantId},${context.authToken}"
-                                        },
-                                        "replaceData": false,
-                                        "requestAdaptor": "\nvar datetime = api.data.datetime;\nvar start_and_end;\nif (datetime) {\n  start_and_end = datetime.split(',');\n} else {\n  start_and_end = ['',''];\n}\napi.data.parameters = {\n  datetime: {\n    start: start_and_end[0],\n    end: start_and_end[1]\n  }\n}",
-                                        "responseData": null,
-                                        "sendOn": "this.datetime"
-                                    },
-                                    "dataFilter": "",
-                                    "className": "r r-2x bg-white no-border",
-                                    "name": "contracts_received"
-                                }
-                            ],
-                            "id": "u:65a1791f4efb"
-                        },
-                        {
-                            "body": [
-                                {
-                                    "type": "chart",
-                                    "config": {
-                                        "title": {
-                                            "text": "付款柱状图",
-                                            "textStyle": {
-                                                "fontSize": "1em"
-                                            },
-                                            "padding": 15
-                                        },
-                                        "tooltip": {
-                                            "show": true
-                                        },
-                                        "grid": {
-                                            "containLabel": true,
-                                            "left": "1%"
-                                        },
-                                        "legend": {
-                                            "data": [
-                                                "已付款金额",
-                                                "待付款金额"
-                                            ],
-                                            "left": 15,
-                                            "bottom": 15
-                                        },
-                                        "xAxis": {
-                                            "type": "category",
-                                            "axisTick": {
-                                                "show": false
-                                            },
-                                            "axisLabel": {
-                                                "inside": true,
-                                                "color": "#fff"
-                                            },
-                                            "data": [
-                                                "金额"
-                                            ]
-                                        },
-                                        "series": [
-                                            {
-                                                "name": "已付款金额",
-                                                "type": "bar",
-                                                "data": [
-                                                    "${paid_amount}"
-                                                ],
-                                                "itemStyle": {
-                                                    "color": "#325cd1"
-                                                },
-                                                "barGap": "0%",
-                                                "barCategoryGap": "20%",
-                                                "label": {
-                                                    "show": true,
-                                                    "position": "top"
-                                                }
-                                            },
-                                            {
-                                                "type": "bar",
-                                                "data": [
-                                                    "${unpaid_amount}"
-                                                ],
-                                                "itemStyle": {
-                                                    "color": "#f00"
-                                                },
-                                                "label": {
-                                                    "show": true,
-                                                    "position": "top"
-                                                },
-                                                "name": "待付款金额"
-                                            }
+                                        "id": "u:fd914d5afd83",
+                                        "affixFooter": false,
+                                        "actions": [
+                                        ]
+                                      }
+                                    ],
+                                    "id": "u:3cae56a9ad0f"
+                                  },
+                                  {
+                                    "body": [
+                                      {
+                                        "type": "panel",
+                                        "title": "",
+                                        "body": [
+                                          {
+                                            "type": "tpl",
+                                            "tpl": "<p>&nbsp;</p>\n<p style=\"text-align: center;\">本月签订合同个数</p>\n<p style=\"text-align: center;\"><span style=\"font-size: 14pt; color: #3598db;\">${count}&nbsp; 个</span></p>",
+                                            "inline": false,
+                                            "id": "u:e260a6416525"
+                                          }
                                         ],
-                                        "toolbox": {
-                                            "show": true,
-                                            "feature": {
-                                                "dataZoom": {
-                                                    "yAxisIndex": "none"
-                                                },
-                                                "dataView": {
-                                                    "readOnly": true
-                                                },
-                                                "restore": {},
-                                                "saveAsImage": {}
-                                            }
-                                        },
-                                        "yAxis": {
-                                            "type": "value"
-                                        }
-                                    },
-                                    "replaceChartOption": true,
-                                    "id": "u:e064aad0bd89",
-                                    "api": {
-                                        "method": "post",
-                                        "url": "${context.rootUrl}/service/api/~packages-@steedos/service-charts/queries/contracts_paid_home/results?datetime=${datetime}",
-                                        "adaptor": "\nvar rows = payload?.query_result?.data?.rows;\nif (rows.length) {\n  rows = rows[0]\n} else {\n  rows = { paid_amount: 0, unpaid_amount: 0 }\n}\npayload.data = {\n  paid_amount: rows.paid_amount,\n  unpaid_amount: rows.unpaid_amount\n};\n// console.log('==>',payload)\nreturn payload;\n",
-                                        "headers": {
-                                            "Authorization": "Bearer ${context.tenantId},${context.authToken}"
-                                        },
-                                        "replaceData": false,
-                                        "requestAdaptor": "\nvar datetime = api.data.datetime;\nvar start_and_end;\nif (datetime) {\n  start_and_end = datetime.split(',');\n} else {\n  start_and_end = ['', ''];\n}\napi.data.parameters = {\n  datetime: {\n    start: start_and_end[0],\n    end: start_and_end[1]\n  }\n}",
-                                        "responseData": null,
-                                        "sendOn": "this.datetime"
-                                    },
-                                    "dataFilter": "",
-                                    "className": "r r-2x bg-white no-border",
-                                    "name": "contracts_paid"
-                                }
+                                        "id": "u:fd914d5afd83",
+                                        "affixFooter": false,
+                                        "actions": [
+                                        ]
+                                      }
+                                    ],
+                                    "id": "u:a84a14b8738a"
+                                  }
+                                ],
+                                "id": "u:8c8aa613d16f"
+                              }
                             ],
-                            "id": "u:83210f76828d"
-                        }
+                            "id": "u:8d929fc71aac",
+                            "messages": {
+                            },
+                            "api": {
+                              "url": "${context.rootUrl}/graphql?a=1",
+                              "method": "post",
+                              "messages": {
+                              },
+                              "sendOn": "",
+                              "data": {
+                                "query": "{contracts(filters:[[\"cash_flow_type\",\"=\",\"receive\"],[\"signed_date\",\"between\",[\"2023-06-01T00:00:00.000Z\",\"2023-06-30T00:00:00.000Z\"]]]){amount, signed_date}}"
+                              },
+                              "headers": {
+                                "Authorization": "Bearer ${context.tenantId},${context.authToken}"
+                              },
+                              "adaptor": "console.log('payload==>', payload)\nconst contracts = payload.data.contracts;\nlet sum = 0;\ncontracts.forEach(function (item) {\n    console.log('item==>', item)\n    const amount = item.amount || 0;\n    sum += amount ;\n})\npayload.data.sum = sum;\npayload.data.count = contracts.length || 0;\n\nreturn payload;"
+                            }
+                          }
+                        ],
+                        "id": "u:b6fde7ca8128",
+                        "actions": [
+                        ],
+                        "affixFooter": false
+                      }
                     ],
-                    "subFormMode": "",
-                    "id": "u:babb595179e4"
-                }
+                    "id": "u:16e609210be6"
+                  },
+                  {
+                    "body": [
+                      {
+                        "type": "panel",
+                        "title": "月度付款情况",
+                        "body": [
+                          {
+                            "type": "chart",
+                            "config": {
+                              "xAxis": {
+                                "type": "category",
+                                "data": [
+                                  "一月",
+                                  "二月",
+                                  "三月",
+                                  "四月",
+                                  "五月",
+                                  "六月",
+                                  "七月",
+                                  "八月",
+                                  "九月",
+                                  "十月",
+                                  "十一月",
+                                  "十二月"
+                                ],
+                                "id": "u:66cbd3acc471"
+                              },
+                              "yAxis": {
+                                "type": "value",
+                                "id": "u:9ce2693b2c90"
+                              },
+                              "series": [
+                                {
+                                  "data": "${monthData}",
+                                  "type": "bar",
+                                  "id": "u:770961895776"
+                                }
+                              ]
+                            },
+                            "replaceChartOption": true,
+                            "id": "u:cbab0bdc30a9",
+                            "api": {
+                              "url": "${context.rootUrl}/graphql?a=2",
+                              "method": "post",
+                              "headers": {
+                                "Authorization": "Bearer ${context.tenantId},${context.authToken}"
+                              },
+                              "data": {
+                                "query": "{contracts (filters:[[\"cash_flow_type\",\"=\",\"receive\"],[\"signed_date\",\"between\",[\"2023-01-01T00:00:00.000Z\",\"2023-12-31T00:00:00.000Z\"]]]){ amount,signed_date, paid_amount }}"
+                              },
+                              "adaptor": "console.log('chart==payload==>', payload);\nconst contracts = payload.data.contracts;\nlet monthData = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];\n\ncontracts.forEach(function (item) {\n  const amount = item.amount || 0;\n  const month = Number(item.signed_date\n    .substr(5, 2));\n  monthData[month - 1] += amount;\n})\npayload.data.monthData = monthData;\nconsole.log('aa==>',payload)\nreturn payload;"
+                            }
+                          }
+                        ],
+                        "id": "u:b6fde7ca8128",
+                        "affixFooter": false
+                      }
+                    ],
+                    "id": "u:c72abd97a114"
+                  }
+                ],
+                "id": "u:20422191e079"
+              }
             ],
-            "id": "u:7903f0712271",
-            "className": "no-border p",
-            "target": "contracts_received,contracts_paid",
-            "actions": [],
-            "wrapWithPanel": false
-        }
+            "id": "u:199a32b4daa2"
+          },
+          {
+            "title": "付款合同",
+            "body": [
+              {
+                "type": "grid",
+                "columns": [
+                  {
+                    "body": [
+                      {
+                        "type": "panel",
+                        "title": "合同付款数据",
+                        "body": [
+                          {
+                            "type": "service",
+                            "body": [
+                              {
+                                "type": "panel",
+                                "title": "",
+                                "body": [
+                                  {
+                                    "type": "tpl",
+                                    "tpl": "<p style=\"text-align: center;\">当年合同总金额</p>\n<p style=\"text-align: center;\"><span style=\"font-size: 14pt; color: #3598db;\">&yen;${sum}&nbsp;</span></p>",
+                                    "inline": false,
+                                    "id": "u:cdcd665793e2"
+                                  }
+                                ],
+                                "id": "u:fd914d5afd83",
+                                "affixFooter": false,
+                                "actions": [
+                                ]
+                              }
+                            ],
+                            "id": "u:8d929fc71aac",
+                            "messages": {
+                            },
+                            "api": {
+                              "url": "${context.rootUrl}/graphql?a=1",
+                              "method": "post",
+                              "messages": {
+                              },
+                              "sendOn": "",
+                              "data": {
+                                "query": "{contracts(filters:[[\"cash_flow_type\",\"=\",\"pay\"],[\"signed_date\",\"between\",[\"2023-01-01T00:00:00.000Z\",\"2023-12-31T00:00:00.000Z\"]]]){amount, signed_date}}"
+                              },
+                              "headers": {
+                                "Authorization": "Bearer ${context.tenantId},${context.authToken}"
+                              },
+                              "adaptor": "console.log('payload==>', payload)\nconst contracts = payload.data.contracts;\nlet sum = 0;\ncontracts.forEach(function (item) {\n    console.log('item==>', item)\n    const amount = item.amount || 0;\n    sum += amount ;\n})\npayload.data.sum = sum;\n\nreturn payload;",
+                              "requestAdaptor": "console.log('api==>', api)\n// const time = new Date();\n// const year = time.getFullYear();\n// const month = time.getMonth() + 1;\n// api.data.query.replaceAll('2023', '1111');\n// api.body.query.replaceAll('2023', '2222');\nreturn api;"
+                            }
+                          },
+                          {
+                            "type": "service",
+                            "body": [
+                              {
+                                "type": "grid",
+                                "columns": [
+                                  {
+                                    "body": [
+                                      {
+                                        "type": "panel",
+                                        "title": "",
+                                        "body": [
+                                          {
+                                            "type": "tpl",
+                                            "tpl": "<p>&nbsp;</p>\n<p style=\"text-align: center;\">本月签订合同金额</p>\n<p style=\"text-align: center;\"><span style=\"font-size: 14pt; color: #3598db;\">&yen;${sum}&nbsp;</span></p>",
+                                            "inline": false,
+                                            "id": "u:6f52ce8d4681"
+                                          }
+                                        ],
+                                        "id": "u:fd914d5afd83",
+                                        "affixFooter": false,
+                                        "actions": [
+                                        ]
+                                      }
+                                    ],
+                                    "id": "u:3cae56a9ad0f"
+                                  },
+                                  {
+                                    "body": [
+                                      {
+                                        "type": "panel",
+                                        "title": "",
+                                        "body": [
+                                          {
+                                            "type": "tpl",
+                                            "tpl": "<p>&nbsp;</p>\n<p style=\"text-align: center;\">本月签订合同个数</p>\n<p style=\"text-align: center;\"><span style=\"font-size: 14pt; color: #3598db;\">${count}&nbsp; 个</span></p>",
+                                            "inline": false,
+                                            "id": "u:e260a6416525"
+                                          }
+                                        ],
+                                        "id": "u:fd914d5afd83",
+                                        "affixFooter": false,
+                                        "actions": [
+                                        ]
+                                      }
+                                    ],
+                                    "id": "u:a84a14b8738a"
+                                  }
+                                ],
+                                "id": "u:8c8aa613d16f"
+                              }
+                            ],
+                            "id": "u:8d929fc71aac",
+                            "messages": {
+                            },
+                            "api": {
+                              "url": "${context.rootUrl}/graphql?a=1",
+                              "method": "post",
+                              "messages": {
+                              },
+                              "sendOn": "",
+                              "data": {
+                                "query": "{contracts(filters:[[\"cash_flow_type\",\"=\",\"pay\"],[\"signed_date\",\"between\",[\"2023-06-01T00:00:00.000Z\",\"2023-06-30T00:00:00.000Z\"]]]){amount, signed_date}}"
+                              },
+                              "headers": {
+                                "Authorization": "Bearer ${context.tenantId},${context.authToken}"
+                              },
+                              "adaptor": "console.log('payload==>', payload)\nconst contracts = payload.data.contracts;\nlet sum = 0;\ncontracts.forEach(function (item) {\n    console.log('item==>', item)\n    const amount = item.amount || 0;\n    sum += amount ;\n})\npayload.data.sum = sum;\npayload.data.count = contracts.length || 0;\n\nreturn payload;"
+                            }
+                          }
+                        ],
+                        "id": "u:b6fde7ca8128",
+                        "actions": [
+                        ],
+                        "affixFooter": false
+                      }
+                    ],
+                    "id": "u:16e609210be6"
+                  },
+                  {
+                    "body": [
+                      {
+                        "type": "panel",
+                        "title": "月度付款情况",
+                        "body": [
+                          {
+                            "type": "chart",
+                            "config": {
+                              "xAxis": {
+                                "type": "category",
+                                "data": [
+                                  "一月",
+                                  "二月",
+                                  "三月",
+                                  "四月",
+                                  "五月",
+                                  "六月",
+                                  "七月",
+                                  "八月",
+                                  "九月",
+                                  "十月",
+                                  "十一月",
+                                  "十二月"
+                                ],
+                                "id": "u:66cbd3acc471"
+                              },
+                              "yAxis": {
+                                "type": "value",
+                                "id": "u:9ce2693b2c90"
+                              },
+                              "series": [
+                                {
+                                  "data": "${monthData}",
+                                  "type": "bar",
+                                  "id": "u:770961895776"
+                                }
+                              ]
+                            },
+                            "replaceChartOption": true,
+                            "id": "u:cbab0bdc30a9",
+                            "api": {
+                              "url": "${context.rootUrl}/graphql?a=2",
+                              "method": "post",
+                              "headers": {
+                                "Authorization": "Bearer ${context.tenantId},${context.authToken}"
+                              },
+                              "data": {
+                                "query": "{contracts (filters:[[\"cash_flow_type\",\"=\",\"pay\"],[\"signed_date\",\"between\",[\"2023-01-01T00:00:00.000Z\",\"2023-12-31T00:00:00.000Z\"]]]){ amount,signed_date, paid_amount }}"
+                              },
+                              "adaptor": "console.log('chart==payload==>', payload);\nconst contracts = payload.data.contracts;\nlet monthData = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];\n\ncontracts.forEach(function (item) {\n  const amount = item.amount || 0;\n  const month = Number(item.signed_date\n    .substr(5, 2));\n  monthData[month - 1] += amount;\n})\npayload.data.monthData = monthData;\nconsole.log('aa==>',payload)\nreturn payload;"
+                            }
+                          }
+                        ],
+                        "id": "u:b6fde7ca8128",
+                        "affixFooter": false
+                      }
+                    ],
+                    "id": "u:c72abd97a114"
+                  }
+                ],
+                "id": "u:20422191e079"
+              }
+            ],
+            "id": "u:6b3bdcfe9497"
+          }
+        ],
+        "id": "u:e06e0d1d39ae",
+        "tabsMode": "simple",
+        "linksClassName": "bg-white m-l m-t",
+        "className": "bg-white",
+        "toolbarClassName": "bg-white",
+        "contentClassName": "bg-white"
+      }
     ],
     "regions": [
-        "body"
+      "body"
     ],
     "data": {
-        "recordId": "",
-        "initialValues": {},
-        "appId": "builder",
-        "title": "",
-        "context": {
-            "rootUrl": "https://5000-purple-ladybug-hp2xa02t.ws.vscode.steedos.cn"
-        }
+      "initialValues": {
+      },
+      "appId": "builder",
+      "title": "",
+      "context": {
+        "rootUrl": "https://5000-aquamarine-gull-66dfy76e.ws.vscode.steedos.cn",
+        "tenantId": "648913c1f7daf4002fe0827f",
+        "userId": "648913bff7daf4002fe08272",
+        "authToken": "ad0cc42740def20a29df545a18f367cb28120931d4c40f9db8ab4376e668b694ed3aa2447034bf8e9e3ae3"
+      }
     },
-    "messages": {},
-    "style": {
-        "backgroundColor": "#e1effe",
-        "opacity": 1
-    },
-    "initApi": "",
-    "bodyClassName": "p-none",
-    "asideClassName": "",
-    "id": "u:14f77d713ece"
-}
+    "id": "u:00c4237df97e"
+  }

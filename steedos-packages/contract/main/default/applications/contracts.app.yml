@@ -12,11 +12,9 @@ tab_groups:
   - group_name: 收付款信息
     default_open: true
   - group_name: 客商信息
-    default_open: false
+    default_open: true
   - group_name: 基础信息
-    default_open: false
-  - group_name: 招投标信息
-    default_open: false
+    default_open: true
 tab_items:
   contracts_home:
     group: 合同信息
