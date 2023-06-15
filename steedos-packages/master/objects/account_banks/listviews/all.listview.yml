@@ -7,10 +7,8 @@ columns:
   - field: pk_bankdoc
     wrap: false
   - field: account
-  - field: accountproperty
   - field: accstate
   - field: pk_currtype
-  - field: enablestate
     wrap: false
 filter_fields:
   - account

@@ -1,423 +1,423 @@
 {
-    "type": "page",
-    "title": "Welcome to Steedos",
-    "body": [
-      {
-        "type": "tabs",
-        "tabs": [
-          {
-            "title": "收款合同",
-            "body": [
-              {
-                "type": "panel",
-                "id": "u:bc29e00915ac",
-                "title": "合同收款数据",
-                "body": [
-                  {
-                    "type": "grid",
-                    "columns": [
-                      {
-                        "body": [
-                          {
-                            "type": "service",
-                            "body": [
-                              {
-                                "type": "panel",
-                                "title": "",
-                                "body": [
-                                  {
-                                    "type": "tpl",
-                                    "tpl": "<p style=\"text-align: center;\">&nbsp;</p>\n<p style=\"text-align: center;\">当年合同总金额</p>\n<p style=\"text-align: center;\"><span style=\"font-size: 14pt; color: #3598db;\">&yen;${sum}&nbsp;</span></p>",
-                                    "inline": false,
-                                    "id": "u:cdcd665793e2"
-                                  }
-                                ],
-                                "id": "u:fd914d5afd83",
-                                "affixFooter": false,
-                                "actions": [
-                                ]
-                              }
-                            ],
-                            "id": "u:8d929fc71aac",
-                            "messages": {
-                            },
-                            "api": {
-                              "url": "${context.rootUrl}/graphql?a=1",
-                              "method": "post",
-                              "messages": {
-                              },
-                              "sendOn": "",
-                              "data": {
-                                "query": "{contracts(filters:[[\"cash_flow_type\",\"=\",\"receive\"],[\"signed_date\",\"between\",[\"2023-01-01T00:00:00.000Z\",\"2023-12-31T00:00:00.000Z\"]]]){amount, signed_date}}"
-                              },
-                              "headers": {
-                                "Authorization": "Bearer ${context.tenantId},${context.authToken}"
-                              },
-                              "adaptor": "console.log('payload==>', payload)\nconst contracts = payload.data.contracts;\nlet sum = 0;\ncontracts.forEach(function (item) {\n    console.log('item==>', item)\n    const amount = item.amount || 0;\n    sum += amount ;\n})\npayload.data.sum = sum;\n\nreturn payload;",
-                              "requestAdaptor": "console.log('api==>', api)\n// const time = new Date();\n// const year = time.getFullYear();\n// const month = time.getMonth() + 1;\n// api.data.query.replaceAll('2023', '1111');\n// api.body.query.replaceAll('2023', '2222');\nreturn api;"
-                            }
-                          }
-                        ],
-                        "id": "u:ca2e694f8871",
-                        "md": 4
-                      },
-                      {
-                        "body": [
-                          {
-                            "type": "service",
-                            "body": [
-                              {
-                                "type": "grid",
-                                "columns": [
-                                  {
-                                    "body": [
-                                      {
-                                        "type": "panel",
-                                        "title": "",
-                                        "body": [
-                                          {
-                                            "type": "tpl",
-                                            "tpl": "<p>&nbsp;</p>\n<p style=\"text-align: center;\">本月签订合同金额</p>\n<p style=\"text-align: center;\"><span style=\"font-size: 14pt; color: #3598db;\">&yen;${sum}&nbsp;</span></p>",
-                                            "inline": false,
-                                            "id": "u:6f52ce8d4681"
-                                          }
-                                        ],
-                                        "id": "u:fd914d5afd83",
-                                        "affixFooter": false,
-                                        "actions": [
-                                        ]
-                                      }
-                                    ],
-                                    "id": "u:3cae56a9ad0f"
-                                  },
-                                  {
-                                    "body": [
-                                      {
-                                        "type": "panel",
-                                        "title": "",
-                                        "body": [
-                                          {
-                                            "type": "tpl",
-                                            "tpl": "<p>&nbsp;</p>\n<p style=\"text-align: center;\">本月签订合同个数</p>\n<p style=\"text-align: center;\"><span style=\"font-size: 14pt; color: #3598db;\">${count}&nbsp; 个</span></p>",
-                                            "inline": false,
-                                            "id": "u:e260a6416525"
-                                          }
-                                        ],
-                                        "id": "u:fd914d5afd83",
-                                        "affixFooter": false,
-                                        "actions": [
-                                        ]
-                                      }
-                                    ],
-                                    "id": "u:a84a14b8738a"
-                                  }
-                                ],
-                                "id": "u:8c8aa613d16f"
-                              }
-                            ],
-                            "id": "u:8d929fc71aac",
-                            "messages": {
-                            },
-                            "api": {
-                              "url": "${context.rootUrl}/graphql?a=1",
-                              "method": "post",
-                              "messages": {
-                              },
-                              "sendOn": "",
-                              "data": {
-                                "query": "{contracts(filters:[[\"cash_flow_type\",\"=\",\"receive\"],[\"signed_date\",\"between\",[\"2023-06-01T00:00:00.000Z\",\"2023-06-30T00:00:00.000Z\"]]]){amount, signed_date}}"
-                              },
-                              "headers": {
-                                "Authorization": "Bearer ${context.tenantId},${context.authToken}"
-                              },
-                              "adaptor": "console.log('payload==>', payload)\nconst contracts = payload.data.contracts;\nlet sum = 0;\ncontracts.forEach(function (item) {\n    console.log('item==>', item)\n    const amount = item.amount || 0;\n    sum += amount ;\n})\npayload.data.sum = sum;\npayload.data.count = contracts.length || 0;\n\nreturn payload;"
-                            }
-                          }
-                        ],
-                        "id": "u:38d5f8413be5"
-                      }
-                    ],
-                    "id": "u:8ec88d5e180c"
-                  }
-                ],
-                "affixFooter": false
-              },
-              {
-                "type": "panel",
-                "title": "月度收款情况",
-                "body": [
-                  {
-                    "type": "chart",
-                    "config": {
-                      "xAxis": {
-                        "type": "category",
-                        "data": [
-                          "一月",
-                          "二月",
-                          "三月",
-                          "四月",
-                          "五月",
-                          "六月",
-                          "七月",
-                          "八月",
-                          "九月",
-                          "十月",
-                          "十一月",
-                          "十二月"
-                        ],
-                        "id": "u:66cbd3acc471"
-                      },
-                      "yAxis": {
-                        "type": "value",
-                        "id": "u:9ce2693b2c90"
-                      },
-                      "series": [
+  "type": "page",
+  "title": "Welcome to Steedos",
+  "body": [
+    {
+      "type": "tabs",
+      "tabs": [
+        {
+          "title": "收款合同",
+          "body": [
+            {
+              "type": "panel",
+              "id": "u:bc29e00915ac",
+              "title": "合同收款数据",
+              "body": [
+                {
+                  "type": "grid",
+                  "columns": [
+                    {
+                      "body": [
                         {
-                          "data": "${monthData}",
-                          "type": "bar",
-                          "id": "u:770961895776"
+                          "type": "service",
+                          "body": [
+                            {
+                              "type": "panel",
+                              "title": "",
+                              "body": [
+                                {
+                                  "type": "tpl",
+                                  "tpl": "<p style=\"text-align: center;\">&nbsp;</p>\n<p style=\"text-align: center;\">当年合同总金额</p>\n<p style=\"text-align: center;\"><span style=\"font-size: 14pt; color: #3598db;\">&yen;${sum}&nbsp;</span></p>",
+                                  "inline": false,
+                                  "id": "u:cdcd665793e2"
+                                }
+                              ],
+                              "id": "u:fd914d5afd83",
+                              "affixFooter": false,
+                              "actions": [
+                              ]
+                            }
+                          ],
+                          "id": "u:8d929fc71aac",
+                          "messages": {
+                          },
+                          "api": {
+                            "url": "${context.rootUrl}/graphql?a=1",
+                            "method": "post",
+                            "messages": {
+                            },
+                            "sendOn": "",
+                            "data": {
+                              "query": "{contracts(filters:[[\"cash_flow_type\",\"=\",\"receive\"],[\"signed_date\",\"between\",[\"2023-01-01T00:00:00.000Z\",\"2023-12-31T00:00:00.000Z\"]]]){amount, signed_date}}"
+                            },
+                            "headers": {
+                              "Authorization": "Bearer ${context.tenantId},${context.authToken}"
+                            },
+                            "adaptor": "console.log('payload==>', payload)\nconst contracts = payload.data.contracts;\nlet sum = 0;\ncontracts.forEach(function (item) {\n    console.log('item==>', item)\n    const amount = item.amount || 0;\n    sum += amount ;\n})\npayload.data.sum = sum;\n\nreturn payload;",
+                            "requestAdaptor": "console.log('api==>', api)\n// const time = new Date();\n// const year = time.getFullYear();\n// const month = time.getMonth() + 1;\n// api.data.query.replaceAll('2023', '1111');\n// api.body.query.replaceAll('2023', '2222');\nreturn api;"
+                          }
                         }
-                      ]
+                      ],
+                      "id": "u:ca2e694f8871",
+                      "md": 4
                     },
-                    "replaceChartOption": true,
-                    "id": "u:cbab0bdc30a9",
-                    "api": {
-                      "url": "${context.rootUrl}/graphql?a=2",
-                      "method": "post",
-                      "headers": {
-                        "Authorization": "Bearer ${context.tenantId},${context.authToken}"
-                      },
-                      "data": {
-                        "query": "{contracts (filters:[[\"cash_flow_type\",\"=\",\"receive\"],[\"signed_date\",\"between\",[\"2023-01-01T00:00:00.000Z\",\"2023-12-31T00:00:00.000Z\"]]]){ amount,signed_date, paid_amount }}"
-                      },
-                      "adaptor": "console.log('chart==payload==>', payload);\nconst contracts = payload.data.contracts;\nlet monthData = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];\n\ncontracts.forEach(function (item) {\n  const amount = item.amount || 0;\n  const month = Number(item.signed_date\n    .substr(5, 2));\n  monthData[month - 1] += amount;\n})\npayload.data.monthData = monthData;\nconsole.log('aa==>',payload)\nreturn payload;"
-                    }
-                  }
-                ],
-                "id": "u:b6fde7ca8128",
-                "affixFooter": false
-              }
-            ],
-            "id": "u:32492563929e"
-          },
-          {
-            "title": "付款合同",
-            "body": [
-              {
-                "type": "panel",
-                "id": "u:bc29e00915ac",
-                "title": "合同付款数据",
-                "body": [
-                  {
-                    "type": "grid",
-                    "columns": [
-                      {
-                        "body": [
-                          {
-                            "type": "service",
-                            "body": [
-                              {
-                                "type": "panel",
-                                "title": "",
-                                "body": [
-                                  {
-                                    "type": "tpl",
-                                    "tpl": "<p style=\"text-align: center;\">&nbsp;</p>\n<p style=\"text-align: center;\">当年合同总金额</p>\n<p style=\"text-align: center;\"><span style=\"font-size: 14pt; color: #3598db;\">&yen;${sum}&nbsp;</span></p>",
-                                    "inline": false,
-                                    "id": "u:cdcd665793e2"
-                                  }
-                                ],
-                                "id": "u:fd914d5afd83",
-                                "affixFooter": false,
-                                "actions": [
-                                ]
-                              }
-                            ],
-                            "id": "u:8d929fc71aac",
-                            "messages": {
-                            },
-                            "api": {
-                              "url": "${context.rootUrl}/graphql?a=1",
-                              "method": "post",
-                              "messages": {
-                              },
-                              "sendOn": "",
-                              "data": {
-                                "query": "{contracts(filters:[[\"cash_flow_type\",\"=\",\"pay\"],[\"signed_date\",\"between\",[\"2023-01-01T00:00:00.000Z\",\"2023-12-31T00:00:00.000Z\"]]]){amount, signed_date}}"
-                              },
-                              "headers": {
-                                "Authorization": "Bearer ${context.tenantId},${context.authToken}"
-                              },
-                              "adaptor": "console.log('payload==>', payload)\nconst contracts = payload.data.contracts;\nlet sum = 0;\ncontracts.forEach(function (item) {\n    console.log('item==>', item)\n    const amount = item.amount || 0;\n    sum += amount ;\n})\npayload.data.sum = sum;\n\nreturn payload;",
-                              "requestAdaptor": "console.log('api==>', api)\n// const time = new Date();\n// const year = time.getFullYear();\n// const month = time.getMonth() + 1;\n// api.data.query.replaceAll('2023', '1111');\n// api.body.query.replaceAll('2023', '2222');\nreturn api;"
-                            }
-                          }
-                        ],
-                        "id": "u:ca2e694f8871",
-                        "md": 4
-                      },
-                      {
-                        "body": [
-                          {
-                            "type": "service",
-                            "body": [
-                              {
-                                "type": "grid",
-                                "columns": [
-                                  {
-                                    "body": [
-                                      {
-                                        "type": "panel",
-                                        "title": "",
-                                        "body": [
-                                          {
-                                            "type": "tpl",
-                                            "tpl": "<p>&nbsp;</p>\n<p style=\"text-align: center;\">本月签订合同金额</p>\n<p style=\"text-align: center;\"><span style=\"font-size: 14pt; color: #3598db;\">&yen;${sum}&nbsp;</span></p>",
-                                            "inline": false,
-                                            "id": "u:6f52ce8d4681"
-                                          }
-                                        ],
-                                        "id": "u:fd914d5afd83",
-                                        "affixFooter": false,
-                                        "actions": [
-                                        ]
-                                      }
-                                    ],
-                                    "id": "u:3cae56a9ad0f"
-                                  },
-                                  {
-                                    "body": [
-                                      {
-                                        "type": "panel",
-                                        "title": "",
-                                        "body": [
-                                          {
-                                            "type": "tpl",
-                                            "tpl": "<p>&nbsp;</p>\n<p style=\"text-align: center;\">本月签订合同个数</p>\n<p style=\"text-align: center;\"><span style=\"font-size: 14pt; color: #3598db;\">${count}&nbsp; 个</span></p>",
-                                            "inline": false,
-                                            "id": "u:e260a6416525"
-                                          }
-                                        ],
-                                        "id": "u:fd914d5afd83",
-                                        "affixFooter": false,
-                                        "actions": [
-                                        ]
-                                      }
-                                    ],
-                                    "id": "u:a84a14b8738a"
-                                  }
-                                ],
-                                "id": "u:8c8aa613d16f"
-                              }
-                            ],
-                            "id": "u:8d929fc71aac",
-                            "messages": {
-                            },
-                            "api": {
-                              "url": "${context.rootUrl}/graphql?a=1",
-                              "method": "post",
-                              "messages": {
-                              },
-                              "sendOn": "",
-                              "data": {
-                                "query": "{contracts(filters:[[\"cash_flow_type\",\"=\",\"pay\"],[\"signed_date\",\"between\",[\"2023-06-01T00:00:00.000Z\",\"2023-06-30T00:00:00.000Z\"]]]){amount, signed_date}}"
-                              },
-                              "headers": {
-                                "Authorization": "Bearer ${context.tenantId},${context.authToken}"
-                              },
-                              "adaptor": "console.log('payload==>', payload)\nconst contracts = payload.data.contracts;\nlet sum = 0;\ncontracts.forEach(function (item) {\n    console.log('item==>', item)\n    const amount = item.amount || 0;\n    sum += amount ;\n})\npayload.data.sum = sum;\npayload.data.count = contracts.length || 0;\n\nreturn payload;"
-                            }
-                          }
-                        ],
-                        "id": "u:38d5f8413be5"
-                      }
-                    ],
-                    "id": "u:8ec88d5e180c"
-                  }
-                ],
-                "affixFooter": false
-              },
-              {
-                "type": "panel",
-                "title": "月度付款情况",
-                "body": [
-                  {
-                    "type": "chart",
-                    "config": {
-                      "xAxis": {
-                        "type": "category",
-                        "data": [
-                          "一月",
-                          "二月",
-                          "三月",
-                          "四月",
-                          "五月",
-                          "六月",
-                          "七月",
-                          "八月",
-                          "九月",
-                          "十月",
-                          "十一月",
-                          "十二月"
-                        ],
-                        "id": "u:66cbd3acc471"
-                      },
-                      "yAxis": {
-                        "type": "value",
-                        "id": "u:9ce2693b2c90"
-                      },
-                      "series": [
+                    {
+                      "body": [
                         {
-                          "data": "${monthData}",
-                          "type": "bar",
-                          "id": "u:770961895776"
+                          "type": "service",
+                          "body": [
+                            {
+                              "type": "grid",
+                              "columns": [
+                                {
+                                  "body": [
+                                    {
+                                      "type": "panel",
+                                      "title": "",
+                                      "body": [
+                                        {
+                                          "type": "tpl",
+                                          "tpl": "<p>&nbsp;</p>\n<p style=\"text-align: center;\">本月签订合同金额</p>\n<p style=\"text-align: center;\"><span style=\"font-size: 14pt; color: #3598db;\">&yen;${sum}&nbsp;</span></p>",
+                                          "inline": false,
+                                          "id": "u:6f52ce8d4681"
+                                        }
+                                      ],
+                                      "id": "u:fd914d5afd83",
+                                      "affixFooter": false,
+                                      "actions": [
+                                      ]
+                                    }
+                                  ],
+                                  "id": "u:3cae56a9ad0f"
+                                },
+                                {
+                                  "body": [
+                                    {
+                                      "type": "panel",
+                                      "title": "",
+                                      "body": [
+                                        {
+                                          "type": "tpl",
+                                          "tpl": "<p>&nbsp;</p>\n<p style=\"text-align: center;\">本月签订合同个数</p>\n<p style=\"text-align: center;\"><span style=\"font-size: 14pt; color: #3598db;\">${count}&nbsp; 个</span></p>",
+                                          "inline": false,
+                                          "id": "u:e260a6416525"
+                                        }
+                                      ],
+                                      "id": "u:fd914d5afd83",
+                                      "affixFooter": false,
+                                      "actions": [
+                                      ]
+                                    }
+                                  ],
+                                  "id": "u:a84a14b8738a"
+                                }
+                              ],
+                              "id": "u:8c8aa613d16f"
+                            }
+                          ],
+                          "id": "u:8d929fc71aac",
+                          "messages": {
+                          },
+                          "api": {
+                            "url": "${context.rootUrl}/graphql?a=1",
+                            "method": "post",
+                            "messages": {
+                            },
+                            "sendOn": "",
+                            "data": {
+                              "query": "{contracts(filters:[[\"cash_flow_type\",\"=\",\"receive\"],[\"signed_date\",\"between\",[\"2023-06-01T00:00:00.000Z\",\"2023-06-30T00:00:00.000Z\"]]]){amount, signed_date}}"
+                            },
+                            "headers": {
+                              "Authorization": "Bearer ${context.tenantId},${context.authToken}"
+                            },
+                            "adaptor": "console.log('payload==>', payload)\nconst contracts = payload.data.contracts;\nlet sum = 0;\ncontracts.forEach(function (item) {\n    console.log('item==>', item)\n    const amount = item.amount || 0;\n    sum += amount ;\n})\npayload.data.sum = sum;\npayload.data.count = contracts.length || 0;\n\nreturn payload;"
+                          }
                         }
-                      ]
-                    },
-                    "replaceChartOption": true,
-                    "id": "u:cbab0bdc30a9",
-                    "api": {
-                      "url": "${context.rootUrl}/graphql?a=2",
-                      "method": "post",
-                      "headers": {
-                        "Authorization": "Bearer ${context.tenantId},${context.authToken}"
-                      },
-                      "data": {
-                        "query": "{contracts (filters:[[\"cash_flow_type\",\"=\",\"pay\"],[\"signed_date\",\"between\",[\"2023-01-01T00:00:00.000Z\",\"2023-12-31T00:00:00.000Z\"]]]){ amount,signed_date, paid_amount }}"
-                      },
-                      "adaptor": "console.log('chart==payload==>', payload);\nconst contracts = payload.data.contracts;\nlet monthData = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];\n\ncontracts.forEach(function (item) {\n  const amount = item.amount || 0;\n  const month = Number(item.signed_date\n    .substr(5, 2));\n  monthData[month - 1] += amount;\n})\npayload.data.monthData = monthData;\nconsole.log('aa==>',payload)\nreturn payload;"
+                      ],
+                      "id": "u:38d5f8413be5"
                     }
+                  ],
+                  "id": "u:8ec88d5e180c"
+                }
+              ],
+              "affixFooter": false
+            },
+            {
+              "type": "panel",
+              "title": "月度收款情况",
+              "body": [
+                {
+                  "type": "chart",
+                  "config": {
+                    "xAxis": {
+                      "type": "category",
+                      "data": [
+                        "一月",
+                        "二月",
+                        "三月",
+                        "四月",
+                        "五月",
+                        "六月",
+                        "七月",
+                        "八月",
+                        "九月",
+                        "十月",
+                        "十一月",
+                        "十二月"
+                      ],
+                      "id": "u:66cbd3acc471"
+                    },
+                    "yAxis": {
+                      "type": "value",
+                      "id": "u:9ce2693b2c90"
+                    },
+                    "series": [
+                      {
+                        "data": "${monthData}",
+                        "type": "bar",
+                        "id": "u:770961895776"
+                      }
+                    ]
+                  },
+                  "replaceChartOption": true,
+                  "id": "u:cbab0bdc30a9",
+                  "api": {
+                    "url": "${context.rootUrl}/graphql?a=2",
+                    "method": "post",
+                    "headers": {
+                      "Authorization": "Bearer ${context.tenantId},${context.authToken}"
+                    },
+                    "data": {
+                      "query": "{finance_receive (filters:[[\"contract_receipts_state\",\"=\",\"received\"],[\"receipt_date\",\"between\",[\"2023-01-01T00:00:00.000Z\",\"2023-12-31T00:00:00.000Z\"]]]){receipt_date, amount }}"
+                    },
+                    "adaptor": "console.log('chart==payload==>', payload);\nconst finance_receive = payload.data.finance_receive;\nlet monthData = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];\n\nfinance_receive.forEach(function (item) {\n  const amount = item.amount || 0;\n  const month = Number(item.receipt_date\n    .substr(5, 2));\n  monthData[month - 1] += amount;\n})\npayload.data.monthData = monthData;\nconsole.log('aa==>', payload)\nreturn payload;"
                   }
-                ],
-                "id": "u:b6fde7ca8128",
-                "affixFooter": false
-              }
-            ],
-            "id": "u:eedd3aa2eb9e"
-          }
-        ],
-        "id": "u:e06e0d1d39ae",
-        "tabsMode": "simple",
-        "linksClassName": "bg-white m-l m-t",
-        "className": "bg-white",
-        "toolbarClassName": "bg-white",
-        "contentClassName": "bg-white"
-      }
-    ],
-    "regions": [
-      "body"
-    ],
-    "data": {
-      "initialValues": {
-      },
-      "appId": "builder",
-      "title": "",
-      "context": {
-        "rootUrl": "https://5000-aquamarine-gull-66dfy76e.ws.vscode.steedos.cn",
-        "tenantId": "648913c1f7daf4002fe0827f",
-        "userId": "648913bff7daf4002fe08272",
-        "authToken": "ad0cc42740def20a29df545a18f367cb28120931d4c40f9db8ab4376e668b694ed3aa2447034bf8e9e3ae3"
-      }
+                }
+              ],
+              "id": "u:b6fde7ca8128",
+              "affixFooter": false
+            }
+          ],
+          "id": "u:32492563929e"
+        },
+        {
+          "title": "付款合同",
+          "body": [
+            {
+              "type": "panel",
+              "id": "u:bc29e00915ac",
+              "title": "合同付款数据",
+              "body": [
+                {
+                  "type": "grid",
+                  "columns": [
+                    {
+                      "body": [
+                        {
+                          "type": "service",
+                          "body": [
+                            {
+                              "type": "panel",
+                              "title": "",
+                              "body": [
+                                {
+                                  "type": "tpl",
+                                  "tpl": "<p style=\"text-align: center;\">&nbsp;</p>\n<p style=\"text-align: center;\">当年合同总金额</p>\n<p style=\"text-align: center;\"><span style=\"font-size: 14pt; color: #3598db;\">&yen;${sum}&nbsp;</span></p>",
+                                  "inline": false,
+                                  "id": "u:cdcd665793e2"
+                                }
+                              ],
+                              "id": "u:fd914d5afd83",
+                              "affixFooter": false,
+                              "actions": [
+                              ]
+                            }
+                          ],
+                          "id": "u:8d929fc71aac",
+                          "messages": {
+                          },
+                          "api": {
+                            "url": "${context.rootUrl}/graphql?a=1",
+                            "method": "post",
+                            "messages": {
+                            },
+                            "sendOn": "",
+                            "data": {
+                              "query": "{contracts(filters:[[\"cash_flow_type\",\"=\",\"pay\"],[\"signed_date\",\"between\",[\"2023-01-01T00:00:00.000Z\",\"2023-12-31T00:00:00.000Z\"]]]){amount, signed_date}}"
+                            },
+                            "headers": {
+                              "Authorization": "Bearer ${context.tenantId},${context.authToken}"
+                            },
+                            "adaptor": "console.log('payload==>', payload)\nconst contracts = payload.data.contracts;\nlet sum = 0;\ncontracts.forEach(function (item) {\n    console.log('item==>', item)\n    const amount = item.amount || 0;\n    sum += amount ;\n})\npayload.data.sum = sum;\n\nreturn payload;",
+                            "requestAdaptor": "console.log('api==>', api)\n// const time = new Date();\n// const year = time.getFullYear();\n// const month = time.getMonth() + 1;\n// api.data.query.replaceAll('2023', '1111');\n// api.body.query.replaceAll('2023', '2222');\nreturn api;"
+                          }
+                        }
+                      ],
+                      "id": "u:ca2e694f8871",
+                      "md": 4
+                    },
+                    {
+                      "body": [
+                        {
+                          "type": "service",
+                          "body": [
+                            {
+                              "type": "grid",
+                              "columns": [
+                                {
+                                  "body": [
+                                    {
+                                      "type": "panel",
+                                      "title": "",
+                                      "body": [
+                                        {
+                                          "type": "tpl",
+                                          "tpl": "<p>&nbsp;</p>\n<p style=\"text-align: center;\">本月签订合同金额</p>\n<p style=\"text-align: center;\"><span style=\"font-size: 14pt; color: #3598db;\">&yen;${sum}&nbsp;</span></p>",
+                                          "inline": false,
+                                          "id": "u:6f52ce8d4681"
+                                        }
+                                      ],
+                                      "id": "u:fd914d5afd83",
+                                      "affixFooter": false,
+                                      "actions": [
+                                      ]
+                                    }
+                                  ],
+                                  "id": "u:3cae56a9ad0f"
+                                },
+                                {
+                                  "body": [
+                                    {
+                                      "type": "panel",
+                                      "title": "",
+                                      "body": [
+                                        {
+                                          "type": "tpl",
+                                          "tpl": "<p>&nbsp;</p>\n<p style=\"text-align: center;\">本月签订合同个数</p>\n<p style=\"text-align: center;\"><span style=\"font-size: 14pt; color: #3598db;\">${count}&nbsp; 个</span></p>",
+                                          "inline": false,
+                                          "id": "u:e260a6416525"
+                                        }
+                                      ],
+                                      "id": "u:fd914d5afd83",
+                                      "affixFooter": false,
+                                      "actions": [
+                                      ]
+                                    }
+                                  ],
+                                  "id": "u:a84a14b8738a"
+                                }
+                              ],
+                              "id": "u:8c8aa613d16f"
+                            }
+                          ],
+                          "id": "u:8d929fc71aac",
+                          "messages": {
+                          },
+                          "api": {
+                            "url": "${context.rootUrl}/graphql?a=1",
+                            "method": "post",
+                            "messages": {
+                            },
+                            "sendOn": "",
+                            "data": {
+                              "query": "{contracts(filters:[[\"cash_flow_type\",\"=\",\"pay\"],[\"signed_date\",\"between\",[\"2023-06-01T00:00:00.000Z\",\"2023-06-30T00:00:00.000Z\"]]]){amount, signed_date}}"
+                            },
+                            "headers": {
+                              "Authorization": "Bearer ${context.tenantId},${context.authToken}"
+                            },
+                            "adaptor": "console.log('payload==>', payload)\nconst contracts = payload.data.contracts;\nlet sum = 0;\ncontracts.forEach(function (item) {\n    console.log('item==>', item)\n    const amount = item.amount || 0;\n    sum += amount ;\n})\npayload.data.sum = sum;\npayload.data.count = contracts.length || 0;\n\nreturn payload;"
+                          }
+                        }
+                      ],
+                      "id": "u:38d5f8413be5"
+                    }
+                  ],
+                  "id": "u:8ec88d5e180c"
+                }
+              ],
+              "affixFooter": false
+            },
+            {
+              "type": "panel",
+              "title": "月度付款情况",
+              "body": [
+                {
+                  "type": "chart",
+                  "config": {
+                    "xAxis": {
+                      "type": "category",
+                      "data": [
+                        "一月",
+                        "二月",
+                        "三月",
+                        "四月",
+                        "五月",
+                        "六月",
+                        "七月",
+                        "八月",
+                        "九月",
+                        "十月",
+                        "十一月",
+                        "十二月"
+                      ],
+                      "id": "u:66cbd3acc471"
+                    },
+                    "yAxis": {
+                      "type": "value",
+                      "id": "u:9ce2693b2c90"
+                    },
+                    "series": [
+                      {
+                        "data": "${monthData}",
+                        "type": "bar",
+                        "id": "u:770961895776"
+                      }
+                    ]
+                  },
+                  "replaceChartOption": true,
+                  "id": "u:cbab0bdc30a9",
+                  "api": {
+                    "url": "${context.rootUrl}/graphql?a=2",
+                    "method": "post",
+                    "headers": {
+                      "Authorization": "Bearer ${context.tenantId},${context.authToken}"
+                    },
+                    "data": {
+                      "query": "{finance_payment (filters:[[\"payment_status\",\"=\",\"paid\"],[\"payment_date\",\"between\",[\"2023-01-01T00:00:00.000Z\",\"2023-12-31T00:00:00.000Z\"]]]){ amount,payment_date}}"
+                    },
+                    "adaptor": "console.log('chart==payload==>', payload);\nconst finance_payment = payload.data.finance_payment;\nlet monthData = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];\n\nfinance_payment.forEach(function (item) {\n  const amount = item.amount || 0;\n  const month = Number(item.payment_date\n    .substr(5, 2));\n  monthData[month - 1] += amount;\n})\npayload.data.monthData = monthData;\nconsole.log('aa==>', payload)\nreturn payload;"
+                  }
+                }
+              ],
+              "id": "u:b6fde7ca8128",
+              "affixFooter": false
+            }
+          ],
+          "id": "u:eedd3aa2eb9e"
+        }
+      ],
+      "id": "u:e06e0d1d39ae",
+      "tabsMode": "simple",
+      "linksClassName": "bg-white m-l m-t",
+      "className": "bg-white",
+      "toolbarClassName": "bg-white",
+      "contentClassName": "bg-white"
+    }
+  ],
+  "regions": [
+    "body"
+  ],
+  "data": {
+    "initialValues": {
     },
-    "id": "u:00c4237df97e"
-  }
+    "appId": "builder",
+    "title": "",
+    "context": {
+      "rootUrl": "https://5000-aquamarine-gull-66dfy76e.ws.vscode.steedos.cn",
+      "tenantId": "6489a2cbcb72b1002f2277b2",
+      "userId": "6489a2c6cb72b1002f2277a5",
+      "authToken": "93c76c1210597853b5aa5fb98a80eef5f346247f47646d9e197122e2c83da4849c6f310496ca3e2c86e935"
+    }
+  },
+  "id": "u:00c4237df97e"
+}
