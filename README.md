@@ -1,3 +1,5 @@
+本项目已迁移到新仓库继续开发。https://github.com/steedos-labs/contract/
+
 
 <p align="center">
   <a href="https://www.steedos.com/cn">
