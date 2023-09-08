@@ -1,20 +1,16 @@
 {
-  "name": "contract",
   "version": "0.0.1",
   "private": true,
   "workspaces": [
     "steedos-packages/*"
   ],
+  "repository": "git://github.com/steedos-labs/contract.git",
   "scripts": {
     "docker": "docker-compose up",
     "start": "moleculer-runner steedos-packages/*/package.service.js --hot --repl",
     "repl": "moleculer-runner --repl",
     "bootstrap": "lerna bootstrap",
-    "build": "lerna run build",
-    "version:latest": "lerna version --force-publish --exact",
-    "publish:latest": "lerna publish from-package --registry https://registry.npmjs.org",
-    "version:beta": "lerna version prerelease --preid beta --force-publish --exact",
-    "publish:beta": "lerna publish from-package --registry https://registry.npmjs.org --dist-tag beta"
+    "build": "lerna run build"
   },
   "dependencies": {
     "@steedos/data-import": "^2.5",
