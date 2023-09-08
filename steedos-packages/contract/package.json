@@ -1,5 +1,5 @@
 {
-    "name": "@steedos-labs/contract",
+    "name": "@steedos-labs/contract-ce",
     "version": "2.2.4",
     "main": "package.service.js",
     "dependencies": {},
