@@ -1,5 +1,6 @@
 name: othercompany
 filterable: false
+group: 关联信息
 hidden: false
 index: false
 is_name: false
@@ -12,4 +13,3 @@ searchable: true
 sort_no: 450
 sortable: false
 type: lookup
-group: 关联信息

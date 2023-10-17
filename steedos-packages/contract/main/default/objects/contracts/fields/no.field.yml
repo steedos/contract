@@ -9,7 +9,7 @@ label: 合同编号
 readonly: true
 required: false
 searchable: true
-sort_no: 110
+sort_no: 1260
 sortable: true
 type: autonumber
-visible_on: "{{global.mode ==='read' ? true : false}}"
+visible_on: '{{global.mode ===''read'' ? true : false}}'

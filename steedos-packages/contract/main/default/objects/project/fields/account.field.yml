@@ -1,5 +1,6 @@
 name: account
 filterable: true
+group: 项目团队信息
 hidden: false
 index: false
 is_name: false
@@ -7,10 +8,9 @@ is_wide: false
 label: 客户
 omit: false
 readonly: false
+reference_to: accounts
 required: false
 searchable: true
 sort_no: 115
 sortable: false
 type: lookup
-reference_to: accounts
-group: 项目团队信息

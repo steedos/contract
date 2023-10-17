@@ -18,3 +18,82 @@ uneditable_related_list:
   - events
 viewAllRecords: false
 viewCompanyRecords: false
+field_permissions:
+  - field: amount_description
+    readable: true
+    editable: true
+  - field: amount
+    readable: true
+    editable: true
+  - field: cash_flow_type
+    readable: false
+    editable: false
+  - field: company_id
+    readable: true
+    editable: true
+  - field: contract_fulfillment_state
+    readable: true
+    editable: true
+  - field: contract_type
+    readable: true
+    editable: true
+  - field: created_by
+    readable: false
+    editable: false
+  - field: currency_type
+    readable: true
+    editable: true
+  - field: end_date
+    readable: true
+    editable: true
+  - field: name
+    readable: true
+    editable: true
+  - field: 'no'
+    readable: true
+    editable: false
+  - field: othercompany
+    readable: true
+    editable: true
+  - field: owner
+    readable: true
+    editable: true
+  - field: paid_amount
+    readable: true
+    editable: false
+  - field: project
+    readable: true
+    editable: true
+  - field: received_amount
+    readable: true
+    editable: false
+  - field: remark
+    readable: true
+    editable: true
+  - field: signed_date
+    readable: true
+    editable: true
+  - field: start_date
+    readable: true
+    editable: true
+  - field: subject
+    readable: true
+    editable: true
+  - field: created
+    readable: true
+    editable: false
+  - field: modified
+    readable: true
+    editable: false
+  - field: modified_by
+    readable: true
+    editable: false
+  - field: locked
+    readable: false
+    editable: false
+  - field: company_ids
+    readable: false
+    editable: false
+  - field: instance_state
+    readable: true
+    editable: true

@@ -2,9 +2,9 @@ name: account_banks
 custom: true
 enable_api: true
 enable_audit: true
+enable_enhanced_lookup: true
 enable_share: false
 enable_trash: true
-enable_enhanced_lookup: true
 icon: account
 label: 银行帐号
 version: 2

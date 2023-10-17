@@ -8,3 +8,73 @@ modifyCompanyRecords: false
 permission_set_id: user
 viewAllRecords: false
 viewCompanyRecords: false
+field_permissions:
+  - field: account_banks
+    readable: true
+    editable: true
+  - field: account
+    readable: true
+    editable: true
+  - field: amount_description
+    readable: true
+    editable: true
+  - field: amount
+    readable: true
+    editable: true
+  - field: billmaker
+    readable: false
+    editable: false
+  - field: billno
+    readable: true
+    editable: true
+  - field: company_id
+    readable: true
+    editable: true
+  - field: contract_receipts_state
+    readable: false
+    editable: false
+  - field: contract
+    readable: true
+    editable: true
+  - field: credit_code
+    readable: true
+    editable: true
+  - field: currency
+    readable: true
+    editable: true
+  - field: customer_bank
+    readable: true
+    editable: true
+  - field: id
+    readable: true
+    editable: false
+  - field: name
+    readable: false
+    editable: false
+  - field: receipt_date
+    readable: true
+    editable: true
+  - field: owner
+    readable: true
+    editable: true
+  - field: created
+    readable: true
+    editable: false
+  - field: created_by
+    readable: true
+    editable: false
+  - field: modified
+    readable: true
+    editable: false
+  - field: modified_by
+    readable: true
+    editable: false
+  - field: locked
+    readable: false
+    editable: false
+  - field: company_ids
+    readable: false
+    editable: false
+  - field: instance_state
+    readable: true
+    editable: true

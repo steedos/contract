@@ -2,9 +2,9 @@ name: account
 create: false
 filterable: true
 label: 付款方
-required: false
 reference_to: accounts
 relatedList: true
+required: false
 sort_no: 120
 sortable: true
 type: lookup

@@ -1,7 +1,7 @@
 name: created_by
+hidden: true
 label: 创建人
 reference_to: users
-sort_no: 110
+sort_no: 1250
 sortable: true
 type: lookup
-hidden: true

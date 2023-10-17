@@ -1,4 +1,5 @@
 name: account
+create: false
 filterable: true
 hidden: false
 index: false
@@ -13,5 +14,3 @@ searchable: false
 sort_no: 120
 sortable: true
 type: lookup
-create: false
-

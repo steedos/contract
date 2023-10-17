@@ -1,4 +1,5 @@
 name: contract
+create: false
 filterable: true
 hidden: false
 index: false
@@ -13,5 +14,4 @@ searchable: false
 sort_no: 50
 sortable: true
 type: master_detail
-create: false
 write_requires_master_read: true

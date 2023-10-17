@@ -5,3 +5,13 @@ allowRead: true
 modifyAllRecords: false
 permission_set_id: user
 viewAllRecords: true
+field_permissions:
+  - field: exchange_rate
+    readable: true
+    editable: true
+  - field: name
+    readable: true
+    editable: true
+  - field: shorthand
+    readable: true
+    editable: true

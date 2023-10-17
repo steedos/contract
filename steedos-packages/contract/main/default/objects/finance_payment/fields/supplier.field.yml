@@ -1,4 +1,5 @@
 name: supplier
+create: false
 filterable: false
 hidden: false
 index: false
@@ -14,4 +15,3 @@ searchable: true
 sort_no: 60
 sortable: false
 type: lookup
-create: false

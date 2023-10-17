@@ -18,30 +18,48 @@ field_permissions:
   - field: company_id
     readable: true
     editable: true
-  - field: contract_state
-    readable: true
-    editable: false
   - field: contract
     readable: true
     editable: true
   - field: currency
     readable: true
     editable: true
-  - field: description
-    readable: true
-    editable: true
   - field: due_date
-    readable: true
-    editable: true
-  - field: finished
     readable: true
     editable: true
   - field: name
     readable: true
     editable: true
-  - field: project
+  - field: contract_amount
+    readable: true
+    editable: true
+  - field: receipts_name
+    readable: true
+    editable: true
+  - field: receipts_proportion
+    readable: true
+    editable: true
+  - field: owner
+    readable: true
+    editable: true
+  - field: created
     readable: true
     editable: false
-  - field: subject
+  - field: created_by
+    readable: true
+    editable: false
+  - field: modified
+    readable: true
+    editable: false
+  - field: modified_by
+    readable: true
+    editable: false
+  - field: locked
+    readable: false
+    editable: false
+  - field: company_ids
+    readable: false
+    editable: false
+  - field: instance_state
     readable: true
     editable: true

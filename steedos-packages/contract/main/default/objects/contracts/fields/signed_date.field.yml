@@ -1,4 +1,5 @@
 name: signed_date
+defaultValue: '{now}'
 filterable: true
 hidden: false
 index: false
@@ -12,4 +13,3 @@ searchable: false
 sort_no: 60
 sortable: true
 type: date
-defaultValue: '{now}'

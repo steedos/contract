@@ -1,3 +1,7 @@
 name: owner
+hidden: true
+index: true
+label: Owner
+omit: true
 sort_no: 310
-type: lookup
+sortable: true

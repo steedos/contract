@@ -1,5 +1,6 @@
 name: amount
 filterable: false
+group: 价款信息
 hidden: false
 index: false
 is_name: false
@@ -11,7 +12,6 @@ readonly: false
 required: false
 scale: 2
 searchable: false
-sort_no: 250
+sort_no: 1270
 sortable: true
 type: number
-group: 价款信息

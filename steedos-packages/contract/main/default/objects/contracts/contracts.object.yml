@@ -3,6 +3,7 @@ custom: true
 enable_api: true
 enable_audit: true
 enable_chatter: false
+enable_enhanced_lookup: true
 enable_events: false
 enable_files: true
 enable_inline_edit: true
@@ -13,8 +14,7 @@ enable_share: false
 enable_tasks: false
 enable_trash: true
 enable_workflow: true
-enable_enhanced_lookup: true
-version: 2
 icon: contract
 is_enable: true
 label: 合同
+version: 2

@@ -7,3 +7,73 @@ modifyCompanyRecords: false
 permission_set_id: user
 viewAllRecords: true
 viewCompanyRecords: false
+field_permissions:
+  - field: account
+    readable: true
+    editable: true
+  - field: count_milestones_ok
+    readable: false
+    editable: false
+  - field: count_milestones
+    readable: false
+    editable: false
+  - field: deadline
+    readable: true
+    editable: true
+  - field: description
+    readable: true
+    editable: true
+  - field: kickoff
+    readable: true
+    editable: true
+  - field: name
+    readable: true
+    editable: true
+  - field: others
+    readable: true
+    editable: true
+  - field: project_amount
+    readable: false
+    editable: false
+  - field: project_code
+    readable: true
+    editable: false
+  - field: project_manager
+    readable: true
+    editable: true
+  - field: project_type
+    readable: true
+    editable: true
+  - field: status
+    readable: true
+    editable: true
+  - field: workload_days
+    readable: false
+    editable: false
+  - field: owner
+    readable: true
+    editable: true
+  - field: created
+    readable: true
+    editable: false
+  - field: created_by
+    readable: true
+    editable: false
+  - field: modified
+    readable: true
+    editable: false
+  - field: modified_by
+    readable: true
+    editable: false
+  - field: locked
+    readable: false
+    editable: false
+  - field: company_id
+    readable: true
+    editable: true
+  - field: company_ids
+    readable: false
+    editable: false
+  - field: instance_state
+    readable: true
+    editable: true

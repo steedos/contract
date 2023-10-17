@@ -1,6 +1,7 @@
 name: project_manager
 defaultValue: '{userId}'
 filterable: false
+group: 项目团队信息
 hidden: false
 index: false
 is_name: false
@@ -15,4 +16,3 @@ searchable: true
 sort_no: 112
 sortable: true
 type: lookup
-group: 项目团队信息

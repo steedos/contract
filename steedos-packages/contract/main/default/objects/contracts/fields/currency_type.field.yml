@@ -1,5 +1,6 @@
 name: currency_type
 filterable: false
+group: 价款信息
 hidden: false
 index: false
 is_name: false
@@ -14,4 +15,3 @@ searchable: false
 sort_no: 270
 sortable: false
 type: lookup
-group: 价款信息

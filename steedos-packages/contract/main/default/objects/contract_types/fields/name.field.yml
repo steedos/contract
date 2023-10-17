@@ -1,6 +1,6 @@
 name: name
 label: 分类名称
+required: true
 searchable: true
 sort_no: 110
 type: text
-required: true

@@ -1,5 +1,6 @@
 name: amount_description
 filterable: false
+group: 价款信息
 hidden: false
 index: false
 is_name: false
@@ -13,4 +14,3 @@ searchable: false
 sort_no: 280
 sortable: false
 type: textarea
-group: 价款信息

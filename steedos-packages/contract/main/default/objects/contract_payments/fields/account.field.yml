@@ -1,8 +1,8 @@
 name: account
 create: false
 label: 收款方
-sort_no: 110
 reference_to: accounts
 relatedList: true
 searchable: true
+sort_no: 110
 type: lookup

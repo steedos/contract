@@ -1,5 +1,5 @@
 name: status
-defaultValue: 'to_be_signed'
+defaultValue: to_be_signed
 filterable: false
 hidden: false
 index: false
@@ -29,6 +29,6 @@ options:
 readonly: false
 required: true
 searchable: true
-sort_no: 110
+sort_no: 620
 sortable: true
 type: select

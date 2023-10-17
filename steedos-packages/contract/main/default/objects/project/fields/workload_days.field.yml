@@ -13,10 +13,10 @@ readonly: false
 required: false
 scale: 0
 searchable: false
-sort_no: 260
+sort_no: 660
 sortable: false
 summary_field: hours
+summary_filters: []
 summary_object: project_time
 summary_type: sum
 type: summary
-summary_filters: []

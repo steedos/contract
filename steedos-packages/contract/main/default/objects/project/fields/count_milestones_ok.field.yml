@@ -12,7 +12,7 @@ readonly: false
 required: false
 scale: 1
 searchable: false
-sort_no: 260
+sort_no: 650
 sortable: false
 summary_filters:
   - field: completed

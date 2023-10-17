@@ -1,9 +1,9 @@
 name: name
 hidden: false
+is_name: true
 is_wide: true
 label: 款项条件
 required: true
 searchable: true
 sort_no: 100
 type: text
-is_name: true

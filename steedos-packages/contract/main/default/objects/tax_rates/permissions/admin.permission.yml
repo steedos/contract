@@ -6,3 +6,37 @@ allowRead: true
 modifyAllRecords: true
 permission_set_id: admin
 viewAllRecords: true
+field_permissions:
+  - field: name
+    readable: true
+    editable: true
+  - field: owner
+    readable: false
+    editable: false
+  - field: tax_rate
+    readable: true
+    editable: true
+  - field: created
+    readable: true
+    editable: false
+  - field: created_by
+    readable: true
+    editable: false
+  - field: modified
+    readable: true
+    editable: false
+  - field: modified_by
+    readable: true
+    editable: false
+  - field: locked
+    readable: false
+    editable: false
+  - field: company_id
+    readable: true
+    editable: true
+  - field: company_ids
+    readable: false
+    editable: false
+  - field: instance_state
+    readable: true
+    editable: true

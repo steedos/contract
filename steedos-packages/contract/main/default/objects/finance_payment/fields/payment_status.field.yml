@@ -8,12 +8,12 @@ is_wide: false
 label: 付款状态
 multiple: false
 omit: false
-readonly: false
 options:
   - label: 已支付
     value: paid
   - label: 未支付
     value: unpaid
+readonly: false
 required: true
 searchable: false
 sort_no: 415

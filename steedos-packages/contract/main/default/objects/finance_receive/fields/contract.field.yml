@@ -1,11 +1,11 @@
 name: contract
+create: false
 filterable: true
 hidden: false
 index: false
 is_name: false
 is_wide: false
 label: 合同
-create: false
 omit: false
 readonly: false
 reference_to: contracts

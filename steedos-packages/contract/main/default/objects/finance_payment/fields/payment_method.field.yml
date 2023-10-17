@@ -1,6 +1,5 @@
 name: payment_method
 label: 付款方式
-type: select
 multiple: false
 options:
   - label: 汇款
@@ -12,3 +11,4 @@ options:
   - label: 其他
     value: 其他
 sort_no: 159
+type: select

@@ -5,3 +5,28 @@ allowRead: true
 modifyAllRecords: true
 permission_set_id: admin
 viewAllRecords: true
+field_permissions:
+  - field: accname
+    readable: true
+    editable: true
+  - field: accnum
+    readable: true
+    editable: true
+  - field: account
+    readable: true
+    editable: true
+  - field: accountproperty
+    readable: true
+    editable: true
+  - field: accstate
+    readable: true
+    editable: true
+  - field: enablestate
+    readable: true
+    editable: true
+  - field: pk_bankdoc
+    readable: true
+    editable: true
+  - field: pk_currtype
+    readable: true
+    editable: true

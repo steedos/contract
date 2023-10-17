@@ -7,3 +7,13 @@ modifyCompanyRecords: false
 permission_set_id: user
 viewAllRecords: true
 viewCompanyRecords: true
+field_permissions:
+  - field: code
+    readable: true
+    editable: true
+  - field: description
+    readable: true
+    editable: true
+  - field: name
+    readable: true
+    editable: true

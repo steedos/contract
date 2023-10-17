@@ -5,3 +5,7 @@ allowRead: false
 modifyAllRecords: false
 permission_set_id: user
 viewAllRecords: true
+field_permissions:
+  - field: name
+    readable: true
+    editable: true

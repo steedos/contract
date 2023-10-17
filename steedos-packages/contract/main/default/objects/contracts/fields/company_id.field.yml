@@ -11,6 +11,6 @@ readonly: false
 reference_to: company
 required: true
 searchable: false
-sort_no: 250
+sort_no: 1280
 sortable: true
 type: lookup

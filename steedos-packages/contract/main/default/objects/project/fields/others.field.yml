@@ -1,5 +1,6 @@
 name: others
 filterable: false
+group: 项目团队信息
 hidden: false
 index: false
 is_name: false
@@ -11,7 +12,6 @@ readonly: false
 reference_to: users
 required: false
 searchable: false
-sort_no: 250
+sort_no: 640
 sortable: false
 type: lookup
-group: 项目团队信息

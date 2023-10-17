@@ -4,4 +4,5 @@ icon: announcement
 label: 首页
 mobile: true
 page: contracts_home
+permissions: []
 type: page

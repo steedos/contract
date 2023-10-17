@@ -1,6 +1,7 @@
 name: project
 filterable: false
 generated: false
+group: 关联信息
 index: false
 is_name: false
 is_wide: false
@@ -12,4 +13,3 @@ sort_no: 480
 sortable: false
 type: master_detail
 write_requires_master_read: true
-group: 关联信息

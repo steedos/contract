@@ -12,9 +12,9 @@ readonly: false
 required: false
 scale: 1
 searchable: false
-sort_no: 250
+sort_no: 630
 sortable: false
+summary_filters: []
 summary_object: project_milestone
 summary_type: count
 type: summary
-summary_filters: []
