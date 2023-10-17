@@ -4,7 +4,6 @@ allowDelete: true
 allowEdit: true
 allowRead: true
 disabled_list_views:
-  - contract_manager
   - none
   - all
   - contract_payments
