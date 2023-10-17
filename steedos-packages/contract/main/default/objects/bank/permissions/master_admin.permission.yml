@@ -1,9 +1,0 @@
-allowCreate: true
-allowDelete: true
-allowEdit: true
-allowRead: true
-modifyAllRecords: true
-modifyCompanyRecords: false
-permission_set_id: master_admin
-viewAllRecords: true
-viewCompanyRecords: false
