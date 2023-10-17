@@ -7,7 +7,6 @@
  */
 "use strict";
 const project = require('./package.json');
-const packageName = project.name;
 const packageLoader = require('@steedos/service-package-loader');
 
 /**
@@ -15,18 +14,22 @@ const packageLoader = require('@steedos/service-package-loader');
  * 软件包服务启动后也需要抛出事件。
  */
 module.exports = {
-	name: packageName,
+	name: project.name,
 	namespace: "steedos",
 	mixins: [packageLoader],
 	/**
 	 * Settings
 	 */
 	settings: {
-		packageInfo: {
-			path: __dirname,
-			name: packageName
-		}
 	},
+    metadata: {
+        $package: {
+            name: project.name,
+            version: project.version,
+            path: __dirname,
+            isPackage: true
+        }
+    },
 
 	/**
 	 * Dependencies
