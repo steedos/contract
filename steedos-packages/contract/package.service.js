@@ -6,17 +6,16 @@
  * @Description: 
  */
 "use strict";
-const project = require('./package.json');
-const packageLoader = require('@steedos/service-package-loader');
+const packageJSON = require('./package.json');
 
 /**
- * @typedef {import('moleculer').Context} Context Moleculer's Context
- * 软件包服务启动后也需要抛出事件。
+ * Steedos Package Service
+ * https://docs.steedos.com/developer/development/package-service
  */
 module.exports = {
-	name: project.name,
+	name: packageJSON.name,
 	namespace: "steedos",
-	mixins: [packageLoader],
+	mixins: [require('@steedos/service-package-loader')],
 	/**
 	 * Settings
 	 */
@@ -24,8 +23,8 @@ module.exports = {
 	},
     metadata: {
         $package: {
-            name: project.name,
-            version: project.version,
+            name: packageJSON.name,
+            version: packageJSON.version,
             path: __dirname,
             isPackage: true
         }
