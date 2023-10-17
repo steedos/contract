@@ -10,7 +10,7 @@ const packageJSON = require('./package.json');
 
 /**
  * Steedos Package Service
- * https://docs.steedos.com/developer/development/package-service
+ * https://docs.steedos.com/developer/development/package
  */
 module.exports = {
 	name: packageJSON.name,
