@@ -17,3 +17,6 @@ logs
 
 yarn.lock
 package-lock.json
+
+steedos-storage
+steedos-storage-mongodb

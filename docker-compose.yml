@@ -3,7 +3,7 @@ version: "3.9"
 services:
 
   steedos:
-    image: ecr.aws.steedos.cn/dockerhub/steedos/steedos-community:2.5
+    image: steedos/steedos-community:2.5
     ports:
       - "5000:5000"
     env_file:
@@ -12,28 +12,23 @@ services:
       - PORT=5000
       - MONGO_URL=mongodb://mongodb:27017/steedos
       - MONGO_OPLOG_URL=mongodb://mongodb:27017/local
-      - TRANSPORTER=nats://nats:4222
-      - CACHER=redis://redis:6379
-      # - STEEDOS_IDENTITY_OIDC_ENABLED=true
-      # - STEEDOS_IDENTITY_OIDC_CONFIG_URL=https://id.steedos.cn/realms/master/.well-known/openid-configuration
-      # - STEEDOS_IDENTITY_OIDC_CLIENT_ID=steedos-oidc-public
-      # - STEEDOS_IDENTITY_OIDC_CLIENT_SECRET=none
-      # - STEEDOS_IDENTITY_OIDC_NAME=Steedos ID
+      - TRANSPORTER=redis://redis:6379
+      - CACHER=redis://redis:6379/1
     volumes:
-      - "steedos-installed-packages:/app/.steedos"
-      - "steedos-data:/app/storage"
+      - "./.steedos:/app/.steedos"
+      - "./steedos-storage:/steedos-storage"
     depends_on:
       mongodb:
         condition: service_healthy
         
   redis:
-    image: ecr.aws.steedos.cn/dockerhub/redis:6.2
+    image: redis:6.2.10
     command: "redis-server --save \"\" --appendonly no --loglevel warning"
     ports:
       - "6379:6379"
   
   mongodb:
-    image: ecr.aws.steedos.cn/dockerhub/mongo:4.4
+    image: mongo:4.4
     ports:
       - 27017:27017
     command: "--bind_ip_all --replSet steedos --logpath /var/log/mongodb/mongod.log"
@@ -43,28 +38,13 @@ services:
       timeout: 10s
       retries: 5
     volumes:
-      - 'steedos-mongo-data:/data/db'
+      - './steedos-storage-mongodb:/data/db'
 
   mongodb-init:
-    image: ecr.aws.steedos.cn/dockerhub/mongo:4.4
+    image: mongo:4.4
     restart: "no"
     depends_on:
       mongodb:
         condition: service_healthy
     command: >
       mongo --host mongodb:27017 --eval "rs.initiate({ _id: 'steedos', members: [{_id: 0, host: 'mongodb:27017'}]})"
-
-  # Micro Service Transporter
-  nats:
-    image: ecr.aws.steedos.cn/dockerhub/steedos/nats:2.9
-    ports:
-      - "4222:4222"
-      # - "8222:8222" # monitor port
-
-volumes:
-  steedos-mongo-data:
-    driver: local
-  steedos-installed-packages:
-    driver: local
-  steedos-data:
-    driver: local
