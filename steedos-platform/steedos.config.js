@@ -1,4 +1,7 @@
-require('dotenv-flow').config({});
+const path = require('path');
+require('dotenv-flow').config({
+	path: path.join(__dirname, '.')
+});
 
 // Moleculer Configuration
 // https://moleculer.services/docs/0.14/configuration.html
@@ -9,10 +12,11 @@ module.exports = {
 	// Available values: trace, debug, info, warn, error, fatal
 	logLevel: "warn",
 
-    transporter: process.env.TRANSPORTER,
+	transporter: process.env.TRANSPORTER,
 
 	// Called after broker started.
 	started(broker) {
-	},
-
+		broker.createService(require("@steedos/service-community"));
+	}
+	
 };

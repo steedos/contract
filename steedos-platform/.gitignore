@@ -13,6 +13,10 @@ dist
 logs
 
 .env.local
+.steedos
 
 yarn.lock
 package-lock.json
+
+steedos-storage
+steedos-storage-mongodb
