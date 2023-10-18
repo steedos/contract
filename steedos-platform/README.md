@@ -4,7 +4,7 @@ Steedos Low-code PaaS platform is an open-source alternative to Salesforce Platf
 
 ## Starting Steedos
 
-Instructions for initializing the Steedos platform, a powerful workflow solution, using different methods.
+Instructions for initializing the Steedos Platform, a powerful low-code solution, using different methods.
 
 ### 1. Launching Steedos with Docker
 
