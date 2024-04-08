@@ -1,45 +1,42 @@
-# Steedos Contract Managenent
+# Steedos 合同管理
 
-Steedos Contract Management Software is a comprehensive solution designed to streamline the entire contract management process. With its intuitive interface and powerful features, Steedos Contract Management Software makes it easy to create, manage, and track contracts from start to finish.
+Steedos 合同管理软件是一种全面的解决方案，旨在简化整个合同管理过程。凭借直观的界面和强大的功能，Steedos 合同管理软件能够轻松地从头至尾创建、管理和跟踪合同。
 
-The core features of Steedos Contract Management Software include:
+Steedos 合同管理软件的核心功能包括：
 
-- Contract Creation: Create contracts easily with customizable templates and a user-friendly interface.
-- Contract Management: Manage all your contracts in one place, with easy access to contract details, deadlines, and milestones.
-- Contract Tracking: Track the status of your contracts at every stage of the process, from creation to renewal.
-- Contract Collaboration: Collaborate with team members and stakeholders on contracts, with real-time updates and notifications.
-- Contract Reporting: Generate custom reports and analytics on your contracts, with insights into performance, compliance, and risk.
+- 合同创建：通过自定义模板和用户友好的界面轻松创建合同。
+- 合同管理：在一个地方管理所有合同，轻松访问合同详情、截止日期和里程碑。
+- 合同跟踪：在过程的每个阶段跟踪合同的状态，从创建到续订。
+- 合同协作：与团队成员和利益相关者合作处理合同，提供实时更新和通知。
+- 合同报告：生成自定义报告和合同分析，洞察性能、合规性和风险。
 
-Steedos Contract Management Software also offers a range of unique features and benefits, including:
+Steedos 合同管理软件还提供一系列独特的功能和优势，包括：
 
-- Workflow Automation: Automate your contract workflows and approvals, with customizable workflows and triggers.
-- Contract Templates: Create and save custom contract templates, with pre-populated fields and clauses.
-- E-Signature Integration: Sign and execute contracts electronically, with integrated e-signature capabilities.
-- Contract Repository: Store and organize all your contracts in a secure, centralized repository, with easy search and retrieval.
-- Mobile Access: Access your contracts and workflows from anywhere, with mobile-friendly design and responsive interface.
+- 工作流自动化：自定义工作流程和触发器自动化合同工作流程和审批。
+- 合同模板：创建和保存自定义合同模板，带有预填充的字段和条款。
+- 电子签名集成：通过集成的电子签名功能电子签署并执行合同。
+- 合同仓库：在安全的集中仓库中存储和组织所有合同，轻松搜索和检索。
+- 移动访问：随时随地访问您的合同和工作流程，采用移动友好的设计和响应式界面。
 
-With its powerful features and user-friendly interface, Steedos Contract Management Software is the ideal solution for businesses of all sizes looking to streamline their contract management process.
+凭借其强大的功能和用户友好的界面，Steedos 合同管理软件是所有规模的企业寻求简化其合同管理流程的理想解决方案。
 
+## 快速开始
 
-## Getting Started
+```shell
+# 克隆仓库
+git clone https://github.com/steedos-labs/contract
+cd feikongwang
 
-### Start Steedos Platform
+# 运行 Steedos 社区版
+docker-compose -f steedos-platform/docker-compose.yml up
 
-The easiest way to run the Steedos platform is by using Docker. 
-
-```bash
-cd steedos-platform
-docker-compose up
-```
-
-You can also refer to the instructions in the [steedos-platform](./steedos-platform) dir to run Steedos with Node.js.
-
-
-### Start Contract Management Package
-
-Navigate to the project folder, and enter the following command to run the contract management package.
-
-```bash
+# 安装依赖
 yarn
-yarn start
+
+# 运行合同软件包
+yarn dev
 ```
+
+## 文档
+
+Steedos 合同管理基于 Steedos 低代码平台开发，更多关于安装、配置和使用的详细信息，请参阅[文档链接](https://docs.steedos.cn)。

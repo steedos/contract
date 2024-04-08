@@ -5,32 +5,45 @@ ports:
   - port: 5000
     onOpen: ignore
     visibility: public
+  - port: 3000
+    onOpen: ignore
+    visibility: public
+  - port: 3100
+    onOpen: open-browser
+    visibility: public
   - port: 6379
+    onOpen: ignore
+  - port: 4222
     onOpen: ignore
   - port: 27017
     onOpen: ignore
+  - port: 1880 # node-red-app
+    onOpen: ignore
     visibility: public
-  - port: 4222
+  - port: 9001 # docker
     onOpen: ignore
-  - port: 8222
+    visibility: public
+  - port: 80
     onOpen: ignore
-    
+    visibility: public
 # List the start up tasks. You can start them in parallel in multiple terminals. See https://www.gitpod.io/docs/config-start-tasks/
 tasks:
   - name: Steedos Platform
     command: |
-      cd steedos-platform
-      echo "ROOT_URL=$(gp url 5000)" >> .env.local
-      docker-compose up
+      echo "ROOT_URL=$(gp url 5000)" >> steedos-platform/.env.local
+      docker-compose -f steedos-platform/docker-compose-ee.yml up
   - name: Steedos Packages
     command: |
       echo "METADATA_SERVER=$(gp url 5000)" >> .env.local
+      npm config set registry=https://registry.npmmirror.com
+      npm install -g steedos-cli
       yarn
       gp await-port 5000
-      yarn start
+      yarn dev
 
 vscode:
   extensions:
+    - dbaeumer.vscode-eslint
     - redhat.vscode-yaml
     - steedos.steedosdx-vscode
     - steedos.steedosdx-vscode-core
