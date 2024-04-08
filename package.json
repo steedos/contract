@@ -23,7 +23,6 @@
   },
   "devDependencies": {
     "lerna": "^5.4.0",
-    "moleculer-repl": "^0.7.4",
-    "ts-jest": "^29.0.3"
+    "moleculer-repl": "^0.7.4"
   }
 }
