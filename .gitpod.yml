@@ -31,7 +31,7 @@ tasks:
   - name: Steedos Platform
     command: |
       echo "ROOT_URL=$(gp url 5000)" >> steedos-platform/.env.local
-      docker-compose -f steedos-platform/docker-compose-ee.yml up
+      docker-compose -f steedos-platform/docker-compose.yml up
   - name: Steedos Packages
     command: |
       echo "METADATA_SERVER=$(gp url 5000)" >> .env.local
