@@ -36,13 +36,6 @@ filter_fields:
   - instance_state
   - owner
 filter_scope: space
-filters:
-  - is_default: true
-    field: instance_state
-    operation: <>
-    value:
-      - terminated
-    is_required: false
 label: 所有合同
 shared: true
 show_count: false
