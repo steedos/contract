@@ -1,13 +1,20 @@
 {
     "name": "@steedos-labs/contract-ce",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "main": "package.service.js",
     "repository": "git://github.com/steedos-labs/contract.git",
     "dependencies": {},
     "license": "MIT",
     "scripts": {
+      "build": "webpack --config webpack.config.js",
+      "build:watch": "webpack --config webpack.config.js --watch",
       "test": "echo \"Error: no test specified\" && exit 1",
       "release": "WEBPACK_BUNDLE=production npm login --registry https://registry.npmjs.org && npm build && npm publish --registry https://registry.npmjs.org && npx cnpm sync @steedos-labs/contract-ce"
+    },
+    "devDependencies": {
+        "webpack": "^5.88.2",
+        "webpack-cli": "^5.1.4",
+        "webpack-node-externals": "^3.0.0"
     },
     "publishConfig": {
         "access": "public"

@@ -1,47 +1,69 @@
-# Steedos 合同管理
 
-Steedos 合同管理软件是一种全面的解决方案，旨在简化整个合同管理过程。凭借直观的界面和强大的功能，Steedos 合同管理软件能够轻松地从头至尾创建、管理和跟踪合同。
 
-Steedos 合同管理软件的核心功能包括：
+# 快速向导
 
-- 合同创建：通过自定义模板和用户友好的界面轻松创建合同。
-- 合同管理：在一个地方管理所有合同，轻松访问合同详情、截止日期和里程碑。
-- 合同跟踪：在过程的每个阶段跟踪合同的状态，从创建到续订。
-- 合同协作：与团队成员和利益相关者合作处理合同，提供实时更新和通知。
-- 合同报告：生成自定义报告和合同分析，洞察性能、合规性和风险。
+## 配置环境变量
 
-Steedos 合同管理软件还提供一系列独特的功能和优势，包括：
+创建 .env.local，[配置系统环境变量](https://docs.steedos.cn/zh-CN/deploy/steedos-config/) 。 
 
-- 工作流自动化：自定义工作流程和触发器自动化合同工作流程和审批。
-- 合同模板：创建和保存自定义合同模板，带有预填充的字段和条款。
-- 电子签名集成：通过集成的电子签名功能电子签署并执行合同。
-- 合同仓库：在安全的集中仓库中存储和组织所有合同，轻松搜索和检索。
-- 移动访问：随时随地访问您的合同和工作流程，采用移动友好的设计和响应式界面。
-
-凭借其强大的功能和用户友好的界面，Steedos 合同管理软件是所有规模的企业寻求简化其合同管理流程的理想解决方案。
-
-## 运行合同管理
-
-- 运行华炎魔方
-- 安装软件包 `@steedos-labs/contract-ce`
-
-## 调试源码
-
-```shell
-# 克隆仓库
-git clone https://github.com/steedos-labs/contract
-cd contract
-
-# 运行 Steedos 社区版
-docker-compose -f steedos-platform/docker-compose.yml up
-
-# 安装依赖
-yarn
-
-# 运行合同软件包
-yarn dev
+```bash
+ROOT_URL=
 ```
 
-## 文档
+## 启动华炎魔方平台
 
-Steedos 合同管理基于 Steedos 低代码平台开发，更多关于安装、配置和使用的详细信息，请参阅[文档链接](https://docs.steedos.cn)。
+开发软件包之前，先启动华炎魔方服务。
+
+1. 使用 docker 启动华炎魔方平台。
+
+推荐使用 docker 启动华炎魔方平台，会自动启动所有依赖服务。
+
+```bash
+docker-compose up
+```
+
+2. 使用 nodejs 启动华炎魔方平台。
+
+也可以使用 nodejs 启动华炎魔方，需在本地先安装 mongodb, redis 和 nats，或使用 docker 启动相关依赖服务。
+
+```bash
+yarn start:db
+yarn start:platform
+```
+
+## 访问华炎魔方
+
+打开浏览器，访问 http://127.0.0.1:5000，进入华炎魔方。
+
+进入设置应用，可以：
+- 创建自定义对象
+- 创建应用
+- 创建微页面
+
+## 启动合同管理软件包
+
+可以使用微服务的方式扩展华炎魔方。例如本项目基于华炎魔方开发了合同管理解决方案。
+
+可以参考 steedos-packages 文件夹下的例子。
+
+```bash
+yarn
+yarn start
+```
+
+### 了解更多
+
+[关于 Steedos 低代码开发平台](http://docs.steedos.com/)
+
+### 保持联系
+
+如果您有任何疑问或想与其他华炎魔方用户交谈，请[点击进入讨论](https://github.com/steedos/steedos-app-contract/discussions)或扫码添加以下联系方式与我们联系！
+
+### 开发人员微信群
+
+
+如果您有任何疑问或想与其他华炎魔方用户交谈，请扫码添加以下联系方式与我们联系。
+
+| ![开发者微信交流群](https://steedos.github.io/assets/github/platform/cn/QR_wechat_developers.jpg) | ![商务咨询](https://steedos.github.io/assets/github/platform/cn/business_consulting.jpg)        | ![微信公众号](https://steedos.github.io/assets/github/platform/cn/public_number.jpg)|
+| :-----: | :-----: | :-----: |
+| 开发人员微信群  | 商务咨询  | 微信公众号 |

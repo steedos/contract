@@ -22,9 +22,6 @@ tab_items:
   object_contracts:
     group: 合同信息
     index: 2
-  object_contract_types:
-    group: 合同信息
-    index: 3
   object_finance_receive:
     group: 收付款信息
     index: 4
@@ -46,15 +43,18 @@ tab_items:
   object_account_banks:
     group: 客商信息
     index: 10
-  object_bank:
+  object_contract_types:
     group: 基础信息
     index: 11
-  object_tax_rates:
+  object_bank:
     group: 基础信息
     index: 12
-  object_currency:
+  object_tax_rates:
     group: 基础信息
     index: 13
+  object_currency:
+    group: 基础信息
+    index: 14
   object_project:
     group: 基础信息
     index: 14
