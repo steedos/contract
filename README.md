@@ -20,12 +20,17 @@ Steedos 合同管理软件还提供一系列独特的功能和优势，包括：
 
 凭借其强大的功能和用户友好的界面，Steedos 合同管理软件是所有规模的企业寻求简化其合同管理流程的理想解决方案。
 
-## 快速开始
+## 运行合同管理
+
+- 运行华炎魔方
+- 安装软件包 `@steedos-labs/contract-ce`
+
+## 调试源码
 
 ```shell
 # 克隆仓库
 git clone https://github.com/steedos-labs/contract
-cd feikongwang
+cd contract
 
 # 运行 Steedos 社区版
 docker-compose -f steedos-platform/docker-compose.yml up
