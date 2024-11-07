@@ -48,6 +48,7 @@ yarn start:platform
 
 ```bash
 yarn
+yarn build
 yarn start
 ```
 
